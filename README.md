@@ -1,2 +1,2 @@
 # KinGin Training
-Wip hgss database
+WIP hgss database

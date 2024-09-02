@@ -1,0 +1,2 @@
+move_code,move_name_en,move_name_ja,move_pp,move_bp,move_ac,move_prio,move_is_bright,move_is_king,move_is_contact,type,move_cat,move_trgt,move_eff,rate,move_mthd
+absorb,absorb,すいとる,25,20,100,0,Yes,No,No,grass,special,Selected,,,
