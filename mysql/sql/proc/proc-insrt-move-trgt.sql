@@ -36,15 +36,18 @@ begin
     delete from move_trgt;    
     open cur1;
 	while continueCur1=1 do
-        fetch cur1 into v;
+        fetch cur1 into 
+            vMoveTrgtCode,
+            vMoveTrgtNameEn,
+            vMoveTrgtNameJa;
         if continueCur1 = 1 then
             insert into move_trgt(
                 move_trgt_code,
                 move_trgt_name_en,
                 move_trgt_name_ja) 
                 values (
-                vMoveTrgtCode
-                vMoveTrgtNameEn
+                vMoveTrgtCode,
+                vMoveTrgtNameEn,
                 vMoveTrgtNameJa);
         end if;
 	end while;

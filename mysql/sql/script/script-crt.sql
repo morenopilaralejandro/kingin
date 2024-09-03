@@ -18,8 +18,8 @@ create table move_cat (
 create table move_eff (
     move_eff_id int not null auto_increment,
     move_eff_code varchar(32) unique,
-    move_eff_desc_en varchar(32),
-    move_eff_desc_ja varchar(32),
+    move_eff_desc_en varchar(200),
+    move_eff_desc_ja varchar(200),
     constraint move_eff_pk primary key (move_eff_id)
 );
 

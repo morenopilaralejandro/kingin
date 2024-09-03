@@ -5,3 +5,4 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-cat.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-eff.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-trgt.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-mthd.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move.sql;

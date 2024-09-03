@@ -1,2 +1,5 @@
 move_trgt_code,move_trgt_name_en,move_trgt_name_ja
-selected,selected target,1体選択
+selected,Selected target,1体選択
+both,Both opponents,相手全体
+user,User,自分
+party,User's party,味方全体

@@ -1,2 +1,17 @@
 move_eff_code,move_eff_desc_en,move_eff_desc_ja
 recover-half-inflicted,User recovers half the damage inflicted.,相手に与えたダメージの半分だけ自分のHPが回復する。
+recover-16-end,User restores 1/16 of its maximum HP at the end of every turn.,使用後、毎ターン、HPが最大HPの1/16ずつ回復する。
+heal-status-party,Heals party's status problems.,自分と味方全体のポケモンの状態異常を治す。
+may-lower-spdef,May lower opponent's Sp. Def one stage.,確率で相手のとくぼうランクを1段階下げる。
+may-rise-all,May raise all user's stats one stage.,確率で自分のステータスランクが1段階ずつ上がる。
+raise-def-two,Raises user's Defense two stages.,自分のぼうぎょランクを2段階上げる。
+raise-spdef-two,Raises user's Sp. Def two stages.,自分のとくぼうランクを2段階上げる。
+raise-spe-two,Raises user's Speed two stages.,自分のすばやさランクを2段階上がる。
+raise-random-two,Raises one stat at random two stages.,ランダムでステータスランクのどれか1つが2段階上がる。
+no-miss,Cannot miss.,必ず命中する。
+high-critical,Has high critical hit ratio.,急所に当たりやすい。
+may-flinch,May cause opponent to flinch.,確率で相手をひるませる。
+always-first,Always strikes first.,必ず先制できる。
+row-2-5,Attacks 2-5 times in a row.,1ターンに2～5回連続で攻撃する。
+random-move-party,Uses a random move from another Pokémon in the party.,自分以外のてもちのポケモンの技のうち1つをランダムで使う。
+double-already,Deals double damage if the target has already received damage on the same turn.,そのターン、相手が既にダメージを受けている時、威力が2倍になる。

@@ -5,7 +5,7 @@ create temporary table aux_move_mthd (
     move_mthd_name_ja varchar(32)
 );
 
-load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/move_mthd.csv'
+load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/move-mthd.csv'
 into table aux_move_mthd 
 fields terminated by ',' 
 enclosed by '"'
@@ -33,7 +33,10 @@ begin
     delete from move_mthd;    
     open cur1;
 	while continueCur1=1 do
-        fetch cur1 into v;
+        fetch cur1 into
+            vMoveMthdCode,
+            vMoveMthdNameEn,
+            vMoveMthdNameJa;
         if continueCur1 = 1 then
             insert into move_mthd(
                 move_mthd_code,

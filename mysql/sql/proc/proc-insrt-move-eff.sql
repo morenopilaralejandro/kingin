@@ -1,8 +1,8 @@
 drop table if exists aux_move_eff;
 create temporary table aux_move_eff (
     move_eff_code varchar(32),
-    move_eff_desc_en varchar(32),
-    move_eff_desc_ja varchar(32)
+    move_eff_desc_en varchar(200),
+    move_eff_desc_ja varchar(200)
 );
 
 load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/move-eff.csv'
@@ -11,7 +11,11 @@ fields terminated by ','
 enclosed by '"'
 lines terminated by '\n'
 ignore 1 lines
-(columns);
+(
+move_eff_code,
+move_eff_desc_en,
+move_eff_desc_ja
+);
 
 delimiter &&
 drop procedure if exists proc_insrt_move_eff;
@@ -21,8 +25,8 @@ begin
 
     /*cur1 variables*/
     declare vMoveEffCode varchar(32) default '';
-    declare vMoveEffDescEn varchar(32) default '';
-    declare vMoveEffDescJa varchar(32) default '';
+    declare vMoveEffDescEn varchar(200) default '';
+    declare vMoveEffDescJa varchar(200) default '';
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_move_eff;
