@@ -67,7 +67,7 @@ create table move_cause_eff (
     move_id int not null,
     move_eff_id int not null,
     rate int,
-    constraint move_cause_eff_pk primary key (move_id),
+    constraint move_cause_eff_pk primary key (move_id, move_eff_id),
     constraint move_cause_eff_fk_move foreign key (move_id) 
         references move(move_id) on delete cascade,
     constraint move_cause_eff_fk_move_eff foreign key (move_eff_id) 
