@@ -14,8 +14,7 @@ create temporary table aux_move (
     move_cat varchar(32),
     move_trgt varchar(32),
     move_eff varchar(32),
-    rate varchar(32),
-    move_mthd varchar(32)
+    rate varchar(32)
 );
 
 load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/move.csv'
@@ -39,8 +38,7 @@ type,
 move_cat,
 move_trgt,
 move_eff,
-rate,
-move_mthd
+rate
 );
 
 delimiter &&
@@ -82,8 +80,6 @@ begin
     declare vMoveTrgt varchar(32) default '';
     declare vMoveEff varchar(32) default '';
     declare vRate  varchar(32) default '';
-    declare vMoveMthd varchar(32) default '';
-
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_move;
@@ -107,13 +103,11 @@ begin
             vMoveCat,
             vMoveTrgt,
             vMoveEff,
-            vRate,
-            vMoveMthd;
+            vRate;
         set idType = 0;
         set idMoveCat = 0;
         set idMoveTrgt = 0;
         set idMoveEff = 0;
-        set idMoveMthd = 0;
         if continueCur1 = 1 then
             select type_id into idType 
                 from type 
@@ -130,7 +124,8 @@ begin
             select move_cat_id into idMoveCat 
                 from move_cat 
                 where move_cat_code = vMoveCat;
-            
+            set continueCur1 = 1;            
+
             if vMovePp = '' then
                 set intMovePp = null;
             else
@@ -152,7 +147,7 @@ begin
             if vMovePrio = '' then
                 set intMovePrio = null;
             else
-                set intMovePrio = cast(vMovePrio as unsigned);
+                set intMovePrio = cast(vMovePrio as int);
             end if;
 
             if vRate = '' then
@@ -216,17 +211,6 @@ begin
                     intRate
                     );
             end if;
-
-            if idMoveMthd != 0 then
-                insert into move_considered_mthd(
-                    move_id, 
-                    move_mthd_id
-                    ) values(
-                    i,
-                    idMoveMthd
-                    );
-            end if;
-
         end if;
         set i = i + 1;
 	end while;

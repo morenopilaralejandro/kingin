@@ -1,17 +1,135 @@
 move_eff_code,move_eff_desc_en,move_eff_desc_ja
 recover-half-inflicted,User recovers half the damage inflicted.,相手に与えたダメージの半分だけ自分のHPが回復する。
+recover-half-sleep,User recovers half the damage inflicted on a sleeping opponent.,相手に与えたダメージの半分だけ自分のHPが回復する。相手がねむり状態の時だけ成功する。
 recover-16-end,User restores 1/16 of its maximum HP at the end of every turn.,使用後、毎ターン、HPが最大HPの1/16ずつ回復する。
 heal-status-party,Heals party's status problems.,自分と味方全体のポケモンの状態異常を治す。
-may-lower-spdef,May lower opponent's Sp. Def one stage.,確率で相手のとくぼうランクを1段階下げる。
-may-rise-all,May raise all user's stats one stage.,確率で自分のステータスランクが1段階ずつ上がる。
-raise-def-two,Raises user's Defense two stages.,自分のぼうぎょランクを2段階上げる。
-raise-spdef-two,Raises user's Sp. Def two stages.,自分のとくぼうランクを2段階上げる。
-raise-spe-two,Raises user's Speed two stages.,自分のすばやさランクを2段階上がる。
-raise-random-two,Raises one stat at random two stages.,ランダムでステータスランクのどれか1つが2段階上がる。
+may-low-opp-atk-one,May lower opponent's Attack one stage.,確率で相手のこうげきランクを1段階下げる。
+may-low-opp-def-one,May lower opponent's Defense one stage.,確率で相手のぼうぎょランクを1段階下げる。
+may-low-opp-spatk-one,May lower opponent's Sp. Attack one stage.,確率で相手のとくこうランクを1段階下げる。
+may-low-opp-spdef-one,May lower opponent's Sp. Defense one stage.,確率で相手のとくぼうランクを1段階下げる。
+may-low-opp-spe-one,May lower opponent's Speed one stage.,確率で相手のすばやさランクを1段階下げる。
+may-rse-slf-atk-one,May raise user's Attack one stage.,確率で自分のこうげきランクが1段階上がる。
+may-rse-slf-def-one,May raise user's Defense one stage.,確率で自分のぼうぎょランクが1段階上がる。
+may-rse-slf-spatk-one,May raise user's Sp. Attack one stage.,確率で自分のとくこうランクが1段階上がる。
+may-rse-slf-spdef-one,May raise user's Sp. Defense one stage.,確率で自分のとくぼうランクが1段階上がる。
+may-rse-slf-spe-one,May raise user's Speed one stage.,確率で自分のすばやさランクが1段階上がる。
+may-rse-slf-all-one,May raise all user's stats one stage.,確率で自分のステータスランクが1段階ずつ上がる。
+low-opp-atk-one,Lowers opponent's Attack one stage.,相手のこうげきランクを1段階下げる。
+low-opp-def-one,Lowers opponent's Defense one stage.,相手のぼうぎょランクを1段階下げる。
+low-opp-spatk-one,Lowers opponent's Sp. Attack one stage.,相手のとくこうランクを1段階下げる。
+low-opp-spdef-one,Lowers opponent's Sp. Defense one stage.,相手のとくぼうランクを1段階下げる。
+low-opp-spe-one,Lowers opponent's Speed one stage.,相手のすばやさランクを1段階下げる。
+low-opp-eva-one,Lowers opponent's Evasion one stage.,相手の回避率を1段階下げる。
+low-opp-acu-one,Lowers opponent's Accuracy one stage.,相手の命中率を1段階下げる。
+low-opp-atk-two,Lowers opponent's Attack two stages.,相手のこうげきランクを2段階下げる。
+low-opp-def-two,Lowers opponent's Defense two stages.,相手のぼうぎょランクを2段階下げる。
+low-opp-spatk-two,Lowers opponent's Sp. Attack two stages.,相手のとくこうランクを2段階下げる。
+low-opp-spdef-two,Lowers opponent's Sp. Defense two stages.,相手のとくぼうランクを2段階下げる。
+low-opp-spe-two,Lowers opponent's Speed two stages.,相手のすばやさランクを2段階下げる。
+low-slf-atk-one,Lowers user's Attack one stage.,自分のこうげきランクを1段階下げる。
+low-slf-def-one,Lowers user's Defense one stage.,自分のぼうぎょランクを1段階下げる。
+low-slf-spatk-one,Lowers user's Sp. Attack one stage.,自分のとくこうランクを1段階下げる。
+low-slf-spdef-one,Lowers user's Sp. Defense one stage.,自分のとくぼうランクを1段階下げる。
+low-slf-spe-one,Lowers user's Speed one stage.,自分のすばやさランクを1段階下げる。
+low-slf-atk-two,Lowers user's Attack two stages.,自分のこうげきランクを2段階下げる。
+low-slf-def-two,Lowers user's Defense two stages.,自分のぼうぎょランクを2段階下げる。
+low-slf-spatk-two,Lowers user's Sp. Attack two stages.,自分のとくこうランクを2段階下げる。
+low-slf-spdef-two,Lowers user's Sp. Defense two stages.,自分のとくぼうランクを2段階下げる。
+low-slf-spe-two,Lowers user's Speed two stages.,自分のすばやさランクを2段階下げる。
+rse-opp-atk-two,Raises opponent's Attack two stages.,相手のこうげきランクを2段階上げる。
+rse-opp-spatk-two,Raises opponent's Sp. Attack two stages.,相手のとくこうランクを2段階上げる。
+rse-slf-atk-one,Raises user's Attack one stage.,自分のこうげきランクを1段階上げる。
+rse-slf-def-one,Raises user's Defense one stage.,自分のぼうぎょランクを1段階上げる。
+rse-slf-spatk-one,Raises user's Sp. Attack one stage.,自分のとくこうランクを1段階上げる。
+rse-slf-spdef-one,Raises user's Sp. Defense one stage.,自分のとくぼうランクを1段階上げる。
+rse-slf-spe-one,Raises user's Speed one stage.,自分のすばやさランクを1段階上げる。
+rse-slf-eva-one,Raises user's Evasiveness one stage.,自分の回避率を1段階上げる。
+rse-slf-atk-two,Raises user's Attack two stages.,自分のこうげきランクを2段階上げる。
+rse-slf-def-two,Raises user's Defense two stages.,自分のぼうぎょランクを2段階上げる。
+rse-slf-spatk-two,Raises user's Sp. Attack two stages.,自分のとくこうランクを2段階上げる。
+rse-slf-spdef-two,Raises user's Sp. Def two stages.,自分のとくぼうランクを2段階上げる。
+rse-slf-spe-two,Raises user's Speed two stages.,自分のすばやさランクを2段階上がる。
+rse-slf-ran-two,Raises one stat at random two stages.,ランダムでステータスランクのどれか1つが2段階上がる。
+reset-opp-eva,Resets opponent's Evasion.,使用後、相手の回避率に関係なく攻撃が当たる。
+ability-remove,Suppresses the target's Ability,相手の特性を無効にする。
+swap-def-spdef,Switches the user's Defense and Sp. Defense with the target.,自分と相手のぼうぎょ、とくぼうランクを入れ替える。
+no-atk-next,User cannot attack on the next turn.,使用した次のターンは行動できない。
 no-miss,Cannot miss.,必ず命中する。
+hit-everyone,Hits everyone on the field.,自分以外全員が対象。
+hit-ghost,Enables the user to hit a Ghost type with any type of move.,相手がゴーストタイプの時、ノーマル、かくとうタイプの技が当たるようになる。
 high-critical,Has high critical hit ratio.,急所に当たりやすい。
+rse-slf-crit,Increases user's critical hit rate.,自分の攻撃が急所に当たりやすくなる。
+berry-eat,"If the target is holding a Berry, the user eats it and gains its effect.",相手が持っているバトルに効果のあるきのみを奪って、自分に使う。
+steal,Steals opponent's item.,相手が持っている道具を自分の物にする。
+fling,The power of the move is determined by the user's held item.,自分の持っている道具によって効果が変化する。
+item-negate-trainer,"For five turns, the target's held item has its effects negated and its Trainer cannot use items on it.",5ターンの間、持っている道具を使えなくなる。トレーナーもそのポケモンには道具を使えない。
+break-screen,Breaks opponent’s Light Screen and Reflect.,相手の技リフレクター、ひかりのかべを壊す。
 may-flinch,May cause opponent to flinch.,確率で相手をひるませる。
+flinch-if-hit,User flinches if hit before attacking.,攻撃するまでに技を受けると失敗してしまう。
+first-turn-out,Will fail if not used on the first turn the user is out.,出た最初のターンしか成功しない。
 always-first,Always strikes first.,必ず先制できる。
 row-2-5,Attacks 2-5 times in a row.,1ターンに2～5回連続で攻撃する。
+row-twice,Attacks twice in a row.,1ターンに2回連続で攻撃する。
 random-move-party,Uses a random move from another Pokémon in the party.,自分以外のてもちのポケモンの技のうち1つをランダムで使う。
-double-already,Deals double damage if the target has already received damage on the same turn.,そのターン、相手が既にダメージを受けている時、威力が2倍になる。
+double-half-hp,Power doubles If the target HP is less than half.,相手のHPが最大HPの半分以下の時、威力が2倍になる。
+double-if-hit,Power doubles if hit before the attack.,そのターンに相手の技のダメージを受けると威力が2倍になる。
+double-already,Power doubles if the target has already received damage on the same turn.,そのターン、相手が既にダメージを受けている時、威力が2倍になる。
+double-electric,"If the user's next move is Electric-type, its power will be doubled",次のターン、自分のでんきタイプの技の威力が2倍になる。
+double-burn-para-pois,"Attack is doubled when burned, paralyzed, or poisoned.",自分がどく、まひ、やけど状態の時、威力が2倍になる。やけどによる『こうげき』の半減の影響を受けない。
+double-each,Move's power raises if it hits.,連続で使用すると攻撃が当たる度に威力が倍増していく。
+double-fly-bounce,Power doubles if opponent is using Fly or Bounce.,相手が技そらをとぶ、とびはねるを使っている時でも命中し、ダメージが2倍になる。
+scale-hp-high,Inflicts more damage when the user's HP is high.,自分の残りHPによって威力が変化する。
+scale-hp-low,Inflicts more damage when the user's HP is down.,自分の残りHPが少ないほど威力が高くなる。
+scale-hap-high,,
+scale-hap-low,"The lower the user's friendship is, the greater the power.",ポケモンがなついていないほど威力が高くなる。
+scale-opp-wei,Damage inflicted raises the heavier the opponent is.,相手のおもさが重いほど威力が高くなる。
+compare-spe,Inflicts more damage the slower the user is compared to the target.,相手よりすばやさが低いほど威力が高くなる。
+recoil,User takes recoil damage.,相手に与えたダメージの33%を自分も受ける。
+induce-attract,Induces Attract.,相手をメロメロ状態にする。
+may-induce-burn,May induce Burn.,確率で相手をやけど状態にする。
+may-induce-frez,May induce Freeze.,確率で相手をこおり状態にする。
+may-induce-para,May induce Paralysis.,確率で相手をまひ状態にする。
+may-induce-pois,May induce Poison.,確率で相手をどく状態にする。
+may-induce-slep,May induce Sleep.,確率で相手をねむり状態にする。
+may-induce-conf,May induce Confusion.,確率で相手をこんらん状態にする。
+induce-sleep,Induces sleep.,相手をねむり状態にする。
+induce-para,Induces paralysis,相手をまひり状態にする。
+induce-conf,Induces Confusion.,相手をこんらんり状態にする。
+defrost,"If the user is frozen, will thaw the user out.",自分がこおり状態の時でも使う事ができ、使うとこおり状態が治る。
+faint,User faints.,攻撃後、自分がひんし状態になる。
+one-hit-ko,May cause one-hit KO.,相手をひんし状態にする。
+switch-status-remain,Switches out the user but status changes remain.,他の味方のポケモンと交代し、かかっていた補助効果を引き継ぐ。
+prevent-escape,Prevents the opponent from escaping.,相手は逃げたり、交代できなくなる。
+trap,Traps opponent.,4～5ターンの間、毎ターン終了後最大HPの1/8のダメージを与え、その間ゴーストタイプではない相手は逃げたり交代できない。
+counter,"If hit by a physical attack, deals double the damage received.",相手の物理攻撃のダメージの2倍をその相手に与える。
+beatup,Inflicts damage from the user and from each Pokémon in the user's party that is not fainted and does not have a status condition.,自分を含むひんしや状態異常でないてもちのポケモンの数だけ攻撃する。
+bellydrum,Cut's half of user's maximum HP and maximizes Attack.,自分のHPを最大HPの半分だけ減らす代わりに、自分のこうげきランクを最大まで上げる。
+bide,"User takes hits for 2 rounds, then strikes back.",今後2ターンの間に受けたダメージの2倍を相手に与える。その間、全く行動できなくなる。
+fly,"The user is protected the first turn, attacks the second turn.",1ターン目に空中へ飛び上がり、2ターン目に攻撃する。
+protect,Evades opponents next attack; the move's accuracy drops.,そのターンの間、相手の技を受けない。連続で使うと失敗しやすくなる。
+endure,Survives any attack for one turn leaving at least 1 HP but move's accuracy drops.,そのターンにひんし状態になる攻撃を受けてもHPが1残る。連続で使うと失敗しやすくなる。
+delay-2,Damage delays 2 turns.,2ターン後に攻撃する。
+camouflage,User changes type depending on the location.,ばしょに あわせて ポケモンの タイプが へんかする。
+captivate,"Lowers the Special Attack of the target by two stages, if it is the opposite gender of the user.",相手が自分とは異なる性別の場合、相手のとくこうを2段階下げる。
+conversion,User changes type into an own move's type.,自分のタイプを、自分の一番上の技と同じタイプに変える。
+conversion2,User becomes a type resistant to opponent's last attack.,自分のタイプを相手が最後に使った技が効きづらいタイプに変える。
+copycat,User attacks with the last move that was used in the battle.,最後に使われた技で相手に攻撃する。
+crushgrip,The attack is more powerful the more HP the foe has left.,相手の残りHPが多いほど威力が高くなる。
+curse-eff-1,Ghost type Pokémon: User loses half their maximum HP and the opponent gets a Nightmare. ,自分のタイプがゴーストタイプの時は自分のHPを最大HPの半分だけ減らして、相手をのろい状態にする。
+curse-eff-2,Other Pokémon types: Raises user's ATTACK and DEFENSE one stage. Lowers user's SPEED one stage.,それ以外のポケモンの場合すばやさランクが1段階下がり、こうげきぼうぎょランクが1段階ずつ上がる。
+defensecurl-eff-2,Damage from Rollout and Ice Ball will be higher.,ころがる・アイスボールの威力が2倍になる。
+defog-eff-2,"Defog clears away any fog on the field,  Light Screen, Reflect, Safeguard, Mist, Spikes, Toxic Spikes, and Stealth Rock on the target's side of the field. If the target is behind a substitute it only lowers the target's evasion.",相手の場のしろいきり、ひかりのかべ、リフレクター、しんぴのまもり、両方の場のまきびし、どくびし、ステルスロックの効果を解除する。相手がみがわり状態の場合、回避率を下げる効果のみ失敗する。
+destinybond,"If the user faints, the opponent will also faint.",次の自分のターンまでに相手の攻撃でひんし状態になると、相手もひんし状態になる。
+dig-eff-2,Earthquake and Magnitude deal twice the damage when digging underground.,地中にいる間はじしん、マグニチュード以外の技を受けない。
+disable,Disables opponent's last move.,相手が最後に使った技を4ターンの間使えなくする。
+dive-eff-2,Surf and Whirlpool deal twice the damage when diving.,水中にいる間はなみのり、うずしお以外の技を受けない。
+dragonrage,Inflicts 40 HP damage.,40の固定ダメージを与える。
+encore,Opponent repears the last move.,3ターンの間、相手は最後に使用した技しか使えなくなる。
+endeavor,Power rises if user's HP are less than opponent's HP.,相手の残りHPから自分の残りHPを引いた分のダメージを与える。
+falseswipe,Leaves the opponent with at least 1 HP.,この技のダメージで相手のHPが0になる時、相手のHPを1にする。
+feint,"Inflicts damage if the target has used Protect or Detect during that turn, lifting their effects.",相手が技まもる、みきりをしている場合は、その効果を解除して攻撃できる。
+followme,Opponent only attacks the user.,そのターンの相手の技をすべて自分が受ける。
+gravity-eff-1,"During intense gravity, the accuracy of all moves is multiplied by 5/3.",5ターンの間、すべてのポケモンの命中率が5/3倍になる。
+gravity-eff-2,Intense gravity causes all Pokémon on the field to become grounded.,特性ふゆうや、ひこうタイプのポケモンにじめんタイプの技が当たるようになる。
+grudge,"If the user faints, deletes the PP of opponent's last move.",相手の技のダメージでひんし状態になった場合、その技のPPを0にする。
+guardswap,,
