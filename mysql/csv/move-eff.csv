@@ -1,11 +1,12 @@
 move_eff_code,move_eff_desc_en,move_eff_desc_ja
-recover-half-max,User recovers half the maximum HP.,HPが最大HPの半分回復する。
+recover-half-max,User recovers half its maximum HP.,HPが最大HPの半分回復する。
 recover-max,User recovers its HP to its maximum amount..,自分のHPを全回復する。
 recover-half-inflicted,User recovers half the damage inflicted.,相手に与えたダメージの半分だけ自分のHPが回復する。
 recover-half-sleep,User recovers half the damage inflicted on a sleeping opponent.,相手に与えたダメージの半分だけ自分のHPが回復する。相手がねむり状態の時だけ成功する。
 recover-16-end,User restores 1/16 of its maximum HP at the end of every turn.,使用後、毎ターン、HPが最大HPの1/16ずつ回復する。
 recover-weather,User recovers HP based on the weather.,自分のHPを回復する。回復量はてんきによって変化する。
 recover-faint,Causes the user to faint. The new Pokémon's HP is restored and it is cured of any status conditions.,自分がひんしになる代わりに、次に出す自分のポケモンの状態異常とHPが全回復する
+recover-delay,Active Pokémon recovers half its maximum HP. Delays 1 turn.,次のターンの終了時にHPが最大HPの半分回復する。交代した場合は同じ位置にいるポケモンが回復する。
 heal-status-party,Heals party's status problems.,自分と味方全体のポケモンの状態異常を治す。
 heal-block,Restricts the targets from healing for 5 turns.,5ターンの間、相手は回復系の技が使えなくなる。
 may-low-opp-atk-one,May lower opponent's Attack one stage.,確率で相手のこうげきランクを1段階下げる。
@@ -61,7 +62,8 @@ reset-all,Resets all stat stages.,すべてのポケモンの能力ランクの�
 reset-opp-eva,Resets opponent's Evasion.,使用後、相手の回避率に関係なく攻撃が当たる。
 reset-slf-stock,Reset Defense and Sp. Defense ranks gained from Stockpile.,技たくわえるで上がったぼうぎょ、とくぼうランクは元に戻る。
 ability-remove,Suppresses the target's Ability,相手の特性を無効にする。
-ability-copy,Copies target's ability.,自分の特性を相手の特性と同じにする。
+ability-copy,Copies target's Ability.,自分の特性を相手の特性と同じにする。
+ability-insomnia,Target’s Ability becomes Insomnia.,相手の特性をふみんにする。
 move-prevent-known,Opponent cannot use move that user knows.,自分が場を離れるまで、自分が覚えている技と同じ技を相手のポケモンは使えなくなる。
 copy-stat-change,Copies opponent's stat changes.,相手にかかっている補助効果を自分にもかける。
 copy-eff,Steals the effects of opponent's next move.,相手が使おうとした、能力ランクを変化させる技や回復系の技の効果を奪い、自分にかける。
@@ -89,11 +91,14 @@ fling,The power of the move is determined by the user's held item.,自分の持�
 item-negate-trainer,"For five turns, the target's held item has its effects negated and its Trainer cannot use items on it.",5ターンの間、持っている道具を使えなくなる。トレーナーもそのポケモンには道具を使えない。
 item-prevent,Knocks down opponent's held item to prevent its use.,相手が道具を持っている場合、道具を持っていない状態にする。
 item-recycle,Recycles an already used held item.,自分が最後に使用した持ち物の道具を手に入れる。
+item-trade,User trades items with opponent.,相手と自分が持っている道具を入れ替える。
 break-screen,Breaks opponent’s Light Screen and Reflect.,相手の技リフレクター、ひかりのかべを壊す。
 may-flinch,May cause opponent to flinch.,確率で相手をひるませる。
 flinch-if-hit,User flinches if hit before attacking.,攻撃するまでに技を受けると失敗してしまう。
 first-turn-out,Will fail if not used on the first turn the user is out.,出た最初のターンしか成功しない。
+fail-select-atk,Will fail unless the target selects an attacking move.,そのターン相手が選んだ技が攻撃技ではない場合や、優先度などの関係ですでに攻撃を終えていた場合は失敗する。
 always-first,Always strikes first.,必ず先制できる。
+row-1-3,Attacks 1-3 times in a row.,1ターンに3回連続で攻撃する。
 row-2-5,Attacks 2-5 times in a row.,1ターンに2～5回連続で攻撃する。
 row-twice,Attacks twice in a row.,1ターンに2回連続で攻撃する。
 repeat-conf,User uses the same attack for 2-3 turns then becomes confused.,2～3ターン連続で攻撃し、その後自分こんらん状態になる。
@@ -111,6 +116,7 @@ double-fly-bounce,Power doubles if opponent is using Fly or Bounce.,相手が技
 double-dig,Power doubles if opponent is using Dig.,相手が技あなをほるを使っている時でも命中し、ダメージが2倍になる。
 double-stomp,Stomp will always hit and deal twice the damage.,ふみつけは必ず命中し威力2倍で受けるようになってしまう。
 double-para,Power doubles if opponent is paralyzed.,相手がまひ状態の時、ダメージが2倍になる。
+double-slep,Power doubles if opponent is asleep.,相手がねむり状態の時、ダメージが2倍になる。
 rollout,Uses the same move for 5 turns; move's power raises if it hits.,外れるまで5ターン連続で攻撃し、攻撃が当たる度に威力が倍増する。
 scale-hp-high,Inflicts more damage when the user's HP is high.,自分の残りHPによって威力が変化する。
 scale-hp-low,Inflicts more damage when the user's HP is down.,自分の残りHPが少ないほど威力が高くなる。
@@ -118,9 +124,11 @@ scale-hap-high,"The higher the user's friendship is, the greater the power.",ポ
 scale-hap-low,"The lower the user's friendship is, the greater the power.",ポケモンがなついていないほど威力が高くなる。
 scale-opp-wei,Damage inflicted raises the heavier the opponent is.,相手のおもさが重いほど威力が高くなる。
 scale-lv,Inflicts damage equal to the user's level.,自分のレベルと同じ値の固定ダメージを与える。
-scale-stock,Damage depends on how many times the user used Stockpile.,技たくわえるを使った数だけ威力が高くなる。
+scale-stock,Damage depends on how many times Stockpile has been used.,技たくわえるを使った数だけ威力が高くなる。
+scale-stock-recover,User recovers HP based on how many times Stockpile has been used.,技たくわえるを使った数だけHPが多く回復する。
 compare-spe,Inflicts more damage the slower the user is compared to the target.,相手よりすばやさが低いほど威力が高くなる。
 recoil,User takes recoil damage.,相手に与えたダメージの33%を自分も受ける。
+take-quarter-max,User takes recoil equal to 1/4 of its maximum HP.,自分の最大HPの1/4を自分も受ける。
 induce-attract,Induces Attract.,相手をメロメロ状態にする。
 may-induce-burn,May induce Burn.,確率で相手をやけど状態にする。
 may-induce-frez,May induce Freeze.,確率で相手をこおり状態にする。
@@ -129,12 +137,15 @@ may-induce-pois,May induce Poison.,確率で相手をどく状態にする。
 may-induce-pois-bad,May induce severe Poison.,確率で相手をもうどく状態にする。
 may-induce-slep,May induce Sleep.,確率で相手をねむり状態にする。
 may-induce-conf,May induce Confusion.,確率で相手をこんらん状態にする。
-induce-slep,Induces sleep.,相手をねむり状態にする。
-induce-para,Induces paralysis,相手をまひ状態にする。
+induce-burn,Induces Burn.,相手をやけど状態にする。
+induce-slep,Induces Sleep.,相手をねむり状態にする。
+induce-para,Induces Paralysis,相手をまひ状態にする。
 induce-conf,Induces Confusion.,相手をこんらん状態にする。
 induce-pois,Induces Poison.,相手をどく状態にする。
 induce-pois-bad,Induces severe Poison.,相手をもうどく状態にする。
+yawn,Induces Sleep on the next turn. The effect disappear if the opponent switches out.,次のターン終了時に相手をねむり状態にする。ただし、そのポケモンが交代されると効果は消える。
 remove-opp-para,Cures the target's paralysis.,相手まひ状態は治る。
+remove-opp-slep,The target's wakes up.,相手ねむり状態は治る。
 usage-slep,Can only be used when asleep.,自分が『ねむり』状態の時のみ使用可能。
 seed,User steals 1/8 of the opponent HP every turn.,使用後、毎ターン、相手のHPを最大HPの1/8ずつ減らし、その分自分のHPを回復させる。
 defrost,"If the user is frozen, will thaw the user out.",自分がこおり状態の時でも使う事ができ、使うとこおり状態が治る。
@@ -156,14 +167,19 @@ bide,"User takes hits for 2 rounds, then strikes back.",今後2ターンの間�
 fly,"The user is protected the first turn, attacks the second turn.",1ターン目に空中へ飛び上がり、2ターン目に攻撃する。
 protect,Evades opponents next attack; the move's accuracy drops.,そのターンの間、相手の技を受けない。連続で使うと失敗しやすくなる。
 protect-bypass,It hits even if the target protects itself.,相手のまもる、みきりの効果を受けない。
+substitute,Creates a decoy.,みがわりを作る。
+substitute-bypass,It hits even if the target is behind substitute.,相手のみがわりの効果を受けない。
 endure,Survives any attack for one turn leaving at least 1 HP but move's accuracy drops.,そのターンにひんし状態になる攻撃を受けてもHPが1残る。連続で使うと失敗しやすくなる。
 screen-light,Halves Sp. Attack damage inflicted on user.,5ターンの間、相手の特殊攻撃のダメージを半分にする。
 screen-reflect,Halves Attack damage inflicted on user.,5ターンの間、相手の物理攻撃のダメージを半分にする。
 field-hail,Causes Hailstorm for 5 turns.,5ターンの間、天気をあられにする。
 field-rain,Causes Rain for 5 turns.,5ターンの間、天気をあめにする。
 field-sand,Causes Sandstorm for 5 turns.,5ターンの間、天気をすなあらしにする。
+field-sun,Causes Sunshine for 5 turns.,5ターンの間、天気をにほんばれにする。
+tailwind,Doubles user's party speed for 4 turns.,4ターンの間、自分と味方のすばやさが2倍になる。
+trickroom,Reverses attack order for 5 turns.,5ターンの間、すばやさが低いポケモンから攻撃できるようになる。
 delay-2,Damage delays 2 turns.,2ターン後に攻撃する。
-camouflage,User changes type depending on the location.,ばしょに あわせて ポケモンの タイプが へんかする。
+camouflage,User changes type depending on the location.,場所に合わせてポケモンのタイプが変化する。
 captivate,"Lowers the Special Attack of the target by two stages, if it is the opposite gender of the user.",相手が自分とは異なる性別の場合、相手のとくこうを2段階下げる。
 conversion,User changes type into an own move's type.,自分のタイプを、自分の一番上の技と同じタイプに変える。
 conversion2,User becomes a type resistant to opponent's last attack.,自分のタイプを相手が最後に使った技が効きづらいタイプに変える。
@@ -171,7 +187,7 @@ copycat,User attacks with the last move that was used in the battle.,最後に�
 crushgrip,The attack is more powerful the more HP the foe has left.,相手の残りHPが多いほど威力が高くなる。
 curse-eff-1,Ghost type Pokémon: User loses half their maximum HP and the opponent gets a Nightmare. ,自分のタイプがゴーストタイプの時は自分のHPを最大HPの半分だけ減らして、相手をのろい状態にする。
 curse-eff-2,Other Pokémon types: Raises user's Attack and Defense one stage. Lowers user's Speed one stage.,それ以外のポケモンの場合すばやさランクが1段階下がり、こうげきぼうぎょランクが1段階ずつ上がる。
-defensecurl-eff-2,Damage from Rollout and Ice Ball will be higher.,ころがる・アイスボールの威力が2倍になる。
+defensecurl-eff-2,Damage from Rollout and Ice Ball will be higher.,ころがる、アイスボールの威力が2倍になる。
 defog-eff-2,"Defog clears away any fog on the field,  Light Screen, Reflect, Safeguard, Mist, Spikes, Toxic Spikes, and Stealth Rock on the target's side of the field. If the target is behind a substitute it only lowers the target's evasion.",相手の場のしろいきり、ひかりのかべ、リフレクター、しんぴのまもり、両方の場のまきびし、どくびし、ステルスロックの効果を解除する。相手がみがわり状態の場合、回避率を下げる効果のみ失敗する。
 destinybond,"If the user faints, the opponent will also faint.",次の自分のターンまでに相手の攻撃でひんし状態になると、相手もひんし状態になる。
 dig-eff-2,Earthquake and Magnitude deal twice the damage when digging underground.,地中にいる間はじしん、マグニチュード以外の技を受けない。
@@ -192,6 +208,7 @@ helpinghand,Raise adjacent ally move's power by 50% this turn,使用したター
 hiddenpower,Power and type depend on user's IVs.,自分の個体値によってタイプ、威力が変わる。
 naturalgift,Power and type depend on user's held berry.,持っているきのみによってタイプと威力が変わる。
 naturepower,Power and type depend on the environment.,地形やフィールドによって出る技が変わる。
+weatherball,Power and type depend on the weather.,天気が変わっているときに使うと威力が2倍になる、タイプに変化する。
 ingrain,Recovers HP every turn. User cannot switch.,使用後、毎ターン、HPが最大HPの1/16ずつ回復するが、交代できなくなる。
 judgment,Type depends on the Plate held.,持たせたプレートによってタイプが変わる。
 lastresort,Fails unless the Pokémon has used all of its other moves at least once while on the field.,この技は自分の持っている他の技をすべて使うと使えるようになる。
@@ -214,7 +231,17 @@ rage,User's Attack raises if hit.,いかり状態の間、相手の技のダメ�
 untrap,"User becomes free from moves like Wrap, Bind and Leech Seed.",技うずしお、からではさむ、しめつける、すなじごく、ほのおのうず、マグマストーム、まきつく、やどりぎのタネ から解放される。
 remove-hazard,Removes entry hazards from the user's side of the field.,技ステルスロック、どくびし、まきびしから解放される。
 set-spikes,Sets one layer of Spikes. Up to three layers can be placed.,相手の場をまきびし状態にする。最大3段階まで設置できる。
+set-toxic-spikes,Sets one layer of Toxic Spikes. Up to three layers can be placed.,相手の場をどくびし状態にする。
 set-stealth,Sets Stealth Rock.,相手の場をステルスロック状態にする。
 refresh,"Heals poisoning, paralysis, or a burn.",どく、まひ、やけど 状態が治る。
 roar,Ends battle. Switches the opponent Pokémon in a trainer battle.,相手のポケモンを強制的に交代させる。野生のポケモンの場合は戦闘を終了する。
 sketch,Copies the target's last move forever.,この技を忘れて、相手が最後に使った技を覚える。
+no-available-move,Will be used automatically when no other move can be selected. ,すべての技のPPが0になる等して使える技がなくなると使える。
+half-opp-hp,Cuts half opponent's HP.,相手のHPを残りHPの半分にする。
+taunt,Opponent can only use attack moves.,3ターンの間、相手は攻撃技しか出せなくなる。
+torment,Opponent cannot use the same move in a row.,使用後、相手は同じ技を連続で出せなくなる。
+transform,Transforms into the opponent’s Pokémon.,相手のポケモンに変身する。
+trumpcard,"The lower the remaining PP, the greater the power.",この技の残りPPが少ない時ほど威力が高くなる。
+switch,Switches the user out. ,手持ちのポケモンと入れ替わる。
+uproar,User cannot sleep for 2-5 turns.,3ターン連続で攻撃し、その間はすべてのポケモンがねむり状態にならない。
+low-move-fire,Lowers the power of FIRE moves.,5ターンの間、ほのおタイプの技の威力が1/3になる。
