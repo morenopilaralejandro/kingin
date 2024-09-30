@@ -39,6 +39,14 @@ create table move_mthd (
     constraint move_mthd_pk primary key (move_mthd_id)
 );
 
+create table move_lrn (
+    move_lrn_id int not null auto_increment,
+    move_lrn_code varchar(32) unique,
+    move_lrn_name_en varchar(32),
+    move_lrn_name_ja varchar(32),
+    constraint move_lrn_pk primary key (move_lrn_id)
+);
+
 create table move (
     move_id int not null auto_increment,
     move_code varchar(32) unique,
@@ -82,4 +90,30 @@ create table move_considered_mthd (
         references move(move_id) on delete cascade,
     constraint move_considered_mthd_fk_move_mthd foreign key (move_mthd_id) 
         references move_mthd(move_mthd_id) on delete cascade
+);
+
+create table pd (
+    pd_id int not null auto_increment,
+    TODO varchar(32),
+    constraint pd_pk primary key (pd_id)
+);
+
+create table po (
+    po_id int not null auto_increment,
+    TODO varchar(32),
+    constraint pd_pk primary key (po_id)
+);
+
+create table pd_learns_move (
+    pd_id int not null,
+    move_id int not null,
+    move_lrn_id int not null,
+    lv int,
+    constraint pd_learns_move_pk primary key (pd_id, move_id, move_lrn_id),
+    constraint pd_learns_move_fk_pd foreign key (pd_id) 
+        references pd(pd_id) on delete cascade,
+    constraint pd_learns_move_fk_move foreign key (move_id) 
+        references move(move_id) on delete cascade,
+    constraint pd_learns_move_fk_lrn foreign key (move_lrn_id) 
+        references move_lrn(move_lrn_id) on delete cascade
 );
