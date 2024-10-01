@@ -10,7 +10,9 @@ fields terminated by ','
 enclosed by '"'
 lines terminated by '\n'
 ignore 1 lines
-(columns);
+(
+columns
+);
 
 delimiter &&
 drop procedure if exists proc_insrt_replace;
@@ -32,8 +34,11 @@ begin
         fetch cur1 into v;
         if continueCur1 = 1 then
             /*TODO*/
-            insert into replace() 
-                values ();
+            insert into replace (
+
+            ) values (
+
+            );
         end if;
 	end while;
 	close cur1;

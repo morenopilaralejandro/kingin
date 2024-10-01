@@ -11,7 +11,11 @@ fields terminated by ','
 enclosed by '"'
 lines terminated by '\n'
 ignore 1 lines
-(move_cat_code, move_cat_name_en, move_cat_name_ja);
+(
+move_cat_code, 
+move_cat_name_en, 
+move_cat_name_ja
+);
 
 delimiter &&
 drop procedure if exists proc_insrt_move_cat;
@@ -31,17 +35,21 @@ begin
     delete from move_cat;    
     open cur1;
 	while continueCur1=1 do
-        fetch cur1 into vMoveCatCode, vMoveCatNameEn, vMoveCatNameJa;
+        fetch cur1 into 
+            vMoveCatCode, 
+            vMoveCatNameEn, 
+            vMoveCatNameJa;
+
         if continueCur1 = 1 then
-            /*TODO*/
-            insert into move_cat(
+            insert into move_cat (
                 move_cat_code, 
                 move_cat_name_en, 
-                move_cat_name_ja) 
-                values (
+                move_cat_name_ja
+            ) values (
                 vMoveCatCode, 
                 vMoveCatNameEn, 
-                vMoveCatNameJa);
+                vMoveCatNameJa
+            );
         end if;
 	end while;
 	close cur1;

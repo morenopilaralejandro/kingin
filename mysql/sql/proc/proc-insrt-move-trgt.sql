@@ -28,7 +28,6 @@ begin
     declare vMoveTrgtNameEn varchar(32) default '';
     declare vMoveTrgtNameJa varchar(32) default '';
 
-
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_move_trgt;
 	declare continue handler for SQLSTATE '02000' set continueCur1 = 0;
@@ -40,15 +39,17 @@ begin
             vMoveTrgtCode,
             vMoveTrgtNameEn,
             vMoveTrgtNameJa;
+
         if continueCur1 = 1 then
-            insert into move_trgt(
+            insert into move_trgt (
                 move_trgt_code,
                 move_trgt_name_en,
-                move_trgt_name_ja) 
-                values (
+                move_trgt_name_ja
+            ) values (
                 vMoveTrgtCode,
                 vMoveTrgtNameEn,
-                vMoveTrgtNameJa);
+                vMoveTrgtNameJa
+            );
         end if;
 	end while;
 	close cur1;

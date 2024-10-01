@@ -24,11 +24,9 @@ begin
     declare idMoveMthd int default 0;
     declare idMove int default 0;
 
-
     /*cur1 variables*/
     declare vMoveMthdCode varchar(32) default '';
     declare vMoveNameEn varchar(32) default '';
-
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_move_considered_mthd;
@@ -56,14 +54,13 @@ begin
             set continueCur1 = 1;
 
             if idMove != 0 then 
-                insert into move_considered_mthd(
+                insert into move_considered_mthd (
                     move_id,
                     move_mthd_id
-                    ) 
-                    values (
+                ) values (
                     idMove,
                     idMoveMthd
-                    );
+                );
             end if;
         end if;
 	end while;

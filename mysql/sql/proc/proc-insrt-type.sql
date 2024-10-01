@@ -31,10 +31,21 @@ begin
     delete from type;    
     open cur1;
 	while continueCur1=1 do
-        fetch cur1 into vTypeCode, vTypeNameEn, vTypeNameJa;
+        fetch cur1 into 
+            vTypeCode, 
+            vTypeNameEn, 
+            vTypeNameJa;
+
         if continueCur1 = 1 then
-            insert into type(type_code, type_name_en, type_name_ja) 
-                values (vTypeCode, vTypeNameEn, vTypeNameJa);
+            insert into type (
+                type_code, 
+                type_name_en, 
+                type_name_ja
+            ) values (
+                vTypeCode, 
+                vTypeNameEn, 
+                vTypeNameJa
+            );
         end if;
 	end while;
 	close cur1;

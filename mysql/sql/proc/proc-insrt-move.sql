@@ -63,7 +63,6 @@ begin
     declare boolMoveIsKing bool default false;
     declare boolMoveIsContact bool default false;
 
-
     /*cur1 variables*/
     declare vMoveCode varchar(32) default '';
     declare vMoveNameEn varchar(32) default '';
@@ -104,26 +103,33 @@ begin
             vMoveTrgt,
             vMoveEff,
             vRate;
+
         set idType = 0;
         set idMoveCat = 0;
         set idMoveTrgt = 0;
         set idMoveEff = 0;
+
         if continueCur1 = 1 then
             select type_id into idType 
                 from type 
                 where type_code = vType;
+
             select move_cat_id into idMoveCat 
                 from move_cat 
                 where move_cat_code = vMoveCat;
+
             select move_trgt_id into idMoveTrgt 
                 from move_trgt 
                 where move_trgt_code = lower(vMoveTrgt);
+
             select move_eff_id into idMoveEff 
                 from move_eff 
                 where move_eff_code = vMoveEff;
+
             select move_cat_id into idMoveCat 
                 from move_cat 
                 where move_cat_code = vMoveCat;
+
             set continueCur1 = 1;            
 
             if vMovePp = '' then
@@ -168,7 +174,7 @@ begin
                 set boolMoveIsContact = true;
             end if;
 
-            insert into move(
+            insert into move (
                 move_id,
                 move_code,
                 move_name_en,
@@ -183,8 +189,7 @@ begin
                 type_id,
                 move_cat_id,
                 move_trgt_id
-                )
-                values (
+            ) values (
                 i,
                 vMoveCode,
                 vMoveNameEn,
@@ -198,18 +203,19 @@ begin
                 boolMoveIsContact,
                 idType,
                 idMoveCat,
-                idMoveTrgt);
+                idMoveTrgt
+            );
 
             if idMoveEff != 0 then
-                insert into move_cause_eff(
+                insert into move_cause_eff (
                     move_id, 
                     move_eff_id, 
                     rate
-                    ) values(
+                ) values(
                     i,
                     idMoveEff,
                     intRate
-                    );
+                );
             end if;
         end if;
         set i = i + 1;

@@ -11,9 +11,11 @@ fields terminated by ','
 enclosed by '"'
 lines terminated by '\n'
 ignore 1 lines
-(move_lrn_code,
+(
+move_lrn_code,
 move_lrn_name_en,
-move_lrn_name_ja);
+move_lrn_name_ja
+);
 
 delimiter &&
 drop procedure if exists proc_insrt_move_lrn;
@@ -37,15 +39,17 @@ begin
             vMoveLrnCode,
             vMoveLrnNameEn,
             vMoveLrnNameJa;
+
         if continueCur1 = 1 then
-            insert into move_lrn(
+            insert into move_lrn (
                 move_lrn_code,
                 move_lrn_name_en,
-                move_lrn_name_ja) 
-                values (
+                move_lrn_name_ja
+            ) values (
                 vMoveLrnCode,
                 vMoveLrnNameEn,
-                vMoveLrnNameJa);
+                vMoveLrnNameJa
+            );
         end if;
 	end while;
 	close cur1;

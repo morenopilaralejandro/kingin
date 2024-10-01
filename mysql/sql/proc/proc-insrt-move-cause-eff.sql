@@ -14,7 +14,8 @@ ignore 1 lines
 (
 move_code,
 move_eff_code,
-rate);
+rate
+);
 
 delimiter &&
 drop procedure if exists proc_insrt_move_cause_eff;
@@ -43,12 +44,15 @@ begin
             vMoveCode,
             vMoveEffCode,
             vRate;
+
         set idMove = 0;
         set idMoveEff = 0;
+
         if continueCur1 = 1 then
             select move_id into idMove 
                 from move 
                 where move_code = vMoveCode;
+
             select move_eff_id into idMoveEff 
                 from move_eff 
                 where move_eff_code = vMoveEffCode;
@@ -59,16 +63,15 @@ begin
                 set intRate = cast(vRate as unsigned);
             end if; 
 
-            insert into move_cause_eff(
+            insert into move_cause_eff (
                 move_id,
                 move_eff_id,
                 rate
-                ) 
-                values (
+            ) values (
                 idMove,
                 idMoveEff,
                 intRate
-                );
+            );
         end if;
 	end while;
 	close cur1;

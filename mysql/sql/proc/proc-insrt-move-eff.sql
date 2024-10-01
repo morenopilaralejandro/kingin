@@ -35,16 +35,21 @@ begin
     delete from move_eff;    
     open cur1;
 	while continueCur1=1 do
-        fetch cur1 into vMoveEffCode, vMoveEffDescEn, vMoveEffDescJa;
+        fetch cur1 into 
+            vMoveEffCode, 
+            vMoveEffDescEn, 
+            vMoveEffDescJa;
+
         if continueCur1 = 1 then
-            insert into move_eff(
+            insert into move_eff (
                 move_eff_code, 
                 move_eff_desc_en, 
-                move_eff_desc_ja) 
-                values (
+                move_eff_desc_ja
+            ) values (
                 vMoveEffCode, 
                 vMoveEffDescEn, 
-                vMoveEffDescJa);
+                vMoveEffDescJa
+            );
         end if;
 	end while;
 	close cur1;

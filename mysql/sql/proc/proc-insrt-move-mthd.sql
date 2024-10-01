@@ -11,9 +11,11 @@ fields terminated by ','
 enclosed by '"'
 lines terminated by '\n'
 ignore 1 lines
-(move_mthd_code,
+(
+move_mthd_code,
 move_mthd_name_en,
-move_mthd_name_ja);
+move_mthd_name_ja
+);
 
 delimiter &&
 drop procedure if exists proc_insrt_move_mthd;
@@ -38,14 +40,15 @@ begin
             vMoveMthdNameEn,
             vMoveMthdNameJa;
         if continueCur1 = 1 then
-            insert into move_mthd(
+            insert into move_mthd (
                 move_mthd_code,
                 move_mthd_name_en,
-                move_mthd_name_ja) 
-                values (
+                move_mthd_name_ja
+            ) values (
                 vMoveMthdCode,
                 vMoveMthdNameEn,
-                vMoveMthdNameJa);
+                vMoveMthdNameJa
+            );
         end if;
 	end while;
 	close cur1;
