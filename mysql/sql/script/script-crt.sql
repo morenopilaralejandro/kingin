@@ -11,6 +11,26 @@ create table abil (
     abil_code varchar(32) unique,
     abil_name_en varchar(32),
     abil_name_ja varchar(32),
+    /*
+    reverse condition on all except mold breaker
+    affected by trace -> true
+    affected by mold -> false
+    unused
+        Doodle
+        Receive & Power of Alchemy	
+        Entrainment
+        Wandering Spirit
+        Turboblaze Teravolt
+        
+    */
+    abil_is_role bool,
+    abil_is_rece bool,
+    abil_is_entr bool,
+    abil_is_trac bool,
+    abil_is_sksw bool,
+    abil_is_gast bool,
+    abil_is_mold bool,
+    abil_is_tran bool,
     constraint abil_pk primary key (abil_id)
 );
 create table abil_pass_eff (
