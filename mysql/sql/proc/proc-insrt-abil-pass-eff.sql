@@ -1,7 +1,8 @@
 drop table if exists aux_abil_pass_eff;
 create temporary table aux_abil_pass_eff (
     abil_code varchar(32),
-    abil_eff_code varchar(32)
+    abil_eff_code varchar(32),
+    abil_eff_type_code varchar(32)
 );
 
 load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/abil-pass-eff.csv'
@@ -12,7 +13,8 @@ lines terminated by '\n'
 ignore 1 lines
 (
 abil_code,
-abil_eff_code
+abil_eff_code,
+abil_eff_type_code
 );
 
 delimiter &&
@@ -23,10 +25,12 @@ begin
 
     declare idAbil int default 0;
     declare idAbilEff int default 0;
+    declare idAbilEffType int default 0;
 
     /*cur1 variables*/
     declare vAbilCode varchar(32) default '';
     declare vAbilEffCode varchar(32) default '';
+    declare vAbilEffTypeCode varchar(32) default '';
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_abil_pass_eff;
@@ -37,10 +41,12 @@ begin
 	while continueCur1=1 do
         fetch cur1 into 
             vAbilCode,
-            vAbilEffCode;
+            vAbilEffCode,
+            vAbilEffTypeCode;
 
         set idAbil = 0;
         set idAbilEff = 0;
+        set idAbilEffType = 0;
 
         if continueCur1 = 1 then
             select abil_id into idAbil 
@@ -51,12 +57,18 @@ begin
                 from abil_eff 
                 where abil_eff_code = vAbilEffCode;
 
+            select abil_eff_type_id into idAbilEffType 
+                from abil_eff_type 
+                where abil_eff_type_code = vAbilEffTypeCode;
+
             insert into abil_pass_eff (
                 abil_id,
-                abil_eff_id
+                abil_eff_id,
+                abil_eff_type_id
             ) values (
                 idAbil,
-                idAbilEff
+                idAbilEff,
+                idAbilEffType
             );
         end if;
 	end while;

@@ -1,5 +1,6 @@
 /*insrt-ability*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-abil-eff.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-abil-eff-type.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-abil.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-abil-pass-eff.sql;
 /*insrt-type*/
