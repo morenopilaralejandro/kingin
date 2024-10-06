@@ -1,2 +1,124 @@
-abil_code,abil_name_en,abil_name_ja
-adaptability,Adaptability,てきおうりょく
+abil_code,abil_name_en,abil_name_ja,abil_is_role,abil_is_rece,abil_is_entr,abil_is_trac,abil_is_sksw,abil_is_gast,abil_is_mold,abil_is_tran
+adaptability,Adaptability,てきおうりょく,No,No,No,No,No,No,No,No
+aftermath,Aftermath,ゆうばく,No,No,No,No,No,No,No,No
+airlock,Air Lock,エアロック,No,No,No,No,No,No,No,No
+angerpoint,Anger Point,いかりのつぼ,No,No,No,No,No,No,No,No
+anticipation,Anticipation,きけんよち,No,No,No,No,No,No,No,No
+arenatrap,Arena Trap,ありじごく,No,No,No,No,No,No,No,No
+baddreams,Bad Dreams,ナイトメア,No,No,No,No,No,No,No,No
+battlearmor,Battle Armor,カブトアーマー,No,No,No,No,No,No,Yes,No
+blaze,Blaze,もうか,No,No,No,No,No,No,No,No
+chlorophyll,Chlorophyll,ようりょくそ,No,No,No,No,No,No,No,No
+clearbody,Clear Body,クリアボディ,No,No,No,No,No,No,Yes,No
+cloudnine,Cloud Nine,ノーてんき,No,No,No,No,No,No,No,No
+colorchange,Color Change,へんしょく,No,No,No,No,No,No,No,No
+compoundeyes,Compoundeyes,ふくがん,No,No,No,No,No,No,No,No
+cutecharm,Cute Charm,メロメロボディ,No,No,No,No,No,No,No,No
+damp,Damp,しめりけ,No,No,No,No,No,No,Yes,No
+download,Download,ダウンロード,No,No,No,No,No,No,No,No
+drizzle,Drizzle,あめふらし,No,No,No,No,No,No,No,No
+drought,Drought,ひでり,No,No,No,No,No,No,No,No
+dryskin,Dry Skin,かんそうはだ,No,No,No,No,No,No,Yes,No
+earlybird,Early Bird,はやおき,No,No,No,No,No,No,No,No
+effectspore,Effect Spore,ほうし,No,No,No,No,No,No,No,No
+filter,Filter,フィルター,No,No,No,No,No,No,Yes,No
+flamebody,Flame Body,ほのおのからだ,No,No,No,No,No,No,No,No
+flashfire,Flash Fire,もらいび,No,No,No,No,No,No,Yes,No
+flowergift,Flower Gift,フラワーギフト,Yes,Yes,Yes,Yes,No,No,Yes,No
+forecast,Forecast,てんきや,Yes,Yes,Yes,Yes,No,No,No,No
+forewarn,Forewarn,よちむ,No,No,No,No,No,No,No,No
+frisk,Frisk,おみとおし,No,No,No,No,No,No,No,No
+gluttony,Gluttony,くいしんぼう,No,No,No,No,No,No,No,No
+guts,Guts,こんじょう,No,No,No,No,No,No,No,No
+heatproof,Heatproof,たいねつ,No,No,No,No,No,No,Yes,No
+honeygather,Honey Gather,みつあつめ,No,No,No,No,No,No,No,No
+hugepower,Huge Power,ちからもち,No,No,No,No,No,No,No,No
+hustle,Hustle,はりきり,No,No,No,No,No,No,No,No
+hydration,Hydration,うるおいボディ,No,No,No,No,No,No,No,No
+hypercutter,Hyper Cutter,かいりきバサミ,No,No,No,No,No,No,Yes,No
+icebody,Ice Body,アイスボディ,No,No,No,No,No,No,No,No
+illuminate,Illuminate,はっこう,No,No,No,No,No,No,No,No
+immunity,Immunity,めんえき,No,No,No,No,No,No,Yes,No
+innerfocus,Inner Focus,せいしんりょく,No,No,No,No,No,No,Yes,No
+insomnia,Insomnia,ふみん,No,No,No,No,No,No,Yes,No
+intimidate,Intimidate,いかく,No,No,No,No,No,No,No,No
+ironfist,Iron Fist,てつのこぶし,No,No,No,No,No,No,No,No
+keeneye,Keen Eye,するどいめ,No,No,No,No,No,No,Yes,No
+klutz,Klutz,ぶきよう,No,No,No,No,No,No,No,No
+leafguard,Leaf Guard,リーフガード,No,No,No,No,No,No,Yes,No
+levitate,Levitate,ふゆう,No,No,No,No,No,No,Yes,No
+lightningrod,Lightning Rod,ひらいしん,No,No,No,No,No,No,Yes,No
+limber,Limber,じゅうなん,No,No,No,No,No,No,Yes,No
+liquidooze,Liquid Ooze,ヘドロえき,No,No,No,No,No,No,No,No
+magicguard,Magic Guard,マジックガード,No,No,No,No,No,No,No,No
+magmaarmor,Magma Armor,マグマのよろい,No,No,No,No,No,No,Yes,No
+magnetpull,Magnet Pull,じりょく,No,No,No,No,No,No,No,No
+marvelscale,Marvel Scale,ふしぎなうろこ,No,No,No,No,No,No,Yes,No
+minus,Minus,マイナス,No,No,No,No,No,No,No,No
+moldbreaker,Mold Breaker,かたやぶり,No,No,No,No,No,No,No,No
+motordrive,Motor Drive,でんきエンジン,No,No,No,No,No,No,No,No
+multitype,Multitype,マルチタイプ,Yes,Yes,Yes,Yes,Yes,Yes,No,No
+naturalcure,Natural Cure,しぜんかいふく,No,No,No,No,No,No,No,No
+noguard,No Guard,ノーガード,No,No,No,No,No,No,No,No
+normalize,Normalize,ノーマルスキン,No,No,No,No,No,No,No,No
+oblivious,Oblivious,どんかん,No,No,No,No,No,No,No,No
+overgrow,Overgrow,しんりょく,No,No,No,No,No,No,No,No
+owntempo,Own Tempo,マイペース,No,No,No,No,No,No,Yes,No
+pickup,Pickup,ものひろい,No,No,No,No,No,No,No,No
+plus,Plus,プラス,No,No,No,No,No,No,No,No
+poisonheal,Poison Heal,ポイズンヒール,No,No,No,No,No,No,No,No
+poisonpoint,Poison Point,どくのトゲ,No,No,No,No,No,No,No,No
+pressure,Pressure,プレッシャー,No,No,No,No,No,No,No,No
+purepower,Pure Power,ヨガパワー,No,No,No,No,No,No,No,No
+quickfeet,Quick Feet,はやあし,No,No,No,No,No,No,No,No
+raindish,Rain Dish,あめうけざら,No,No,No,No,No,No,No,No
+reckless,Reckless,すてみ,No,No,No,No,No,No,No,No
+rivalry,Rivalry,とうそうしん,No,No,No,No,No,No,No,No
+rockhead,Rock Head,いしあたま,No,No,No,No,No,No,No,No
+roughskin,Rough Skin,さめはだ,No,No,No,No,No,No,No,No
+runaway,Run Away,にげあし,No,No,No,No,No,No,No,No
+sandstream,Sand Stream,すなおこし,No,No,No,No,No,No,No,No
+sandveil,Sand Veil,すながくれ,No,No,No,No,No,No,Yes,No
+scrappy,Scrappy,きもったま,No,No,No,No,No,No,No,No
+serenegrace,Serene Grace,てんのめぐみ,No,No,No,No,No,No,No,No
+shadowtag,Shadow Tag,かげふみ,No,No,No,No,No,No,No,No
+shedskin,Shed Skin,だっぴ,No,No,No,No,No,No,No,No
+shellarmor,Shell Armor,シェルアーマー,No,No,No,No,No,No,Yes,No
+shielddust,Shield Dust,りんぷん,No,No,No,No,No,No,Yes,No
+simple,Simple,たんじゅん,No,No,No,No,No,No,Yes,No
+skilllink,Skill Link,スキルリンク,No,No,No,No,No,No,No,No
+slowstart,Slow Start,スロースタート,No,No,No,No,No,No,No,No
+sniper,Sniper,スナイパー,No,No,No,No,No,No,No,No
+snowcloak,Snow Cloak,ゆきがくれ,No,No,No,No,No,No,Yes,No
+snowwarning,Snow Warning,ゆきふらし,No,No,No,No,No,No,No,No
+solarpower,Solar Power,サンパワー,No,No,No,No,No,No,No,No
+solidrock,Solid Rock,ハードロック,No,No,No,No,No,No,Yes,No
+soundproof,Soundproof,ぼうおん,No,No,No,No,No,No,Yes,No
+speedboost,Speed Boost,かそく,No,No,No,No,No,No,No,No
+stall,Stall,あとだし,No,No,No,No,No,No,No,No
+static,Static,せいでんき,No,No,No,No,No,No,No,No
+steadfast,Steadfast,ふくつのこころ,No,No,No,No,No,No,No,No
+stench,Stench,あくしゅう,No,No,No,No,No,No,No,No
+stickyhold,Sticky Hold,ねんちゃく,No,No,No,No,No,No,Yes,No
+stormdrain,Storm Drain,よびみず,No,No,No,No,No,No,Yes,No
+sturdy,Sturdy,がんじょう,No,No,No,No,No,No,Yes,No
+suctioncups,Suction Cups,きゅうばん,No,No,No,No,No,No,No,No
+superluck,Super Luck,きょううん,No,No,No,No,No,No,No,No
+swarm,Swarm,むしのしらせ,No,No,No,No,No,No,No,No
+swiftswim,Swift Swim,すいすい,No,No,No,No,No,No,No,No
+synchronize,Synchronize,シンクロ,No,No,No,No,No,No,No,No
+tangledfeet,Tangled Feet,ちどりあし,No,No,No,No,No,No,Yes,No
+technician,Technician,テクニシャン,No,No,No,No,No,No,No,No
+thickfat,Thick Fat,あついしぼう,No,No,No,No,No,No,Yes,No
+tintedlens,Tinted Lens,いろめがね,No,No,No,No,No,No,No,No
+torrent,Torrent,げきりゅう,No,No,No,No,No,No,No,No
+trace,Trace,トレース,Yes,Yes,Yes,Yes,No,No,No,No
+truant,Truant,なまけ,No,No,No,No,No,No,No,No
+unaware,Unaware,てんねん,No,No,No,No,No,No,Yes,No
+unburden,Unburden,かるわざ,No,No,No,No,No,No,No,No
+vitalspirit,Vital Spirit,やるき,No,No,No,No,No,No,Yes,No
+voltabsorb,Volt Absorb,ちくでん,No,No,No,No,No,No,Yes,No
+waterabsorb,Water Absorb,ちょすい,No,No,No,No,No,No,Yes,No
+waterveil,Water Veil,みずのベール,No,No,No,No,No,No,Yes,No
+whitesmoke,White Smoke,しろいけむり,No,No,No,No,No,No,Yes,No
+wonderguard,Wonder Guard,ふしぎなまもり,Yes,Yes,Yes,No,Yes,No,Yes,No

@@ -30,7 +30,7 @@ abil_is_trac,
 abil_is_sksw,
 abil_is_gast,
 abil_is_mold,
-abil_is_tran,
+abil_is_tran
 );
 
 delimiter &&

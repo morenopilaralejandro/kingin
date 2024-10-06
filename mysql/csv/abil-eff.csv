@@ -1,2 +1,152 @@
-abil_eff_code,abil_eff_desc_en,abil_eff_desc_ja
-inc-stab,Increases the Same Type Attack Bonus from *1.5 to *2.,Increases the Same Type Attack Bonus from *1.5 to *2.
+abil_eff_code,abil_eff_desc_en,abil_eff_desc_ja,abil_eff_type_code
+inc-stab,Increases the Same Type Attack Bonus from *1.5 to *2.,自分のタイプと同じタイプの技のダメージが1.5倍ではなく2倍になる。,battle
+inc-punch,The power of punching moves is multiplied by 1.2.,パンチ系の技の威力が1.2倍になる。,battle
+inc-60,The power of moves with a base power of 60 or less a is multiplied by 1.5.,威力が60以下の技の威力が1.5倍になる。,battle
+inc-crit-dmg,The power of critical-hit moves is multiplied by 2.25 rather than 1.50.,自分の攻撃が急所に当たると、ダメージが1.5倍ではなく2.25倍になる。,battle
+inc-crit-rate,Increases critical-hit ratio one level.,急所ランクが1段階上がった状態となり、自分の攻撃が急所に当たりやすくなる。,battle
+inc-recoil-power,The power of moves that have recoil is multiplied by 1.2.,反動でダメージを受ける技を使ったとき威力が1.2倍になる。,battle
+inc-not-very,The power of “not very effective” moves is doubled.,自分の技のタイプ相性が『こうかは いまひとつのようだ』の場合、1/2倍の時は通常に、1/4倍の時は1/2倍になる。,battle
+reduce-super,Damage taken from super-effective moves is reduced by 25%.,タイプ相性がこうかは ばつぐんの技の受けるダメージが3/4になる。,battle
+aftermath,The foe that dealt the final hit loses 1/4 of its maximum HP if the move made physical contact.,相手の直接攻撃でひんしになった時、相手に相手の最大HPの1/4のダメージを与える。,battle
+weather-negate,All weather effects are negated while the Pokémon is on the field.,全てのポケモンに対しての天気の影響がなくなる。,battle
+weather-sun,Weather changes to Sunshine when the Pokémon enters the battle.,天気がにほんばれになる。,battle
+weather-rain,Weather changes to Rain when the Pokémon enters the battle.,天気があめになる。,battle
+weather-sand,Weather changes to Sandstorm when the Pokémon enters the battle.,天気がすなあらしになる。,battle
+weather-hail,Weather changes to Hail when the Pokémon enters the battle.,天気があられになる。,battle
+angerpoint,Increases Attack to maximum level upon taking a critical hit.,自分への攻撃が急所に当たると、こうげきランクが最大まで上がる。,battle
+anticipation,Warns when the foe knows 1-hit KO or super-effective moves.,戦闘に出てきた時、相手がこうかは ばつぐんや一撃必殺となる技を持っているかが分かる。,battle
+trap,The opponent cannot run nor switch.,相手は逃げたり、ポケモンを交代することができなくなる。,battle
+flying-unaffected,Flying-type Pokémon and Pokémon with the Levitate special ability are unaffected.,相手がひこうタイプ、特性ふゆうの場合は効果がない。,battle
+baddreams,Reduces the HP of sleeping opposing Pokémon.,相手がねむり状態の時、相手のHPを相手の最大HPの1/8減らす。,battle
+no-crit,Opponent’s moves cannot Critical Hit.,自分への攻撃は急所に当たらない。,battle
+pinch-fire,"When HP is below 1/3rd its maximum, power of Fire-type moves is multiplied by 1.5.",HPが1/3以下の時、ほのおタイプの技の威力が1.5倍になる。,battle
+pinch-grass,"When HP is below 1/3rd its maximum, power of Grass-type moves is multiplied by 1.5.",HPが1/3以下の時、くさタイプの技の威力が1.5倍になる。,battle
+pinch-water,"When HP is below 1/3rd its maximum, power of Water-type moves is multiplied by 1.5.",HPが1/3以下の時、みずタイプの技の威力が1.5倍になる。,battle
+pinch-bug,"When HP is below 1/3rd its maximum, power of Bug-type moves is multiplied by 1.5.",HPが1/3以下の時、むしタイプの技の威力が1.5倍になる。,battle
+low-opp-atk,"Upon entering battle, lowers opponent’s Attack one stage.",戦闘に出たときに相手全体のこうげきランクを1段階ずつ下げる。,battle
+low-slf-acu-8,User’s accuracy is multiplied by 0.8.,物理攻撃の命中率が0.8倍になる。,battle
+rse-slf-phy-atk,Damage from physical attacks is multiplied by 1.5.,こうげきが1.5倍になる。,battle
+rse-slf-atk,User’s Attack doubles.,攻撃時の自分のこうげきが2倍になる。,battle
+rse-slf-spatk-one,Raises the Pokémon’s Sp Attack one stage.,自分のとくこうランクが1段階上がる。,battle
+rse-slf-spe-one,Raises the Pokémon’s Speed one stage.,自分のすばやさランクが1段階上がる。,battle
+rse-slf-atk-status,"When induced with a status, user’s Attack is multiplied by 1.5.",状態異常の時、こうげきが1.5倍になる。,battle
+rse-slf-def-status,"When induced with a status, user’s Defence is multiplied by 1.5.",状態異常の時、ぼうぎょが1.5倍になる。,battle
+rse-slf-spe-status,"When induced with a status, user’s Speed is multiplied by 1.5.",状態異常の時、すばやさ1.5倍になる。,battle
+rse-slf-atk-sun-5,"When sunny, user’s Attack is multiplied by 1.5.",天気がにほんばれの時、自分のこうげきが1.5倍になる。,battle
+rse-slf-spdef-sun-5,"When sunny, user’s Sp. Defence is multiplied by 1.5.",天気がにほんばれの時、自分のとくぼうが1.5倍になる。,battle
+rse-aly-atk-sun-5,"When sunny, ally’s Attack is multiplied by 1.5.",天気がにほんばれの時、味方のこうげきが1.5倍になる。,battle
+rse-aly-spdef-sun-5,"When sunny, ally’s Sp. Defence is multiplied by 1.5.",天気がにほんばれの時、味方のとくぼうが1.5倍になる。,battle
+rse-slf-spatk-sun-5,"When sunny, users’s Sp. Attack is multiplied by 1.5.",天気がにほんばれの時、とくこうが1.5倍になる。,battle
+rse-slf-spe-sun,"When sunny, user’s Speed doubles.",天気がにほんばれの時、すばやさが2倍になる。,battle
+rse-slf-spe-rain,"When rainy, user’s Speed doubles.",天気があめの時、すばやさが2倍になる。,battle
+rse-slf-spe-end,Increases Speed by one stage at the end of each turn.,毎ターン、すばやさランクが1段階ずつ上がる。,battle
+rse-slf-spe-flinch,Increases Speed by one stage every time the Pokémon flinches.,相手の技でひるむと、すばやさランクが1段階上がる。,battle
+rse-slf-eva-conf,Increases Evasion by one stage when Confused.,同じ性格の野生ポケモンが出現しやすくなる。,battle
+rse-slf-eva-sand,"When in Sandstorm, multiplies opponent’s Accuracy by 0.8.",天気がすなあらしの時、相手の技の命中率が0.8倍になる。,battle
+rse-slf-eva-hail,"When in Hail, multiplies opponent’s Accuracy by 0.8.",天気があられの時、相手の技の命中率が0.8倍になる。,battle
+no-lower,Opponents’ moves which lower this Pokémon’s stats have no effect.,相手の能力ランクを下げる技や特性の効果を受けない。,battle
+no-lower-atk,Opponent cannot lower this Pokémon’s Attack.,相手の技や特性でこうげきランクが下がらない。,battle
+no-lower-acu,Opponent cannot lower this Pokémon’s accuracy.,相手の技や特性で命中率が下がらない。,battle
+change-type-hit,This Pokémon’s type becomes the type of the last damaging move which hit it.,技を受けると、その技のタイプになる。,battle
+rse-slf-acu,Raises the Pokémon’s accuracy by 30%.,命中率が1.3倍になる。,battle
+phy-attr,The opponent has a 30% chance of being induced with Attract when making physical contact with this Pokémon.,直接攻撃を受けると、30%の確率で相手をメロメロ状態にする。,battle
+phy-pois,The opponent has a 30% chance of being induced with Poison when making physical contact with this Pokémon.,直接攻撃を受けると、30%の確率で相手をどく状態にする。,battle
+phy-para,The opponent has a 30% chance of being induced with Paralysis when making physical contact with this Pokémon.,直接攻撃を受けると、30%の確率で相手をまひ状態にする。,battle
+phy-burn,The opponent has a 30% chance of being induced with Burn when making physical contact with this Pokémon.,直接攻撃を受けると、30%の確率で相手をやけど状態にする。,battle
+phy-spore,"The opponent has a 30% chance of being induced by Paralysis, Poison, or Sleep when making physical contact with this Pokémon.",直接攻撃を受けると、30%の確率で相手をどく、まひ、ねむり状態のいずれかにする。,battle
+phy-dmg,The opponent is hurt by 1/8 of his maxium HP making physical contact with this Pokémon.,直接攻撃を受けると、相手のHPを相手の最大HPの1/8減らす。,battle
+negate-explosion,Explosive moves will not work while the Pokémon is on the field.,全てのポケモンは ばくはつ技 が失敗になる。,battle
+negate-aftermath,Prevents the Ability Aftermath from doing damage.,特性ゆうばくが無効になる。,battle
+negate-burn-de,User is not affected by Burn’s effect of lowering Attack.,やけど状態によるこうげき半減の効果を受けな,battle
+negate-item-own,User cannot receive the effect of its held item.,持っている道具の効果が発揮されない。,battle
+negate-pass-dmg,Prevents all damage except from direct-attack moves.,直接のダメージ以外を受けない。,battle
+negate-recoil,User does not receive recoil damage.,反動ダメージを受ける技を使用しても反動ダメージを受けない。,battle
+negate-opp-sw-move,Negates moves that force switching out.,相手を交代させる技の効果を受けない。,battle
+download,Attack is increased when the foe’s Defense is lower than its Special Defense or increases Special Attack when the foe’s Special Defense is lower than its Defense.,相手のぼうぎょがとくぼうより低い場合はこうげきランクを、とくぼうの方が低い場合はとくこうランクを1段階上げる。,battle
+imm-fire,User becomes immune to Fire-type moves.,ほのおタイプの技を受けない。,battle
+imm-ground,User becomes immune to Ground-type moves.,じめんタイプの技を受けない。,battle
+imm-electric,User becomes immune to Electric-type moves.,でんきタイプの技を受けない。,battle
+imm-hail,User becomes immune to Hail damage.,あられによるダメージを受けない。,battle
+imm-sand,User becomes immune to Sandstorm damage.,すなあらしによるダメージを受けない。,battle
+imm-pois,User cannot be Poisoned.,どく状態にならない。,battle
+imm-slep,User cannot be put to Sleep.,ねむり状態にならない。,battle
+imm-para,User cannot be Paralysed.,まひ状態にならない。,battle
+imm-froz,User cannot be Frozen.,こおり状態にならない。,battle
+imm-burn,User cannot be Burned.,やけど状態にならない。,battle
+imm-conf,User cannot be Confused.,こんらん状態にならない。,battle
+imm-one-hit-ko,User becomes immune to One Hit KO moves.,一撃でを受けない。,battle
+imm-status-sun,User cannot be afflicted by status conditions when the weather is sunny.,天気がにほんばれの時、状態異常にならない。,battle
+imm-flinch,User will not flinch.,相手の技でひるみ状態にならない。,battle
+imm-spike,User becomes immune to Spikes and Poison Spikes.,どくびし、まきびしの効果を受けない。,battle
+imm-arena-trap,User becomes immune to Arena Trap.,特性ありじごの効果を受けない。,battle
+imm-shadow-tag,User becomes immune to Shadow Tag.,特性かげふみ効果を受けない。,battle
+imm-terain,User becomes immune to Terrain Effects.,フィールド技の効果も受けない。,battle
+imm-attract,User becomes immune to Attract.,メロメロ状態にならない。,battle
+imm-intimi,User becomes immune to Intimidate.,ちょうはつ状態にならない。,battle
+imm-taunt,User becomes immune to Taunt.,ゆうわく状態にならない。,battle
+imm-sound,Unaffected by sound moves.,音系の技を受けない。,battle
+redi-electric,Electric-type moves are drawn to this Pokémon.,自分以外の全てのポケモンのでんきタイプの単体攻撃技の攻撃対象が自分になる。,battle
+redi-water,Water-type moves are drawn to this Pokémon.,自分以外の全てのポケモンのみずタイプの単体攻撃技の攻撃対象が自分になる。,battle
+bypass-eva,Ignores the target's evasion stages.,相手の回避率ランクを無視して攻撃できる。,battle
+dmg-turn-end,Decreases 1/8 of user’s maximum HP every turn.,毎ターン終了時に最大HPの1/8のダメージを受ける。,battle
+heal-status-chance,"Every turn, it has a 1 in 3 chance of healing status conditions.",ターンごとに1/3の確率で状態異常が治る。,battle
+heal-status-rain,Heals status conditions at the end of the turn when the weather is rainy.,天気があめの時、ターン終了時に状態異常が回復する。,battle
+heal-status-switch,Heals status conditions when switching out.,他のポケモンに交代すると異常状態が回復する。,battle
+heal-water,Restores ¼ of the user’s maximum HP when hit by Water-type.,みずタイプの技を受けると、ダメージを受けずHPが最大HPの1/4回復する。,battle
+heal-electric,Restores ¼ of the user’s maximum HP when hit by Electric-type.,でんきタイプの技を受けると、ダメージを受けずHPが最大HPの1/4回復する。,battle
+heal-rain-8,Restores 1/8 of the user’s maximum HP when the weather is rainy.,天気があめの時は毎ターンHPが最大HPの1/8回復する。,battle
+heal-rain,Restores 1/16 of the user’s maximum HP when the weather is rainy.,天気があめの時は毎ターンHPが最大HPの1/16回復する。,battle
+heal-hail,Restores 1/16 of the user’s maximum HP when its Snowing.,天気があられの時、毎ターン終了時にHPが最大HPの1/16回復する。,battle
+damage-sun,Reduces 1/8 of the user’s maximum HP when the weather is sunny.,天気がにほんばれの時は毎ターン最大HPの1/8のダメージを受け。,battle
+become-weak-fire,User becomes weak to Fire-type moves.,ほのおタイプの技の受けるダメージが1.25倍になる。,battle
+half-sleep-turn,Sleep condition lasts for half as long.,ねむり状態の時、ねむり状態のターン経過が2倍になり、通常より早く回復する。,battle
+half-burn-dmg,Damage from Burn status is halved.,やけど状態によるダメージが半減する。,battle
+half-fire-dmg,Damage from Fire-type moves is halved.,ほのおタイプの技をダメージが半減する。,battle
+half-ice-dmg,Damage from Ice-type moves is halved.,こおりタイプの技をダメージが半減する。,battle
+boost-fire-hit,User’s Fire-type moves deal 1.5 times damage when hit by a Fire-type move.,ほのおタイプの技を受ける以後自分のほのおタイプの技の威力が1.5倍になる。,battle
+forecast,"User changes its form and becomes Fire-type when sunny, Water-type when rainy or Ice type when in hail.",天気がにほんばれの時はほのおタイプに、あめの時はみずタイプに、あられの時はこおりタイプになり、姿がそれぞれ変化する。,battle
+reveal-strong-move,Reveals the foe’s strongest move.,戦闘に出ると相手の覚えている技のうち、最も威力の高い技の名前が分かる。,battle
+reveal-item,Reveals the foe’s held item.,戦闘に出てきた時、すべての相手の持っている道具の名前が分かる。,battle
+eat-berry-early,User will eat its held berry when its HP is below 50%.,通常より早く、HPが最大HPの半分以下になるときのみを使う。,battle
+honeygather,"May pick up a Honey after battle; the higher the level, the higher the chance.",道具を持っていない時、戦闘後にどうぐあまいミツを拾ってくることがある。レベルが高い程、拾ってくる確率が上がる。,battle
+over-inc-enc,Increases wild Pokémon encounter rate by 100%. ,野生のポケモンと出会いやすくなる。,over
+over-dec-enc,Decreases wild Pokémon encounter rate by 50%. ,野生のポケモンと出会いにくくなる。,over
+over-dec-enc-sand,Decreases wild Pokémon encounter rate by 50% when there is Sandstorm. ,フィールドの天気がすなあらしの時、野生のポケモンと出会いにくくなる。,over
+over-dec-enc-hail,Decreases wild Pokémon encounter rate by 50% when there is Hail. ,フィールドの天気があられの時、野生のポケモンと出会いにくくなる。,over
+over-inc-enc-steal,"50% chance to encounter Steel-type Pokémon, if one is possible.",出現可能なはがねタイプのポケモンが50%の確率で出現する。,over
+over-inc-enc-elec,"50% chance to encounter Electric-type Pokémon, if one is possible.",出現可能なでんきタイプのポケモンが50%の確率で出現する。,over
+over-egg,The number of cycles it takes for Eggs to hatch are halved.,手持ちにこのとくせいを持つポケモンがいると、タマゴの孵化に必要な歩数が半減する。,over
+over-item,Increases the chances of finding a wild Pokémon holding an item.,手持ちの先頭にこのとくせいを持つポケモンがいると、もちものを持った野生ポケモンが出やすくなる。,over
+over-dec-low-lv,Decreases the chances of finding wild low-level Pokémon.,レベルの低い野生のポケモンと出会いにくくなる。,over
+over-inc-high-lv,Increases the chances of finding wild high-level Pokémon.,,over
+over-inc-rock,Increases the chances of finding an item when breaking a rock.,いわくだきでアイテムが出やすくなる。,over
+over-pick,Has a 10% chance of finding and holding an item after battle.,道具を持っていない時、戦闘後に10%の確率で道具を拾ってくる。,over
+over-inc-fish,Makes fishing easier.,釣りが成功しやすくなる。,over
+over-nature,There is a 50% chance that wild Pokémon will have the same Nature as the user.,同じ性格の野生ポケモンが出現しやすくなる。,over
+liquidooze,"When the opponent absorbs HP from this Pokémon, the opponent instead loses HP.",HPを吸い取る技を受けた時、逆に相手に本来回復する分のダメージを与える。,battle
+eff-steal,Only affects Steal-type Pokémon.,はがねタイプのポケモンにのみ効果がある。,battle
+minus,"When battling with Plus or Minus, Special Attack is multiplied by 1.5.",特性プラスかマイナスのポケモンが戦闘にいるととくこうが1.5倍になる。,battle
+moldbreaker,The Pokémon's moves are not affected by foe’s abilities during battle.,相手の特性の影響を受けずに攻撃できる。,battle
+multitype,Changes the Pokémon's type to match the Plate it holds.,持っているプレートに対応してタイプが変化する。,battle
+noguard,The accuracy of all moves known by this Pokémon and all Pokémon targeting this Pokémon raises to 100%.,お互いに技が命中率・回避率に関係なく必ず命中する。,battle
+move-turn-normal,All moves known by the Pokémon turn into Normal-type.,自分の全ての技がノーマルタイプになる。,battle
+poisonheal,Restores 1/8 of the user’s maximum HP when Poisoned.,どく状態の時毎ターン、HPが減らずに最大HPの1/8だけ回復する。,battle
+pressure,"When hit by a move, the opponent’s PP lowers by 2 rather than 1.",技を受けた時、技のPPを2減らす。,battle
+rivalry,Attack and Sp Attack are multiplied by 1.25 if the foe is of the same gender or by 0.75 if it is of the opposite gender.,性別が同じ相手に対してはこうげき、とくこうが1.25倍になるが、異なる場合は0.75倍になる。,battle
+runaway,User can always run away from wild Pokemón.,野生のポケモンとの戦闘の場合、必ず逃げられる。,battle
+hit-ghost,Allows the user to hit Ghost-type Pokémon with Normal-type and Fighting-type moves.,相手がゴーストタイプでも、ノーマル、かくとうタイプの技が等倍で当たる。,battle
+double-eff-rate,Doubles the chance of move’s secondary effects.,技の追加効果の発生率が2倍になる。,battle
+negate-opp-eff,Moves used by the opponent will not have secondary effects.,技の追加効果を受けない。,battle
+double-stat-change,The stat changes the Pokémon receives are doubled.,能力ランクの変化が2倍になる。,battle
+row-max,Moves that attack 2-5 times always hit 5 times.,1ターンに複数回連続で攻撃する技が1度目が成功すれば、必ず最大回数当たる。,battle
+slowstart,Attack and Speed is halved during the first five turns since sent out.,戦闘に出てから5ターンの間、こうげきとすばやさが半分になる。,battle
+order-last,User always attacks last.,技を出す順番が必ず一番最後になる。,battle
+add-flinch,10% chance of flinching the target when using a damaging move.,相手に技のダメージを与えると、10%の確率でひるませる。,battle
+item-no-take,Item cannot be taken.,持っている道具を相手に奪われない。,battle
+sturdy,Always survives with 1 HP when at full HP.,HPが最大の時、ひんし状態になるダメージを受けても必ず1残る。,battle
+synchronize,"When this Pokémon becomes Poisoned, Paralyzed, or Burned, so does the opponent.",相手の技や特性によってどく、まひ、やけど状態になった時、相手を同じ状態異常にする。,battle
+copy-abil,Copies opponent’s ability.,場に出た時、相手と同じ特性になる。,battle
+truant,User only attacks every alternate turn.,攻撃後、次のターンは技が使えなくなる。,battle
+unaware,Opponent’s stat changes are ignored.,相手の能力ランクの変化の影響を受けない。,battle
+unburden,"When the held item is consumed, user’s Speed doubles.",持っている道具がなくなるとすばやさが2倍になる。,battle
+wonderguard,"User is only harmed by Super Effective damage, weather effects and condition effects.",タイプ相性が『こうかは ばつぐん』でない技のダメージを受けない。,battle

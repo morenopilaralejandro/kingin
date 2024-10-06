@@ -1,17 +1,20 @@
 /*crt-abil*/
-create table abil_eff (
-    abil_eff_id int not null auto_increment,
-    abil_eff_code varchar(32) unique,
-    abil_eff_desc_en varchar(1000),
-    abil_eff_desc_ja varchar(1000),
-    constraint abil_eff_pk primary key (abil_eff_id)
-);
 create table abil_eff_type (
     abil_eff_type_id int not null auto_increment,
     abil_eff_type_code varchar(32) unique,
     abil_eff_type_name_en varchar(1000),
     abil_eff_type_name_ja varchar(1000),
     constraint abil_eff_type_pk primary key (abil_eff_type_id)
+);
+create table abil_eff (
+    abil_eff_id int not null auto_increment,
+    abil_eff_code varchar(32) unique,
+    abil_eff_desc_en varchar(1000),
+    abil_eff_desc_ja varchar(1000),
+    abil_eff_type_id int,
+    constraint abil_eff_pk primary key (abil_eff_id),
+    constraint abil_pass_eff_fk_eff_type foreign key (abil_eff_type_id) 
+        references abil_eff_type(abil_eff_type_id) on delete cascade
 );
 create table abil (
     abil_id int not null auto_increment,
@@ -21,7 +24,7 @@ create table abil (
     /*
     reverse condition on all except mold breaker
     affected by trace -> true
-    affected by mold -> false
+    affected by mold  -> false
     unused
         Doodle
         Receive & Power of Alchemy	
@@ -43,14 +46,11 @@ create table abil (
 create table abil_pass_eff (
     abil_id int not null,
     abil_eff_id int not null,
-    abil_eff_type_id int,
     constraint abil_pass_eff_pk primary key (abil_id, abil_eff_id),
     constraint abil_pass_eff_fk_abil foreign key (abil_id) 
         references abil(abil_id) on delete cascade,
     constraint abil_pass_eff_fk_eff foreign key (abil_eff_id) 
-        references abil_eff(abil_eff_id) on delete cascade,
-    constraint abil_pass_eff_fk_eff_type foreign key (abil_eff_type_id) 
-        references abil_eff_type(abil_eff_type_id) on delete cascade
+        references abil_eff(abil_eff_id) on delete cascade
 ); 
 /*crt-type*/
 create table type (

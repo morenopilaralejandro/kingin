@@ -2,7 +2,8 @@ drop table if exists aux_abil_eff;
 create temporary table aux_abil_eff (
     abil_eff_code varchar(32),
     abil_eff_desc_en varchar(1000),
-    abil_eff_desc_ja varchar(1000)
+    abil_eff_desc_ja varchar(1000),
+    abil_eff_type_code varchar(32)
 );
 
 load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/abil-eff.csv'
@@ -14,7 +15,8 @@ ignore 1 lines
 (
 abil_eff_code,
 abil_eff_desc_en,
-abil_eff_desc_ja
+abil_eff_desc_ja,
+abil_eff_type_code
 );
 
 delimiter &&
@@ -23,11 +25,13 @@ create procedure proc_insrt_abil_eff()
 begin
 	declare i int default 1;
 
+    declare idAbilEffType int default 0;
+
     /*cur1 variables*/
     declare vAbilEffCode varchar(32) default '';
     declare vAbilEffDescEn varchar(1000) default '';
     declare vAbilEffDescJa varchar(1000) default '';
-
+    declare vAbilEffTypeCode varchar(32) default '';
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_abil_eff;
@@ -39,17 +43,26 @@ begin
         fetch cur1 into 
             vAbilEffCode,
             vAbilEffDescEn,
-            vAbilEffDescJa;
+            vAbilEffDescJa,
+            vAbilEffTypeCode;
+
+        set idAbilEffType = 0;
 
         if continueCur1 = 1 then
+            select abil_eff_type_id into idAbilEffType 
+                from abil_eff_type 
+                where abil_eff_type_code = vAbilEffTypeCode;
+
             insert into abil_eff (
                 abil_eff_code,
                 abil_eff_desc_en,
-                abil_eff_desc_ja
+                abil_eff_desc_ja,
+                abil_eff_type_id
             ) values (
                 vAbilEffCode,
                 vAbilEffDescEn,
-                vAbilEffDescJa
+                vAbilEffDescJa,
+                idAbilEffType
             );
         end if;
 	end while;
