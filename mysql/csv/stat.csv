@@ -1,0 +1,7 @@
+stat_code,stat_name_en,stat_name_ja
+hp,HP,HP
+atk,Attack,こうげき
+def,Defense,ぼうぎょ
+spatk,Sp. Attack,とくこう
+spdef,Sp. Defense,とくぼう
+spe,Speed,すばやさ

@@ -1,3 +1,7 @@
+/*insrt-stat*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-stat.sql;
+/*insrt-nature*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-natu.sql;
 /*insrt-ability*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-abil-eff-type.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-abil-eff.sql;

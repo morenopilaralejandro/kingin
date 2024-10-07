@@ -1,3 +1,25 @@
+/*crt-stat*/
+create table stat (
+    stat_id int not null auto_increment,
+    stat_code varchar(32) unique,
+    stat_name_en varchar(32),
+    stat_name_ja varchar(32),
+    constraint stat_pk primary key (stat_id)
+);
+/*crt-natu*/
+create table natu (
+    natu_id int not null auto_increment,
+    natu_code varchar(32) unique,
+    natu_name_en varchar(32),
+    natu_name_ja varchar(32),
+    stat_id_red int,
+    stat_id_blue int,
+    constraint natu_pk primary key (natu_id),
+    constraint natu_id_fk_red foreign key (stat_id_red) 
+        references stat(stat_id) on delete cascade,
+    constraint natu_id_fk_blue foreign key (stat_id_blue) 
+        references stat(stat_id) on delete cascade
+);
 /*crt-abil*/
 create table abil_eff_type (
     abil_eff_type_id int not null auto_increment,
