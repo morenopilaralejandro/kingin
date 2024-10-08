@@ -1,0 +1,7 @@
+exp_grp_code,exp_grp_name_en,exp_grp_name_ja,exp_grp_final
+erra-60,Erratic,60万タイプ,600000
+fast-80,Fast,80万タイプ,800000
+med-fast-100,Medium-Fast,100万タイプ,1000000
+med-slow-105,Medium-Slow,105万タイプ,1059860
+slow-125,Slow,125万タイプ,1250000
+fluc-164,Fluctuating,164万タイプ,1640000

@@ -20,6 +20,32 @@ create table natu (
     constraint natu_id_fk_blue foreign key (stat_id_blue) 
         references stat(stat_id) on delete cascade
 );
+/*crt-egg-grp*/
+create table egg_grp (
+    egg_grp_id int not null auto_increment,
+    egg_grp_code varchar(32) unique,
+    egg_grp_name_en varchar(32),
+    egg_grp_name_ja varchar(32),
+    constraint egg_grp_pk primary key (egg_grp_id)
+);
+/*crt-exp-grp*/
+create table exp_grp (
+    exp_grp_id int not null auto_increment,
+    exp_grp_code varchar(32) unique,
+    exp_grp_name_en varchar(32),
+    exp_grp_name_ja varchar(32),
+    exp_grp_final int,
+    constraint exp_grp_pk primary key (exp_grp_id)
+);
+/*crt-gndr*/
+create table gndr (
+    gndr_id int not null auto_increment,
+    gndr_code varchar(32) unique,
+    gndr_name_en varchar(32),
+    gndr_name_ja varchar(32),
+    gndr_sym varchar(32),
+    constraint gndr_pk primary key (gndr_id)
+);
 /*crt-abil*/
 create table abil_eff_type (
     abil_eff_type_id int not null auto_increment,

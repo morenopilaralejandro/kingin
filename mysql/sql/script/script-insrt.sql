@@ -2,6 +2,12 @@
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-stat.sql;
 /*insrt-nature*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-natu.sql;
+/*insrt-egg-grp*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-egg-grp.sql;
+/*insrt-exp-grp*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-exp-grp.sql;
+/*insrt-gndr*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gndr.sql;
 /*insrt-ability*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-abil-eff-type.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-abil-eff.sql;
