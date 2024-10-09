@@ -1,0 +1,57 @@
+move_name_en,move_tuto_code,bp
+Headbutt,head,0
+Draco Meteor,ryu,0
+Blast Burn,ele,0
+Frenzy Plant,ele,0
+Hydro Cannon,ele,0
+Air Cutter,bf-left,48
+Bug Bite,bf-left,32
+Dive,bf-left,40
+Fire Punch,bf-left,64
+Fury Cutter,bf-left,32
+Ice Punch,bf-left,64
+Icy Wind,bf-left,48
+Knock Off,bf-left,40
+Ominous Wind,bf-left,48
+Sucker Punch,bf-left,40
+ThunderPunch,bf-left,64
+Trick,bf-left,48
+Vacuum Wave,bf-left,48
+Zen Headbutt,bf-left,64
+Ancient Power,bf-right-top,40
+Aqua Tail,bf-right-top,40
+Bounce,bf-right-top,32
+Earth Power,bf-right-top,40
+Endeavor,bf-right-top,64
+Gastro Acid,bf-right-top,32
+Gunk Shot,bf-right-top,32
+Heat Wave,bf-right-top,48
+Iron Defense,bf-right-top,40
+Iron Head,bf-right-top,40
+Low Kick,bf-right-top,32
+Mud-Slap,bf-right-top,32
+Outrage,bf-right-top,48
+Pain Split,bf-right-top,64
+Rollout,bf-right-top,32
+Seed Bomb,bf-right-top,40
+Signal Beam,bf-right-top,40
+Sky Attack,bf-right-top,64
+Super Fang,bf-right-top,40
+Superpower,bf-right-top,48
+Twister,bf-right-top,40
+Block,bf-right-bot,32
+Gravity,bf-right-bot,32
+Heal Bell,bf-right-bot,48
+Helping Hand,bf-right-bot,40
+Last Resort,bf-right-bot,48
+Magic Coat,bf-right-bot,32
+Magnet Rise,bf-right-bot,40
+Role Play,bf-right-bot,48
+Snore,bf-right-bot,32
+Spite,bf-right-bot,40
+String Shot,bf-right-bot,32
+Swift,bf-right-bot,40
+Synthesis,bf-right-bot,40
+Tailwind,bf-right-bot,48
+Uproar,bf-right-bot,48
+Worry Seed,bf-right-bot,32

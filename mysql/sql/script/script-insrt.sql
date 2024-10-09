@@ -24,9 +24,11 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-lrn.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-cause-eff.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-considered-mthd.sql;
-
-
-
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-tuto.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-remembered-tuto.sql;
+/*insrt-zone*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-zone.sql;
+/*insrt-todo*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-learns-move.sql;*/

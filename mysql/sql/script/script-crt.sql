@@ -186,6 +186,35 @@ create table move_considered_mthd (
     constraint move_considered_mthd_fk_move_mthd foreign key (move_mthd_id) 
         references move_mthd(move_mthd_id) on delete cascade
 );
+create table move_tuto (
+    move_tuto_id int not null auto_increment,
+    move_tuto_code varchar(32) unique,
+    move_tuto_name_en varchar(32),
+    move_tuto_name_ja varchar(32),
+    constraint move_tuto_pk primary key (move_tuto_id)
+);
+create table move_remembered_tuto (
+    move_id int not null,
+    move_tuto_id int not null,
+    bp int,
+    constraint move_remembered_tuto_pk primary key (move_id),
+    constraint move_remembered_tuto_fk_move foreign key (move_id) 
+        references move(move_id) on delete cascade,
+    constraint move_remembered_tuto_fk_tuto foreign key (move_tuto_id) 
+        references move_tuto(move_tuto_id) on delete cascade
+);
+/*crt-zone*/
+create table zone (
+    zone_id int not null auto_increment,
+    zone_code varchar(32) unique,
+    zone_name_en varchar(32),
+    zone_name_ja varchar(32),
+    zone_main_id int,
+    constraint zone_pk primary key (zone_id),
+    constraint zone_fk_main_zone foreign key (zone_main_id) 
+        references zone(zone_id) on delete cascade
+);
+/*crt-move-todo*/
 create table pd (
     pd_id int not null auto_increment,
     TODO varchar(32),
