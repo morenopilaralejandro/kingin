@@ -1,0 +1,164 @@
+zone_name_code,zone_name_en,zone_name_ja
+zn-city-bark,New Bark Town,ワカバタウン
+zn-city-cher,Cherrygrove City,ヨシノシティ
+zn-city-vio,Violet City,キキョウシティ
+zn-city-aza,Azalea Town,ヒワダタウン
+zn-city-gold,Goldenrod City,コガネシティ
+zn-city-ecru,Ecruteak City,エンジュシティ
+zn-city-oliv,Olivine City,アサギシティ
+zn-city-cian,Cianwood City,タンバシティ
+zn-city-maho,Mahogany Town,チョウジタウン
+zn-city-thor,Blackthorn City,フスベシティ
+zn-city-ver,Vermilion City,クチバシティ
+zn-city-saf,Saffron City,ヤマブキシティ
+zn-city-lav,Lavender Town,シオンタウン
+zn-city-ceru,Cerulean City,ハナダシティ
+zn-city-cel,Celadon City,タマムシシティ
+zn-city-fu,Fuchsia City,セキチクシティ
+zn-city-pew,Pewter City,ニビシティ
+zn-city-viri,Viridian City,トキワシティ
+zn-city-pall,Pallet Town,マサラタウン 
+zn-main,Main Area,メインエリア
+zn-gym,Gym,ジム
+zn-misc-harb,Harbor,船乗り場
+zn-misc-clif,Cliff Edge Gate,がけっぷちゲート
+zn-misc-dojo,Fighting Dojo,かくとうどうじょう
+zn-rout-1,Route 1,1ばんどうろ
+zn-rout-2,Route 2,2ばんどうろ
+zn-rout-3,Route 3,3ばんどうろ
+zn-rout-4,Route 4,4ばんどうろ
+zn-rout-5,Route 5,5ばんどうろ
+zn-rout-6,Route 6,6ばんどうろ
+zn-rout-7,Route 7,7ばんどうろ
+zn-rout-8,Route 8,8ばんどうろ
+zn-rout-9,Route 9,9ばんどうろ
+zn-rout-10,Route 10,10ばんどうろ
+zn-rout-11,Route 11,11ばんどうろ
+zn-rout-12,Route 12,12ばんどうろ
+zn-rout-13,Route 13,13ばんどうろ
+zn-rout-14,Route 14,14ばんどうろ
+zn-rout-15,Route 15,15ばんどうろ
+zn-rout-16,Route 16,16ばんどうろ
+zn-rout-17,Route 17,17ばんどうろ
+zn-rout-18,Route 18,18ばんどうろ
+zn-rout-19,Route 19,19ばんどうろ
+zn-rout-20,Route 20,20ばんどうろ
+zn-rout-21,Route 21,21ばんどうろ
+zn-rout-22,Route 22,22ばんどうろ
+zn-rout-23,Route 23,23ばんどうろ
+zn-rout-24,Route 24,24ばんどうろ
+zn-rout-25,Route 25,25ばんどうろ
+zn-rout-26,Route 26,26ばんどうろ
+zn-rout-27,Route 27,27ばんどうろ
+zn-rout-28,Route 28,28ばんどうろ
+zn-rout-29,Route 29,29ばんどうろ
+zn-rout-30,Route 30,30ばんどうろ
+zn-rout-31,Route 31,31ばんどうろ
+zn-rout-32,Route 32,32ばんどうろ
+zn-rout-33,Route 33,33ばんどうろ
+zn-rout-34,Route 34,34ばんどうろ
+zn-rout-35,Route 35,35ばんどうろ
+zn-rout-36,Route 36,36ばんどうろ
+zn-rout-37,Route 37,37ばんどうろ
+zn-rout-38,Route 38,38ばんどうろ
+zn-rout-39,Route 39,39ばんどうろ
+zn-rout-40,Route 40,40ばんどうろ
+zn-rout-41,Route 41,41ばんどうろ
+zn-rout-42,Route 42,42ばんどうろ
+zn-rout-43,Route 43,43ばんどうろ
+zn-rout-44,Route 44,44ばんどうろ
+zn-rout-45,Route 45,45ばんどうろ
+zn-rout-46,Route 46,46ばんどうろ
+zn-rout-47,Route 47,47ばんどうろ
+zn-rout-48,Route 48,48ばんどうろ
+zn-dngn-dark,Dark Cave,くらやみのほらあな
+zn-dngn-spro,Sprout Tower,マダツボミのとう
+zn-dngn-alph,Ruins of Alph,アルフのいせき
+zn-dngn-unio,Union Cave,つながりのどうくつ
+zn-dngn-well,Slowpoke Well,ヤドンのいど
+zn-dngn-ilex,Ilex Forest,ウバメのもり
+zn-dngn-rad,Radio Tower,ラジオとう
+zn-dngn-gold-under,Goldenrod Underground,ちかつうろ
+zn-dngn-park,National Park,しぜんこうえん
+zn-dngn-park-pre,Pre Nat Dex,全国図鑑前に
+zn-dngn-park-tue,Tuesday,火曜日
+zn-dngn-park-thu,Thursday,木曜日
+zn-dngn-park-sat,Saturday,Saturday
+zn-dngn-ath,Pokeathlon Dome,ポケスロンドーム
+zn-dngn-burn,Burned Tower,やけたとう
+zn-dngn-burn-1F,1F,1F
+zn-dngn-burn-B1F,B1F,B1F
+zn-dngn-bell,Bell Tower,スズのとう
+zn-dngn-trail,Bellchime Trail,スズねのこみち
+zn-dngn-ligh,Shining Lighthouse,かがやきのとうだい
+zn-dngn-aqua,SS Aqua,アクアごう
+zn-dngn-batt,Battle Frontier,バトルフロンティア
+zn-dngn-batt-acce,Frontier Access,フロンティアフロント
+zn-dngn-batt-main,Main area,メインエリア
+zn-dngn-whir,Whirl Islands,うずまきじま
+zn-dngn-embe,Embedded Tower,うずもれのとう
+zn-dngn-mort,Mt. Mortar,スリバチやま
+zn-dngn-mort-1f,1F,1F
+zn-dngn-hide,Rocket Hideout,ロケットだんアジト
+zn-dngn-lake,Lake of Rage,いかりのみずうみ
+zn-dngn-ice,Ice Path,こおりのぬけみち
+zn-dngn-den,Dragon's Den,りゅうのあな
+zn-dngn-fall,Tohjo Falls,トージョウのたき
+zn-dngn-fall-main,Main Area,メインエリア
+zn-dngn-fall-room,Giovanni's Room,サカキのルーム
+zn-dngn-rece-gate,Reception Gate,ポケモンリーグ うけつけゲート
+zn-dngn-road,Victory Road,チャンピオンロード
+zn-dngn-indi,Indigo Plateau,セキエイこうげん
+zn-dngn-indi-main,Main Area,メインエリア
+zn-dngn-indi-leag,Pokemon League,ポケモンリーグ
+zn-dngn-silv,Mt. Silver,シロガネやま
+zn-dngn-viri,Viridian Forest,トキワのもり
+zn-dngn-dig,Diglett's Cave,ディグダのあな
+zn-dngn-moon,Mt. Moon,おつきみやま
+zn-dngn-ceru,Cerulean Cave,ハナダのどうくつ
+zn-dngn-rock,Rock Tunnel,イワヤマトンネル
+zn-dngn-pow,Power Plant,カントーはつでんしょ
+zn-dngn-silp,Silph Co,シルフカンパニー
+zn-dngn-silp-lob,Lobby,ロビー
+zn-dngn-silp-rot,Rotom Room,ロトムのルーム
+zn-dngn-foam,Seafoam Islands,ふたごじま
+zn-dngn-cin,Cinnabar Island,グレンタウン
+zn-saf,Safari Zone,サファリゾーン
+zn-saf-gate,Safari Zone Gate,サファリゾーンゲート
+zn-saf-plai,Plains,そうげんエリア
+zn-saf-mead,Meadow,はなばたけエリア
+zn-saf-sava,Savannah,サバンナエリア
+zn-saf-peak,Peak,いわばエリア
+zn-saf-rock,Rocky Beach,みずべのいわばエリア
+zn-saf-wet,Wetland,しつげんエリア
+zn-saf-fore,Forest,もりエリア
+zn-saf-swam,Swamp,みずべのもりエリア
+zn-saf-mars,Marshland,ぬまちエリア
+zn-saf-wast,Wasteland,あれちエリア
+zn-saf-moun,Mountain,やまエリア
+zn-saf-dese,Desert,さばくエリア
+zn-1f,1F,1F
+zn-2f,2F,2F
+zn-3f,3F,3F
+zn-4f,4F,4F
+zn-5f,5F,5F
+zn-6f,6F,6F
+zn-7f,7F,7F
+zn-8f,8F,8F
+zn-9f,9F,9F
+zn-10f,10F,10F
+zn-top,Top,上
+zn-sum,Summit,最奥
+zn-bot,Bottom,最深部
+zn-b1f,B1F,B1F
+zn-b2f,B2F,B2F
+zn-b3f,B3F,B3F
+zn-b4f,B4F,B4F
+zn-f1t,1F Top,1F 上
+zn-b1f1,B1F Room 1,B1F ルーム 1
+zn-b1f2,B1F Room 2,B1F ルーム 2
+zn-1f2,1F-2,1F-2
+zn-1f3,1F-3,1F-3
+zn-ins,Inside,内
+zn-out,Outside,外
+zn-m,Mountainside,山腹

@@ -204,13 +204,21 @@ create table move_remembered_tuto (
         references move_tuto(move_tuto_id) on delete cascade
 );
 /*crt-zone*/
+create table zone_name (
+    zone_name_id int not null auto_increment,
+    zone_name_code varchar(32) unique,
+    zone_name_en varchar(32),
+    zone_name_ja varchar(32),
+    constraint zone_name_pk primary key (zone_name_id)
+);
 create table zone (
     zone_id int not null auto_increment,
     zone_code varchar(32) unique,
-    zone_name_en varchar(32),
-    zone_name_ja varchar(32),
+    zone_name_id int,
     zone_main_id int,
     constraint zone_pk primary key (zone_id),
+    constraint zone_fk_main_zone_name foreign key (zone_name_id) 
+        references zone_name(zone_name_id) on delete cascade,
     constraint zone_fk_main_zone foreign key (zone_main_id) 
         references zone(zone_id) on delete cascade
 );

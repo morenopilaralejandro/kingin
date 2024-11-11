@@ -1,8 +1,7 @@
 drop table if exists aux_zone;
 create temporary table aux_zone (
     zone_code varchar(32),
-    zone_name_en varchar(1000),
-    zone_name_ja varchar(1000),
+    zone_name_code varchar(32),
     zone_main_code varchar(32)
 );
 
@@ -14,8 +13,7 @@ lines terminated by '\n'
 ignore 1 lines
 (
 zone_code,
-zone_name_en,
-zone_name_ja,
+zone_name_code,
 zone_main_code
 );
 
@@ -25,12 +23,12 @@ create procedure proc_insrt_zone()
 begin
 	declare i int default 1;
 
+    declare idZoneName int default 0;
     declare idZoneMain int default 0;
 
     /*cur1 variables*/
     declare vZoneCode varchar(32) default '';
-    declare vZoneNameEn varchar(1000) default '';
-    declare vZoneNameJa varchar(1000) default '';
+    declare vZoneNameCode varchar(32) default '';
     declare vZoneMainCode varchar(32) default '';
 
     declare continueCur1 int default 1;
@@ -42,13 +40,21 @@ begin
 	while continueCur1=1 do
         fetch cur1 into 
             vZoneCode, 
-            vZoneNameEn, 
-            vZoneNameJa,
+            vZoneNameCode,
             vZoneMainCode;
 
+        set idZoneName = 0;
         set idZoneMain = 0;
 
         if continueCur1 = 1 then
+            if vZoneNameCode = '' then
+                set idZoneName = null;
+            else
+                select zone_name_id into idZoneName
+                    from zone_name
+                    where zone_name_code = vZoneNameCode;
+            end if; 
+
             if vZoneMainCode = '' then
                 set idZoneMain = null;
             else
@@ -57,16 +63,13 @@ begin
                     where zone_code = vZoneMainCode;
             end if; 
 
-
             insert into zone (
                 zone_code, 
-                zone_name_en, 
-                zone_name_ja,
+                zone_name_id,
                 zone_main_id
             ) values (
                 vZoneCode, 
-                vZoneNameEn, 
-                vZoneNameJa,
+                idZoneName,
                 idZoneMain
             );
         end if;

@@ -27,6 +27,7 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-considered-mthd
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-tuto.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-remembered-tuto.sql;
 /*insrt-zone*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-zone-name.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-zone.sql;
 /*insrt-todo*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;*/
