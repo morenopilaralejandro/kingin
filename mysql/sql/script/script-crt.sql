@@ -222,6 +222,49 @@ create table zone (
     constraint zone_fk_main_zone foreign key (zone_main_id) 
         references zone(zone_id) on delete cascade
 );
+/*crt-item*/
+create table item_type (
+    item_type_id int not null auto_increment,
+    item_type_code varchar(32) unique,
+    item_type_name_en varchar(32),
+    item_type_name_ja varchar(32),
+    constraint item_type_pk primary key (item_type_id)
+);
+create table item (
+    item_id int not null auto_increment,
+    item_code varchar(32) unique,
+    item_name_en varchar(32),
+    item_name_ja varchar(32),
+    item_desc_en varchar(32),
+    item_desc_ja varchar(32),
+    item_price_buy int,
+    item_price_sell int,
+    item_price_buy_bp int,
+    item_price_buy_cn int,
+    item_type_id int,
+    constraint item_pk primary key (item_id),
+    constraint item_fk_type foreign key (item_type_id) 
+        references item_type(item_type_id) on delete cascade
+);
+create table item_ball (
+    item_ball_id int not null,
+    item_ball_eff_en int not null,
+    item_ball_eff_ja int not null,
+    constraint item_ball_pk primary key (item_ball_id),
+    constraint item_ball_fk_item foreign key (item_ball_id)
+        references item(item_id) on delete cascade
+);
+create table item_tm (
+    item_tm_id int not null,
+    item_tm_is_num int,
+    item_tm_is_hm bool,
+    move_id int,
+    constraint item_tm_pk primary key (item_tm_id),
+    constraint item_tm_fk_item foreign key (tm_id)
+        references item(item_id) on delete cascade,
+    constraint item_tm_fk_move foreign key (move_id)
+        references move(move_id) on delete cascade
+);
 /*crt-move-todo*/
 create table pd (
     pd_id int not null auto_increment,
