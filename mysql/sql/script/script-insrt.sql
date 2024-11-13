@@ -29,6 +29,10 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-remembered-tuto
 /*insrt-zone*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-zone-name.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-zone.sql;
+/*insrt-move*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-type.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-pkt.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-cat.sql;
 /*insrt-todo*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;*/
