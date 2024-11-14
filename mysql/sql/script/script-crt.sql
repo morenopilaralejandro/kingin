@@ -247,6 +247,7 @@ create table item_cat (
 create table item (
     item_id int not null auto_increment,
     item_code varchar(32) unique,
+    item_img varchar(32),
     item_name_en varchar(32),
     item_name_ja varchar(32),
     item_desc_en varchar(1000),
@@ -255,6 +256,8 @@ create table item (
     item_price_sell int,
     item_price_buy_bp int,
     item_price_buy_cn int,
+    item_price_buy_ap int,
+    item_flin int,
     item_type_id int,
     item_pkt_id int,
     item_cat_id int,
