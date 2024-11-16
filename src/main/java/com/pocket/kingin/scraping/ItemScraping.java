@@ -1,6 +1,6 @@
-package com.pocket.kingin.scraper;
+package com.pocket.kingin.scraping;
 
-public class ItemScraper {
+public class ItemScraping {
 	private String ItemCode;
 	private String ItemImg;
 	private String ItemNameEn;
@@ -17,7 +17,7 @@ public class ItemScraper {
 	private String ItemPktCode;
 	private String ItemCatCode;
 	
-	public ItemScraper() {
+	public ItemScraping() {
 
 	}
 	

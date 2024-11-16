@@ -1,4 +1,4 @@
-package com.pocket.kingin.scraper;
+package com.pocket.kingin.scraping;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +13,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.util.ResourceUtils;
 
-public class MainScraper {
+public class MainScraping {
 
 	public static void main(String[] args) {
 		String methodName = "scrapItemEn";
@@ -30,14 +30,14 @@ public class MainScraper {
 
 	private static void scrapItemEn() {
 		Document doc; 
-		List<ItemScraper> items = new ArrayList<>();
+		List<ItemScraping> items = new ArrayList<>();
 		try {
 			File file = ResourceUtils.getFile("classpath:item.csv");
 			try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 				String line;
 				while ((line = br.readLine()) != null) {
 					String[] values = line.split(",");
-					ItemScraper item = new ItemScraper();
+					ItemScraping item = new ItemScraping();
 					item.setItemCode(values[0]);
 					item.setItemImg(values[1]);
 					item.setItemNameEn(values[2]);
@@ -50,7 +50,7 @@ public class MainScraper {
 
 		
 		for (int i = 0; i < items.size(); i++) {
-			ItemScraper item = items.get(i);
+			ItemScraping item = items.get(i);
 			String auxStr = "";
 			String[] auxArr;
 			try {
