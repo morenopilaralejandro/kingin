@@ -124,7 +124,7 @@ public class ItemScraping {
 	
 	public String toCsv() {
 		return ItemCode + "," + ItemImg + "," + ItemNameEn
-				+ "," + ItemNameJa + "," + ItemDescEn + "," + ItemDescJa
+				+ "," + ItemNameJa + "," + "\"" +ItemDescEn + "\"" + "," + ItemDescJa
 				+ "," + ItemPriceBuyYe + "," + ItemPriceSelYe + ","
 				+ ItemPriceBuyBp + "," + ItemPriceBuyCn + "," + ItemPriceBuyAp
 				+ "," + ItemFlin + "," + ItemTypeCode + "," + ItemPktCode

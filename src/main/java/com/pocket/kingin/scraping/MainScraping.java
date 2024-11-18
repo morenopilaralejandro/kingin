@@ -55,7 +55,7 @@ public class MainScraping {
 			String[] auxArr;
 			try {
 				String urlBase = "";
-				doc = Jsoup.connect(urlBase + item.getItemCode() + ".shtml").get();
+				doc = Jsoup.connect(urlBase + item.getItemCode() + ".html").get();
 				Elements tables = doc.select("table.dextable");
 				/*Item Type*/
 				item.setItemPktCode(tables.get(1).child(0).child(1).child(1).text());
@@ -70,6 +70,22 @@ public class MainScraping {
 						Element table = tables.get(j);
 						if (table.child(0).childNodeSize() == 20) {
 							item.setItemDescEn(table.child(0).child(3).text());
+						}
+					}
+					break;
+				case "Mail":
+				case "Miscellaneous":
+				case "Key Item":
+					for (int j = 0; j < tables.size(); j++) {
+						Element table = tables.get(j);
+						if (table.child(0).child(0).text().equals("Flavour Text")) {
+							Elements trs = tables.get(j).child(0).children();
+							for (int k = 0; k < trs.size(); k++) {
+								Element tr = trs.get(k);	
+								if (tr.child(0).text().equals("HeartGold")) {
+									item.setItemDescEn(tr.child(2).text());		
+								}
+							}
 						}
 					}
 					break;
