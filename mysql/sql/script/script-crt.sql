@@ -269,16 +269,25 @@ create table item (
     constraint item_fk_cat foreign key (item_cat_id) 
         references item_cat(item_cat_id) on delete cascade
 );
+create table item_mach_obt (
+    item_mach_obt_id int not null auto_increment,
+    item_mach_obt_code varchar(32) unique,
+    item_mach_obt_name_en varchar(32),
+    item_mach_obt_name_ja varchar(32),
+    constraint item_mach_obt_pk primary key (item_mach_obt_id)
+);
 create table item_mach (
     item_mach_id int not null,
-    item_mach_is_num int,
-    item_mach_is_hm bool,
+    item_mach_num int,
+    item_mach_obt_id int,
     move_id int,
     constraint item_mach_pk primary key (item_mach_id),
     constraint item_mach_fk_item foreign key (item_mach_id)
         references item(item_id) on delete cascade,
     constraint item_mach_fk_move foreign key (move_id)
-        references move(move_id) on delete cascade
+        references move(move_id) on delete cascade,
+    constraint item_mach_fk_item_mach_obt foreign key (item_mach_obt_id)
+        references item_mach_obt(item_mach_obt_id) on delete cascade
 );
 /*crt-pd-todo*/
 create table pd (
@@ -303,4 +312,13 @@ create table pd_learns_move (
         references move(move_id) on delete cascade,
     constraint pd_learns_move_fk_lrn foreign key (move_lrn_id) 
         references move_lrn(move_lrn_id) on delete cascade
+);
+create table item_foss (
+    item_foss_id int not null,
+    pd_id int,
+    constraint item_foss_pk primary key (item_foss_id),
+    constraint item_foss_fk_item foreign key (item_foss_id)
+        references item(item_id) on delete cascade,
+    constraint item_foss_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade
 );

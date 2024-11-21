@@ -33,7 +33,11 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-zone.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-type.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-pkt.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-cat.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-mach-obt.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-mach.sql;
 /*insrt-todo*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-learns-move.sql;*/
+/*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-foss;*/
