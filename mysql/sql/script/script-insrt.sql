@@ -40,4 +40,4 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-mach.sql;
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;*/
 /*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-learns-move.sql;*/
-/*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-foss;*/
+/*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-foss.sql;*/
