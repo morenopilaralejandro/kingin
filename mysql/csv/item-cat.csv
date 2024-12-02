@@ -1,0 +1,32 @@
+item_cat_code,item_cat_name_en,item_cat_name_ja
+ic-item,Items,どうぐ
+ic-med,Medicine,かいふく
+ic-ball,Poké Balls,モンスターボール
+ic-tmhm,TMs & HMs,わざマシン
+ic-berr,Berries,きのみ
+ic-berr-ev,EV-reducing berries,努力値を下げるきのみ
+ic-berr-com,Battle berries,バトルきのみ
+ic-batt,Battle Items,せんとうよう
+ic-key,Key Items,たいせつなもの
+ic-dop,Vitamin,ドーピングアイテム
+ic-flu,Flute,ビードロ
+ic-shar,Shard,かけら
+ic-rep,Repel,スプレー
+ic-ston,Stone,いし
+ic-cash,Cash,換金
+ic-mulc,Mulch,こやし
+ic-fossil,Fossil,カセキ
+ic-evo,Evolution,進化
+ic-com,Combat,バトル
+ic-mail,Mail,メール
+ic-choi,Choice,こだわり
+ic-ince,Incense,おこう
+ic-scar,Scarf,バンダナ
+ic-orb,Orb,たま
+ic-rock,Rock,いわ
+ic-pow,Power item,パワーアイテム
+ic-plate,Plate,プレート
+ic-tm,TM,わざマシン
+ic-hm,HM,ひでんマシン
+ic-apri,Apricorn,ぼんぐり
+ic-data,Data Card,データカード
