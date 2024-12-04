@@ -1,0 +1,101 @@
+item,item_mach_num,item_mach_obt,move
+tm01,1,one,Focus Punch
+tm02,2,many,Dragon Claw
+tm03,3,one,Water Pulse
+tm04,4,many,Calm Mind
+tm05,5,one,Roar
+tm06,6,many,Toxic
+tm07,7,wkr,Hail
+tm08,8,many,Bulk Up
+tm09,9,one,Bullet Seed
+tm10,10,many,Hidden Power
+tm11,11,wkr,Sunny Day
+tm12,12,many,Taunt
+tm13,13,many,Ice Beam
+tm14,14,many,Blizzard
+tm15,15,many,Hyper Beam
+tm16,16,many,Light Screen
+tm17,17,many,Protect
+tm18,18,wkr,Rain Dance
+tm19,19,one,Giga Drain
+tm20,20,many,Safeguard
+tm21,21,many,Frustration
+tm22,22,many,Solarbeam
+tm23,23,one,Iron Tail
+tm24,24,many,Thunderbolt
+tm25,25,many,Thunder
+tm26,26,many,Earthquake
+tm27,27,many,Return
+tm28,28,many,Dig
+tm29,29,many,Psychic
+tm30,30,many,Shadow Ball
+tm31,31,many,Brick Break
+tm32,32,many,Double Team
+tm33,33,many,Reflect
+tm34,34,one,Shock Wave
+tm35,35,many,Flamethrower
+tm36,36,many,Sludge Bomb
+tm37,37,wkr,Sandstorm
+tm38,38,many,Fire Blast
+tm39,39,one,Rock Tomb
+tm40,40,one,Aerial Ace
+tm41,41,many,Torment
+tm42,42,many,Facade
+tm43,43,one,Secret Power
+tm44,44,many,Rest
+tm45,45,many,Attract
+tm46,46,one,Thief
+tm47,47,one,Steel Wing
+tm48,48,one,Skill Swap
+tm49,49,one,Snatch
+tm50,50,one,Overheat
+tm51,51,one,Roost
+tm52,52,many,Focus Blast
+tm53,53,many,Energy Ball
+tm54,54,many,False Swipe
+tm55,55,many,Brine
+tm56,56,one,Fling
+tm57,57,many,Charge Beam
+tm58,58,many,Endure
+tm59,59,many,Dragon Pulse
+tm60,60,many,Drain Punch
+tm61,61,many,Will-o-wisp
+tm62,62,many,Silver Wind
+tm63,63,one,Embargo
+tm64,64,many,Explosion
+tm65,65,many,Shadow Claw
+tm66,66,one,Payback
+tm67,67,one,Recycle
+tm68,68,many,Giga Impact
+tm69,69,one,Rock Polish
+tm70,70,many,Flash
+tm71,71,many,Stone Edge
+tm72,72,many,Avalanche
+tm73,73,many,Thunder Wave
+tm74,74,many,Gyro Ball
+tm75,75,many,Swords Dance
+tm76,76,many,Stealth Rock
+tm77,77,one,Psych Up
+tm78,78,many,Captivate
+tm79,79,many,Dark Pulse
+tm80,80,one,Rock Slide
+tm81,81,many,X-Scissor
+tm82,82,one,Sleep Talk
+tm83,83,many,Natural Gift
+tm84,84,one,Poison Jab
+tm85,85,one,Dream Eater
+tm86,86,one,Grass Knot
+tm87,87,one,Swagger
+tm88,88,one,Pluck
+tm89,89,many,U-Turn
+tm90,90,many,Substitute
+tm91,91,many,Flash Cannon
+tm92,92,one,Trick Room
+hm01,1,one,Cut
+hm02,2,one,Fly
+hm03,3,one,Surf
+hm04,4,one,Strength
+hm05,5,one,Whirlpool
+hm06,6,one,Rock Smash
+hm07,7,one,Waterfall
+hm08,8,one,Rock Climb
