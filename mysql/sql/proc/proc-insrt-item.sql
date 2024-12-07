@@ -175,7 +175,7 @@ begin
                 item_pkt_id,
                 item_cat_id
             ) values (
-                vItemCode
+                vItemCode,
                 vItemImg,
                 vItemNameEn,
                 vItemNameJa,

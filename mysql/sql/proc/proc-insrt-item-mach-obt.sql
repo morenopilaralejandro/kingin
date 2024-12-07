@@ -24,9 +24,9 @@ begin
 	declare i int default 1;
 
     /*cur1 variables*/
-    declare vItemmach_obtCode varchar(32) default '';
-    declare vItemmach_obtNameEn varchar(32) default '';
-    declare vItemmach_obtNameJa varchar(32) default '';
+    declare vItemMachObtCode varchar(32) default '';
+    declare vItemMachObtNameEn varchar(32) default '';
+    declare vItemMachObtNameJa varchar(32) default '';
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_item_mach_obt;
@@ -35,7 +35,10 @@ begin
     delete from item_mach_obt;    
     open cur1;
 	while continueCur1=1 do
-        fetch cur1 into v;
+        fetch cur1 into 
+            vItemMachObtCode,
+            vItemMachObtNameEn,
+            vItemMachObtNameJa;
         if continueCur1 = 1 then
             /*TODO*/
             insert into item_mach_obt (
@@ -43,9 +46,9 @@ begin
                 item_mach_obt_name_en,	
                 item_mach_obt_name_ja
             ) values (
-                vItemmach_obtCode,
-                vItemmach_obtNameEn,
-                vItemmach_obtNameJa
+                vItemMachObtCode,
+                vItemMachObtNameEn,
+                vItemMachObtNameJa
             );
         end if;
 	end while;

@@ -49,7 +49,7 @@ begin
             vMove;
 
         if continueCur1 = 1 then
-            select item_mach_type_id into idItem 
+            select item_id into idItem 
                 from item
                 where item_code = vItem;
 

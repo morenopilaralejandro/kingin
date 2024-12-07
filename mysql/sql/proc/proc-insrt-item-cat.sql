@@ -35,7 +35,10 @@ begin
     delete from item_cat;    
     open cur1;
 	while continueCur1=1 do
-        fetch cur1 into v;
+        fetch cur1 into 
+            vItemCatCode, 
+            vItemCatNameEn, 
+            vItemCatNameJa;
         if continueCur1 = 1 then
             /*TODO*/
             insert into item_cat (

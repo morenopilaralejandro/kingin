@@ -35,7 +35,10 @@ begin
     delete from item_type;    
     open cur1;
 	while continueCur1=1 do
-        fetch cur1 into v;
+        fetch cur1 into 
+            vItemTypeCode, 
+            vItemTypeNameEn, 
+            vItemTypeNameJa;
         if continueCur1 = 1 then
             /*TODO*/
             insert into item_type (
