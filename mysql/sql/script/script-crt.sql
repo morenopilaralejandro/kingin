@@ -289,6 +289,36 @@ create table item_mach (
     constraint item_mach_fk_item_mach_obt foreign key (item_mach_obt_id)
         references item_mach_obt(item_mach_obt_id) on delete cascade
 );
+/*crt-shop*/
+create table curr (
+    curr_id int not null auto_increment,
+    curr_code varchar(32) unique,
+    curr_name_en varchar(32),
+    curr_name_ja varchar(32),
+    constraint curr_pk primary key (curr_id)
+);
+create table shop (
+    shop_id int not null auto_increment,
+    shop_code varchar(32) unique,
+    shop_name_en varchar(32),
+    shop_name_ja varchar(32),
+    zone_id int,
+    curr_id int,
+    constraint shop_pk primary key (shop_id),
+    constraint shop_fk_zone foreign key (zone_id)
+        references zone(zone_id) on delete cascade,
+    constraint shop_fk_curr foreign key (curr_id)
+        references curr(curr_id) on delete cascade
+);
+create table shop_sells_item (
+    shop_id int not null,
+    item_id int not null,
+    constraint shop_sells_item_pk primary key (shop_id, item_id),
+    constraint shop_sells_item_fk_shop foreign key (shop_id)
+        references shop(shop_id) on delete cascade,
+    constraint shop_sells_item_fk_item foreign key (item_id)
+        references item(item_id) on delete cascade
+);
 /*crt-pd-todo*/
 create table pd (
     pd_id int not null auto_increment,
@@ -320,5 +350,15 @@ create table item_foss (
     constraint item_foss_fk_item foreign key (item_foss_id)
         references item(item_id) on delete cascade,
     constraint item_foss_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade
+);
+create table shop_exchanges_pd (
+    shop_id int not null,
+    pd_id int not null,
+    price int,
+    constraint shop_exchanges_pd_pk primary key (pd),
+    constraint shop_exchanges_pd_fk_shop foreign key (shop_id)
+        references shop(shop_id) on delete cascade,
+    constraint shop_exchanges_pd_fk_pd foreign key (pd_id)
         references pd(pd_id) on delete cascade
 );
