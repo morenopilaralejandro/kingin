@@ -1,25 +1,25 @@
-drop table if exists aux_shop_exchanges_pd;
-create temporary table aux_shop_exchanges_pd (
+drop table if exists aux_shop_exch_pd;
+create temporary table aux_shop_exch_pd (
     shop_code varchar(32),
-    pd_code varchar(32),
+    pd_name varchar(32),
     price int
 );
 
-load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/shop-exchanges-pd.csv'
-into table aux_shop_exchanges_pd 
+load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/shop-exch-pd.csv'
+into table aux_shop_exch_pd 
 fields terminated by ',' 
 enclosed by '"'
 lines terminated by '\n'
 ignore 1 lines
 (
 shop_code,
-pd_code,
+pd_name,
 price
 );
 
 delimiter &&
-drop procedure if exists proc_insrt_shop_exchanges_pd;
-create procedure proc_insrt_shop_exchanges_pd()
+drop procedure if exists proc_insrt_shop_exch_pd;
+create procedure proc_insrt_shop_exch_pd()
 begin
 	declare i int default 1;
 
@@ -28,19 +28,19 @@ begin
 
     /*cur1 variables*/
     declare vShopCode varchar(32) default '';
-    declare vPdCode varchar(32) default '';    
+    declare vPdName varchar(32) default '';    
     declare vPrice varchar(32) default '';
 
     declare continueCur1 int default 1;
-    declare cur1 cursor for select * from aux_shop_exchanges_pd;
+    declare cur1 cursor for select * from aux_shop_exch_pd;
 	declare continue handler for SQLSTATE '02000' set continueCur1 = 0;
 
-    delete from shop_exchanges_pd;    
+    delete from shop_exch_pd;    
     open cur1;
 	while continueCur1=1 do
         fetch cur1 into 
             vShopCode,
-            vPdCode,
+            vPdName,
             vPrice;
 
         set idShop = 0;
@@ -53,9 +53,9 @@ begin
 
             select pd_id into idPd 
                 from pd 
-                where pd_code = vPdCode;
+                where pd_name_en = vPdName;
 
-            insert into shop_exchanges_pd (
+            insert into shop_exch_pd (
                 shop_id,
                 pd_id,
                 price
@@ -67,8 +67,8 @@ begin
         end if;
 	end while;
 	close cur1;
-    drop table if exists aux_shop_exchanges_pd;
+    drop table if exists aux_shop_exch_pd;
 end
 &&
 delimiter ;
-call proc_insrt_shop_exchanges_pd();
+call proc_insrt_shop_exch_pd();

@@ -29,15 +29,21 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-move-remembered-tuto
 /*insrt-zone*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-zone-name.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-zone.sql;
-/*insrt-move*/
+/*insrt-item*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-type.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-pkt.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-cat.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-mach-obt.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-mach.sql;
-/*insrt-todo*/
-/*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;*/
-/*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;*/
-/*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-learns-move.sql;*/
-/*source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-foss.sql;*/
+/*insrt-shop*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-curr.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop-sell-item.sql;
+/*insrt-todo
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-learns-move.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-foss.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop-exch-pd.sql;
+*/
