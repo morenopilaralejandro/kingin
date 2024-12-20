@@ -1,0 +1,14 @@
+shop_code,shop_name_en,shop_name_ja,zone_code,curr_code
+sh-dept-gold-2f,Goldenrod Dept. Store - 2F,コガネひゃっかてん - 2F,city-gold,curr-ye
+sh-dept-gold-3f,Goldenrod Dept. Store - 3F,コガネひゃっかてん - 3F,city-gold,curr-ye
+sh-dept-gold-4f,Goldenrod Dept. Store - 4F,コガネひゃっかてん - 4F,city-gold,curr-ye
+sh-dept-gold-5f,Goldenrod Dept. Store - 5F,コガネひゃっかてん - 5F,city-gold,curr-ye
+sh-dept-gold-ve,Goldenrod Dept. Store - Vending,コガネひゃっかてん - 自動販売機,city-gold,curr-ye
+sh-game-gold,Goldenrod Game Corner,コガネゲームコーナー,city-gold,curr-cn
+sh-flow,Flower Shop,フラワーショップ,city-gold,curr-ye
+sh-dept-cel-2f,Celadon Dept. Store - 2F,タマムシデパート - 2F,city-cel,curr-ye
+sh-dept-cel-3f,Celadon Dept. Store - 3F,タマムシデパート - 3F,city-cel,curr-ye
+sh-dept-cel-4f,Celadon Dept. Store - 4F,タマムシデパート - 4F,city-cel,curr-ye
+sh-dept-cel-5f,Celadon Dept. Store - 5F,タマムシデパート - 5F,city-cel,curr-ye
+sh-dept-cel-ve,Celadon Dept. Store - Vending,タマムシデパート - 自動販売機,city-cel,curr-ye
+sh-game-cel,Celadon Game Corner,タマムシゲームコーナー,city-cel,curr-cn

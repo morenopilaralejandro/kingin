@@ -40,7 +40,6 @@ begin
             vCurrNameEn, 
             vCurrNameJa;
         if continueCur1 = 1 then
-            /*TODO*/
             insert into curr (
                 curr_code,
                 curr_name_en,	

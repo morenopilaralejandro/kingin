@@ -15,10 +15,10 @@ lines terminated by '\n'
 ignore 1 lines
 (
 shop_code,
-shop_name_en,	
-shop_name_ja
+shop_name_en,
+shop_name_ja,
 zone_code,
-curr_code 
+curr_code
 );
 
 delimiter &&
@@ -35,7 +35,7 @@ begin
     declare vShopNameEn varchar(32) default '';
     declare vShopNameJa varchar(32) default '';
     declare vZoneCode varchar(32) default '';
-    declare vCurrCode varchar(32) default '';   
+    declare vCurrCode varchar(32) default '';
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_shop;
@@ -47,11 +47,24 @@ begin
         fetch cur1 into 
             vShopCode, 
             vShopNameEn, 
-            vShopNameJa
+            vShopNameJa,
+            vZoneCode,
+            vCurrCode;
+        select             
+            vShopCode, 
+            vShopNameEn, 
+            vShopNameJa,
             vZoneCode,
             vCurrCode;
         if continueCur1 = 1 then
-            /*TODO*/
+            select zone_id into idZone 
+                from zone
+                where zone_code = vZoneCode;
+
+            select curr_id into idCurr 
+                from curr
+                where curr_code = vCurrCode;
+
             insert into shop (
                 shop_code,
                 shop_name_en,	
