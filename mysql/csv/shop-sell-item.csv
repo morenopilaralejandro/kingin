@@ -18,7 +18,7 @@ Max Potion,sh-dept-gold-2f
 Full Restore,sh-dept-gold-2f
 Revive,sh-dept-gold-2f
 Antidote,sh-dept-gold-2f
-Parlyze Heal,sh-dept-gold-2f
+Paralyze Heal,sh-dept-gold-2f
 Awakening,sh-dept-gold-2f
 Burn Heal,sh-dept-gold-2f
 Ice Heal,sh-dept-gold-2f
@@ -73,7 +73,7 @@ Max Potion,sh-dept-cel-2f
 Full Restore,sh-dept-cel-2f
 Revive,sh-dept-cel-2f
 Antidote,sh-dept-cel-2f
-Parlyze Heal,sh-dept-cel-2f
+Paralyze Heal,sh-dept-cel-2f
 Awakening,sh-dept-cel-2f
 Burn Heal,sh-dept-cel-2f
 Ice Heal,sh-dept-cel-2f
@@ -132,3 +132,424 @@ Silk Scarf,sh-game-cel
 Wide Lens,sh-game-cel
 Zoom Lens,sh-game-cel
 Metronome,sh-game-cel
+Poké Ball,sh-mart-che
+Great Ball,sh-mart-che
+Ultra Ball,sh-mart-che
+Potion,sh-mart-che
+Super Potion,sh-mart-che
+Hyper Potion,sh-mart-che
+Max Potion,sh-mart-che
+Full Restore,sh-mart-che
+Revive,sh-mart-che
+Antidote,sh-mart-che
+Paralyze Heal,sh-mart-che
+Awakening,sh-mart-che
+Burn Heal,sh-mart-che
+Ice Heal,sh-mart-che
+Full Heal,sh-mart-che
+Escape Rope,sh-mart-che
+Repel,sh-mart-che
+Super Repel,sh-mart-che
+Max Repel,sh-mart-che
+Air Mail,sh-mart-che
+Heal Ball,sh-mart-che
+Poké Ball,sh-mart-vio
+Great Ball,sh-mart-vio
+Ultra Ball,sh-mart-vio
+Potion,sh-mart-vio
+Super Potion,sh-mart-vio
+Hyper Potion,sh-mart-vio
+Max Potion,sh-mart-vio
+Full Restore,sh-mart-vio
+Revive,sh-mart-vio
+Antidote,sh-mart-vio
+Paralyze Heal,sh-mart-vio
+Awakening,sh-mart-vio
+Burn Heal,sh-mart-vio
+Ice Heal,sh-mart-vio
+Full Heal,sh-mart-vio
+Escape Rope,sh-mart-vio
+Repel,sh-mart-vio
+Super Repel,sh-mart-vio
+Max Repel,sh-mart-vio
+Bloom Mail,sh-mart-vio
+Heal Ball,sh-mart-vio
+Net Ball,sh-mart-vio
+Poké Ball,sh-mart-aza
+Great Ball,sh-mart-aza
+Ultra Ball,sh-mart-aza
+Potion,sh-mart-aza
+Super Potion,sh-mart-aza
+Hyper Potion,sh-mart-aza
+Max Potion,sh-mart-aza
+Full Restore,sh-mart-aza
+Revive,sh-mart-aza
+Antidote,sh-mart-aza
+Paralyze Heal,sh-mart-aza
+Awakening,sh-mart-aza
+Burn Heal,sh-mart-aza
+Ice Heal,sh-mart-aza
+Full Heal,sh-mart-aza
+Escape Rope,sh-mart-aza
+Repel,sh-mart-aza
+Super Repel,sh-mart-aza
+Max Repel,sh-mart-aza
+Air Mail,sh-mart-aza
+Heal Ball,sh-mart-aza
+Net Ball,sh-mart-aza
+Poké Ball,sh-mart-ecru
+Great Ball,sh-mart-ecru
+Ultra Ball,sh-mart-ecru
+Potion,sh-mart-ecru
+Super Potion,sh-mart-ecru
+Hyper Potion,sh-mart-ecru
+Max Potion,sh-mart-ecru
+Full Restore,sh-mart-ecru
+Revive,sh-mart-ecru
+Antidote,sh-mart-ecru
+Paralyze Heal,sh-mart-ecru
+Awakening,sh-mart-ecru
+Burn Heal,sh-mart-ecru
+Ice Heal,sh-mart-ecru
+Full Heal,sh-mart-ecru
+Escape Rope,sh-mart-ecru
+Repel,sh-mart-ecru
+Super Repel,sh-mart-ecru
+Max Repel,sh-mart-ecru
+Air Mail,sh-mart-ecru
+Heal Ball,sh-mart-ecru
+Net Ball,sh-mart-ecru
+Poké Ball,sh-mart-oliv
+Great Ball,sh-mart-oliv
+Ultra Ball,sh-mart-oliv
+Potion,sh-mart-oliv
+Super Potion,sh-mart-oliv
+Hyper Potion,sh-mart-oliv
+Max Potion,sh-mart-oliv
+Full Restore,sh-mart-oliv
+Revive,sh-mart-oliv
+Antidote,sh-mart-oliv
+Paralyze Heal,sh-mart-oliv
+Awakening,sh-mart-oliv
+Burn Heal,sh-mart-oliv
+Ice Heal,sh-mart-oliv
+Full Heal,sh-mart-oliv
+Escape Rope,sh-mart-oliv
+Repel,sh-mart-oliv
+Super Repel,sh-mart-oliv
+Max Repel,sh-mart-oliv
+Heart Mail,sh-mart-oliv
+Net Ball,sh-mart-oliv
+Heal Ball,sh-mart-oliv
+Potion,sh-phar-cian
+Super Potion,sh-phar-cian
+Hyper Potion,sh-phar-cian
+Full Heal,sh-phar-cian
+Revive,sh-phar-cian
+Great Ball,sh-souv-maho
+Super Potion,sh-souv-maho
+Hyper Potion,sh-souv-maho
+Antidote,sh-souv-maho
+Paralyze Heal,sh-souv-maho
+Super Repel,sh-souv-maho
+Revive,sh-souv-maho
+Air Mail,sh-souv-maho
+Poké Ball,sh-mart-thor
+Great Ball,sh-mart-thor
+Ultra Ball,sh-mart-thor
+Potion,sh-mart-thor
+Super Potion,sh-mart-thor
+Hyper Potion,sh-mart-thor
+Max Potion,sh-mart-thor
+Full Restore,sh-mart-thor
+Revive,sh-mart-thor
+Antidote,sh-mart-thor
+Paralyze Heal,sh-mart-thor
+Awakening,sh-mart-thor
+Burn Heal,sh-mart-thor
+Ice Heal,sh-mart-thor
+Full Heal,sh-mart-thor
+Escape Rope,sh-mart-thor
+Repel,sh-mart-thor
+Super Repel,sh-mart-thor
+Max Repel,sh-mart-thor
+Air Mail,sh-mart-thor
+Net Ball,sh-mart-thor
+Dusk Ball,sh-mart-thor
+Poké Ball,sh-mart-ver
+Great Ball,sh-mart-ver
+Ultra Ball,sh-mart-ver
+Potion,sh-mart-ver
+Super Potion,sh-mart-ver
+Hyper Potion,sh-mart-ver
+Max Potion,sh-mart-ver
+Full Restore,sh-mart-ver
+Revive,sh-mart-ver
+Antidote,sh-mart-ver
+Paralyze Heal,sh-mart-ver
+Awakening,sh-mart-ver
+Burn Heal,sh-mart-ver
+Ice Heal,sh-mart-ver
+Full Heal,sh-mart-ver
+Escape Rope,sh-mart-ver
+Repel,sh-mart-ver
+Super Repel,sh-mart-ver
+Max Repel,sh-mart-ver
+Air Mail,sh-mart-ver
+Nest Ball,sh-mart-ver
+Dusk Ball,sh-mart-ver
+Quick Ball,sh-mart-ver
+Poké Ball,sh-mart-saf
+Great Ball,sh-mart-saf
+Ultra Ball,sh-mart-saf
+Potion,sh-mart-saf
+Super Potion,sh-mart-saf
+Hyper Potion,sh-mart-saf
+Max Potion,sh-mart-saf
+Full Restore,sh-mart-saf
+Revive,sh-mart-saf
+Antidote,sh-mart-saf
+Paralyze Heal,sh-mart-saf
+Awakening,sh-mart-saf
+Burn Heal,sh-mart-saf
+Ice Heal,sh-mart-saf
+Full Heal,sh-mart-saf
+Escape Rope,sh-mart-saf
+Repel,sh-mart-saf
+Super Repel,sh-mart-saf
+Max Repel,sh-mart-saf
+Air Mail,sh-mart-saf
+Dusk Ball,sh-mart-saf
+Quick Ball,sh-mart-saf
+Poké Ball,sh-mart-lav
+Great Ball,sh-mart-lav
+Ultra Ball,sh-mart-lav
+Potion,sh-mart-lav
+Super Potion,sh-mart-lav
+Hyper Potion,sh-mart-lav
+Max Potion,sh-mart-lav
+Full Restore,sh-mart-lav
+Revive,sh-mart-lav
+Antidote,sh-mart-lav
+Paralyze Heal,sh-mart-lav
+Awakening,sh-mart-lav
+Burn Heal,sh-mart-lav
+Ice Heal,sh-mart-lav
+Full Heal,sh-mart-lav
+Escape Rope,sh-mart-lav
+Repel,sh-mart-lav
+Super Repel,sh-mart-lav
+Max Repel,sh-mart-lav
+Snow Mail,sh-mart-lav
+Dusk Ball,sh-mart-lav
+Quick Ball,sh-mart-lav
+Poké Ball,sh-mart-ceru
+Great Ball,sh-mart-ceru
+Ultra Ball,sh-mart-ceru
+Potion,sh-mart-ceru
+Super Potion,sh-mart-ceru
+Hyper Potion,sh-mart-ceru
+Max Potion,sh-mart-ceru
+Full Restore,sh-mart-ceru
+Revive,sh-mart-ceru
+Antidote,sh-mart-ceru
+Paralyze Heal,sh-mart-ceru
+Awakening,sh-mart-ceru
+Burn Heal,sh-mart-ceru
+Ice Heal,sh-mart-ceru
+Full Heal,sh-mart-ceru
+Escape Rope,sh-mart-ceru
+Repel,sh-mart-ceru
+Super Repel,sh-mart-ceru
+Max Repel,sh-mart-ceru
+Air Mail,sh-mart-ceru
+Quick Ball,sh-mart-ceru
+Poké Ball,sh-mart-fu
+Great Ball,sh-mart-fu
+Ultra Ball,sh-mart-fu
+Potion,sh-mart-fu
+Super Potion,sh-mart-fu
+Hyper Potion,sh-mart-fu
+Max Potion,sh-mart-fu
+Full Restore,sh-mart-fu
+Revive,sh-mart-fu
+Antidote,sh-mart-fu
+Paralyze Heal,sh-mart-fu
+Awakening,sh-mart-fu
+Burn Heal,sh-mart-fu
+Ice Heal,sh-mart-fu
+Full Heal,sh-mart-fu
+Escape Rope,sh-mart-fu
+Repel,sh-mart-fu
+Super Repel,sh-mart-fu
+Max Repel,sh-mart-fu
+Steel Mail,sh-mart-fu
+Net Ball,sh-mart-fu
+Dusk Ball,sh-mart-fu
+Poké Ball,sh-mart-pew
+Great Ball,sh-mart-pew
+Ultra Ball,sh-mart-pew
+Potion,sh-mart-pew
+Super Potion,sh-mart-pew
+Hyper Potion,sh-mart-pew
+Max Potion,sh-mart-pew
+Full Restore,sh-mart-pew
+Revive,sh-mart-pew
+Antidote,sh-mart-pew
+Paralyze Heal,sh-mart-pew
+Awakening,sh-mart-pew
+Burn Heal,sh-mart-pew
+Ice Heal,sh-mart-pew
+Full Heal,sh-mart-pew
+Escape Rope,sh-mart-pew
+Repel,sh-mart-pew
+Super Repel,sh-mart-pew
+Max Repel,sh-mart-pew
+Steel Mail,sh-mart-pew
+Nest Ball,sh-mart-pew
+Quick Ball,sh-mart-pew
+Protein,sh-saf-rig
+Iron,sh-saf-rig
+Calcium,sh-saf-rig
+Zinc,sh-saf-rig
+Carbos,sh-saf-rig
+HP Up,sh-saf-rig
+Air Mail,sh-saf-lef
+Nest Ball,sh-saf-lef
+Dusk Ball,sh-saf-lef
+Quick Ball,sh-saf-lef
+Ultra Ball,sh-indi
+Super Repel,sh-indi
+Super Potion,sh-indi
+Max Potion,sh-indi
+Full Restore,sh-indi
+Revive,sh-indi
+Full Heal,sh-indi
+Protein,sh-batt-ite
+Calcium,sh-batt-ite
+Iron,sh-batt-ite
+Zinc,sh-batt-ite
+Carbos,sh-batt-ite
+HP Up,sh-batt-ite
+Power Bracer,sh-batt-ite
+Power Belt,sh-batt-ite
+Power Lens,sh-batt-ite
+Power Band,sh-batt-ite
+Power Anklet,sh-batt-ite
+Power Weight,sh-batt-ite
+Toxic Orb,sh-batt-ite
+Flame Orb,sh-batt-ite
+White Herb,sh-batt-ite
+Power Herb,sh-batt-ite
+Brightpowder,sh-batt-ite
+Choice Band,sh-batt-ite
+Focus Band,sh-batt-ite
+Scope Lens,sh-batt-ite
+Muscle Band,sh-batt-ite
+Focus Sash,sh-batt-ite
+Choice Scarf,sh-batt-ite
+Razor Claw,sh-batt-ite
+Razor Fang,sh-batt-ite
+Rare Candy,sh-batt-ite
+TM06,sh-batt-tms
+TM73,sh-batt-tms
+TM61,sh-batt-tms
+TM45,sh-batt-tms
+TM40,sh-batt-tms
+TM31,sh-batt-tms
+TM08,sh-batt-tms
+TM04,sh-batt-tms
+TM81,sh-batt-tms
+TM30,sh-batt-tms
+TM53,sh-batt-tms
+TM36,sh-batt-tms
+TM59,sh-batt-tms
+TM71,sh-batt-tms
+TM26,sh-batt-tms
+Fresh Water,sh-ath-ve
+Soda Pop,sh-ath-ve
+Lemonade,sh-ath-ve
+Red Apricorn,sh-ath-mo
+Blu Apricorn,sh-ath-mo
+Grn Apricorn,sh-ath-mo
+Moomoo Milk,sh-ath-mo
+Moon Stone,sh-ath-mo
+Rare Candy,sh-ath-mo
+Full Restore,sh-ath-mo
+King's Rock,sh-ath-mo
+Sun Stone,sh-ath-mo
+Water Stone,sh-ath-mo
+Shiny Stone,sh-ath-mo
+Dusk Stone,sh-ath-mo
+Ylw Apricorn,sh-ath-tu
+Pnk Apricorn,sh-ath-tu
+Wht Apricorn,sh-ath-tu
+Moomoo Milk,sh-ath-tu
+Fire Stone,sh-ath-tu
+PP Up,sh-ath-tu
+Full Restore,sh-ath-tu
+Metal Coat,sh-ath-tu
+Water Stone,sh-ath-tu
+Leaf Stone,sh-ath-tu
+Dusk Stone,sh-ath-tu
+Dawn Stone,sh-ath-tu
+Blu Apricorn,sh-ath-we
+Pnk Apricorn,sh-ath-we
+Blk Apricorn,sh-ath-we
+Moomoo Milk,sh-ath-we
+Water Stone,sh-ath-we
+Heart Scale,sh-ath-we
+Full Restore,sh-ath-we
+Dragon Scale,sh-ath-we
+Thunderstone,sh-ath-we
+Moon Stone,sh-ath-we
+Shiny Stone,sh-ath-we
+Dawn Stone,sh-ath-we
+Ylw Apricorn,sh-ath-th
+Pnk Apricorn,sh-ath-th
+Wht Apricorn,sh-ath-th
+Moomoo Milk,sh-ath-th
+Thunderstone,sh-ath-th
+PP Up,sh-ath-th
+Full Restore,sh-ath-th
+King's Rock,sh-ath-th
+Fire Stone,sh-ath-th
+Leaf Stone,sh-ath-th
+Shiny Stone,sh-ath-th
+Dusk Stone,sh-ath-th
+Red Apricorn,sh-ath-fr
+Ylw Apricorn,sh-ath-fr
+Grn Apricorn,sh-ath-fr
+Moomoo Milk,sh-ath-fr
+Metal Coat,sh-ath-fr
+Nugget,sh-ath-fr
+Full Restore,sh-ath-fr
+Dragon Scale,sh-ath-fr
+Water Stone,sh-ath-fr
+Sun Stone,sh-ath-fr
+Dusk Stone,sh-ath-fr
+Dawn Stone,sh-ath-fr
+Grn Apricorn,sh-ath-sat
+Wht Apricorn,sh-ath-sat
+Blk Apricorn,sh-ath-sat
+Moomoo Milk,sh-ath-sat
+Leaf Stone,sh-ath-sat
+Rare Candy,sh-ath-sat
+Full Restore,sh-ath-sat
+Metal Coat,sh-ath-sat
+Thunderstone,sh-ath-sat
+Shiny Stone,sh-ath-sat
+Dusk Stone,sh-ath-sat
+Dawn Stone,sh-ath-sat
+Red Apricorn,sh-ath-sun
+Blu Apricorn,sh-ath-sun
+Blk Apricorn,sh-ath-sun
+Moomoo Milk,sh-ath-sun
+King's Rock,sh-ath-sun
+Heart Scale,sh-ath-sun
+Full Restore,sh-ath-sun
+Nugget,sh-ath-sun
+Sun Stone,sh-ath-sun
+Fire Stone,sh-ath-sun
+Shiny Stone,sh-ath-sun
+Dawn Stone,sh-ath-sun

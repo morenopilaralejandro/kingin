@@ -29,7 +29,7 @@ antidote,antidote,Antidote,どくけし,Heals the Poison Status Ailment.,どく�
 burnheal,burn-heal,Burn Heal,やけどなおし,Heals the Burn Status Ailment.,やけど状態を回復させる,250,125,null,null,null,30,item,ip-med,ic-med
 iceheal,ice-heal,Ice Heal,こおりなおし,Heals the Frozen Status Ailment.,こおり状態を回復させる。,250,125,null,null,null,30,item,ip-med,ic-med
 awakening,awakening,Awakening,ねむけざまし,Heals the Sleep Status Ailment.,ねむり状態を回復させる。,250,125,null,null,null,30,item,ip-med,ic-med
-paralyzeheal,paralyze-heal,Parlyze Heal,まひなおし,Heals the Paralysis Status Ailment.,まひ状態を回復させる。,200,100,null,null,null,30,item,ip-med,ic-med
+paralyzeheal,paralyze-heal,Paralyze Heal,まひなおし,Heals the Paralysis Status Ailment.,まひ状態を回復させる。,200,100,null,null,null,30,item,ip-med,ic-med
 fullrestore,full-restore,Full Restore,かいふくのくすり,Completely heals a Pokémon's HP and Status.,HPを全回復し、状態異常を回復する。,3000,1500,null,null,500,30,item,ip-med,ic-med
 maxpotion,max-potion,Max Potion,まんたんのくすり,Completely heals a Pokémon's HP.,HPを全回復する。,2500,1250,null,null,null,30,item,ip-med,ic-med
 hyperpotion,hyper-potion,Hyper Potion,すごいキズぐすり,Heals a Pokémon by 200HP.,HPを200回復する。,1500,750,null,null,null,30,item,ip-med,ic-med

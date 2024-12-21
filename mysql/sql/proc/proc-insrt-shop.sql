@@ -50,12 +50,7 @@ begin
             vShopNameJa,
             vZoneCode,
             vCurrCode;
-        select             
-            vShopCode, 
-            vShopNameEn, 
-            vShopNameJa,
-            vZoneCode,
-            vCurrCode;
+
         if continueCur1 = 1 then
             select zone_id into idZone 
                 from zone

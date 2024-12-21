@@ -39,10 +39,6 @@ begin
             vItemName,
             vShopCode;
 
-        select 
-            vItemName,
-            vShopCode;
-
         set idShop = 0;
         set idItem = 0;
 
