@@ -28,6 +28,13 @@ create table egg_grp (
     egg_grp_name_ja varchar(32),
     constraint egg_grp_pk primary key (egg_grp_id)
 );
+/*crt-egg-cyc*/
+create table egg_cyc (
+    egg_cyc_id int not null auto_increment,
+    egg_cyc_code varchar(32) unique,
+    egg_cyc_val int,
+    constraint egg_cyc_pk primary key (egg_cyc_id)
+);
 /*crt-exp-grp*/
 create table exp_grp (
     exp_grp_id int not null auto_increment,
@@ -319,16 +326,142 @@ create table shop_sell_item (
     constraint shop_sell_item_fk_item foreign key (item_id)
         references item(item_id) on delete cascade
 );
-/*crt-pd-todo*/
+/*crt-pd*/
 create table pd (
     pd_id int not null auto_increment,
-    TODO varchar(32),
-    constraint pd_pk primary key (pd_id)
+    pd_code varchar(32) unique,
+    pd_index int,
+    pd_name_en varchar(32),
+    pd_name_ja varchar(32),
+    pd_img varchar(32),
+    pd_cap_rate int,
+    pd_hap int,
+    pd_base_hp int,
+    pd_base_atk int,
+    pd_base_def int,
+    pd_base_spatk int,
+    pd_base_spdef int,
+    pd_base_spe int,
+    egg_cyc_id int,
+    exp_grp_id int,
+    constraint pd_pk primary key (pd_id),
+    constraint pd_fk_egg_cyc foreign key (egg_cyc_id)
+        references egg_cyc(egg_cyc_id) on delete cascade,
+    constraint pd_fk_exp_grp foreign key (exp_grp_id)
+        references exp_grp(exp_grp_id) on delete cascade
 );
-create table po (
-    po_id int not null auto_increment,
-    TODO varchar(32),
-    constraint pd_pk primary key (po_id)
+create table pd_yiel_stat (
+    pd_id int not null,
+    stat_id int not null,
+    amount int,
+    constraint pd_yiel_stat_pk primary key (pd_id, stat_id),
+    constraint pd_yiel_stat_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_yiel_stat_fk_stat foreign key (stat_id)
+        references stat(stat_id) on delete cascade
+);
+create table pd_tra_abil (
+    pd_id int not null,
+    abil_id int not null,
+    constraint pd_tra_abil_pk primary key (pd_id, abil_id),
+    constraint pd_tra_abil_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_tra_abil_fk_abil foreign key (abil_id)
+        references abil(abil_id) on delete cascade
+);
+create table pd_belo_egg_grp (
+    pd_id int not null,
+    egg_grp_id int not null,
+    constraint pd_belo_egg_grp_pk primary key (pd_id, egg_grp_id),
+    constraint pd_belo_egg_grp_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_belo_egg_grp_fk_egg_grp foreign key (egg_grp_id)
+        references egg_grp(egg_grp_id) on delete cascade
+);
+create table pd_evok_type (
+    pd_id int not null,
+    type_id int not null,
+    constraint pd_evok_type_pk primary key (pd_id, type_id),
+    constraint pd_evok_type_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_evok_type_fk_type foreign key (type_id)
+        references type(type_id) on delete cascade
+);
+create table pd_hold_item (
+    pd_id int not null,
+    item_id int not null,
+    rate int,
+    constraint pd_hold_item_pk primary key (pd_id, item_id),
+    constraint pd_hold_item_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_hold_item_fk_item foreign key (item_id)
+        references item(item_id) on delete cascade
+);
+create table pd_dimo_gndr (
+    pd_id int not null,
+    gndr_id int not null,
+    rate int,
+    constraint pd_dimo_gndr_pk primary key (pd_id, gndr_id),
+    constraint pd_dimo_gndr_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_dimo_gndr_fk_gndr foreign key (gndr_id)
+        references gndr(gndr_id) on delete cascade
+);
+create table pd_shif_pd (
+    pd_id_ori int not null,
+    pd_id_alt int not null,
+    constraint pd_dimo_pd_pk primary key (pd_id_alt),
+    constraint pd_dimo_pd_fk_pd_ori foreign key (pd_id_ori)
+        references pd(pd_id) on delete cascade,
+    constraint pd_dimo_pd_fk_pd_alt foreign key (pd_id_alt)
+        references pd(pd_id) on delete cascade
+);
+create table evo_fam (
+    evo_fam_id int not null auto_increment,
+    evo_fam_code varchar(32) unique,
+    constraint evo_fam_pk primary key (evo_fam_id)
+);
+create table pd_lina_evo_fam (
+    pd_id int not null,
+    evo_fam_id int not null,
+    ordr int,
+    constraint pd_lina_evo_fam_pk primary key (pd_id, evo_fam_id),
+    constraint pd_lina_evo_fam_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_lina_evo_fam_fk_evo_fam foreign key (evo_fam_id)
+        references evo_fam(evo_fam_id) on delete cascade
+);
+create table evo_cond (
+    evo_cond_id int not null auto_increment,
+    evo_cond_code varchar(32) unique,
+    evo_cond_desc_en varchar(32),
+    evo_cond_desc_ja varchar(32),
+    constraint evo_cond_pk primary key (evo_cond_id)
+);
+create table pd_evo_pd (
+    pd_id_sta int not null,
+    pd_id_end int not null,
+    evo_cond_id int not null,
+    lv int,
+    constraint pd_evo_pd_pk primary key (pd_id_sta, pd_id_end, evo_cond_id),
+    constraint pd_evo_pd_fk_pd_sta foreign key (pd_id_sta)
+        references pd(pd_id) on delete cascade,
+    constraint pd_evo_pd_fk_pd_end foreign key (pd_id_end)
+        references pd(pd_id) on delete cascade,
+    constraint pd_evo_pd_fk_evo_cond foreign key (evo_cond_id)
+        references evo_cond(evo_cond_id) on delete cascade
+);
+create table pd_baby_pd (
+    pd_id_pare int not null,
+    pd_id_baby int not null,
+    item_id int not null,
+    constraint pd_baby_pd_pk primary key (pd_id_pare, pd_id_baby, item_id),
+    constraint pd_baby_pd_fk_pd_pare foreign key (pd_id_pare)
+        references pd(pd_id) on delete cascade,
+    constraint pd_baby_pd_fk_pd_baby foreign key (pd_id_baby)
+        references pd(pd_id) on delete cascade,
+    constraint pd_baby_pd_fk_item foreign key (item_id)
+        references item(item_id) on delete cascade
 );
 create table pd_learns_move (
     pd_id int not null,
@@ -361,4 +494,10 @@ create table shop_exch_pd (
         references shop(shop_id) on delete cascade,
     constraint shop_exch_pd_fk_pd foreign key (pd_id)
         references pd(pd_id) on delete cascade
+);
+/*crt-po*/
+create table po (
+    po_id int not null auto_increment,
+    TODO varchar(32),
+    constraint pd_pk primary key (po_id)
 );

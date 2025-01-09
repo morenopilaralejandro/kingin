@@ -4,6 +4,8 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-stat.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-natu.sql;
 /*insrt-egg-grp*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-egg-grp.sql;
+/*insrt-egg-cyc*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-egg-cyc.sql;
 /*insrt-exp-grp*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-exp-grp.sql;
 /*insrt-gndr*/
@@ -40,6 +42,18 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-mach.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-curr.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop-sell-item.sql;
+/*insrt-pd*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-yiel-stat.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-tra-abil;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-belo-egg-grp;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-evok-type;
+
+
+
+
+
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-evo-fam.sql;
 /*insrt-todo
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;
