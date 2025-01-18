@@ -10,7 +10,9 @@ enclosed by '"'
 lines terminated by '\n'
 ignore 1 lines
 (
-evo_fam_code
+evo_fam_code,
+evo_fam_name_en,
+evo_fam_name_ja
 );
 
 delimiter &&
@@ -21,6 +23,8 @@ begin
 
     /*cur1 variables*/
     declare vEvoFamCode varchar(32) default '';
+    declare vEvoFamNameEn varchar(32) default '';
+    declare vEvoFamNameJa varchar(32) default '';
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_evo_fam;
@@ -30,12 +34,18 @@ begin
     open cur1;
 	while continueCur1=1 do
         fetch cur1 into 
-            vEvoFamCode;
+            vEvoFamCode,
+            vEvoFamNameEn,
+            vEvoFamNameJa;
         if continueCur1 = 1 then
             insert into evo_fam (
-                evo_fam_code
+                evo_fam_code,
+                evo_fam_name_en,
+                evo_fam_name_ja
             ) values (
-                vEvoFamCode
+                vEvoFamCode,   
+                vEvoFamNameEn,
+                vEvoFamNameJa
             );
         end if;
 	end while;

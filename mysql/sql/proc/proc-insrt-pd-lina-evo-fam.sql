@@ -1,7 +1,7 @@
 drop table if exists aux_pd_lina_evo_fam;
 create temporary table aux_pd_lina_evo_fam (
     pd_name varchar(32),
-    evo_fam_code varchar(32),
+    evo_fam_name varchar(32),
     ordr int
 );
 
@@ -13,7 +13,7 @@ lines terminated by '\n'
 ignore 1 lines
 (
 pd_name,
-evo_fam_code,
+evo_fam_name,
 ordr
 );
 
@@ -28,7 +28,7 @@ begin
 
     /*cur1 variables*/
     declare vPdName varchar(32) default '';
-    declare vEvoFamCode varchar(32) default '';
+    declare vEvoFamName varchar(32) default '';
     declare vOrdr int default 0;
 
     declare continueCur1 int default 1;
@@ -40,7 +40,7 @@ begin
 	while continueCur1=1 do
         fetch cur1 into 
             vPdName,
-            vEvoFamCode;
+            vEvoFamName;
 
         set idEvoFam = 0;
         set idPd = 0;
@@ -52,7 +52,7 @@ begin
 
             select evo_fam_id into idEvoFam 
                 from evo_fam 
-                where evo_fam_code = vEvoFamCode;
+                where evo_fam_name_en = vEvoFamName;
 
             insert into pd_lina_evo_fam (
                 pd_id,

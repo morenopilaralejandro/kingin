@@ -22,8 +22,8 @@ begin
 	declare i int default 1;
 
     /*cur1 variables*/
-    declare vEggcycCode varchar(32) default '';
-    declare vEggcycVal int default 0;
+    declare vEggCycCode varchar(32) default '';
+    declare vEggCycVal int default 0;
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_egg_cyc;
@@ -33,16 +33,16 @@ begin
     open cur1;
 	while continueCur1=1 do
         fetch cur1 into 
-            vEggcycCode,
-            vEggcycVal;
+            vEggCycCode,
+            vEggCycVal;
 
         if continueCur1 = 1 then
             insert into egg_cyc (
                 egg_cyc_code,
-                egg_cyc_name_val
+                egg_cyc_val
             ) values (
-                vEggcycCode,
-                vEggcycVal
+                vEggCycCode,
+                vEggCycVal
             );
         end if;
 	end while;

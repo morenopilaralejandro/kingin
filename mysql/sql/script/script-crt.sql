@@ -335,6 +335,7 @@ create table pd (
     pd_name_ja varchar(32),
     pd_img varchar(32),
     pd_cap_rate int,
+    pd_xp int, 
     pd_hap int,
     pd_base_hp int,
     pd_base_atk int,
@@ -419,6 +420,8 @@ create table pd_shif_pd (
 create table evo_fam (
     evo_fam_id int not null auto_increment,
     evo_fam_code varchar(32) unique,
+    evo_fam_name_en varchar(32),
+    evo_fam_name_ja varchar(32),
     constraint evo_fam_pk primary key (evo_fam_id)
 );
 create table pd_lina_evo_fam (

@@ -22,10 +22,47 @@ public class MainScraping {
 			scrapItemEn();
 			break;
 		}
+		case "scrapPdJa": {
+			scrapPdJa();
+			break;
+		}
 		default:
 			System.out.println(methodName);
 		}
 
+	}
+	
+	private static void scrapPdJa() {
+		Document doc;
+		List<ItemScraping> items = new ArrayList<>();
+		try {
+			File file = ResourceUtils.getFile("classpath:item.csv");
+			try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+				String line;
+				while ((line = br.readLine()) != null) {
+					String[] values = line.split(",");
+					ItemScraping item = new ItemScraping();
+					item.setItemCode(values[0]);
+					item.setItemImg(values[1]);
+					item.setItemNameEn(values[2]);
+					items.add(item);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		for (int i = 0; i < items.size(); i++) {
+			ItemScraping item = items.get(i);
+			String auxStr = "";
+			String[] auxArr;
+			try {
+				String urlBase = "";
+				doc = Jsoup.connect(urlBase + item.getItemCode() + ".html").get();			
+			} catch (IOException e) { 
+				throw new RuntimeException(e); 
+			}
+		}
 	}
 
 	private static void scrapItemEn() {
