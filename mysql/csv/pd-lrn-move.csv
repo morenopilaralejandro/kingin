@@ -672,3 +672,82 @@ n9,Blastoise,Skull Bash,lv,39
 n9,Blastoise,Iron Defense,lv,46
 n9,Blastoise,Rain Dance,lv,53
 n9,Blastoise,Hydro Pump,lv,60
+n10,Caterpie,String Shot,tu,0
+n10,Caterpie,Bug Bite,tu,0
+n10,Caterpie,Snore,tu,0
+n10,Caterpie,Tackle,lv,1
+n10,Caterpie,String Shot,lv,1
+n10,Caterpie,Bug Bite,lv,15
+n11,Metapod,Tackle,pr,0
+n11,Metapod,String Shot,pr,0
+n11,Metapod,Bug Bite,pr,0
+n11,Metapod,Snore,pr,0
+n11,Metapod,String Shot,tu,0
+n11,Metapod,Bug Bite,tu,0
+n11,Metapod,Iron Defense,tu,0
+n11,Metapod,Harden,lv,1
+n11,Metapod,Harden,lv,7
+n12,Butterfree,Harden,pr,0
+n12,Butterfree,Tackle,pr,0
+n12,Butterfree,String Shot,pr,0
+n12,Butterfree,Bug Bite,pr,0
+n12,Butterfree,Iron Defense,pr,0
+n12,Butterfree,String Shot,tu,0
+n12,Butterfree,Tailwind,tu,0
+n12,Butterfree,Bug Bite,tu,0
+n12,Butterfree,Air Cutter,tu,0
+n12,Butterfree,Ominous Wind,tu,0
+n12,Butterfree,Snore,tu,0
+n12,Butterfree,Swift,tu,0
+n12,Butterfree,Signal Beam,tu,0
+n12,Butterfree,Twister,tu,0
+n12,Butterfree,Toxic,tm,0
+n12,Butterfree,Hidden Power,tm,0
+n12,Butterfree,Sunny Day,tm,0
+n12,Butterfree,Hyper Beam,tm,0
+n12,Butterfree,Protect,tm,0
+n12,Butterfree,Rain Dance,tm,0
+n12,Butterfree,Giga Drain,tm,0
+n12,Butterfree,Safeguard,tm,0
+n12,Butterfree,Frustration,tm,0
+n12,Butterfree,Solarbeam,tm,0
+n12,Butterfree,Return,tm,0
+n12,Butterfree,Psychic,tm,0
+n12,Butterfree,Shadow Ball,tm,0
+n12,Butterfree,Double Team,tm,0
+n12,Butterfree,Aerial Ace,tm,0
+n12,Butterfree,Facade,tm,0
+n12,Butterfree,Secret Power,tm,0
+n12,Butterfree,Rest,tm,0
+n12,Butterfree,Attract,tm,0
+n12,Butterfree,Thief,tm,0
+n12,Butterfree,Skill Swap,tm,0
+n12,Butterfree,Roost,tm,0
+n12,Butterfree,Energy Ball,tm,0
+n12,Butterfree,Endure,tm,0
+n12,Butterfree,Silver Wind,tm,0
+n12,Butterfree,Giga Impact,tm,0
+n12,Butterfree,Flash,tm,0
+n12,Butterfree,Psych Up,tm,0
+n12,Butterfree,Captivate,tm,0
+n12,Butterfree,Sleep Talk,tm,0
+n12,Butterfree,Natural Gift,tm,0
+n12,Butterfree,Dream Eater,tm,0
+n12,Butterfree,Swagger,tm,0
+n12,Butterfree,U-turn,tm,0
+n12,Butterfree,Substitute,tm,0
+n12,Butterfree,Defog,tm,0
+n12,Butterfree,Confusion,lv,1
+n12,Butterfree,Confusion,lv,10
+n12,Butterfree,Poisonpowder,lv,12
+n12,Butterfree,Stun Spore,lv,12
+n12,Butterfree,Sleep Powder,lv,12
+n12,Butterfree,Gust,lv,16
+n12,Butterfree,Supersonic,lv,18
+n12,Butterfree,Whirlwind,lv,22
+n12,Butterfree,Psybeam,lv,24
+n12,Butterfree,Silver Wind,lv,28
+n12,Butterfree,Tailwind,lv,30
+n12,Butterfree,Safeguard,lv,34
+n12,Butterfree,Captivate,lv,36
+n12,Butterfree,Bug Buzz,lv,40

@@ -16,8 +16,8 @@ import org.springframework.util.ResourceUtils;
 public class MainScraping {
 
 	public static void main(String[] args) {
-		scrapMoveEn("n9", "009");
-		scrapPdJa("n9");
+		scrapMoveEn("n12", "012");
+		scrapPdJa("n12");
 	}
 	
 	private static void scrapMoveEn(String code1, String code2) {
@@ -103,6 +103,7 @@ public class MainScraping {
                     .ignoreContentType(true)
 					.get();
 			
+			boolean cont = true;
 			int auxInt = -1;
 			String auxStr = "";
 			String[] auxStrArr;
@@ -155,11 +156,27 @@ public class MainScraping {
 			} else {
 				auxInt = auxStr.indexOf("オス:");
 				if (auxInt > -1) {
-					pd.setGndrMRate(auxStr.substring(auxInt+3, auxInt+3+4));
+					pd.setGndrMRate("");
+					cont = true;
+					for (int i = auxInt + 3; i < auxStr.length() && cont; i++) {
+						if (auxStr.charAt(i) == '%') {
+							cont = false;
+						} else {
+							pd.setGndrMRate(pd.getGndrMRate() + auxStr.charAt(i));		
+						}
+					}
 				}
 				auxInt = auxStr.indexOf("メス:");
 				if (auxInt > -1) {
-					pd.setGndrFRate(auxStr.substring(auxInt+3, auxInt+3+4));
+					pd.setGndrFRate("");
+					cont = true;
+					for (int i = auxInt + 3; i < auxStr.length() && cont; i++) {
+						if (auxStr.charAt(i) == '%') {
+							cont = false;
+						} else {
+							pd.setGndrFRate(pd.getGndrFRate() + auxStr.charAt(i));		
+						}
+					}
 				}
 			}
 			

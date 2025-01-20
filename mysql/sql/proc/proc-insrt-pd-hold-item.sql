@@ -40,7 +40,8 @@ begin
 	while continueCur1=1 do
         fetch cur1 into 
             vPdName,
-            vItemName;
+            vItemName,
+            vRate;
 
         set idItem = 0;
         set idPd = 0;
