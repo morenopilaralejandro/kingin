@@ -92,9 +92,9 @@ begin
     declare intPdCapRate int default 0;
     declare intPdExp int default 0;
     declare intPdHap int default 0;
-    declare douGndrMRate int default 0;
-    declare douGndrFRate int default 0;
-    declare douGndrNRate int default 0;
+    declare douGndrMRate double default 0;
+    declare douGndrFRate double default 0;
+    declare douGndrNRate double default 0;
 
     /*cur1 variables*/
     declare vPdCode varchar(32) default '';
@@ -240,19 +240,19 @@ begin
             if vGndrMRate = 'null' then
                 set douGndrMRate = null;
             else
-                set douGndrMRate = cast(vGndrMRate as decimal);
+                set douGndrMRate = cast(vGndrMRate as decimal(3,1));
             end if;
 
             if vGndrFRate = 'null' then
                 set douGndrFRate = null;
             else
-                set douGndrFRate = cast(vGndrFRate as decimal);
+                set douGndrFRate = cast(vGndrFRate as decimal(3,1));
             end if;
 
             if vGndrNRate = 'null' then
                 set douGndrNRate = null;
             else
-                set douGndrNRate = cast(vGndrNRate as decimal);
+                set douGndrNRate = cast(vGndrNRate as decimal(3,1));
             end if;
 
             insert into pd (

@@ -16,28 +16,84 @@ import org.springframework.util.ResourceUtils;
 public class MainScraping {
 
 	public static void main(String[] args) {
-		String methodName = "scrapPdJa";
-		switch (methodName) {
-		case "scrapItemEn": {
-			scrapItemEn();
-			break;
-		}
-		case "scrapPdJa": {
-			scrapPdJa();
-			break;
-		}
-		default:
-			System.out.println(methodName);
-		}
-
+		scrapMoveEn("n9", "009");
+		scrapPdJa("n9");
 	}
 	
-	private static void scrapPdJa() {
+	private static void scrapMoveEn(String code1, String code2) {
+		Document doc; 
+		List<MoveScraping> moves = new ArrayList<>();
+		try {
+			String urlBase = "https://www.serebii.net/pokedex-dp/";
+			doc = Jsoup.connect(urlBase + code2 + ".shtml").get();
+			
+			Elements tblDex = doc.select("table.dextable");
+			Element tbl;
+			Elements trs;
+			Element tr;
+			
+			String auxCaption;
+			String auxName = tblDex.get(1).child(0).child(1).child(0).text();
+			boolean cont = true;
+			
+			for (int i = tblDex.size() - 3; i > tblDex.size() - 13 && cont; i--) {
+				tbl = tblDex.get(i);
+				trs = tbl.child(0).children();
+				auxCaption = tbl.child(0).child(0).text();
+				if (auxCaption.equals("Location")) {
+					cont = false;
+				} else {
+					for (int j = 2; j < trs.size(); j = j + 2) {
+						MoveScraping move = new MoveScraping();
+						tr = trs.get(j);
+						
+						if (auxCaption.contains("SoulSilver Level Up")) {
+							move.setMoveLrnCode("lv");
+							move.setMoveName(tr.child(1).text());
+							move.setLv(tr.child(0).text());
+							if (move.getLv().equals("—")) {
+								move.setLv("1");
+							}
+						} else if (auxCaption.contains("TM & HM Attacks")) {
+							move.setMoveLrnCode("tm");
+							move.setMoveName(tr.child(1).text());
+							move.setLv("0");
+						} else {
+							move.setMoveName(tr.child(0).text());
+							move.setLv("0");
+						}
+							
+						if (auxCaption.contains("Move Tutor Attacks")) {
+							move.setMoveLrnCode("tu");
+						} else if (auxCaption.contains("Egg Moves")) {
+							move.setMoveLrnCode("eg");
+						} else if (auxCaption.contains("Gen")) {
+							move.setMoveLrnCode("tf");
+						} else if (auxCaption.contains("Pre-Evolution Moves")) {
+							move.setMoveLrnCode("pr");
+						}
+						
+						move.setPdCode(code1);
+						move.setPdName(auxName);
+						moves.add(move);
+					}
+				}
+			}
+		} catch (IOException e) { 
+			throw new RuntimeException(e); 
+		}
+		
+		for (MoveScraping move : moves) {
+			System.out.println(move.toCsv());
+		}
+	}
+	
+	
+	private static void scrapPdJa(String code) {
 		Document doc; 
 		PdScraping pd = new PdScraping();
 		try {
-			String urlBase = "";
-			String code = "n2";
+			String urlBase = "https://yakkun.com/dp/zukan/";
 			doc = Jsoup.connect(urlBase + code + ".htm")
 					.userAgent("Mozilla")
                     .header("Accept", "text/html")

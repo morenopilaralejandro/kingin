@@ -1,27 +1,29 @@
-drop table if exists aux_pd_learns_move;
-create temporary table aux_pd_learns_move (
+drop table if exists aux_pd_lrn_move;
+create temporary table aux_pd_lrn_move (
     pd_code varchar(32),
-    move_code varchar(32),
+    pd_name varchar(32),
+    move_name varchar(32),
     move_lrn_code varchar(32),
     lv varchar(32)
 );
 
-load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/pd-learns-move.csv'
-into table aux_pd_learns_move 
+load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/pd-lrn-move.csv'
+into table aux_pd_lrn_move 
 fields terminated by ',' 
 enclosed by '"'
 lines terminated by '\n'
 ignore 1 lines
 (
 pd_code,
-move_code,
+pd_name,
+move_name,
 move_lrn_code,
 lv
 );
 
 delimiter &&
-drop procedure if exists proc_insrt_pd_learns_move;
-create procedure proc_insrt_pd_learns_move()
+drop procedure if exists proc_insrt_pd_lrn_move;
+create procedure proc_insrt_pd_lrn_move()
 begin
 	declare i int default 1;
 
@@ -32,21 +34,30 @@ begin
     declare intLv int default 0; 
 
     /*cur1 variables*/
-    declare vPdCode varchar(32) default '';    
-    declare vMoveCode varchar(32) default '';
+    declare vPdCode varchar(32) default '';
+    declare vPdName varchar(32) default '';    
+    declare vMoveName varchar(32) default '';
     declare vMoveLrnCode varchar(32) default '';
     declare vLv varchar(32) default '';
 
     declare continueCur1 int default 1;
-    declare cur1 cursor for select * from aux_pd_learns_move;
+    declare cur1 cursor for select * from aux_pd_lrn_move;
 	declare continue handler for SQLSTATE '02000' set continueCur1 = 0;
 
-    delete from pd_learns_move;    
+    delete from pd_lrn_move;    
     open cur1;
 	while continueCur1=1 do
         fetch cur1 into 
             vPdCode,
-            vMoveCode,
+            vPdName,
+            vMoveName,
+            vMoveLrnCode,
+            vLv;
+
+        select
+            vPdCode,
+            vPdName,
+            vMoveName,
             vMoveLrnCode,
             vLv;
 
@@ -61,19 +72,19 @@ begin
 
             select move_id into idMove 
                 from move 
-                where move_code = vMoveCode;
+                where move_name_en = vMoveName;
 
             select move_lrn_id into idMoveLrn 
                 from move_lrn 
                 where move_lrn_code = vMoveLrnCode;
 
-            if vLv = '' then
+            if vLv = 'null' then
                 set intLv = null;
             else
                 set intLv = cast(vLv as unsigned);
             end if;
 
-            insert into pd_learns_move (
+            insert into pd_lrn_move (
                 pd_id,
                 move_id,
                 move_lrn_id,
@@ -87,8 +98,8 @@ begin
         end if;
 	end while;
 	close cur1;
-    drop table if exists aux_pd_learns_move;
+    drop table if exists aux_pd_lrn_move;
 end
 &&
 delimiter ;
-call proc_insrt_pd_learns_move();
+call proc_insrt_pd_lrn_move();

@@ -1,0 +1,674 @@
+pd_code,pd_name,move_name,move_lrn_code,lv
+n1,Bulbasaur,Solarbeam,tf,0
+n1,Bulbasaur,Light Screen,eg,0
+n1,Bulbasaur,Skull Bash,eg,0
+n1,Bulbasaur,Safeguard,eg,0
+n1,Bulbasaur,Charm,eg,0
+n1,Bulbasaur,Petal Dance,eg,0
+n1,Bulbasaur,Magical Leaf,eg,0
+n1,Bulbasaur,Grasswhistle,eg,0
+n1,Bulbasaur,Curse,eg,0
+n1,Bulbasaur,Ingrain,eg,0
+n1,Bulbasaur,Nature Power,eg,0
+n1,Bulbasaur,Amnesia,eg,0
+n1,Bulbasaur,Leaf Storm,eg,0
+n1,Bulbasaur,Power Whip,eg,0
+n1,Bulbasaur,Sludge,eg,0
+n1,Bulbasaur,String Shot,tu,0
+n1,Bulbasaur,Worry Seed,tu,0
+n1,Bulbasaur,Headbutt,tu,0
+n1,Bulbasaur,Fury Cutter,tu,0
+n1,Bulbasaur,Knock Off,tu,0
+n1,Bulbasaur,Snore,tu,0
+n1,Bulbasaur,Synthesis,tu,0
+n1,Bulbasaur,Mud-slap,tu,0
+n1,Bulbasaur,Seed Bomb,tu,0
+n1,Bulbasaur,Toxic,tm,0
+n1,Bulbasaur,Bullet Seed,tm,0
+n1,Bulbasaur,Hidden Power,tm,0
+n1,Bulbasaur,Sunny Day,tm,0
+n1,Bulbasaur,Protect,tm,0
+n1,Bulbasaur,Giga Drain,tm,0
+n1,Bulbasaur,Frustration,tm,0
+n1,Bulbasaur,Solarbeam,tm,0
+n1,Bulbasaur,Return,tm,0
+n1,Bulbasaur,Double Team,tm,0
+n1,Bulbasaur,Sludge Bomb,tm,0
+n1,Bulbasaur,Facade,tm,0
+n1,Bulbasaur,Secret Power,tm,0
+n1,Bulbasaur,Rest,tm,0
+n1,Bulbasaur,Attract,tm,0
+n1,Bulbasaur,Energy Ball,tm,0
+n1,Bulbasaur,Endure,tm,0
+n1,Bulbasaur,Flash,tm,0
+n1,Bulbasaur,Swords Dance,tm,0
+n1,Bulbasaur,Captivate,tm,0
+n1,Bulbasaur,Sleep Talk,tm,0
+n1,Bulbasaur,Natural Gift,tm,0
+n1,Bulbasaur,Grass Knot,tm,0
+n1,Bulbasaur,Swagger,tm,0
+n1,Bulbasaur,Substitute,tm,0
+n1,Bulbasaur,Cut,tm,0
+n1,Bulbasaur,Strength,tm,0
+n1,Bulbasaur,Rock Smash,tm,0
+n1,Bulbasaur,Tackle,lv,1
+n1,Bulbasaur,Growl,lv,3
+n1,Bulbasaur,Leech Seed,lv,7
+n1,Bulbasaur,Vine Whip,lv,9
+n1,Bulbasaur,Poisonpowder,lv,13
+n1,Bulbasaur,Sleep Powder,lv,13
+n1,Bulbasaur,Take Down,lv,15
+n1,Bulbasaur,Razor Leaf,lv,19
+n1,Bulbasaur,Sweet Scent,lv,21
+n1,Bulbasaur,Growth,lv,25
+n1,Bulbasaur,Double-edge,lv,27
+n1,Bulbasaur,Worry Seed,lv,31
+n1,Bulbasaur,Synthesis,lv,33
+n1,Bulbasaur,Seed Bomb,lv,37
+n2,Ivysaur,Seed Bomb,pr,0
+n2,Ivysaur,Light Screen,eg,0
+n2,Ivysaur,Skull Bash,eg,0
+n2,Ivysaur,Safeguard,eg,0
+n2,Ivysaur,Charm,eg,0
+n2,Ivysaur,Petal Dance,eg,0
+n2,Ivysaur,Magical Leaf,eg,0
+n2,Ivysaur,Grasswhistle,eg,0
+n2,Ivysaur,Curse,eg,0
+n2,Ivysaur,Ingrain,eg,0
+n2,Ivysaur,Nature Power,eg,0
+n2,Ivysaur,Amnesia,eg,0
+n2,Ivysaur,Leaf Storm,eg,0
+n2,Ivysaur,Power Whip,eg,0
+n2,Ivysaur,Sludge,eg,0
+n2,Ivysaur,String Shot,tu,0
+n2,Ivysaur,Worry Seed,tu,0
+n2,Ivysaur,Headbutt,tu,0
+n2,Ivysaur,Fury Cutter,tu,0
+n2,Ivysaur,Knock Off,tu,0
+n2,Ivysaur,Snore,tu,0
+n2,Ivysaur,Synthesis,tu,0
+n2,Ivysaur,Mud-slap,tu,0
+n2,Ivysaur,Seed Bomb,tu,0
+n2,Ivysaur,Toxic,tm,0
+n2,Ivysaur,Bullet Seed,tm,0
+n2,Ivysaur,Hidden Power,tm,0
+n2,Ivysaur,Sunny Day,tm,0
+n2,Ivysaur,Protect,tm,0
+n2,Ivysaur,Giga Drain,tm,0
+n2,Ivysaur,Frustration,tm,0
+n2,Ivysaur,Solarbeam,tm,0
+n2,Ivysaur,Return,tm,0
+n2,Ivysaur,Double Team,tm,0
+n2,Ivysaur,Sludge Bomb,tm,0
+n2,Ivysaur,Facade,tm,0
+n2,Ivysaur,Secret Power,tm,0
+n2,Ivysaur,Rest,tm,0
+n2,Ivysaur,Attract,tm,0
+n2,Ivysaur,Energy Ball,tm,0
+n2,Ivysaur,Endure,tm,0
+n2,Ivysaur,Flash,tm,0
+n2,Ivysaur,Swords Dance,tm,0
+n2,Ivysaur,Captivate,tm,0
+n2,Ivysaur,Sleep Talk,tm,0
+n2,Ivysaur,Natural Gift,tm,0
+n2,Ivysaur,Grass Knot,tm,0
+n2,Ivysaur,Swagger,tm,0
+n2,Ivysaur,Substitute,tm,0
+n2,Ivysaur,Cut,tm,0
+n2,Ivysaur,Strength,tm,0
+n2,Ivysaur,Rock Smash,tm,0
+n2,Ivysaur,Tackle,lv,1
+n2,Ivysaur,Growl,lv,1
+n2,Ivysaur,Leech Seed,lv,1
+n2,Ivysaur,Growl,lv,3
+n2,Ivysaur,Leech Seed,lv,7
+n2,Ivysaur,Vine Whip,lv,9
+n2,Ivysaur,Poisonpowder,lv,13
+n2,Ivysaur,Sleep Powder,lv,13
+n2,Ivysaur,Take Down,lv,15
+n2,Ivysaur,Razor Leaf,lv,20
+n2,Ivysaur,Sweet Scent,lv,23
+n2,Ivysaur,Growth,lv,28
+n2,Ivysaur,Double-edge,lv,31
+n2,Ivysaur,Worry Seed,lv,36
+n2,Ivysaur,Synthesis,lv,39
+n2,Ivysaur,Solarbeam,lv,44
+n3,Venusaur,Seed Bomb,pr,0
+n3,Venusaur,Light Screen,eg,0
+n3,Venusaur,Skull Bash,eg,0
+n3,Venusaur,Safeguard,eg,0
+n3,Venusaur,Charm,eg,0
+n3,Venusaur,Petal Dance,eg,0
+n3,Venusaur,Magical Leaf,eg,0
+n3,Venusaur,Grasswhistle,eg,0
+n3,Venusaur,Curse,eg,0
+n3,Venusaur,Ingrain,eg,0
+n3,Venusaur,Nature Power,eg,0
+n3,Venusaur,Amnesia,eg,0
+n3,Venusaur,Leaf Storm,eg,0
+n3,Venusaur,Power Whip,eg,0
+n3,Venusaur,Sludge,eg,0
+n3,Venusaur,String Shot,tu,0
+n3,Venusaur,Worry Seed,tu,0
+n3,Venusaur,Block,tu,0
+n3,Venusaur,Headbutt,tu,0
+n3,Venusaur,Fury Cutter,tu,0
+n3,Venusaur,Knock Off,tu,0
+n3,Venusaur,Snore,tu,0
+n3,Venusaur,Synthesis,tu,0
+n3,Venusaur,Mud-slap,tu,0
+n3,Venusaur,Outrage,tu,0
+n3,Venusaur,Seed Bomb,tu,0
+n3,Venusaur,Frenzy Plant,tu,0
+n3,Venusaur,Roar,tm,0
+n3,Venusaur,Toxic,tm,0
+n3,Venusaur,Bullet Seed,tm,0
+n3,Venusaur,Hidden Power,tm,0
+n3,Venusaur,Sunny Day,tm,0
+n3,Venusaur,Hyper Beam,tm,0
+n3,Venusaur,Protect,tm,0
+n3,Venusaur,Giga Drain,tm,0
+n3,Venusaur,Frustration,tm,0
+n3,Venusaur,Solarbeam,tm,0
+n3,Venusaur,Earthquake,tm,0
+n3,Venusaur,Return,tm,0
+n3,Venusaur,Double Team,tm,0
+n3,Venusaur,Sludge Bomb,tm,0
+n3,Venusaur,Facade,tm,0
+n3,Venusaur,Secret Power,tm,0
+n3,Venusaur,Rest,tm,0
+n3,Venusaur,Attract,tm,0
+n3,Venusaur,Energy Ball,tm,0
+n3,Venusaur,Endure,tm,0
+n3,Venusaur,Giga Impact,tm,0
+n3,Venusaur,Flash,tm,0
+n3,Venusaur,Swords Dance,tm,0
+n3,Venusaur,Captivate,tm,0
+n3,Venusaur,Sleep Talk,tm,0
+n3,Venusaur,Natural Gift,tm,0
+n3,Venusaur,Grass Knot,tm,0
+n3,Venusaur,Swagger,tm,0
+n3,Venusaur,Substitute,tm,0
+n3,Venusaur,Cut,tm,0
+n3,Venusaur,Strength,tm,0
+n3,Venusaur,Rock Smash,tm,0
+n3,Venusaur,Rock Climb,tm,0
+n3,Venusaur,Tackle,lv,1
+n3,Venusaur,Growl,lv,1
+n3,Venusaur,Leech Seed,lv,1
+n3,Venusaur,Vine Whip,lv,1
+n3,Venusaur,Growl,lv,3
+n3,Venusaur,Leech Seed,lv,7
+n3,Venusaur,Vine Whip,lv,9
+n3,Venusaur,Poisonpowder,lv,13
+n3,Venusaur,Sleep Powder,lv,13
+n3,Venusaur,Take Down,lv,15
+n3,Venusaur,Razor Leaf,lv,20
+n3,Venusaur,Sweet Scent,lv,23
+n3,Venusaur,Growth,lv,28
+n3,Venusaur,Double-edge,lv,31
+n3,Venusaur,Petal Dance,lv,32
+n3,Venusaur,Worry Seed,lv,39
+n3,Venusaur,Synthesis,lv,45
+n3,Venusaur,Solarbeam,lv,53
+n4,Charmander,Rage,tf,0
+n4,Charmander,Metal Claw,tf,0
+n4,Charmander,Belly Drum,eg,0
+n4,Charmander,Ancient Power,eg,0
+n4,Charmander,Rock Slide,eg,0
+n4,Charmander,Bite,eg,0
+n4,Charmander,Outrage,eg,0
+n4,Charmander,Beat Up,eg,0
+n4,Charmander,Swords Dance,eg,0
+n4,Charmander,Dragon Dance,eg,0
+n4,Charmander,Crunch,eg,0
+n4,Charmander,Dragon Rush,eg,0
+n4,Charmander,Metal Claw,eg,0
+n4,Charmander,Flare Blitz,eg,0
+n4,Charmander,Counter,eg,0
+n4,Charmander,Headbutt,tu,0
+n4,Charmander,Fire Punch,tu,0
+n4,Charmander,Fury Cutter,tu,0
+n4,Charmander,Thunderpunch,tu,0
+n4,Charmander,Snore,tu,0
+n4,Charmander,Swift,tu,0
+n4,Charmander,Heat Wave,tu,0
+n4,Charmander,Mud-slap,tu,0
+n4,Charmander,Focus Punch,tm,0
+n4,Charmander,Dragon Claw,tm,0
+n4,Charmander,Toxic,tm,0
+n4,Charmander,Hidden Power,tm,0
+n4,Charmander,Sunny Day,tm,0
+n4,Charmander,Protect,tm,0
+n4,Charmander,Frustration,tm,0
+n4,Charmander,Iron Tail,tm,0
+n4,Charmander,Return,tm,0
+n4,Charmander,Dig,tm,0
+n4,Charmander,Brick Break,tm,0
+n4,Charmander,Double Team,tm,0
+n4,Charmander,Flamethrower,tm,0
+n4,Charmander,Fire Blast,tm,0
+n4,Charmander,Rock Tomb,tm,0
+n4,Charmander,Aerial Ace,tm,0
+n4,Charmander,Facade,tm,0
+n4,Charmander,Secret Power,tm,0
+n4,Charmander,Rest,tm,0
+n4,Charmander,Attract,tm,0
+n4,Charmander,Overheat,tm,0
+n4,Charmander,Fling,tm,0
+n4,Charmander,Endure,tm,0
+n4,Charmander,Will-o-wisp,tm,0
+n4,Charmander,Shadow Claw,tm,0
+n4,Charmander,Swords Dance,tm,0
+n4,Charmander,Captivate,tm,0
+n4,Charmander,Rock Slide,tm,0
+n4,Charmander,Sleep Talk,tm,0
+n4,Charmander,Natural Gift,tm,0
+n4,Charmander,Swagger,tm,0
+n4,Charmander,Substitute,tm,0
+n4,Charmander,Cut,tm,0
+n4,Charmander,Strength,tm,0
+n4,Charmander,Rock Smash,tm,0
+n4,Charmander,Scratch,lv,1
+n4,Charmander,Growl,lv,1
+n4,Charmander,Ember,lv,7
+n4,Charmander,Smokescreen,lv,10
+n4,Charmander,Dragon Rage,lv,16
+n4,Charmander,Scary Face,lv,19
+n4,Charmander,Fire Fang,lv,25
+n4,Charmander,Slash,lv,28
+n4,Charmander,Flamethrower,lv,34
+n4,Charmander,Fire Spin,lv,37
+n5,Charmeleon,Rage,tf,0
+n5,Charmeleon,Metal Claw,tf,0
+n5,Charmeleon,Belly Drum,eg,0
+n5,Charmeleon,Ancient Power,eg,0
+n5,Charmeleon,Rock Slide,eg,0
+n5,Charmeleon,Bite,eg,0
+n5,Charmeleon,Outrage,eg,0
+n5,Charmeleon,Beat Up,eg,0
+n5,Charmeleon,Swords Dance,eg,0
+n5,Charmeleon,Dragon Dance,eg,0
+n5,Charmeleon,Crunch,eg,0
+n5,Charmeleon,Dragon Rush,eg,0
+n5,Charmeleon,Metal Claw,eg,0
+n5,Charmeleon,Flare Blitz,eg,0
+n5,Charmeleon,Counter,eg,0
+n5,Charmeleon,Headbutt,tu,0
+n5,Charmeleon,Fire Punch,tu,0
+n5,Charmeleon,Fury Cutter,tu,0
+n5,Charmeleon,Thunderpunch,tu,0
+n5,Charmeleon,Snore,tu,0
+n5,Charmeleon,Swift,tu,0
+n5,Charmeleon,Heat Wave,tu,0
+n5,Charmeleon,Mud-slap,tu,0
+n5,Charmeleon,Focus Punch,tm,0
+n5,Charmeleon,Dragon Claw,tm,0
+n5,Charmeleon,Toxic,tm,0
+n5,Charmeleon,Hidden Power,tm,0
+n5,Charmeleon,Sunny Day,tm,0
+n5,Charmeleon,Protect,tm,0
+n5,Charmeleon,Frustration,tm,0
+n5,Charmeleon,Iron Tail,tm,0
+n5,Charmeleon,Return,tm,0
+n5,Charmeleon,Dig,tm,0
+n5,Charmeleon,Brick Break,tm,0
+n5,Charmeleon,Double Team,tm,0
+n5,Charmeleon,Flamethrower,tm,0
+n5,Charmeleon,Fire Blast,tm,0
+n5,Charmeleon,Rock Tomb,tm,0
+n5,Charmeleon,Aerial Ace,tm,0
+n5,Charmeleon,Facade,tm,0
+n5,Charmeleon,Secret Power,tm,0
+n5,Charmeleon,Rest,tm,0
+n5,Charmeleon,Attract,tm,0
+n5,Charmeleon,Overheat,tm,0
+n5,Charmeleon,Fling,tm,0
+n5,Charmeleon,Endure,tm,0
+n5,Charmeleon,Will-o-wisp,tm,0
+n5,Charmeleon,Shadow Claw,tm,0
+n5,Charmeleon,Swords Dance,tm,0
+n5,Charmeleon,Captivate,tm,0
+n5,Charmeleon,Rock Slide,tm,0
+n5,Charmeleon,Sleep Talk,tm,0
+n5,Charmeleon,Natural Gift,tm,0
+n5,Charmeleon,Swagger,tm,0
+n5,Charmeleon,Substitute,tm,0
+n5,Charmeleon,Cut,tm,0
+n5,Charmeleon,Strength,tm,0
+n5,Charmeleon,Rock Smash,tm,0
+n5,Charmeleon,Scratch,lv,1
+n5,Charmeleon,Growl,lv,1
+n5,Charmeleon,Ember,lv,1
+n5,Charmeleon,Ember,lv,7
+n5,Charmeleon,Smokescreen,lv,10
+n5,Charmeleon,Dragon Rage,lv,17
+n5,Charmeleon,Scary Face,lv,21
+n5,Charmeleon,Fire Fang,lv,28
+n5,Charmeleon,Slash,lv,32
+n5,Charmeleon,Flamethrower,lv,39
+n5,Charmeleon,Fire Spin,lv,43
+n6,Charizard,Rage,tf,0
+n6,Charizard,Metal Claw,tf,0
+n6,Charizard,Belly Drum,eg,0
+n6,Charizard,Ancient Power,eg,0
+n6,Charizard,Rock Slide,eg,0
+n6,Charizard,Bite,eg,0
+n6,Charizard,Outrage,eg,0
+n6,Charizard,Beat Up,eg,0
+n6,Charizard,Swords Dance,eg,0
+n6,Charizard,Dragon Dance,eg,0
+n6,Charizard,Crunch,eg,0
+n6,Charizard,Dragon Rush,eg,0
+n6,Charizard,Metal Claw,eg,0
+n6,Charizard,Flare Blitz,eg,0
+n6,Charizard,Counter,eg,0
+n6,Charizard,Tailwind,tu,0
+n6,Charizard,Headbutt,tu,0
+n6,Charizard,Air Cutter,tu,0
+n6,Charizard,Fire Punch,tu,0
+n6,Charizard,Fury Cutter,tu,0
+n6,Charizard,Ominous Wind,tu,0
+n6,Charizard,Thunderpunch,tu,0
+n6,Charizard,Snore,tu,0
+n6,Charizard,Swift,tu,0
+n6,Charizard,Heat Wave,tu,0
+n6,Charizard,Mud-slap,tu,0
+n6,Charizard,Outrage,tu,0
+n6,Charizard,Twister,tu,0
+n6,Charizard,Blast Burn,tu,0
+n6,Charizard,Focus Punch,tm,0
+n6,Charizard,Dragon Claw,tm,0
+n6,Charizard,Roar,tm,0
+n6,Charizard,Toxic,tm,0
+n6,Charizard,Hidden Power,tm,0
+n6,Charizard,Sunny Day,tm,0
+n6,Charizard,Hyper Beam,tm,0
+n6,Charizard,Protect,tm,0
+n6,Charizard,Frustration,tm,0
+n6,Charizard,Solarbeam,tm,0
+n6,Charizard,Iron Tail,tm,0
+n6,Charizard,Earthquake,tm,0
+n6,Charizard,Return,tm,0
+n6,Charizard,Dig,tm,0
+n6,Charizard,Brick Break,tm,0
+n6,Charizard,Double Team,tm,0
+n6,Charizard,Flamethrower,tm,0
+n6,Charizard,Fire Blast,tm,0
+n6,Charizard,Rock Tomb,tm,0
+n6,Charizard,Aerial Ace,tm,0
+n6,Charizard,Facade,tm,0
+n6,Charizard,Secret Power,tm,0
+n6,Charizard,Rest,tm,0
+n6,Charizard,Attract,tm,0
+n6,Charizard,Steel Wing,tm,0
+n6,Charizard,Overheat,tm,0
+n6,Charizard,Roost,tm,0
+n6,Charizard,Focus Blast,tm,0
+n6,Charizard,Fling,tm,0
+n6,Charizard,Endure,tm,0
+n6,Charizard,Dragon Pulse,tm,0
+n6,Charizard,Will-o-wisp,tm,0
+n6,Charizard,Shadow Claw,tm,0
+n6,Charizard,Giga Impact,tm,0
+n6,Charizard,Swords Dance,tm,0
+n6,Charizard,Captivate,tm,0
+n6,Charizard,Rock Slide,tm,0
+n6,Charizard,Sleep Talk,tm,0
+n6,Charizard,Natural Gift,tm,0
+n6,Charizard,Swagger,tm,0
+n6,Charizard,Substitute,tm,0
+n6,Charizard,Cut,tm,0
+n6,Charizard,Fly,tm,0
+n6,Charizard,Strength,tm,0
+n6,Charizard,Defog,tm,0
+n6,Charizard,Rock Smash,tm,0
+n6,Charizard,Dragon Claw,lv,1
+n6,Charizard,Shadow Claw,lv,1
+n6,Charizard,Air Slash,lv,1
+n6,Charizard,Scratch,lv,1
+n6,Charizard,Growl,lv,1
+n6,Charizard,Ember,lv,1
+n6,Charizard,Smokescreen,lv,1
+n6,Charizard,Ember,lv,7
+n6,Charizard,Smokescreen,lv,10
+n6,Charizard,Dragon Rage,lv,17
+n6,Charizard,Scary Face,lv,21
+n6,Charizard,Fire Fang,lv,28
+n6,Charizard,Slash,lv,32
+n6,Charizard,Wing Attack,lv,36
+n6,Charizard,Flamethrower,lv,42
+n6,Charizard,Fire Spin,lv,49
+n6,Charizard,Heat Wave,lv,59
+n6,Charizard,Flare Blitz,lv,66
+n7,Squirtle,Mirror Coat,eg,0
+n7,Squirtle,Haze,eg,0
+n7,Squirtle,Mist,eg,0
+n7,Squirtle,Foresight,eg,0
+n7,Squirtle,Flail,eg,0
+n7,Squirtle,Refresh,eg,0
+n7,Squirtle,Mud Sport,eg,0
+n7,Squirtle,Yawn,eg,0
+n7,Squirtle,Muddy Water,eg,0
+n7,Squirtle,Fake Out,eg,0
+n7,Squirtle,Aqua Ring,eg,0
+n7,Squirtle,Aqua Jet,eg,0
+n7,Squirtle,Water Spout,eg,0
+n7,Squirtle,Headbutt,tu,0
+n7,Squirtle,Dive,tu,0
+n7,Squirtle,Ice Punch,tu,0
+n7,Squirtle,Icy Wind,tu,0
+n7,Squirtle,Zen Headbutt,tu,0
+n7,Squirtle,Snore,tu,0
+n7,Squirtle,Aqua Tail,tu,0
+n7,Squirtle,Iron Defense,tu,0
+n7,Squirtle,Mud-slap,tu,0
+n7,Squirtle,Rollout,tu,0
+n7,Squirtle,Focus Punch,tm,0
+n7,Squirtle,Water Pulse,tm,0
+n7,Squirtle,Toxic,tm,0
+n7,Squirtle,Hail,tm,0
+n7,Squirtle,Hidden Power,tm,0
+n7,Squirtle,Ice Beam,tm,0
+n7,Squirtle,Blizzard,tm,0
+n7,Squirtle,Protect,tm,0
+n7,Squirtle,Rain Dance,tm,0
+n7,Squirtle,Frustration,tm,0
+n7,Squirtle,Iron Tail,tm,0
+n7,Squirtle,Return,tm,0
+n7,Squirtle,Dig,tm,0
+n7,Squirtle,Brick Break,tm,0
+n7,Squirtle,Double Team,tm,0
+n7,Squirtle,Rock Tomb,tm,0
+n7,Squirtle,Facade,tm,0
+n7,Squirtle,Secret Power,tm,0
+n7,Squirtle,Rest,tm,0
+n7,Squirtle,Attract,tm,0
+n7,Squirtle,Brine,tm,0
+n7,Squirtle,Fling,tm,0
+n7,Squirtle,Endure,tm,0
+n7,Squirtle,Gyro Ball,tm,0
+n7,Squirtle,Captivate,tm,0
+n7,Squirtle,Sleep Talk,tm,0
+n7,Squirtle,Natural Gift,tm,0
+n7,Squirtle,Swagger,tm,0
+n7,Squirtle,Substitute,tm,0
+n7,Squirtle,Surf,tm,0
+n7,Squirtle,Strength,tm,0
+n7,Squirtle,Whirlpool,tm,0
+n7,Squirtle,Rock Smash,tm,0
+n7,Squirtle,Waterfall,tm,0
+n7,Squirtle,Tackle,lv,1
+n7,Squirtle,Tail Whip,lv,4
+n7,Squirtle,Bubble,lv,7
+n7,Squirtle,Withdraw,lv,10
+n7,Squirtle,Water Gun,lv,13
+n7,Squirtle,Bite,lv,16
+n7,Squirtle,Rapid Spin,lv,19
+n7,Squirtle,Protect,lv,22
+n7,Squirtle,Water Pulse,lv,25
+n7,Squirtle,Aqua Tail,lv,28
+n7,Squirtle,Skull Bash,lv,31
+n7,Squirtle,Iron Defense,lv,34
+n7,Squirtle,Rain Dance,lv,37
+n7,Squirtle,Hydro Pump,lv,40
+n8,Wartortle,Mirror Coat,eg,0
+n8,Wartortle,Haze,eg,0
+n8,Wartortle,Mist,eg,0
+n8,Wartortle,Foresight,eg,0
+n8,Wartortle,Flail,eg,0
+n8,Wartortle,Refresh,eg,0
+n8,Wartortle,Mud Sport,eg,0
+n8,Wartortle,Yawn,eg,0
+n8,Wartortle,Muddy Water,eg,0
+n8,Wartortle,Fake Out,eg,0
+n8,Wartortle,Aqua Ring,eg,0
+n8,Wartortle,Aqua Jet,eg,0
+n8,Wartortle,Water Spout,eg,0
+n8,Wartortle,Headbutt,tu,0
+n8,Wartortle,Dive,tu,0
+n8,Wartortle,Ice Punch,tu,0
+n8,Wartortle,Icy Wind,tu,0
+n8,Wartortle,Zen Headbutt,tu,0
+n8,Wartortle,Snore,tu,0
+n8,Wartortle,Aqua Tail,tu,0
+n8,Wartortle,Iron Defense,tu,0
+n8,Wartortle,Mud-slap,tu,0
+n8,Wartortle,Rollout,tu,0
+n8,Wartortle,Focus Punch,tm,0
+n8,Wartortle,Water Pulse,tm,0
+n8,Wartortle,Toxic,tm,0
+n8,Wartortle,Hail,tm,0
+n8,Wartortle,Hidden Power,tm,0
+n8,Wartortle,Ice Beam,tm,0
+n8,Wartortle,Blizzard,tm,0
+n8,Wartortle,Protect,tm,0
+n8,Wartortle,Rain Dance,tm,0
+n8,Wartortle,Frustration,tm,0
+n8,Wartortle,Iron Tail,tm,0
+n8,Wartortle,Return,tm,0
+n8,Wartortle,Dig,tm,0
+n8,Wartortle,Brick Break,tm,0
+n8,Wartortle,Double Team,tm,0
+n8,Wartortle,Rock Tomb,tm,0
+n8,Wartortle,Facade,tm,0
+n8,Wartortle,Secret Power,tm,0
+n8,Wartortle,Rest,tm,0
+n8,Wartortle,Attract,tm,0
+n8,Wartortle,Brine,tm,0
+n8,Wartortle,Fling,tm,0
+n8,Wartortle,Endure,tm,0
+n8,Wartortle,Gyro Ball,tm,0
+n8,Wartortle,Captivate,tm,0
+n8,Wartortle,Sleep Talk,tm,0
+n8,Wartortle,Natural Gift,tm,0
+n8,Wartortle,Swagger,tm,0
+n8,Wartortle,Substitute,tm,0
+n8,Wartortle,Surf,tm,0
+n8,Wartortle,Strength,tm,0
+n8,Wartortle,Whirlpool,tm,0
+n8,Wartortle,Rock Smash,tm,0
+n8,Wartortle,Waterfall,tm,0
+n8,Wartortle,Tackle,lv,1
+n8,Wartortle,Tail Whip,lv,1
+n8,Wartortle,Bubble,lv,1
+n8,Wartortle,Tail Whip,lv,4
+n8,Wartortle,Bubble,lv,7
+n8,Wartortle,Withdraw,lv,10
+n8,Wartortle,Water Gun,lv,13
+n8,Wartortle,Bite,lv,16
+n8,Wartortle,Rapid Spin,lv,20
+n8,Wartortle,Protect,lv,24
+n8,Wartortle,Water Pulse,lv,28
+n8,Wartortle,Aqua Tail,lv,32
+n8,Wartortle,Skull Bash,lv,36
+n8,Wartortle,Iron Defense,lv,40
+n8,Wartortle,Rain Dance,lv,44
+n8,Wartortle,Hydro Pump,lv,48
+n9,Blastoise,Mirror Coat,eg,0
+n9,Blastoise,Haze,eg,0
+n9,Blastoise,Mist,eg,0
+n9,Blastoise,Foresight,eg,0
+n9,Blastoise,Flail,eg,0
+n9,Blastoise,Refresh,eg,0
+n9,Blastoise,Mud Sport,eg,0
+n9,Blastoise,Yawn,eg,0
+n9,Blastoise,Muddy Water,eg,0
+n9,Blastoise,Fake Out,eg,0
+n9,Blastoise,Aqua Ring,eg,0
+n9,Blastoise,Aqua Jet,eg,0
+n9,Blastoise,Water Spout,eg,0
+n9,Blastoise,Headbutt,tu,0
+n9,Blastoise,Dive,tu,0
+n9,Blastoise,Ice Punch,tu,0
+n9,Blastoise,Icy Wind,tu,0
+n9,Blastoise,Zen Headbutt,tu,0
+n9,Blastoise,Snore,tu,0
+n9,Blastoise,Aqua Tail,tu,0
+n9,Blastoise,Iron Defense,tu,0
+n9,Blastoise,Mud-slap,tu,0
+n9,Blastoise,Outrage,tu,0
+n9,Blastoise,Rollout,tu,0
+n9,Blastoise,Signal Beam,tu,0
+n9,Blastoise,Hydro Cannon,tu,0
+n9,Blastoise,Focus Punch,tm,0
+n9,Blastoise,Water Pulse,tm,0
+n9,Blastoise,Roar,tm,0
+n9,Blastoise,Toxic,tm,0
+n9,Blastoise,Hail,tm,0
+n9,Blastoise,Hidden Power,tm,0
+n9,Blastoise,Ice Beam,tm,0
+n9,Blastoise,Blizzard,tm,0
+n9,Blastoise,Hyper Beam,tm,0
+n9,Blastoise,Protect,tm,0
+n9,Blastoise,Rain Dance,tm,0
+n9,Blastoise,Frustration,tm,0
+n9,Blastoise,Iron Tail,tm,0
+n9,Blastoise,Earthquake,tm,0
+n9,Blastoise,Return,tm,0
+n9,Blastoise,Dig,tm,0
+n9,Blastoise,Brick Break,tm,0
+n9,Blastoise,Double Team,tm,0
+n9,Blastoise,Rock Tomb,tm,0
+n9,Blastoise,Facade,tm,0
+n9,Blastoise,Secret Power,tm,0
+n9,Blastoise,Rest,tm,0
+n9,Blastoise,Attract,tm,0
+n9,Blastoise,Focus Blast,tm,0
+n9,Blastoise,Brine,tm,0
+n9,Blastoise,Fling,tm,0
+n9,Blastoise,Endure,tm,0
+n9,Blastoise,Giga Impact,tm,0
+n9,Blastoise,Avalanche,tm,0
+n9,Blastoise,Gyro Ball,tm,0
+n9,Blastoise,Captivate,tm,0
+n9,Blastoise,Rock Slide,tm,0
+n9,Blastoise,Sleep Talk,tm,0
+n9,Blastoise,Natural Gift,tm,0
+n9,Blastoise,Swagger,tm,0
+n9,Blastoise,Substitute,tm,0
+n9,Blastoise,Flash Cannon,tm,0
+n9,Blastoise,Surf,tm,0
+n9,Blastoise,Strength,tm,0
+n9,Blastoise,Whirlpool,tm,0
+n9,Blastoise,Rock Smash,tm,0
+n9,Blastoise,Waterfall,tm,0
+n9,Blastoise,Rock Climb,tm,0
+n9,Blastoise,Flash Cannon,lv,1
+n9,Blastoise,Tackle,lv,1
+n9,Blastoise,Tail Whip,lv,1
+n9,Blastoise,Bubble,lv,1
+n9,Blastoise,Withdraw,lv,1
+n9,Blastoise,Tail Whip,lv,4
+n9,Blastoise,Bubble,lv,7
+n9,Blastoise,Withdraw,lv,10
+n9,Blastoise,Water Gun,lv,13
+n9,Blastoise,Bite,lv,16
+n9,Blastoise,Rapid Spin,lv,20
+n9,Blastoise,Protect,lv,24
+n9,Blastoise,Water Pulse,lv,28
+n9,Blastoise,Aqua Tail,lv,32
+n9,Blastoise,Skull Bash,lv,39
+n9,Blastoise,Iron Defense,lv,46
+n9,Blastoise,Rain Dance,lv,53
+n9,Blastoise,Hydro Pump,lv,60

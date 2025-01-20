@@ -57,11 +57,11 @@ begin
         if continueCur1 = 1 then
             select pd_id into idPdSta 
                 from pd 
-                where pd_name_en = vPdNameSta;
+                where pd_name_ja = vPdNameSta;
 
             select pd_id into idPdStaEnd 
                 from pd 
-                where pd_name_en = vPdNameEnd;
+                where pd_name_ja = vPdNameEnd;
 
             select evo_cond_id into idEvoCond 
                 from evo_cond 

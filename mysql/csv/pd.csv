@@ -1,3 +1,10 @@
 pd_code,pd_index,pd_name_en,pd_name_ja,pd_img,pd_cap_rate,pd_exp,pd_hap,pd_base_hp,pd_base_atk,pd_base_def,pd_base_spatk,pd_base_spdef,pd_base_spe,pd_yiel_hp,pd_yiel_atk,pd_yiel_def,pd_yiel_spatk,pd_yiel_spdef,pd_yiel_spe,gndr_m_rate,gndr_f_rate,gndr_n_rate,egg_cyc,exp_grp,type1,type2,egg_grp1,egg_grp2,abil1,abil2
 n1,1,Bulbasaur,フシギダネ,1,45,64,70,45,49,49,65,65,45,0,0,0,1,0,0,87.5,12.5,null,5120,1050000,くさ,どく,怪獣,植物,しんりょく,null
 n2,2,Ivysaur,フシギソウ,2,45,141,70,60,62,63,80,80,60,0,0,0,1,1,0,87.5,12.5,null,5120,1050000,くさ,どく,怪獣,植物,しんりょく,null
+n3,3,Venusaur,フシギバナ,3,45,208,70,80,82,83,100,100,80,0,0,0,2,1,0,87.5,12.5,null,5120,1050000,くさ,どく,怪獣,植物,しんりょく,null
+n4,4,Charmander,ヒトカゲ,4,45,65,70,39,52,43,60,50,65,0,0,0,0,0,1,87.5,12.5,null,5120,1050000,ほのお,null,怪獣,ドラゴン,もうか,null
+n5,5,Charmeleon,リザード,5,45,142,70,58,64,58,80,65,80,0,0,0,1,0,1,87.5,12.5,null,5120,1050000,ほのお,null,怪獣,ドラゴン,もうか,null
+n6,6,Charizard,リザードン,6,45,209,70,78,84,78,109,85,100,0,0,0,3,0,0,87.5,12.5,null,5120,1050000,ほのお,ひこう,怪獣,ドラゴン,もうか,null
+n7,7,Squirtle,ゼニガメ,7,45,66,70,44,48,65,50,64,43,0,0,1,0,0,0,87.5,12.5,null,5120,1050000,みず,null,怪獣,水中1,げきりゅう,null
+n8,8,Wartortle,カメール,8,45,143,70,59,63,80,65,80,58,0,0,1,0,1,0,87.5,12.5,null,5120,1050000,みず,null,怪獣,水中1,げきりゅう,null
+n9,9,Blastoise,カメックス,9,45,210,70,79,83,100,85,105,78,0,0,0,0,3,0,87.5,12.5,null,5120,1050000,みず,null,怪獣,水中1,げきりゅう,null

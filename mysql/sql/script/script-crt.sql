@@ -466,17 +466,17 @@ create table pd_baby_pd (
     constraint pd_baby_pd_fk_item foreign key (item_id)
         references item(item_id) on delete cascade
 );
-create table pd_learns_move (
+create table pd_lrn_move (
     pd_id int not null,
     move_id int not null,
     move_lrn_id int not null,
-    lv int,
-    constraint pd_learns_move_pk primary key (pd_id, move_id, move_lrn_id),
-    constraint pd_learns_move_fk_pd foreign key (pd_id) 
+    lv int not null,
+    constraint pd_lrn_move_pk primary key (pd_id, move_id, move_lrn_id, lv),
+    constraint pd_lrn_move_fk_pd foreign key (pd_id) 
         references pd(pd_id) on delete cascade,
-    constraint pd_learns_move_fk_move foreign key (move_id) 
+    constraint pd_lrn_move_fk_move foreign key (move_id) 
         references move(move_id) on delete cascade,
-    constraint pd_learns_move_fk_lrn foreign key (move_lrn_id) 
+    constraint pd_lrn_move_fk_lrn foreign key (move_lrn_id) 
         references move_lrn(move_lrn_id) on delete cascade
 );
 create table item_foss (
