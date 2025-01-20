@@ -40,7 +40,8 @@ begin
 	while continueCur1=1 do
         fetch cur1 into 
             vPdName,
-            vEvoFamName;
+            vEvoFamName,
+            vOrdr;
 
         set idEvoFam = 0;
         set idPd = 0;
@@ -48,11 +49,11 @@ begin
         if continueCur1 = 1 then
             select pd_id into idPd 
                 from pd 
-                where pd_name_en = vPdName;
+                where pd_name_ja = vPdName;
 
             select evo_fam_id into idEvoFam 
                 from evo_fam 
-                where evo_fam_name_en = vEvoFamName;
+                where evo_fam_name_ja = vEvoFamName;
 
             insert into pd_lina_evo_fam (
                 pd_id,

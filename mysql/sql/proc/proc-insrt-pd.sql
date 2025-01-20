@@ -6,7 +6,7 @@ create temporary table aux_pd (
     pd_name_ja varchar(32),
     pd_img varchar(32),
     pd_cap_rate varchar(32),
-    pd_xp varchar(32),
+    pd_exp varchar(32),
     pd_hap varchar(32),
     pd_base_hp int,
     pd_base_atk int,
@@ -46,7 +46,7 @@ pd_name_en,
 pd_name_ja,
 pd_img,
 pd_cap_rate,
-pd_xp,
+pd_exp,
 pd_hap,
 pd_base_hp,
 pd_base_atk,
@@ -90,11 +90,11 @@ begin
 
     declare intPdIndex int default 0;
     declare intPdCapRate int default 0;
-    declare intPdXp int default 0;
+    declare intPdExp int default 0;
     declare intPdHap int default 0;
-    declare intGndrMRate int default 0;
-    declare intGndrFRate int default 0;
-    declare intGndrNRate int default 0;
+    declare douGndrMRate int default 0;
+    declare douGndrFRate int default 0;
+    declare douGndrNRate int default 0;
 
     /*cur1 variables*/
     declare vPdCode varchar(32) default '';
@@ -103,7 +103,7 @@ begin
     declare vPdNameJa varchar(32) default '';
     declare vPdImg varchar(32) default '';
     declare vPdCapRate varchar(32) default '';
-    declare vPdXp varchar(32) default '';
+    declare vPdExp varchar(32) default '';
     declare vPdHap varchar(32) default '';
     declare vPdBaseHp int default 0;
     declare vPdBaseAtk int default 0;
@@ -143,7 +143,7 @@ begin
             vPdNameJa,
             vPdImg,
             vPdCapRate,
-            vPdXp,
+            vPdExp,
             vPdHap,
             vPdBaseHp,
             vPdBaseAtk,
@@ -185,31 +185,31 @@ begin
 
             select exp_grp_id into idExpGrp 
                 from exp_grp 
-                where exp_grp_name_en = vExpGrp;
+                where exp_grp_final = vExpGrp;
 
             select type_id into idType1 
                 from type 
-                where type_name_en = vType1;
+                where type_name_ja = vType1;
 
             select type_id into idType2 
                 from type 
-                where type_name_en = vType2;
+                where type_name_ja = vType2;
 
             select egg_grp_id into idEggGrp1 
                 from egg_grp 
-                where egg_grp_name_en = vEggGrp1;
+                where egg_grp_name_ja = vEggGrp1;
 
             select egg_grp_id into idEggGrp2
                 from egg_grp 
-                where egg_grp_name_en = vEggGrp2;
+                where egg_grp_name_ja = vEggGrp2;
 
             select abil_id into idAbil1
                 from abil 
-                where abil_name_en = vAbil1;
+                where abil_name_ja = vAbil1;
 
             select abil_id into idAbil2
                 from abil 
-                where abil_name_en = vAbil2;
+                where abil_name_ja = vAbil2;
 
             set continueCur1 = 1;            
 
@@ -225,10 +225,10 @@ begin
                 set intPdCapRate = cast(vPdCapRate as unsigned);
             end if; 
 
-            if vPdXp = 'null' then
-                set intPdXp = null;
+            if vPdExp = 'null' then
+                set intPdExp = null;
             else
-                set intPdXp = cast(vPdXp as unsigned);
+                set intPdExp = cast(vPdExp as unsigned);
             end if; 
 
             if vPdHap = 'null' then
@@ -237,22 +237,22 @@ begin
                 set intPdHap = cast(vPdHap as unsigned);
             end if;
 
-            if vGndrMRate = '' then
-                set intGndrMRate = null;
+            if vGndrMRate = 'null' then
+                set douGndrMRate = null;
             else
-                set intGndrMRate = cast(vGndrMRate as unsigned);
+                set douGndrMRate = cast(vGndrMRate as decimal);
             end if;
 
-            if vGndrFRate = '' then
-                set intGndrFRate = null;
+            if vGndrFRate = 'null' then
+                set douGndrFRate = null;
             else
-                set intGndrFRate = cast(vGndrFRate as unsigned);
+                set douGndrFRate = cast(vGndrFRate as decimal);
             end if;
 
-            if vGndrNRate = '' then
-                set intGndrNRate = null;
+            if vGndrNRate = 'null' then
+                set douGndrNRate = null;
             else
-                set intGndrNRate = cast(vGndrNRate as unsigned);
+                set douGndrNRate = cast(vGndrNRate as decimal);
             end if;
 
             insert into pd (
@@ -263,6 +263,7 @@ begin
                 pd_name_ja,
                 pd_img,
                 pd_cap_rate,
+                pd_exp,
                 pd_hap,
                 pd_base_hp,
                 pd_base_atk,
@@ -280,6 +281,7 @@ begin
                 vPdNameJa,
                 vPdImg,
                 intPdCapRate,
+                intPdExp,
                 intPdHap,
                 vPdBaseHp,
                 vPdBaseAtk,
@@ -300,7 +302,6 @@ begin
                     idType1
                 );
             end if;
-
             if idType2 != 0 then
                 insert into pd_evok_type (
                     pd_id,
@@ -320,7 +321,6 @@ begin
                     idEggGrp1
                 );
             end if;
-
             if idEggGrp2 != 0 then
                 insert into pd_belo_egg_grp (
                     pd_id,
@@ -340,7 +340,6 @@ begin
                     idAbil1
                 );
             end if;
-
             if idAbil2 != 0 then
                 insert into pd_tra_abil (
                     pd_id,
@@ -348,6 +347,108 @@ begin
                 ) values (
                     i,
                     idAbil2
+                );
+            end if;
+
+            if vPdYielHp != 0 then
+                insert into pd_yiel_stat (
+                    pd_id,
+                    stat_id,
+                    amount
+                ) values (
+                    i,
+                    1,
+                    vPdYielHp
+                );
+            end if;
+            if vPdYielAtk != 0 then
+                insert into pd_yiel_stat (
+                    pd_id,
+                    stat_id,
+                    amount
+                ) values (
+                    i,
+                    2,
+                    vPdYielAtk
+                );
+            end if;
+            if vPdYielDef != 0 then
+                insert into pd_yiel_stat (
+                    pd_id,
+                    stat_id,
+                    amount
+                ) values (
+                    i,
+                    3,
+                    vPdYielDef
+                );
+            end if;
+
+            if vPdYielSpatk != 0 then
+                insert into pd_yiel_stat (
+                    pd_id,
+                    stat_id,
+                    amount
+                ) values (
+                    i,
+                    4,
+                    vPdYielSpatk
+                );
+            end if;
+            if vPdYielSpdef != 0 then
+                insert into pd_yiel_stat (
+                    pd_id,
+                    stat_id,
+                    amount
+                ) values (
+                    i,
+                    5,
+                    vPdYielSpdef
+                );
+            end if;
+            if vPdYielSpe != 0 then
+                insert into pd_yiel_stat (
+                    pd_id,
+                    stat_id,
+                    amount
+                ) values (
+                    i,
+                    6,
+                    vPdYielSpe
+                );
+            end if;
+
+            if douGndrMRate is not null then
+                insert into pd_dimo_gndr (
+                    pd_id,
+                    gndr_id,
+                    rate
+                ) values (
+                    i,
+                    1,
+                    douGndrMRate
+                );
+            end if;
+            if douGndrFRate is not null then
+                insert into pd_dimo_gndr (
+                    pd_id,
+                    gndr_id,
+                    rate
+                ) values (
+                    i,
+                    2,
+                    douGndrFRate
+                );
+            end if;
+            if douGndrNRate is not null then
+                insert into pd_dimo_gndr (
+                    pd_id,
+                    gndr_id,
+                    rate
+                ) values (
+                    i,
+                    3,
+                    douGndrNRate
                 );
             end if;
         end if;

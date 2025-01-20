@@ -1,6 +1,8 @@
 drop table if exists aux_evo_fam;
 create temporary table aux_evo_fam (
-    evo_fam_code varchar(32)
+    evo_fam_code varchar(32),
+    evo_fam_name_en varchar(32),
+    evo_fam_name_ja varchar(32)
 );
 
 load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/evo-fam.csv'

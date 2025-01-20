@@ -1,3 +1,3 @@
-pd_code,pd_index,pd_name_en,pd_name_ja,pd_img,pd_cap_rate,pd_hap,pd_base_hp,pd_base_atk,pd_base_def,pd_base_spatk,pd_base_spdef,pd_base_spe,egg_cyc,exp_grp,type1,type2,egg_grp1,egg_grp2,abil1,abil2
-001,1,Bulbasaur,フシギダネ,1,45,70,45,49,49,65,65,45,5120,Medium Slow,grass,poison,Monster,Plant,Overgrow,
-002,2,Ivysaur,フシギソウ,2,45,70,60,62,63,80,80,60,5120,Medium Slow,grass,poison,Monster,Plant,Overgrow,
+pd_code,pd_index,pd_name_en,pd_name_ja,pd_img,pd_cap_rate,pd_exp,pd_hap,pd_base_hp,pd_base_atk,pd_base_def,pd_base_spatk,pd_base_spdef,pd_base_spe,pd_yiel_hp,pd_yiel_atk,pd_yiel_def,pd_yiel_spatk,pd_yiel_spdef,pd_yiel_spe,gndr_m_rate,gndr_f_rate,gndr_n_rate,egg_cyc,exp_grp,type1,type2,egg_grp1,egg_grp2,abil1,abil2
+n1,1,Bulbasaur,フシギダネ,1,45,64,70,45,49,49,65,65,45,0,0,0,1,0,0,87.5,12.5,null,5120,1050000,くさ,どく,怪獣,植物,しんりょく,null
+n2,2,Ivysaur,フシギソウ,2,45,141,70,60,62,63,80,80,60,0,0,0,1,1,0,87.5,12.5,null,5120,1050000,くさ,どく,怪獣,植物,しんりょく,null

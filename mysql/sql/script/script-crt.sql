@@ -335,7 +335,7 @@ create table pd (
     pd_name_ja varchar(32),
     pd_img varchar(32),
     pd_cap_rate int,
-    pd_xp int, 
+    pd_exp int, 
     pd_hap int,
     pd_base_hp int,
     pd_base_atk int,
@@ -401,7 +401,7 @@ create table pd_hold_item (
 create table pd_dimo_gndr (
     pd_id int not null,
     gndr_id int not null,
-    rate int,
+    rate double,
     constraint pd_dimo_gndr_pk primary key (pd_id, gndr_id),
     constraint pd_dimo_gndr_fk_pd foreign key (pd_id)
         references pd(pd_id) on delete cascade,
