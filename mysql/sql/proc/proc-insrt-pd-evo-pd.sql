@@ -67,7 +67,7 @@ begin
                 from evo_cond 
                 where evo_cond_code = vEvoCondCode;
 
-            if vLv = '' then
+            if vLv = 'null' then
                 set intLv = null;
             else
                 set intLv = cast(vLv as unsigned);

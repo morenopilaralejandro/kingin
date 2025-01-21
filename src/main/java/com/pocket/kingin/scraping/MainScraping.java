@@ -16,8 +16,9 @@ import org.springframework.util.ResourceUtils;
 public class MainScraping {
 
 	public static void main(String[] args) {
-		scrapMoveEn("n12", "012");
-		scrapPdJa("n12");
+		int num = 45;
+		scrapMoveEn("n"+num, "0"+num);
+		scrapPdJa("n"+num);
 	}
 	
 	private static void scrapMoveEn(String code1, String code2) {
@@ -40,7 +41,7 @@ public class MainScraping {
 				tbl = tblDex.get(i);
 				trs = tbl.child(0).children();
 				auxCaption = tbl.child(0).child(0).text();
-				if (auxCaption.equals("Location")) {
+				if (auxCaption.contains("Location")) {
 					cont = false;
 				} else {
 					for (int j = 2; j < trs.size(); j = j + 2) {
@@ -71,7 +72,11 @@ public class MainScraping {
 							move.setMoveLrnCode("tf");
 						} else if (auxCaption.contains("Pre-Evolution Moves")) {
 							move.setMoveLrnCode("pr");
+						} else if (auxCaption.contains("Special")) {
+							move.setMoveLrnCode("sp");
 						}
+						
+						
 						
 						move.setPdCode(code1);
 						move.setPdName(auxName);
@@ -105,6 +110,7 @@ public class MainScraping {
 			
 			boolean cont = true;
 			int auxInt = -1;
+			int offset = 0;
 			String auxStr = "";
 			String[] auxStrArr;
 			String[] auxBase = new String[6];
@@ -148,11 +154,20 @@ public class MainScraping {
 			pd.setPdCapRate(tblDetailData.get(0).child(0).child(16).child(1).text());
 			pd.setPdExp(tblDetailData.get(0).child(0).child(17).child(1).text());
 			pd.setPdHap(tblDetailData.get(0).child(0).child(18).child(1).text());
-			pd.setExpGrp(tblDetailData.get(0).child(0).child(19).child(1).text());
 			
-			auxStr = tblDetailData.get(0).child(0).child(20).child(1).text();
+			if (tblDetailData.get(0).child(0).child(19).child(0).text().contains("逃げにくさ")) {
+				offset = 1;
+			}
+			
+			pd.setExpGrp(tblDetailData.get(0).child(0).child(19+offset).child(1).text());
+			
+			auxStr = tblDetailData.get(0).child(0).child(20+offset).child(1).text();
 			if (auxStr.equals("ふめい")) {
 				pd.setGndrNRate("100");
+			} else if (auxStr.equals("オスのみ")) {
+				pd.setGndrMRate("100");
+			} else if (auxStr.equals("メスのみ")) {
+				pd.setGndrFRate("100");
 			} else {
 				auxInt = auxStr.indexOf("オス:");
 				if (auxInt > -1) {
@@ -180,10 +195,10 @@ public class MainScraping {
 				}
 			}
 			
-			auxStr = tblDetailData.get(0).child(0).child(22).child(1).text();
+			auxStr = tblDetailData.get(0).child(0).child(22+offset).child(1).text();
 			pd.setEggCyc(auxStr.substring(0, auxStr.length()-1));
 			
-			tdTamago = tblDetailData.get(0).child(0).child(23).child(1);
+			tdTamago = tblDetailData.get(0).child(0).child(23+offset).child(1);
 			if (tdTamago.childNodes().size() == 1) {
 				pd.setEggGrp1(tdTamago.child(0).text()); 
 			} 
@@ -193,7 +208,7 @@ public class MainScraping {
 			}
 			
 			auxInt = 0;
-			for (int i = 25; i < tblDetailData.get(0).child(0).childrenSize(); i++) {
+			for (int i = 25+offset; i < tblDetailData.get(0).child(0).childrenSize(); i++) {
 				auxStr = tblDetailData.get(0).child(0).child(i).child(0).text();
 				if (auxInt == 0) {
 					pd.setAbil1(auxStr);
