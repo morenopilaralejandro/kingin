@@ -16,12 +16,22 @@ import org.springframework.util.ResourceUtils;
 public class MainScraping {
 
 	public static void main(String[] args) {
-		int num = 45;
-		scrapMoveEn("n"+num, "0"+num);
-		scrapPdJa("n"+num);
+		scrapPdCombo();
 	}
 	
-	private static void scrapMoveEn(String code1, String code2) {
+	private static void scrapPdCombo() { 
+		int[] nums = {88, 89};
+		String[] names = new String[nums.length];
+		for (int i = 0; i < nums.length; i++) {
+			names[i] = scrapMoveEn("n"+nums[i], "0"+nums[i]);
+		}
+		for (int i = 0; i < nums.length; i++) {
+			scrapPdJa("n"+nums[i], names[i]);
+		}
+	}
+	
+	private static String scrapMoveEn(String code1, String code2) {
+		String resName = "";
 		Document doc; 
 		List<MoveScraping> moves = new ArrayList<>();
 		try {
@@ -35,13 +45,15 @@ public class MainScraping {
 			
 			String auxCaption;
 			String auxName = tblDex.get(1).child(0).child(1).child(0).text();
+			resName = auxName;
 			boolean cont = true;
 			
 			for (int i = tblDex.size() - 3; i > tblDex.size() - 13 && cont; i--) {
 				tbl = tblDex.get(i);
 				trs = tbl.child(0).children();
 				auxCaption = tbl.child(0).child(0).text();
-				if (auxCaption.contains("Location")) {
+				if (auxCaption.contains("Location") ||
+						auxCaption.equals("Diamond/Pearl Level Up")) {
 					cont = false;
 				} else {
 					for (int j = 2; j < trs.size(); j = j + 2) {
@@ -91,10 +103,11 @@ public class MainScraping {
 		for (MoveScraping move : moves) {
 			System.out.println(move.toCsv());
 		}
+		return resName;
 	}
 	
 	
-	private static void scrapPdJa(String code) {
+	private static void scrapPdJa(String code, String nameEn) {
 		Document doc; 
 		PdScraping pd = new PdScraping();
 		try {
@@ -124,6 +137,7 @@ public class MainScraping {
 			pd.setPdIndex(tblBasicData.get(0).child(0).child(3).child(1).text());
 			pd.setPdIndex(String.valueOf(Integer.parseInt(pd.getPdIndex())));
 			pd.setPdImg(pd.getPdIndex());
+			pd.setPdNameEn(nameEn);
 			pd.setPdNameJa(tblBasicData.get(0).child(0).child(0).child(0).text());
 			
 			ulType = tblBasicData.get(0).child(0).child(8).child(1).child(0);
