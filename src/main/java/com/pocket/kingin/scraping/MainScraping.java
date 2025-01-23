@@ -20,10 +20,10 @@ public class MainScraping {
 	}
 	
 	private static void scrapPdCombo() { 
-		int[] nums = {88, 89};
+		int[] nums = {134, 135, 136};
 		String[] names = new String[nums.length];
 		for (int i = 0; i < nums.length; i++) {
-			names[i] = scrapMoveEn("n"+nums[i], "0"+nums[i]);
+			names[i] = scrapMoveEn("n"+nums[i], ""+nums[i]);
 		}
 		for (int i = 0; i < nums.length; i++) {
 			scrapPdJa("n"+nums[i], names[i]);
