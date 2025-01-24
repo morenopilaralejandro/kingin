@@ -1,2 +1,30 @@
 evo_cond_code,evo_cond_desc_en,evo_cond_desc_ja
-lv,Level up,
+lv,Level up,レベルアップ
+h1,Attack < Defence at Level 20,『こうげき』＜『ぼうぎょ』の時レベル20
+h2,Attack > Defence at Level 20,『こうげき』＞『ぼうぎょ』の時レベル20
+h3,Attack = Defence at Level 20,『こうげき』＝『ぼうぎょ』の時レベル20
+fr,Happiness,なつき
+fd,Level Up with high Happiness during the day,朝・昼に『なつき』
+fn,Level Up with high Happiness during the night,夜に『なつき』
+st,Thunder Stone,かみなりのいし
+sm,Moon Stone,つきのいし
+sf,Fire Stone,ほのおのいし
+sw,Water Stone,みずのいし
+sl,Leaf Stone,リーフのいし
+ss,Sun Stone,たいようのいし
+tr,Trade,通信交換
+tk,Trade while holding King's Rock,『おうじゃのしるし』を持たせて通信交換
+tm,Trade while holding Metal Coat,『メタルコート』を持たせて通信交換
+tp,Trade while holding Protector,『プロテクター』を持たせて通信交換
+td,Trade while holding Dragon Scale,『りゅうのウロコ』を持たせて通信交換
+te,Trade while holding Electirizer,『エレキブースター』を持たせて通信交換
+tg,Trade while holding Magmarizer,『マグマブースター』を持たせて通信交換
+tu,Trade while holding Upgrade,『アップグレード』を持たせて通信交換
+t2,Trade while holding Dubious Disc,『あやしいパッチ』を持たせて通信交換
+zc,Level up while at Mt. Coronet,『テンガンざん』でレベルアップ
+zm,Level up near the Moss Rock in Eterna Forest,『ハクタイのもり』でレベルアップ
+zi,Level up near the Ice Rock in Route 217,『217ばんどうろ』でレベルアップ
+mr,Level up while knowing Rollout,『ころがる』を覚えさせてレベルアップ
+mm,Level up while knowing Mimic,『ものまね』を覚えさせてレベルアップ
+ma,Level up while knowing Ancient Power,『げんしのちから』を覚えさせてレベルアップ
+to,Level up during day while holding Oval Stone,『まんまるいし』を持たせて朝・昼にレベルアップ

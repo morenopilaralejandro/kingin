@@ -437,8 +437,8 @@ create table pd_lina_evo_fam (
 create table evo_cond (
     evo_cond_id int not null auto_increment,
     evo_cond_code varchar(32) unique,
-    evo_cond_desc_en varchar(32),
-    evo_cond_desc_ja varchar(32),
+    evo_cond_desc_en varchar(1000),
+    evo_cond_desc_ja varchar(1000),
     constraint evo_cond_pk primary key (evo_cond_id)
 );
 create table pd_evo_pd (

@@ -169,6 +169,15 @@ begin
             vAbil1,
             vAbil2;
 
+        select
+            vPdCode,
+            vPdIndex,
+            vPdNameEn,
+            vPdNameJa,
+            vGndrMRate,
+            vGndrFRate,
+            vGndrNRate;
+
         set idEggCyc = 0;
         set idExpGrp = 0;
         set idType1 = 0;
@@ -240,19 +249,19 @@ begin
             if vGndrMRate = 'null' then
                 set douGndrMRate = null;
             else
-                set douGndrMRate = cast(vGndrMRate as decimal(3,1));
+                set douGndrMRate = cast(vGndrMRate as decimal(4,1));
             end if;
 
             if vGndrFRate = 'null' then
                 set douGndrFRate = null;
             else
-                set douGndrFRate = cast(vGndrFRate as decimal(3,1));
+                set douGndrFRate = cast(vGndrFRate as decimal(4,1));
             end if;
 
             if vGndrNRate = 'null' then
                 set douGndrNRate = null;
             else
-                set douGndrNRate = cast(vGndrNRate as decimal(3,1));
+                set douGndrNRate = cast(vGndrNRate as decimal(4,1));
             end if;
 
             insert into pd (

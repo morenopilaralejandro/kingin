@@ -1,8 +1,8 @@
 drop table if exists aux_evo_cond;
 create temporary table aux_evo_cond (
     evo_cond_code varchar(32),
-    evo_cond_desc_en varchar(32),	
-    evo_cond_desc_ja varchar(32)
+    evo_cond_desc_en varchar(1000),	
+    evo_cond_desc_ja varchar(1000)
 );
 
 load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/evo-cond.csv'
@@ -25,8 +25,8 @@ begin
 
     /*cur1 variables*/
     declare vEvoCondCode varchar(32) default '';
-    declare vEvoCondDescEn varchar(32) default '';
-    declare vEvoCondDescJa varchar(32) default '';
+    declare vEvoCondDescEn varchar(1000) default '';
+    declare vEvoCondDescJa varchar(1000) default '';
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_evo_cond;

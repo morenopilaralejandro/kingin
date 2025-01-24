@@ -35,7 +35,7 @@ begin
     declare vPdNameSta varchar(32) default '';
     declare vPdNameEnd varchar(32) default '';
     declare vEvoCondCode varchar(32) default '';
-    declare vLv int default 0;
+    declare vLv varchar(32) default 0;
 
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_pd_evo_pd;
