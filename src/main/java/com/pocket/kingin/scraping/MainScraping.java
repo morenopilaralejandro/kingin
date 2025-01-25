@@ -20,7 +20,7 @@ public class MainScraping {
 	}
 	
 	private static void scrapPdCombo() { 
-		int[] nums = {249, 250, 251};
+		int[] nums = {300, 301};
 		String[] names = new String[nums.length];
 		for (int i = 0; i < nums.length; i++) {
 			names[i] = scrapMoveEn("n"+nums[i], ""+nums[i]);
