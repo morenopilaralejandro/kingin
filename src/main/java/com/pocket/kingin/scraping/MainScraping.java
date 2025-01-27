@@ -16,15 +16,11 @@ import org.springframework.util.ResourceUtils;
 public class MainScraping {
 
 	public static void main(String[] args) {
-		scrapPdJa("n386", "Deoxys - Normal Forme");
-		scrapPdJa("n386a", "Deoxys - Attack Forme");
-		scrapPdJa("n386d", "Deoxys - Defense Forme");
-		scrapPdJa("n386s", "Deoxys - Speed Forme");
-		//scrapPdCombo();
+		scrapPdCombo();
 	}
 	
 	private static void scrapPdCombo() { 
-		int[] nums = {385};
+		int[] nums = {429, 430};
 		String[] names = new String[nums.length];
 		for (int i = 0; i < nums.length; i++) {
 			names[i] = scrapMoveEn("n"+nums[i], ""+nums[i]);
