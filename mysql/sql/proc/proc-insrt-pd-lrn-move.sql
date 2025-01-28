@@ -54,13 +54,6 @@ begin
             vMoveLrnCode,
             vLv;
 
-        select
-            vPdCode,
-            vPdName,
-            vMoveName,
-            vMoveLrnCode,
-            vLv;
-
         set idPd = 0;
         set idMove = 0;
         set idMoveLrn = 0;

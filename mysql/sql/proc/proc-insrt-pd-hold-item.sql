@@ -43,11 +43,6 @@ begin
             vItemName,
             vRate;
 
-        select
-            vPdName,
-            vItemName,
-            vRate;
-
         set idItem = 0;
         set idPd = 0;
 

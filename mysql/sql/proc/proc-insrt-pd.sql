@@ -169,15 +169,6 @@ begin
             vAbil1,
             vAbil2;
 
-        select
-            vPdCode,
-            vPdIndex,
-            vPdNameEn,
-            vPdNameJa,
-            vGndrMRate,
-            vGndrFRate,
-            vGndrNRate;
-
         set idEggCyc = 0;
         set idExpGrp = 0;
         set idType1 = 0;
@@ -285,7 +276,7 @@ begin
             ) values (
                 i,
                 vPdCode,
-                vPdIndex,
+                intPdIndex,
                 vPdNameEn,
                 vPdNameJa,
                 vPdImg,

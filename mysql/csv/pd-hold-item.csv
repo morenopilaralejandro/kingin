@@ -4,11 +4,14 @@ Beedrill,Poison Barb,5
 Rattata,Chilan Berry,5
 Raticate,Chilan Berry,5
 Fearow,Sharp Beak,5
+Pichu,Oran Berry,5
 Pikachu,Oran Berry,50
 Pikachu,Light Ball,5
 Raichu,Oran Berry,5
 Sandshrew,Quick Claw,5
 Sandslash,Quick Claw,5
+Cleffa,Leppa Berry,50
+Cleffa,Moon Stone,5
 Clefairy,Leppa Berry,50
 Clefairy,Moon Stone,5
 Clefable,Leppa Berry,50
@@ -30,6 +33,7 @@ Growlithe,Rawst Berry,100
 Arcanine,Rawst Berry,100
 Poliwhirl,King's Rock,5
 Poliwrath,King's Rock,5
+Politoed,King's Rock,5
 Abra,Twisted Spoon,5
 Kadabra,Twisted Spoon,5
 Alakazam,Twisted Spoon,5
@@ -46,7 +50,7 @@ Slowking,King's Rock,5
 Magnemite,Metal Coat,5
 Magneton,Metal Coat,5
 Magnezone,Metal Coat,5
-Farfetch'd,Leek,5
+Farfetch'd,Stick,5
 Doduo,Sharp Beak,5
 Dodrio,Sharp Beak,5
 Grimer,Nugget,5
@@ -88,3 +92,134 @@ Dratini,Dragon Scale,5
 Dragonair,Dragon Scale,5
 Dragonite,Dragon Scale,5
 Mew,Lum Berry,100
+Sentret,Oran Berry,5
+Furret,Oran Berry,50
+Furret,Sitrus Berry,5
+Chinchou,Deep Sea Scale,5
+Lanturn,Deep Sea Scale,5
+Sunkern,Coba Berry,5
+Yanma,Wide Lens,5
+Yanmega,Wide Lens,5
+Girafarig,Persim Berry,5
+Steelix,Metal Coat,5
+Qwilfish,Poison Barb,5
+Shuckle,Berry Juice,100
+Sneasel,Grip Claw,50
+Sneasel,Quick Claw,5
+Weavile,Grip Claw,50
+Weavile,Quick Claw,5
+Corsola,Hard Stone,5
+Phanpy,Passho Berry,5
+Donphan,Passho Berry,5
+Miltank,Moomoo Milk,100
+Ho-oh,Sacred Ash,100
+Celebi,Lum Berry,100
+Poochyena,Pecha Berry,5
+Mightyena,Pecha Berry,5
+Zigzagoon,Oran Berry,5
+Linoone,Oran Berry,50
+Linoone,Sitrus Berry,5
+Beautifly,Shed Shell,5
+Dustox,Shed Shell,5
+Taillow,Charti Berry,5
+Swellow,Charti Berry,5
+Shroomish,Kebia Berry,5
+Breloom,Kebia Berry,5
+Whismur,Chesto Berry,5
+Loudred,Chesto Berry,5
+Exploud,Chesto Berry,5
+Hariyama,King's Rock,5
+Nosepass,Hard Stone,5
+Probopass,Hard Stone,5
+Skitty,Leppa Berry,5
+Delcatty,Leppa Berry,5
+Mawile,Occa Berry,5
+Aron,Hard Stone,5
+Lairon,Hard Stone,5
+Aggron,Hard Stone,5
+Budew,Poison Barb,5
+Roselia,Poison Barb,5
+Roserade,Poison Barb,5
+Gulpin,Big Pearl,5
+Swalot,Big Pearl,5
+Carvanha,Deep Sea Tooth,5
+Sharpedo,Deep Sea Tooth,5
+Numel,Rawst Berry,100
+Camerupt,Rawst Berry,100
+Spoink,Tanga Berry,5
+Grumpig,Tanga Berry,5
+Spinda,Chesto Berry,5
+Trapinch,Soft Sand,5
+Cacnea,Sticky Barb,5
+Cacturne,Sticky Barb,5
+Zangoose,Quick Claw,5
+Lunatone,Moon Stone,5
+Solrock,Sun Stone,5
+Lileep,Big Root,5
+Cradily,Big Root,5
+Castform,Mystic Water,5
+Kecleon,Persim Berry,5
+Shuppet,Spell Tag,5
+Banette,Spell Tag,5
+Duskull,Kasib Berry,5
+Dusclops,Kasib Berry,5
+Dusknoir,Kasib Berry,5
+Chingling,Colbur Berry,5
+Chimecho,Colbur Berry,5
+Snorunt,Babiri Berry,5
+Glalie,Babiri Berry,5
+Froslass,Babiri Berry,5
+Clamperl,Big Pearl,5
+Huntail,Deep Sea Tooth,5
+Gorebyss,Deep Sea Scale,5
+Relicanth,Deep Sea Scale,5
+Luvdisc,Heart Scale,50
+Bagon,Dragon Fang,5
+Shelgon,Dragon Fang,5
+Salamence,Dragon Fang,5
+Beldum,Metal Coat,5
+Metang,Metal Coat,5
+Metagross,Metal Coat,5
+Jirachi,Star Piece,100
+Starly,Yache Berry,5
+Staravia,Yache Berry,5
+Staraptor,Yache Berry,5
+Bibarel,Oran Berry,50
+Bibarel,Sitrus Berry,5
+Kricketot,Metronome,5
+Kricketune,Metronome,5
+Burmy - Plant Cloak,Silver Powder,5
+Burmy - Sandy Cloak,Silver Powder,5
+Burmy - Trash Cloak,Silver Powder,5
+Wormadam - Plant Cloak,Silver Powder,5
+Wormadam - Sandy Cloak,Silver Powder,5
+Wormadam - Trash Cloak,Silver Powder,5
+Mothim,Silver Powder,5
+Combee,Honey,5
+Vespiquen,Poison Barb,5
+Buizel,Wacan Berry,5
+Floatzel,Wacan Berry,5
+Cherubi,Miracle Seed,5
+Cherrim,Miracle Seed,5
+Buneary,Chople Berry,5
+Lopunny,Chople Berry,5
+Glameow,Cheri Berry,5
+Purugly,Cheri Berry,5
+Stunky,Pecha Berry,5
+Skuntank,Pecha Berry,5
+Bronzor,Metal Coat,5
+Bronzong,Metal Coat,5
+Chatot,Metronome,5
+Gible,Haban Berry,5
+Gabite,Haban Berry,5
+Garchomp,Haban Berry,5
+Skorupi,Poison Barb,5
+Drapion,Poison Barb,5
+Croagunk,Black Sludge,5
+Toxicroak,Black Sludge,5
+Finneon,Rindo Berry,5
+Lumineon,Rindo Berry,5
+Snover,Never-Melt Ice,5
+Abomasnow,Never-Melt Ice,5
+Shaymin - Land Forme,Lum Berry,5
+Shaymin - Sky Forme,Lum Berry,5

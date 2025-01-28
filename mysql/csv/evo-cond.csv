@@ -1,17 +1,24 @@
 evo_cond_code,evo_cond_desc_en,evo_cond_desc_ja
 lv,Level up,レベルアップ
+lm,Male at Level 20,レベル20でオス
+lf,Female at Level 20,レベル20でメス
+l1,Female at Level 21,レベル21でメス
 h1,Attack < Defence at Level 20,『こうげき』＜『ぼうぎょ』の時レベル20
 h2,Attack > Defence at Level 20,『こうげき』＞『ぼうぎょ』の時レベル20
 h3,Attack = Defence at Level 20,『こうげき』＝『ぼうぎょ』の時レベル20
-fr,Happiness,なつき
+fr,Happiness,『なつき』
 fd,Level Up with high Happiness during the day,朝・昼に『なつき』
 fn,Level Up with high Happiness during the night,夜に『なつき』
-st,Thunder Stone,かみなりのいし
-sm,Moon Stone,つきのいし
-sf,Fire Stone,ほのおのいし
-sw,Water Stone,みずのいし
-sl,Leaf Stone,リーフのいし
-ss,Sun Stone,たいようのいし
+st,Thunder Stone,『かみなりのいし』
+sf,Fire Stone,『ほのおのいし』
+sw,Water Stone,『みずのいし』
+sl,Leaf Stone,『リーフのい』
+ss,Sun Stone,『たいようのいし』
+sm,Moon Stone,『つきのいし』
+sy,Shiny Stone,『ひかりのいし』
+sd,Dusk Stone,『やみのいし』
+wm,Dawn Stone on male,『めざめいし』でオス
+wf,Dawn Stone on female,『めざめいし』でメス
 tr,Trade,通信交換
 tk,Trade while holding King's Rock,『おうじゃのしるし』を持たせて通信交換
 tm,Trade while holding Metal Coat,『メタルコート』を持たせて通信交換
@@ -21,10 +28,19 @@ te,Trade while holding Electirizer,『エレキブースター』を持たせて
 tg,Trade while holding Magmarizer,『マグマブースター』を持たせて通信交換
 tu,Trade while holding Upgrade,『アップグレード』を持たせて通信交換
 t2,Trade while holding Dubious Disc,『あやしいパッチ』を持たせて通信交換
+tc,Trade while holding Reaper Cloth,『れいかいのぬの』を持たせて通信交換
+tt,Trade while holding Deep Sea Tooth,『しんかいのキバ』を持たせて通信交換
+ts,Trade while holding Deep Sea Scale,しんかいのウロコ』を持たせて通信交換
+io,Level up during day while holding Oval Stone,『まんまるいし』を持たせて朝・昼にレベルアップ
+if,Level up during the night while holding Razor Fang,『するどいキバ』を持たせて夜にレベルアップ
+ic,Level up during the night while holding Razor Claw,『するどいツメ』を持たせて夜にレベルアップ
 zc,Level up while at Mt. Coronet,『テンガンざん』でレベルアップ
 zm,Level up near the Moss Rock in Eterna Forest,『ハクタイのもり』でレベルアップ
 zi,Level up near the Ice Rock in Route 217,『217ばんどうろ』でレベルアップ
 mr,Level up while knowing Rollout,『ころがる』を覚えさせてレベルアップ
 mm,Level up while knowing Mimic,『ものまね』を覚えさせてレベルアップ
 ma,Level up while knowing Ancient Power,『げんしのちから』を覚えさせてレベルアップ
-to,Level up during day while holding Oval Stone,『まんまるいし』を持たせて朝・昼にレベルアップ
+md,Level up while knowing Double Hit,『ダブルアタック』を覚えさせてレベルアップ
+pr,Level up with Remoraid in the party,手持ちに『テッポウオ』がいる時レベルアップ
+pe,Have at least one empty space in your party and one Poké Ball when Nincada evolves into Ninjask at level 20,レベル20で『ツチニン』が『テッカニン』に進化した際、手持ちポケモンに空きがあり、『モンスターボール』を1個以上持っていれば追加
+be,Level up with maximum Beauty,『うつくしさ』170以上でレベルアップ

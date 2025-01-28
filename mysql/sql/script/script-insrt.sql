@@ -44,13 +44,6 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop-sell-item.sql;
 /*insrt-pd*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;
-/*
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-yiel-stat.sql;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-tra-abil;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-belo-egg-grp;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-evok-type;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-dimo-gndr;
-*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-lrn-move.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-hold-item.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-shif-pd.sql;
@@ -59,8 +52,8 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-lina-evo-fam.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-evo-cond.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-evo-pd.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-baby-pd.sql;
-/*insrt-todo
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-foss.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop-exch-pd.sql;
+/*insrt-todo
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;
 */
