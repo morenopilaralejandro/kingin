@@ -17,6 +17,7 @@ public class MainScraping {
 
 	public static void main(String[] args) {
 		scrapPdCombo();
+		scrapItemEn();
 	}
 	
 	private static void scrapPdCombo() { 

@@ -1,0 +1,21 @@
+enc_code,enc_name_en,enc_name_ja
+walk,Walking,草むら
+walk_m,Walking - Morning,草むら 朝
+walk_d,Walking - Day,草むら 昼
+walk_n,Walking - Night,草むら 夜
+head,Headbutt,ずつき
+rock,Rock Smash,いわくだき
+surf,Surf,なみのり
+rod_old,Old Rod,ボロのつりざお
+rod_good,Good Rod,いいつりざお
+rod_good_m,Good Rod - Morning,いいつりざお 朝
+rod_good_d,Good Rod - Day,いいつりざお 昼
+rod_good_n,Good Rod - Night,すごいつりざお 夜
+rod_sup,Super Rod,すごいつりざお
+rod_sup_m,Super Rod - Morning,すごいつりざお 朝
+rod_sup_d,Super Rod - Day,すごいつりざお 昼
+rod_sup_n,Super Rod - Night,すごいつりざお 夜
+swar,Swarm,大量発生
+sou_hoen,Hoenn Sound,ホウエンサウンド
+sou_shin,Sinnoh Sound,シンオウサウンド
+gift,Gift,ギフト

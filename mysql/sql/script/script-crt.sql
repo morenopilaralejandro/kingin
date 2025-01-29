@@ -498,6 +498,72 @@ create table shop_exch_pd (
     constraint shop_exch_pd_fk_pd foreign key (pd_id)
         references pd(pd_id) on delete cascade
 );
+/*crt-obt*/
+create table vrs (
+    vrs_id int not null auto_increment,
+    vrs_code varchar(32) unique,
+    vrs_name_en varchar(32),
+    vrs_name_ja varchar(32),
+    vrs_sym varchar(32),
+    constraint vrs_pk primary key (vrs_id)
+);
+create table enc (
+    enc_id int not null auto_increment,
+    enc_code varchar(32) unique,
+    enc_name_en varchar(32),
+    enc_name_ja varchar(32),
+    constraint enc_pk primary key (enc_id)
+);
+create table pd_spaw_hg (
+    pd_id int not null,
+    zone_id int not null,
+    enc_id int not null,
+    lv_min int,
+    lv_max int,
+    rate int,
+    constraint pd_spaw_hg_pk primary key (pd_id, zone_id, enc_id),
+    constraint pd_spaw_hg_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_spaw_hg_fk_zone foreign key (zone_id)
+        references zone(zone_id) on delete cascade,
+    constraint pd_spaw_hg_fk_enc foreign key (enc_id)
+        references enc(enc_id) on delete cascade
+);
+create table pd_spaw_ss (
+    pd_id int not null,
+    zone_id int not null,
+    enc_id int not null,
+    lv_min int,
+    lv_max int,
+    rate int,
+    constraint pd_spaw_ss_pk primary key (pd_id, zone_id, enc_id),
+    constraint pd_spaw_ss_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_spaw_ss_fk_zone foreign key (zone_id)
+        references zone(zone_id) on delete cascade,
+    constraint pd_spaw_ss_fk_enc foreign key (enc_id)
+        references enc(enc_id) on delete cascade
+);
+create table item_obt (
+    item_obt_id int not null auto_increment,
+    item_obt_code varchar(32) unique,
+    item_obt_name_en varchar(32),
+    item_obt_name_ja varchar(32),
+    constraint item_obt_pk primary key (item_obt_id)
+);
+create table item_loc_hgss (
+    item_id int not null,
+    zone_id int not null,
+    item_obt_id int not null,
+    constraint item_loc_hgss_pk primary key (item_id, zone_id, item_obt_id),
+    constraint item_loc_hgss_fk_item foreign key (item_id)
+        references item(item_id) on delete cascade,
+    constraint item_loc_hgss_fk_zone foreign key (zone_id)
+        references zone(zone_id) on delete cascade,
+    constraint item_loc_hgss_fk_item_obt foreign key (item_obt_id)
+        references item_obt(item_obt_id) on delete cascade
+);
+
 /*crt-po*/
 create table po (
     po_id int not null auto_increment,
