@@ -26,6 +26,7 @@ main-oliv,zn-main,city-oliv
 main-cian,zn-main,city-cian
 main-maho,zn-main,city-maho
 main-thor,zn-main,city-thor
+main-ver,zn-main,city-ver
 main-saf,zn-main,city-saf
 main-ceru,zn-main,city-ceru
 main-cel,zn-main,city-cel
@@ -40,6 +41,7 @@ gym-oliv,zn-gym,city-oliv
 gym-cian,zn-gym,city-cian
 gym-maho,zn-gym,city-maho
 gym-thor,zn-gym,city-thor
+gym-ver,zn-gym,city-ver
 gym-saf,zn-gym,city-saf
 gym-ceru,zn-gym,city-ceru
 gym-cel,zn-gym,city-cel
@@ -72,7 +74,6 @@ rout-19,zn-rout-19,
 rout-20,zn-rout-20,
 rout-21,zn-rout-21,
 rout-22,zn-rout-22,
-rout-23,zn-rout-23,
 rout-24,zn-rout-24,
 rout-25,zn-rout-25,
 rout-26,zn-rout-26,
