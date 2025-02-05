@@ -1,32 +1,32 @@
 shop_code,shop_name_en,shop_name_ja,zone_code,curr_code
-sh-dept-gold-2f,Goldenrod Dept. Store - 2F,コガネひゃっかてん - 2F,city-gold,curr-ye
-sh-dept-gold-3f,Goldenrod Dept. Store - 3F,コガネひゃっかてん - 3F,city-gold,curr-ye
-sh-dept-gold-4f,Goldenrod Dept. Store - 4F,コガネひゃっかてん - 4F,city-gold,curr-ye
-sh-dept-gold-5f,Goldenrod Dept. Store - 5F,コガネひゃっかてん - 5F,city-gold,curr-ye
-sh-dept-gold-ve,Goldenrod Dept. Store - Vending,コガネひゃっかてん - 自動販売機,city-gold,curr-ye
-sh-game-gold,Goldenrod Game Corner,コガネゲームコーナー,city-gold,curr-cn
-sh-flow,Flower Shop,フラワーショップ,city-gold,curr-ye
-sh-dept-cel-2f,Celadon Dept. Store - 2F,タマムシデパート - 2F,city-cel,curr-ye
-sh-dept-cel-3f,Celadon Dept. Store - 3F,タマムシデパート - 3F,city-cel,curr-ye
-sh-dept-cel-4f,Celadon Dept. Store - 4F,タマムシデパート - 4F,city-cel,curr-ye
-sh-dept-cel-5f,Celadon Dept. Store - 5F,タマムシデパート - 5F,city-cel,curr-ye
-sh-dept-cel-ve,Celadon Dept. Store - Vending,タマムシデパート - 自動販売機,city-cel,curr-ye
-sh-game-cel,Celadon Game Corner,タマムシゲームコーナー,city-cel,curr-cn
-sh-mart-che,PokéMart - Cherrygrove City,フレンドリィショップ - ヨシノシティ,city-cher,curr-ye
-sh-mart-vio,PokéMart - Violet City,フレンドリィショップ - キキョウシティ,city-vio,curr-ye
-sh-mart-aza,PokéMart - Azalea Town,フレンドリィショップ - ヒワダタウン,city-aza,curr-ye
-sh-mart-ecru,PokéMart - Ecruteak City,フレンドリィショップ - エンジュシティ,city-ecru,curr-ye
-sh-mart-oliv,PokéMart - Olivine City,フレンドリィショップ - アサギシティ,city-oliv,curr-ye
-sh-phar-cian,Cianwood City Pharmacy,タンバシティの薬屋,city-cian,curr-ye
-sh-souv-maho,Souvenir Shop,お土産屋,city-maho,curr-ye
-sh-mart-thor,PokéMart - Blackthorn City,フレンドリィショップ - フスベシティ,city-thor,curr-ye
-sh-mart-ver,PokéMart - Vermilion City,フレンドリィショップ - クチバシティ,city-ver,curr-ye
-sh-mart-saf,PokéMart - Saffron City,フレンドリィショップ - ヤマブキシティ,city-saf,curr-ye
-sh-mart-lav,PokéMart - Lavender Town,フレンドリィショップ - シオンタウン,city-lav,curr-ye
-sh-mart-ceru,PokéMart - Cerulean City,フレンドリィショップ - ハナダシティ,city-ceru,curr-ye
-sh-mart-fu,PokéMart - Fuchsia City,フレンドリィショップ - セキチクシティ,city-fu,curr-ye
-sh-mart-pew,PokéMart - Pewter City,フレンドリィショップ - ニビシティ,city-pew,curr-ye
-sh-mart-viri,PokéMart - Viridian City,フレンドリィショップ - トキワシティ,city-viri,curr-ye
+sh-dept-gold-2f,Goldenrod Dept. Store - 2F,コガネひゃっかてん - 2F,main-gold,curr-ye
+sh-dept-gold-3f,Goldenrod Dept. Store - 3F,コガネひゃっかてん - 3F,main-gold,curr-ye
+sh-dept-gold-4f,Goldenrod Dept. Store - 4F,コガネひゃっかてん - 4F,main-gold,curr-ye
+sh-dept-gold-5f,Goldenrod Dept. Store - 5F,コガネひゃっかてん - 5F,main-gold,curr-ye
+sh-dept-gold-ve,Goldenrod Dept. Store - Vending,コガネひゃっかてん - 自動販売機,main-gold,curr-ye
+sh-game-gold,Goldenrod Game Corner,コガネゲームコーナー,main-gold,curr-cn
+sh-flow,Flower Shop,フラワーショップ,main-gold,curr-ye
+sh-dept-cel-2f,Celadon Dept. Store - 2F,タマムシデパート - 2F,main-cel,curr-ye
+sh-dept-cel-3f,Celadon Dept. Store - 3F,タマムシデパート - 3F,main-cel,curr-ye
+sh-dept-cel-4f,Celadon Dept. Store - 4F,タマムシデパート - 4F,main-cel,curr-ye
+sh-dept-cel-5f,Celadon Dept. Store - 5F,タマムシデパート - 5F,main-cel,curr-ye
+sh-dept-cel-ve,Celadon Dept. Store - Vending,タマムシデパート - 自動販売機,main-cel,curr-ye
+sh-game-cel,Celadon Game Corner,タマムシゲームコーナー,main-cel,curr-cn
+sh-mart-che,PokéMart - Cherrygrove City,フレンドリィショップ - ヨシノシティ,main-cher,curr-ye
+sh-mart-vio,PokéMart - Violet City,フレンドリィショップ - キキョウシティ,main-vio,curr-ye
+sh-mart-aza,PokéMart - Azalea Town,フレンドリィショップ - ヒワダタウン,main-aza,curr-ye
+sh-mart-ecru,PokéMart - Ecruteak City,フレンドリィショップ - エンジュシティ,main-ecru,curr-ye
+sh-mart-oliv,PokéMart - Olivine City,フレンドリィショップ - アサギシティ,main-oliv,curr-ye
+sh-phar-cian,Cianwood City Pharmacy,タンバシティの薬屋,main-cian,curr-ye
+sh-souv-maho,Souvenir Shop,お土産屋,main-maho,curr-ye
+sh-mart-thor,PokéMart - Blackthorn City,フレンドリィショップ - フスベシティ,main-thor,curr-ye
+sh-mart-ver,PokéMart - Vermilion City,フレンドリィショップ - クチバシティ,main-ver,curr-ye
+sh-mart-saf,PokéMart - Saffron City,フレンドリィショップ - ヤマブキシティ,main-saf,curr-ye
+sh-mart-lav,PokéMart - Lavender Town,フレンドリィショップ - シオンタウン,main-lav,curr-ye
+sh-mart-ceru,PokéMart - Cerulean City,フレンドリィショップ - ハナダシティ,main-ceru,curr-ye
+sh-mart-fu,PokéMart - Fuchsia City,フレンドリィショップ - セキチクシティ,main-fu,curr-ye
+sh-mart-pew,PokéMart - Pewter City,フレンドリィショップ - ニビシティ,main-pew,curr-ye
+sh-mart-viri,PokéMart - Viridian City,フレンドリィショップ - トキワシティ,main-viri,curr-ye
 sh-saf-rig,Safari Zone - Right Tent,サファリゾーン - 南東の露店,saf-gate,curr-ye
 sh-saf-lef,Safari Zone - Left Tent,サファリゾーン - 南西の露店,saf-gate,curr-ye
 sh-indi,Indigo Plateau,セキエイこうげん,dngn-indi,curr-ye
@@ -40,3 +40,5 @@ sh-ath-th,Pokeathlon Dome - Thursday,ポケスロンドーム - 木,dngn-ath,cur
 sh-ath-fr,Pokeathlon Dome - Friday,ポケスロンドーム - 金,dngn-ath,curr-ap
 sh-ath-sat,Pokeathlon Dome - Saturday,ポケスロンドーム - 土,dngn-ath,curr-ap
 sh-ath-sun,Pokeathlon Dome - Sunday,ポケスロンドーム - 日,dngn-ath,curr-ap
+sh-barg,Bargain Shop,安売り道具屋,dngn-gold-under-1f,curr-ye
+sh-herb,Herb Shop,カンポー屋,dngn-gold-under-1f,curr-ye
