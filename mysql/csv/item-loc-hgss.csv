@@ -31,3 +31,719 @@ city-bark,Babiri Berry,mom
 city-bark,Chilan Berry,mom
 city-cher,Nugget,dow
 city-cher,Mystic Water,flo
+city-pall,HM08,gift
+city-pall,Jade Orb,gift
+main-vio,Chesto Berry,sha-blu
+main-vio,Oran Berry,sha-blu
+main-vio,Wiki Berry,sha-blu
+main-vio,Rawst Berry,sha-gre
+main-vio,Lum Berry,sha-gre
+main-vio,Aguav Berry,sha-gre
+main-vio,Cheri Berry,sha-red
+main-vio,Pecha Berry,sha-red
+main-vio,Leppa Berry,sha-red
+main-vio,Aspear Berry,sha-yel
+main-vio,Sitrus Berry,sha-yel
+main-vio,Iapapa Berry,sha-yel
+main-vio,Rare Candy,flo
+main-vio,PP Up,flo
+main-vio,Poké Ball,dow
+main-vio,Hyper Potion,dow
+main-vio,Star Piece,rock
+main-vio,Revive,rock
+main-vio,Blue Shard,rock
+main-vio,Green Shard,rock
+main-vio,Red Shard,rock
+main-vio,Yellow Shard,rock
+main-vio,Heart Scale,rock
+main-vio,Max Ether,rock
+main-vio,Ylw Apricorn,tree
+gym-vio,TM51,gift
+main-aza,Fast Ball,gift
+main-aza,Full Heal,flo
+main-aza,Charcoal,gift
+main-aza,Wht Apricorn,tree
+main-aza,Love Ball,kurt
+main-aza,Moon Ball,kurt
+main-aza,Heavy Ball,kurt
+main-aza,Lure Ball,kurt
+main-aza,Friend Ball,kurt
+main-aza,Level Ball,kurt
+main-aza,Fast Ball,kurt
+gym-aza,TM89,gift
+main-gold,Bicycle,gift
+main-gold,TM78,gift
+main-gold,TM21,gift
+main-gold,TM27,gift
+main-gold,Ether,flo
+main-gold,Ultra Ball,flo
+main-gold,Burn Heal,flo
+main-gold,Paralyze Heal,dow
+main-gold,Super Potion,dow
+main-gold,Antidote,dow
+main-gold,Squirtbottle,gift
+main-gold,Amulet Coin,gift
+main-gold,Super Potion,flo
+main-gold,HP Up,flo
+main-gold,Gracidea,gift
+main-gold,Oran Berry,lot-3
+main-gold,Chesto Berry,lot-3
+main-gold,Pecha Berry,lot-3
+main-gold,Rawst Berry,lot-3
+main-gold,Aspear Berry,lot-3
+main-gold,Persim Berry,lot-3
+main-gold,Cheri Berry,lot-3
+main-gold,Nest Ball,lot-2-mon
+main-gold,Repeat Ball,lot-2-tue
+main-gold,Net Ball,lot-2-wed
+main-gold,Quick Ball,lot-2-thu
+main-gold,Dusk Ball,lot-2-fri
+main-gold,Timer Ball,lot-2-sat
+main-gold,Luxury Ball,lot-2-sun
+main-gold,TM65,lot-1-mon
+main-gold,TM91,lot-1-tue
+main-gold,TM57,lot-1-wed
+main-gold,TM60,lot-1-thu
+main-gold,TM42,lot-1-fri
+main-gold,TM62,lot-1-sat
+main-gold,TM02,lot-1-sun
+gym-gold,TM45,gift
+main-ecru,HM03,gift
+main-ecru,Dowsing MCHN,gift
+main-ecru,Rare Candy,dow
+main-ecru,Ultra Ball,dow
+main-ecru,Hyper Potion,dow
+main-ecru,Ether,dow
+main-ecru,Clear Bell,gift-hg
+main-ecru,Tidal Bell,gift-ss
+gym-ecru,TM30,gift
+main-oliv,Good Rod,gift
+main-oliv,Pearl,dow
+main-oliv,Protein,dow
+main-oliv,TM57,flo
+main-oliv,Rare Candy,dow
+main-oliv,Full Heal,dow
+gym-oliv,TM23,gift
+main-cian,Secret Potion,gift
+main-cian,Stardust,dow
+main-cian,HM02,gift
+main-cian,Star Piece,rock
+main-cian,Revive,rock
+main-cian,Blue Shard,rock
+main-cian,Green Shard,rock
+main-cian,Red Shard,rock
+main-cian,Yellow Shard,rock
+main-cian,Heart Scale,rock
+main-cian,Max Ether,rock
+gym-cian,TM01,gift
+main-maho,RageCandyBar,gift
+gym-maho,TM07,gift
+main-thor,Soft Sand,sib-sat
+main-ver,Luck Incense,flo
+main-ver,Sticky Barb,flo
+main-ver,Full Heal,dow
+main-ver,Iron,dow
+main-ver,Heart Scale,dow
+main-ver,Pearl,dow
+main-ver,Big Pearl,dow
+main-ver,Rare Candy,gift
+main-ver,Lost Item,gift
+main-ver,Star Piece,rock
+main-ver,Revive,rock
+main-ver,Blue Shard,rock
+main-ver,Green Shard,rock
+main-ver,Red Shard,rock
+main-ver,Yellow Shard,rock
+main-ver,Heart Scale,rock
+main-ver,Max Ether,rock
+gym-ver,TM34,gift
+misc-harb-ver,Iron,dow
+main-saf,TM29,gift
+main-saf,Pass,gift
+gym-saf,TM48,gift
+main-ceru,Nugget,dow
+gym-ceru,Machine Part,dow
+gym-ceru,TM03,gift
+main-cel,TM67,flo
+main-cel,PP Up,dow
+main-cel,Spell Tag,gift
+main-cel,GB Sounds,gift
+gym-cel,TM19,gift
+main-fu,Nugget,dow
+main-fu,Bluk Berry,sha-blu
+main-fu,Kelpsy Berry,sha-blu
+main-fu,Cornn Berry,sha-blu
+main-fu,Wepear Berry,sha-gre
+main-fu,Hondew Berry,sha-gre
+main-fu,Durin Berry,sha-gre
+main-fu,Persim Berry,sha-red
+main-fu,Razz Berry,sha-red
+main-fu,Pomeg Berry,sha-red
+main-fu,Pinap Berry,sha-yel
+main-fu,Grepa Berry,sha-yel
+main-fu,Nomel Berry,sha-yel
+main-fu,Red Apricorn,tree
+gym-fu,TM84,gift
+main-pew,Wise Glasses,flo
+main-pew,X Defend,dow
+main-pew,PP Up,dow
+main-pew,Max Revive,dow
+main-pew,Soul Dew,gift
+main-pew,Silver Wing,gift-hg
+main-pew,Rainbow Wing,gift-ss
+main-pew,Blu Apricorn,tree
+main-pew,Wht Apricorn,tree
+gym-pew,TM80,gift
+main-viri,Nugget,dow
+main-viri,TM85,gift
+gym-viri,TM92,gift
+rout-1,Blk Apricorn,tree
+rout-2,Carbos,flo
+rout-2,Nugget,flo
+rout-2,Sacred Ash,flo
+rout-2,Elixir,flo
+rout-2,Pnk Apricorn,tree
+rout-3,Big Root,flo
+rout-3,Star Piece,dow
+rout-3,Hyper Potion,dow
+rout-4,HP Up,flo
+rout-4,Ultra Ball,dow
+rout-4,Big Mushroom,dow
+rout-5,Full Restore,flo
+rout-5,X Special,flo
+rout-5,Cleanse Tag,gift
+rout-6,TM62,flo
+rout-7,Mental Herb,flo
+rout-8,TM41,flo
+rout-8,Ylw Apricorn,tree
+rout-9,Max Potion,flo
+rout-9,Full Restore,flo
+rout-9,Light Clay,flo
+rout-9,TM91,flo
+rout-9,Ether,dow
+rout-10,TM69,flo
+rout-10,Carbos,dow
+rout-11,TM86,flo
+rout-11,Revive,dow
+rout-11,Grn Apricorn,tree
+rout-12,Calcium,flo
+rout-12,Yellow Flute,flo
+rout-12,Elixir,dow
+rout-12,Super Rod,gift
+rout-13,Calcium,dow
+rout-14,Lucky Punch,gift
+rout-15,PP Up,flo
+rout-15,Rose Incense,flo
+rout-17,Max Elixir,dow
+rout-17,Max Ether,dow
+rout-19,TM55,flo
+rout-19,Revive,dow
+rout-19,PP Max,dow
+rout-19,Pearl,dow
+rout-19,Big Pearl,dow
+rout-19,Star Piece,rock
+rout-19,Revive,rock
+rout-19,Blue Shard,rock
+rout-19,Green Shard,rock
+rout-19,Red Shard,rock
+rout-19,Yellow Shard,rock
+rout-19,Heart Scale,rock
+rout-19,Max Ether,rock
+rout-20,Stardust,dow
+rout-20,Deep Sea Scale,dow
+rout-20,Deep Sea Tooth,dow
+rout-21,Stardust,dow
+rout-25,Revive,dow
+rout-25,Nugget,gift
+rout-25,Protein,gift
+rout-25,Everstone,gift
+rout-25,Leaf Stone,gift
+rout-25,Water Stone,gift
+rout-25,Fire Stone,gift
+rout-25,Thunderstone,gift
+rout-26,PP Max,flo
+rout-26,Tiny Mushroom,dow
+rout-26,Nugget,dow
+rout-26,Blu Apricorn,tree
+rout-27,Rare Candy,flo
+rout-27,Destiny Knot,flo
+rout-27,TM02,flo
+rout-27,Big Mushroom,dow
+rout-27,Revive,dow
+rout-27,TM37,gift
+rout-28,TM35,flo
+rout-28,TM47,flo
+rout-28,Rare Candy,dow
+rout-29,Potion,flo
+rout-29,Poké Ball,gift
+rout-29,Twisted Spoon,sib-tue
+rout-29,Grn Apricorn,tree
+rout-30,Apricorn Box,gift
+rout-30,Mystery Egg,gift
+rout-30,Antidote,flo
+rout-30,Potion,flo
+rout-30,Potion,dow
+rout-30,EXP. Share,gift
+rout-30,Red Orb,gift-hg
+rout-30,Blue Orb,gift-ss
+rout-30,Grn Apricorn,tree
+rout-30,Pnk Apricorn,tree
+rout-31,Vs. Recorder,gift
+rout-31,Potion,flo
+rout-31,Poké Ball,flo
+rout-31,TM44,gift
+rout-31,Blk Apricorn,tree
+rout-32,Miracle Seed,flo
+rout-32,Repel,flo
+rout-32,Old Rod,gift
+rout-32,Lure Ball,gift
+rout-32,TM09,flo
+rout-32,Great Ball,flo
+rout-32,TM05,gift
+rout-32,Shell Bell,gift
+rout-32,Super Potion,dow
+rout-32,Heart Scale,dow
+rout-32,Great Ball,dow
+rout-32,Poison Barb,sib-fri
+rout-33,Blk Apricorn,tree
+rout-33,Pnk Apricorn,tree
+rout-34,TM63,gift
+rout-34,Nugget,flo
+rout-34,Power Herb,gift
+rout-34,Super Potion,flo
+rout-34,Rare Candy,flo
+rout-35,Paralyze Heal,flo
+rout-35,TM66,flo
+rout-35,Nugget,dow
+rout-35,Grn Apricorn,tree
+rout-36,HM06,gift
+rout-36,Berry Pots,gift
+rout-36,Oran Berry,gift
+rout-36,Pecha Berry,gift
+rout-36,Hyper Potion,flo
+rout-36,Awakening,dow
+rout-36,Blu Apricorn,tree
+rout-36,Hard Stone,sib-thu
+rout-37,Magnet,sib-sun
+rout-37,Blk Apricorn,tree
+rout-37,Red Apricorn,tree
+rout-37,Blu Apricorn,tree
+rout-38,Max Potion,flo
+rout-38,Lax Incense,flo
+rout-38,HP Up,dow
+rout-38,Wht Apricorn,tree
+rout-39,TM60,flo
+rout-39,Seal Case,gift
+rout-39,TM83,gift
+rout-39,X Attack,dow
+rout-39,PP Up,dow
+rout-39,Nugget,dow
+rout-39,Grn Apricorn,tree
+rout-39,MooMoo Milk,gift
+rout-40,Hyper Potion,flo
+rout-40,Sharp Beak,sib-mon
+rout-41,Stardust,dow
+rout-41,Max Ether,dow
+rout-42,HM04,gift
+rout-42,TM65,flo
+rout-42,Super Potion,flo
+rout-42,Dubious Disc,flo
+rout-42,Pnk Apricorn,tree
+rout-42,Grn Apricorn,tree
+rout-42,Ylw Apricorn,tree
+rout-43,Max Ether,flo
+rout-43,TM36,flo
+rout-43,BLK Apricorn,tree
+rout-44,Max Repel,flo
+rout-44,Ultra Ball,flo
+rout-44,Max Revive,flo
+rout-44,Elixir,dow
+rout-44,Red Apricorn,tree
+rout-45,Elixir,flo
+rout-45,Max Potion,flo
+rout-45,Full Heal,flo
+rout-45,Nugget,flo
+rout-45,Revive,flo
+rout-45,PP Max,dow
+rout-45,Grn Apricorn,tree
+rout-46,X Speed,flo
+rout-46,Ylw Apricorn,tree
+rout-46,Grn Apricorn,tree
+rout-47,Revive,flo
+rout-47,Lagging Tail,flo
+rout-47,Pearl,dow
+rout-47,White Flute,flo
+rout-47,Stardust,dow
+rout-47,Wave Incense,flo
+rout-48,Nugget,flo
+dngn-dark-31,Revive,flo
+dngn-dark-31,Black Glasses,flo
+dngn-dark-31,TM54,flo
+dngn-dark-31,Elixir,dow
+dngn-dark-31,Max Revive,dow
+dngn-dark-45,Hyper Potion,flo
+dngn-dark-45,Full Heal,flo
+dngn-dark-45,Dire Hit,flo
+dngn-dark-45,Black Flute,flo
+dngn-dark-45,Star Piece,rock
+dngn-dark-45,Revive,rock
+dngn-dark-45,Blue Shard,rock
+dngn-dark-45,Green Shard,rock
+dngn-dark-45,Red Shard,rock
+dngn-dark-45,Yellow Shard,rock
+dngn-dark-45,Heart Scale,rock
+dngn-dark-45,Max Ether,rock
+dngn-spro-2f,Paralyze Heal,flo
+dngn-spro-2f,X Accuracy,flo
+dngn-spro-2f,Potion,flo
+dngn-spro-3f,Escape Rope,flo
+dngn-spro-3f,TM70,gift
+dngn-alph-out,Blue Shard,rock
+dngn-alph-out,Red Shard,rock
+dngn-alph-out,Green Shard,rock
+dngn-alph-out,Yellow Shard,rock
+dngn-alph-out,Max Revive,rock
+dngn-alph-out,Max Ether,rock
+dngn-alph-out,Old Amber,rock
+dngn-alph-out,Dome Fossil,rock
+dngn-alph-out,Helix Fossil,rock
+dngn-alph-out,Unown Report,gift
+dngn-alph-ins,Oran Berry,flo
+dngn-alph-ins,Pecha Berry,flo
+dngn-alph-ins,Energy Powder,flo
+dngn-alph-ins,Heal Powder,flo
+dngn-alph-ins,Sitrus Berry,flo
+dngn-alph-ins,Moon Stone,flo
+dngn-alph-ins,Energy Root,flo
+dngn-alph-ins,Heal Powder,flo
+dngn-alph-ins,Leppa Berry,flo
+dngn-alph-ins,Mystic Water,flo
+dngn-alph-ins,Star Piece,flo
+dngn-alph-ins,Stardust,flo
+dngn-alph-ins,Leppa Berry,flo
+dngn-alph-ins,Life Orb,flo-ho
+dngn-alph-ins,Charcoal,flo
+dngn-alph-ins,Revival Herb,flo
+dngn-alph-ins,Nugget,dow
+dngn-alph-ins,Big Mushroom,dow
+dngn-unio-1f,X Attack,flo
+dngn-unio-1f,Great Ball,flo
+dngn-unio-1f,Potion,flo
+dngn-unio-1f,Awakening,flo
+dngn-unio-1f,Great Ball,dow
+dngn-unio-1f,Paralyze Heal,dow
+dngn-unio-1f,Big Pearl,dow
+dngn-unio-b1f,X Defend,flo
+dngn-unio-b1f,TM39,flo
+dngn-unio-b1f,X Speed,dow
+dngn-unio-b1f,Revive,dow
+dngn-unio-b2f,Hyper Potion,flo
+dngn-unio-b2f,Elixir,flo
+dngn-unio-b2f,Calcium,dow
+dngn-unio-b2f,Ultra Ball,dow
+dngn-well-1f,Super Potion,flo
+dngn-well-1f,Super Potion,dow
+dngn-well-1f,Great Ball,dow
+dngn-well-1f,Full Heal,flo
+dngn-well-b1f,King's Rock,flo
+dngn-well-b1f,TM18,flo
+dngn-ilex,HM01,gift
+dngn-ilex,Revive,flo
+dngn-ilex,X Attack,flo
+dngn-ilex,Ether,flo
+dngn-ilex,Antidote,flo
+dngn-ilex,Antidote,dow
+dngn-ilex,Repel,dow
+dngn-ilex,Ether,dow
+dngn-ilex,Full Heal,dow
+dngn-ilex,Super Potion,dow
+dngn-ilex,Tiny Mushroom,dow
+dngn-ilex,Big Mushroom,dow
+dngn-ilex,TM12,gift
+dngn-rad-1f,Master Ball,lot-id
+dngn-rad-1f,Max Revive,lot-id-4
+dngn-rad-1f,EXP. Share,lot-id-3
+dngn-rad-1f,PP Up,lot-id-2
+dngn-rad-1f,Ultra Ball,lot-id-1
+dngn-rad-2f,Blue Card,gift
+dngn-rad-2f,Poké Ball,bc-1
+dngn-rad-2f,Full Restore,bc-3
+dngn-rad-2f,Protein,bc-5
+dngn-rad-2f,Iron,bc-10
+dngn-rad-2f,Carbos,bc-15
+dngn-rad-2f,Nugget,bc-20
+dngn-rad-2f,Rare Candy,bc-25
+dngn-rad-2f,HP Up,bc-30
+dngn-rad-3f,Bright Powder,gift
+dngn-rad-4f,Ultra Ball,flo
+dngn-rad-4f,TM11,gift
+dngn-rad-5f,Basement Key,gift
+dngn-rad-to,Rainbow Wing,gift-hg
+dngn-rad-to,Silver Wing,gift-ss
+dngn-gold-under-1f,Fashion Case,gift
+dngn-gold-under-1f,Coin Case,gift
+dngn-gold-under-b1f1,Full Heal,flo
+dngn-gold-under-b1f1,Smoke Ball,flo
+dngn-gold-under-b1f1,Ultra Ball,flo
+dngn-gold-under-b1f1,Max Ether,flo
+dngn-gold-under-b1f1,TM82,flo
+dngn-gold-under-b1f1,Revive,dow
+dngn-gold-under-b1f1,Max Potion,dow
+dngn-gold-under-b1f2,Card Key,gift
+dngn-park-main,Quick Claw,gift
+dngn-park-main,Soothe Bell,flo
+dngn-park-main,TM28,flo
+dngn-park-main,Shiny Stone,flo
+dngn-park-main,Full Heal,dow
+dngn-park-main,Sun Stone,bcc-1
+dngn-park-main,Water Stone,bcc-1
+dngn-park-main,Fire Stone,bcc-1
+dngn-park-main,Thunderstone,bcc-1
+dngn-park-main,Leaf Stone,bcc-1
+dngn-park-main,Dusk Stone,bcc-1
+dngn-park-main,Shiny Stone,bcc-1
+dngn-park-main,Dawn Stone,bcc-1
+dngn-park-main,Oval Stone,bcc-1
+dngn-park-main,Everstone,bcc-2
+dngn-park-main,Aspear Berry,bcc-3
+dngn-park-main,Shed Shell,bcc-4
+dngn-ath,Protein,dow
+dngn-ath,PP Up,dow
+dngn-burn-1F,Antidote,flo
+dngn-burn-1F,HP Up,flo
+dngn-burn-1F,Ether,dow
+dngn-burn-1F,Ultra Ball,dow
+dngn-burn-B1F,TM12,flo
+dngn-trail,Tiny Mushroom,dow
+dngn-trail,Big Mushroom,dow
+dngn-bell-3f,Full Heal,flo
+dngn-bell-3f,Max Potion,dow
+dngn-bell-4f,PP Up,flo
+dngn-bell-4f,Escape Rope,flo
+dngn-bell-4f,Ultra Ball,flo
+dngn-bell-5f,Rare Candy,flo
+dngn-bell-5f,Full Restore,dow
+dngn-bell-6f,Max Potion,flo
+dngn-bell-6f,Full Heal,flo
+dngn-bell-7f,Max Revive,flo
+dngn-bell-8f,Max Elixir,flo
+dngn-bell-8f,HP Up,flo
+dngn-bell-8f,Nugget,flo
+dngn-bell-9f,Full Restore,flo
+dngn-bell-9f,Carbos,dow
+dngn-ligh-3f,Ether,flo
+dngn-ligh-3f,Hyper Potion,dow
+dngn-ligh-4f,TM87,flo
+dngn-ligh-out,Rare Candy,flo
+dngn-ligh-5f,Super Repel,flo
+dngn-ligh-6f,Super Potion,flo
+dngn-aqua-1f,Metal Coat,gift
+dngn-aqua-1f,Splash Plate,gift
+dngn-aqua-1f,Zap Plate,gift
+dngn-aqua-1f,Flame Plate,gift
+dngn-aqua-1f,Insect Plate,gift
+dngn-aqua-1f,Dread Plate,gift
+dngn-aqua-1f,Draco Plate,gift
+dngn-aqua-1f,Fist Plate,gift
+dngn-aqua-1f,Sky Plate,gift
+dngn-aqua-1f,Spooky Plate,gift
+dngn-aqua-1f,Meadow Plate,gift
+dngn-aqua-1f,Earth Plate,gift
+dngn-aqua-1f,Icicle Plate,gift
+dngn-aqua-1f,Toxic Plate,gift
+dngn-aqua-1f,Mind Plate,gift
+dngn-aqua-1f,Stone Plate,gift
+dngn-aqua-1f,Iron Plate,gift
+dngn-aqua-1f,Nugget,gift
+dngn-whir-1f,Ultra Ball,flo
+dngn-whir-1f,Rare Candy,dow
+dngn-whir-b1f,Nugget,flo
+dngn-whir-b1f,Full Restore,flo
+dngn-whir-b1f,Carbos,flo
+dngn-whir-b1f,Calcium,flo
+dngn-whir-b1f,Escape Rope,flo
+dngn-whir-b1f,Super Repel,dow
+dngn-whir-b1f,Pearl,dow
+dngn-whir-b1f,Ultra Ball,dow
+dngn-whir-b1f,Revive,dow
+dngn-whir-b2f,Max Revive,flo
+dngn-whir-b2f,Full Restore,flo
+dngn-whir-b2f,PP Max,flo
+dngn-whir-b2f,Full Restore,dow
+dngn-whir-b3f,Rare Candy,dow
+dngn-mort-1f,Elixir,flo
+dngn-mort-1f,Revive,flo
+dngn-mort-1f2,Max Repel,flo
+dngn-mort-1f2,Max Potion,flo
+dngn-mort-1f2,Escape Rope,flo
+dngn-mort-1f2,Nugget,flo
+dngn-mort-1f2,Ultra Ball,flo
+dngn-mort-1f2,Full Incense,flo
+dngn-mort-1f2,Protector,flo
+dngn-mort-1f2,Hyper Potion,dow
+dngn-mort-1f2,Revive,dow
+dngn-mort-1f2,Ultra Ball,dow
+dngn-mort-1f2,Rare Candy,dow
+dngn-mort-1f2,Nugget,dow
+dngn-mort-1f3,Iron,flo
+dngn-mort-1f3,Max Revive,flo
+dngn-mort-1f3,Iron Ball,flo
+dngn-mort-1f3,Ether,flo
+dngn-mort-1f3,Rare Candy,flo
+dngn-mort-1f3,Max Potion,flo
+dngn-mort-1f3,TM40,flo
+dngn-mort-1f3,Escape Rope,flo
+dngn-mort-1f3,Dragon Scale,flo
+dngn-mort-1f3,Elixir,flo
+dngn-mort-1f3,Hyper Potion,dow
+dngn-mort-1f3,Full Restore,dow
+dngn-mort-1f3,HP Up,dow
+dngn-mort-1f3,Full Heal,dow
+dngn-mort-b1f,Hyper Potion,flo
+dngn-mort-b1f,Carbos,flo
+dngn-mort-b1f,PP Up,flo
+dngn-mort-b1f,Max Ether,flo
+dngn-mort-b1f,Full Restore,flo
+dngn-mort-b1f,Ultra Ball,dow
+dngn-mort-b1f,Max Revive,dow
+dngn-hide-b1f,Hyper Potion,flo
+dngn-hide-b1f,Nugget,flo
+dngn-hide-b1f,Guard Spec.,flo
+dngn-hide-b1f,Revive,dow
+dngn-hide-b2f,X Sp. Def,dow
+dngn-hide-b2f,HM05,flo
+dngn-hide-b2f,X Special,dow
+dngn-hide-b2f,TM46,flo
+dngn-hide-b2f,Full Heal,dow
+dngn-hide-b3f,Full Heal,flo
+dngn-hide-b3f,TM49,flo
+dngn-hide-b3f,Protein,flo
+dngn-hide-b3f,Ultra Ball,flo
+dngn-lake,Red Scale,flo
+dngn-lake,Black Belt,sib-wed
+dngn-lake,Full Heal,flo-low
+dngn-lake,Max Revive,flo-low
+dngn-lake,Full Restore,flo-low
+dngn-lake,TM10,gift-tide
+dngn-lake,TM43,gift-tide
+dngn-lake,Choice Specs,flo-hi
+dngn-lake,Red Flute,flo-hi
+dngn-ice-1f,HM07,flo
+dngn-ice-1f,Max Potion,dow
+dngn-ice-1f,Ice Heal,dow
+dngn-ice-1f,Protein,flo
+dngn-ice-1f,PP Up,flo
+dngn-ice-b1f,Iron,flo
+dngn-ice-b1f,Revive,dow
+dngn-ice-b2f,Max Potion,flo
+dngn-ice-b2f,Full Heal,flo
+dngn-ice-b2f,Carbos,dow
+dngn-ice-b2f,TM72,flo
+dngn-ice-b3f,Never-Melt Ice,flo
+dngn-den,Calcium,flo
+dngn-den,PP Max,flo
+dngn-den,Revive,dow
+dngn-den,Max Potion,dow
+dngn-den,PP Max,dow
+dngn-den,Dragon Fang,flo
+dngn-den,TM59,gift
+dngn-fall-main,Moon Stone,flo
+dngn-road-1f,Potion,flo
+dngn-road-1f,Full Heal,flo
+dngn-road-1f,Max Revive,flo
+dngn-road-2f,Full Restore,flo
+dngn-road-2f,TM26,flo
+dngn-road-2f,HP Up,flo
+dngn-road-2f,Max Revive,dow
+dngn-road-3f,Ultra Ball,flo
+dngn-road-3f,TM79,flo
+dngn-road-3f,Rare Candy,flo
+dngn-road-3f,Zinc,dow
+dngn-road-3f,Star Piece,rock
+dngn-road-3f,Revive,rock
+dngn-road-3f,Blue Shard,rock
+dngn-road-3f,Green Shard,rock
+dngn-road-3f,Red Shard,rock
+dngn-road-3f,Yellow Shard,rock
+dngn-road-3f,Heart Scale,rock
+dngn-road-3f,Max Ether,rock
+dngn-indi-main,Rare Candy,dow
+dngn-silv-out,Reaper Cloth,flo
+dngn-silv-out,Full Restore,dow
+dngn-viri,TM77,flo
+dngn-viri,Blue Flute,flo
+dngn-viri,Leaf Stone,flo
+dngn-viri,Dire Hit,flo
+dngn-viri,Tiny Mushroom,flo
+dngn-viri,Big Mushroom,flo
+dngn-viri,Max Ether,dow
+dngn-viri,Full Restore,dow
+dngn-dig,PP Max,flo
+dngn-dig,Rock Incense,flo
+dngn-dig,Max Revive,dow
+dngn-dig,Calcium,dow
+dngn-moon-1f,Revive,dow
+dngn-moon-out,Moon Stone,ev-cle
+dngn-moon-out,Max Revive,dow
+dngn-ceru-1f,Nugget,flo
+dngn-ceru-1f,Full Restore,flo
+dngn-ceru-1f,Max Elixir,flo
+dngn-ceru-1f,Sea Incense,flo
+dngn-ceru-1f,Hyper Potion,dow
+dngn-ceru-1f,Revive,dow
+dngn-ceru-1f,Rare Candy,dow
+dngn-ceru-2f,TM24,flo
+dngn-ceru-2f,PP Up,flo
+dngn-ceru-2f,Odd Incense,flo
+dngn-ceru-2f,Ultra Ball,flo
+dngn-ceru-2f,Ultra Ball,dow
+dngn-ceru-2f,Big Pearl,dow
+dngn-ceru-2f,Zinc,dow
+dngn-ceru-2f,Full Heal,dow
+dngn-ceru-2f,PP Up,dow
+dngn-ceru-2f,Protein,dow
+dngn-ceru-b1f,Max revive,flo
+dngn-ceru-b1f,Ultra Ball,flo
+dngn-ceru-b1f,Dusk Stone,flo
+dngn-ceru-b1f,Electirizer,flo
+dngn-ceru-b1f,Black Sludge,flo
+dngn-ceru-b1f,Max Revive,dow
+dngn-ceru-b1f,Ultra Ball,dow
+dngn-ceru-b1f,Nugget,dow
+dngn-rock-1f,TM56,flo
+dngn-rock-1f,Elixir,flo
+dngn-rock-1f,X Accuracy,dow
+dngn-rock-1f,X Defend,dow
+dngn-rock-b1f,Revive,flo
+dngn-rock-b1f,PP Up,flo
+dngn-rock-b1f,Oval Stone,flo
+dngn-rock-b1f,Iron,flo
+dngn-rock-b1f,Max Potion,dow
+dngn-rock-b1f,HP Up,dow
+dngn-rock-b1f,Star Piece,rock
+dngn-rock-b1f,Revive,rock
+dngn-rock-b1f,Blue Shard,rock
+dngn-rock-b1f,Green Shard,rock
+dngn-rock-b1f,Red Shard,rock
+dngn-rock-b1f,Yellow Shard,rock
+dngn-rock-b1f,Heart Scale,rock
+dngn-rock-b1f,Max Ether,rock
+dngn-pow,TM57,gift
+dngn-silp-lob,Up-Grade,gift
+dngn-foam-1f,Escape Rope,dow
+dngn-foam-gym,TM50,gift
+dngn-foam-b1f,Ice Heal,flo
+dngn-foam-b1f,Grip Claw,flo
+dngn-foam-b1f,Ice Heal,dow
+dngn-foam-b2f,Water Stone,flo
+dngn-foam-b2f,Pearl,flo
+dngn-foam-b3f,Revive,flo
+dngn-foam-b3f,Big Pearl,flo
+dngn-foam-b3f,Max Revive,dow
+dngn-foam-b4f,Ultra Ball,flo
+dngn-foam-b4f,TM13,flo
+dngn-foam-b4f,Zinc,dow
+dngn-cin,Magmarizer,flo
+dngn-cin,Rare Candy,dow
+dngn-cin,Iron,dow
+dngn-cin,Star Piece,dow

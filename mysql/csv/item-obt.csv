@@ -1,5 +1,58 @@
 item_obt_code,item_obt_name_en,item_obt_name_ja
 flo,Floor,地面
+flo-ho,Have Ho-Oh in the party,手持ちに『ホウオウ』がいる
+flo-low,Floor Low Tide,地面 晴天時
+flo-hi,Floor High Tide,地面 雨天時
 dow,Dowsing MCHN,ダウジングマシン
 gift ,Gift,ギフト
+gift-hg,Gift HeartGold,ギフト ハートゴールド
+gift-ss,Gift SoulSilver,ギフト ソウルシルバー
+gift-tide,Gift High Tide,ギフト 雨天時
+sha-red,Red Shard,あかいかけら
+sha-blu,Blue Shard,あおいかけら
+sha-yel,Yellow Shard,きいろいかけら
+sha-gre,Green Shard,みどりのかけら
 mom,Mom's Savings,おかあさんの貯金
+rock,Rock Smash,いわくだき
+tree,Apricorn tree,みのなるき
+kurt,Kurt,ガンテツ 
+lot-3,Lottery 3rd,アイテムくじ 3等
+lot-2-mon,Lottery 2nd Monday,アイテムくじ 2等 日
+lot-2-tue,Lottery 2nd Tuesday,アイテムくじ 2等 月
+lot-2-wed,Lottery 2nd Wednesday,アイテムくじ 2等 火
+lot-2-thu,Lottery 2nd Thursday,アイテムくじ 2等 水
+lot-2-fri,Lottery 2nd Friday,アイテムくじ 2等 木
+lot-2-sat,Lottery 2nd Saturday,アイテムくじ 2等 金
+lot-2-sun,Lottery 2nd Sunday,アイテムくじ 2等 土
+lot-1-mon,Lottery 1st Monday,アイテムくじ 2等 日
+lot-1-tue,Lottery 1st Tuesday,アイテムくじ 1等 月
+lot-1-wed,Lottery 1st Wednesday,アイテムくじ 1等 火
+lot-1-thu,Lottery 1st Thursday,アイテムくじ 1等 水
+lot-1-fri,Lottery 1st Friday,アイテムくじ 1等 木
+lot-1-sat,Lottery 1st Saturday,アイテムくじ 1等 金
+lot-1-sun,Lottery 1st Sunday,アイテムくじ 1等 土
+sib-mon,Week Siblings Monday,ようびきょうだい 月曜
+sib-tue,Week Siblings Tuesday,ようびきょうだい 火曜
+sib-wed,Week Siblings Wednesday,ようびきょうだい 水曜
+sib-thu,Week Siblings Thursday,ようびきょうだい 木曜
+sib-fri,Week Siblings Friday,ようびきょうだい 金曜
+sib-sat,Week Siblings Saturday,ようびきょうだい 土曜 
+sib-sun,Week Siblings Sunday,ようびきょうだい 日曜 
+lot-id,Lottery All Numbers,IDくじ 5ケタ一致
+lot-id-4,Lottery 4 Numbers,IDくじ 下4ケタ一致
+lot-id-3,Lottery 3 Numbers,IDくじ 下3ケタ一致
+lot-id-2,Lottery 2 Numbers,IDくじ 下2ケタ一致
+lot-id-1,Lottery 1 Numbers,IDくじ 下1ケタ一致
+bc-1,Blue Card 1 point,ブルーカード 1 ポイント
+bc-3,Blue Card 3 points,ブルーカード 3 ポイント
+bc-5,Blue Card 5 points,ブルーカード 5 ポイント
+bc-10,Blue Card 10 points,ブルーカード 10 ポイント
+bc-15,Blue Card 15 points,ブルーカード 15 ポイント
+bc-20,Blue Card 20 points,ブルーカード 20 ポイント
+bc-25,Blue Card 25 points,ブルーカード 25 ポイント
+bc-30,Blue Card 30 points,ブルーカード 30 ポイント
+bcc-1,Bug Catching Contest 1st,むしとりたいかい 1等
+bcc-2,Bug Catching Contest 2nd,むしとりたいかい 2等
+bcc-3,Bug Catching Contest 3rd,むしとりたいかい 3等
+bcc-4,Bug Catching Contest 4th,むしとりたいかい 参加賞
+ev-cle,Clefairy event,ピッピのイベント

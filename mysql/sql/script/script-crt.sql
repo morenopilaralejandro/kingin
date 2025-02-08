@@ -563,6 +563,33 @@ create table item_loc_hgss (
     constraint item_loc_hgss_fk_item_obt foreign key (item_obt_id)
         references item_obt(item_obt_id) on delete cascade
 );
+/*crt-saf*/
+create table saf_blk (
+    saf_blk_id int not null auto_increment,
+    saf_blk_code varchar(32) unique,
+    saf_blk_name_en varchar(32),
+    saf_blk_name_ja varchar(32),
+    constraint saf_blk_pk primary key (saf_blk_id)
+);
+create table pd_spaw_saf (
+    pd_id int not null,
+    zone_id int not null,
+    enc_id int not null,
+    saf_blk_id int,
+    lv_min int,
+    lv_max int,
+    amount int,
+    days int,
+    constraint pd_spaw_saf_pk primary key (pd_id, zone_id, enc_id),
+    constraint pd_spaw_saf_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pd_spaw_saf_fk_zone foreign key (zone_id)
+        references zone(zone_id) on delete cascade,
+    constraint pd_spaw_saf_fk_enc foreign key (enc_id)
+        references enc(enc_id) on delete cascade,
+    constraint pd_spaw_saf_fk_saf_blk foreign key (saf_blk_id)
+        references saf_blk(saf_blk_id) on delete cascade
+);
 
 /*crt-po*/
 create table po (

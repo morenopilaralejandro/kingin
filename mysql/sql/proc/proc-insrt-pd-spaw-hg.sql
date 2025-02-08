@@ -59,6 +59,13 @@ begin
             vLvMax,
             vRate,
             vEnc;
+        select
+            vZone,
+            vPd,
+            vLvMin,
+            vLvMax,
+            vRate,
+            vEnc;
 
         set idPd = 0;
         set idZone = 0;

@@ -12,7 +12,7 @@ sh-dept-cel-4f,Celadon Dept. Store - 4F,タマムシデパート - 4F,main-cel,c
 sh-dept-cel-5f,Celadon Dept. Store - 5F,タマムシデパート - 5F,main-cel,curr-ye
 sh-dept-cel-ve,Celadon Dept. Store - Vending,タマムシデパート - 自動販売機,main-cel,curr-ye
 sh-game-cel,Celadon Game Corner,タマムシゲームコーナー,main-cel,curr-cn
-sh-mart-che,PokéMart - Cherrygrove City,フレンドリィショップ - ヨシノシティ,main-cher,curr-ye
+sh-mart-che,PokéMart - Cherrygrove City,フレンドリィショップ - ヨシノシティ,city-cher,curr-ye
 sh-mart-vio,PokéMart - Violet City,フレンドリィショップ - キキョウシティ,main-vio,curr-ye
 sh-mart-aza,PokéMart - Azalea Town,フレンドリィショップ - ヒワダタウン,main-aza,curr-ye
 sh-mart-ecru,PokéMart - Ecruteak City,フレンドリィショップ - エンジュシティ,main-ecru,curr-ye
@@ -22,7 +22,7 @@ sh-souv-maho,Souvenir Shop,お土産屋,main-maho,curr-ye
 sh-mart-thor,PokéMart - Blackthorn City,フレンドリィショップ - フスベシティ,main-thor,curr-ye
 sh-mart-ver,PokéMart - Vermilion City,フレンドリィショップ - クチバシティ,main-ver,curr-ye
 sh-mart-saf,PokéMart - Saffron City,フレンドリィショップ - ヤマブキシティ,main-saf,curr-ye
-sh-mart-lav,PokéMart - Lavender Town,フレンドリィショップ - シオンタウン,main-lav,curr-ye
+sh-mart-lav,PokéMart - Lavender Town,フレンドリィショップ - シオンタウン,city-lav,curr-ye
 sh-mart-ceru,PokéMart - Cerulean City,フレンドリィショップ - ハナダシティ,main-ceru,curr-ye
 sh-mart-fu,PokéMart - Fuchsia City,フレンドリィショップ - セキチクシティ,main-fu,curr-ye
 sh-mart-pew,PokéMart - Pewter City,フレンドリィショップ - ニビシティ,main-pew,curr-ye

@@ -1,21 +1,23 @@
 enc_code,enc_name_en,enc_name_ja
 walk,Walking,草むら
-walk_m,Walking - Morning,草むら 朝
-walk_d,Walking - Day,草むら 昼
-walk_n,Walking - Night,草むら 夜
+walk-m,Walking - Morning,草むら 朝
+walk-d,Walking - Day,草むら 昼
+walk-n,Walking - Night,草むら 夜
 head,Headbutt,ずつき
+head-sp,Headbutt Special,ずつき スペシャル
 rock,Rock Smash,いわくだき
 surf,Surf,なみのり
-rod_old,Old Rod,ボロのつりざお
-rod_good,Good Rod,いいつりざお
-rod_good_m,Good Rod - Morning,いいつりざお 朝
-rod_good_d,Good Rod - Day,いいつりざお 昼
-rod_good_n,Good Rod - Night,すごいつりざお 夜
-rod_sup,Super Rod,すごいつりざお
-rod_sup_m,Super Rod - Morning,すごいつりざお 朝
-rod_sup_d,Super Rod - Day,すごいつりざお 昼
-rod_sup_n,Super Rod - Night,すごいつりざお 夜
+rod-old,Old Rod,ボロのつりざお
+rod-good,Good Rod,いいつりざお
+rod-good-m,Good Rod - Morning,いいつりざお 朝
+rod-good-d,Good Rod - Day,いいつりざお 昼
+rod-good-n,Good Rod - Night,すごいつりざお 夜
+rod-sup,Super Rod,すごいつりざお
+rod-sup-m,Super Rod - Morning,すごいつりざお 朝
+rod-sup-d,Super Rod - Day,すごいつりざお 昼
+rod-sup-n,Super Rod - Night,すごいつりざお 夜
 swar,Swarm,大量発生
-sou_hoen,Hoenn Sound,ホウエンサウンド
-sou_shin,Sinnoh Sound,シンオウサウンド
+sou-hoen,Hoenn Sound,ホウエンサウンド
+sou-shin,Sinnoh Sound,シンオウサウンド
 gift,Gift,ギフト
+sp,Special,スペシャル
