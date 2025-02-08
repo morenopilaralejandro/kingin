@@ -1,5 +1,5 @@
-drop table if exists aux_pd_spaw_hg;
-create temporary table aux_pd_spaw_hg (
+drop table if exists aux_pd_spaw_ss;
+create temporary table aux_pd_spaw_ss (
     zone varchar(32),
     pd varchar(32),
     lv_min varchar(32),
@@ -8,8 +8,8 @@ create temporary table aux_pd_spaw_hg (
     enc varchar(32)
 );
 
-load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/pd-spaw-hg.csv'
-into table aux_pd_spaw_hg 
+load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/pd-spaw-ss.csv'
+into table aux_pd_spaw_ss 
 fields terminated by ',' 
 enclosed by '"'
 lines terminated by '\n'
@@ -24,8 +24,8 @@ enc
 );
 
 delimiter &&
-drop procedure if exists proc_insrt_pd_spaw_hg;
-create procedure proc_insrt_pd_spaw_hg()
+drop procedure if exists proc_insrt_pd_spaw_ss;
+create procedure proc_insrt_pd_spaw_ss()
 begin
 	declare i int default 1;
 
@@ -46,10 +46,10 @@ begin
     declare vRate varchar(32) default '';    
 
     declare continueCur1 int default 1;
-    declare cur1 cursor for select * from aux_pd_spaw_hg;
+    declare cur1 cursor for select * from aux_pd_spaw_ss;
 	declare continue handler for SQLSTATE '02000' set continueCur1 = 0;
 
-    delete from pd_spaw_hg;    
+    delete from pd_spaw_ss;    
     open cur1;
 	while continueCur1=1 do
         fetch cur1 into 
@@ -95,7 +95,7 @@ begin
                 set intRate = cast(vRate as unsigned);
             end if; 
 
-            insert into pd_spaw_hg (
+            insert into pd_spaw_ss (
                 pd_id,
                 zone_id,
                 enc_id,
@@ -113,8 +113,8 @@ begin
         end if;
 	end while;
 	close cur1;
-    drop table if exists aux_pd_spaw_hg;
+    drop table if exists aux_pd_spaw_ss;
 end
 &&
 delimiter ;
-call proc_insrt_pd_spaw_hg();
+call proc_insrt_pd_spaw_ss();

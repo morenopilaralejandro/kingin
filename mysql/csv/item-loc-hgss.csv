@@ -185,7 +185,7 @@ main-fu,Nomel Berry,sha-yel
 main-fu,Red Apricorn,tree
 gym-fu,TM84,gift
 main-pew,Wise Glasses,flo
-main-pew,X Defend,dow
+main-pew,X Defense,dow
 main-pew,PP Up,dow
 main-pew,Max Revive,dow
 main-pew,Soul Dew,gift
@@ -260,7 +260,7 @@ rout-25,Everstone,gift
 rout-25,Leaf Stone,gift
 rout-25,Water Stone,gift
 rout-25,Fire Stone,gift
-rout-25,Thunderstone,gift
+rout-25,Thunder Stone,gift
 rout-26,PP Max,flo
 rout-26,Tiny Mushroom,dow
 rout-26,Nugget,dow
@@ -415,12 +415,10 @@ dngn-alph-ins,Heal Powder,flo
 dngn-alph-ins,Sitrus Berry,flo
 dngn-alph-ins,Moon Stone,flo
 dngn-alph-ins,Energy Root,flo
-dngn-alph-ins,Heal Powder,flo
 dngn-alph-ins,Leppa Berry,flo
 dngn-alph-ins,Mystic Water,flo
 dngn-alph-ins,Star Piece,flo
 dngn-alph-ins,Stardust,flo
-dngn-alph-ins,Leppa Berry,flo
 dngn-alph-ins,Life Orb,flo-ho
 dngn-alph-ins,Charcoal,flo
 dngn-alph-ins,Revival Herb,flo
@@ -433,7 +431,7 @@ dngn-unio-1f,Awakening,flo
 dngn-unio-1f,Great Ball,dow
 dngn-unio-1f,Paralyze Heal,dow
 dngn-unio-1f,Big Pearl,dow
-dngn-unio-b1f,X Defend,flo
+dngn-unio-b1f,X Defense,flo
 dngn-unio-b1f,TM39,flo
 dngn-unio-b1f,X Speed,dow
 dngn-unio-b1f,Revive,dow
@@ -498,7 +496,7 @@ dngn-park-main,Full Heal,dow
 dngn-park-main,Sun Stone,bcc-1
 dngn-park-main,Water Stone,bcc-1
 dngn-park-main,Fire Stone,bcc-1
-dngn-park-main,Thunderstone,bcc-1
+dngn-park-main,Thunder Stone,bcc-1
 dngn-park-main,Leaf Stone,bcc-1
 dngn-park-main,Dusk Stone,bcc-1
 dngn-park-main,Shiny Stone,bcc-1
@@ -713,7 +711,7 @@ dngn-ceru-b1f,Nugget,dow
 dngn-rock-1f,TM56,flo
 dngn-rock-1f,Elixir,flo
 dngn-rock-1f,X Accuracy,dow
-dngn-rock-1f,X Defend,dow
+dngn-rock-1f,X Defense,dow
 dngn-rock-b1f,Revive,flo
 dngn-rock-b1f,PP Up,flo
 dngn-rock-b1f,Oval Stone,flo

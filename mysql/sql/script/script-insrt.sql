@@ -58,9 +58,9 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop-exch-pd.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-vrs.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-enc.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-hg.sql;
-
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-ss.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-obt.sql;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-loc-hg.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-loc-hgss.sql;
 /*insrt-todo
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;
 */
