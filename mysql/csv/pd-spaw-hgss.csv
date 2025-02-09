@@ -1,0 +1,45 @@
+zone,pd,vrs,enc,lv_min,lv_max,rate_m,rate_d,rate_n
+city-bark,Tentacool,HG/SS,Surfing,10,25,90,,
+city-bark,Tentacruel,HG/SS,Surfing,15,25,10,,
+city-bark,Tentacool,HG/SS,Fishing (Old Rod),10,,5,,
+city-bark,Magikarp,HG/SS,Fishing (Old Rod),10,,95,,
+city-bark,Tentacool,HG/SS,Fishing (Good Rod),20,,30,,
+city-bark,Shellder,HG/SS,Fishing (Good Rod),20,,3,,
+city-bark,Magikarp,HG/SS,Fishing (Good Rod),20,,60,,
+city-bark,Chinchou,HG/SS,Fishing (Good Rod),20,,7,,
+city-bark,Tentacruel,HG/SS,Fishing (Super Rod),40,,7,,
+city-bark,Shellder,HG/SS,Fishing (Super Rod),40,,30,,
+city-bark,Chinchou,HG/SS,Fishing (Super Rod),40,,60,,
+city-bark,Lanturn,HG/SS,Fishing (Super Rod),40,,3,,
+city-bark,Exeggcute,HG/SS,Headbutt (Group A),2,3,20,,
+city-bark,Hoothoot,HG/SS,Headbutt (Group A),2,3,50,,
+city-bark,Pineco,HG/SS,Headbutt (Group A),2,3,30,,
+city-bark,Exeggcute,HG/SS,Headbutt (Group B),4,5,20,,
+city-bark,Hoothoot,HG/SS,Headbutt (Group B),4,5,50,,
+city-bark,Ledyba,HG/SS,Headbutt (Group B),4,5,30,,
+city-bark,Spinarak,HG/SS,Headbutt (Group B),4,5,30,,
+city-bark,Chikorita,HG/SS,gift,5,,,,
+city-bark,Cyndaquil,HG/SS,gift,5,,,,
+city-bark,Totodile,HG/SS,gift,5,,,,
+city-cher,Tentacool,HG/SS,Surfing,10,25,90,,
+city-cher,Tentacruel,HG/SS,Surfing,15,25,10,,
+city-cher,Krabby,HG/SS,Fishing (Old Rod),10,,15,,
+city-cher,Magikarp,HG/SS,Fishing (Old Rod),10,,85,,
+city-cher,Krabby,HG/SS,Fishing (Good Rod),20,,50,50,50
+city-cher,Staryu,HG/SS,Fishing (Good Rod),20,,0,0,10
+city-cher,Magikarp,HG/SS,Fishing (Good Rod),20,,40,40,40
+city-cher,Corsola,HG/SS,Fishing (Good Rod),20,,10,10,0
+city-cher,Krabby,HG/SS,Fishing (Super Rod),40,,60,60,60
+city-cher,Kingler,HG/SS,Fishing (Super Rod),40,,10,10,10
+city-cher,Staryu,HG/SS,Fishing (Super Rod),40,,0,0,30
+city-cher,Corsola,HG/SS,Fishing (Super Rod),40,,30,30,0
+city-cher,Exeggcute,HG/SS,Headbutt (Group A),2,3,20,,
+city-cher,Hoothoot,HG/SS,Headbutt (Group A),2,3,50,,
+city-cher,Pineco,HG/SS,Headbutt (Group A),2,3,30,,
+city-cher,Exeggcute,HG/SS,Headbutt (Group B),4,5,20,,
+city-cher,Hoothoot,HG/SS,Headbutt (Group B),4,5,50,,
+city-cher,Ledyba,SS,Headbutt (Group B),4,5,30,,
+city-cher,Spinarak,HG,Headbutt (Group B),4,5,30,,
+city-cher,Exeggcute,HG/SS,Headbutt (sp),18,20,65,,
+city-cher,Taillow,HG/SS,Headbutt (sp),18,20,30,,
+city-cher,Taillow,HG/SS,Headbutt (sp),21,25,5,,

@@ -1,21 +1,14 @@
 enc_code,enc_name_en,enc_name_ja
 walk,Walking,草むら
-walk-m,Walking - Morning,草むら 朝
-walk-d,Walking - Day,草むら 昼
-walk-n,Walking - Night,草むら 夜
 head,Headbutt,ずつき
+head-a,Headbutt A,ずつき A
+head-b,Headbutt B,ずつき B
 head-sp,Headbutt Special,ずつき スペシャル
 rock,Rock Smash,いわくだき
 surf,Surf,なみのり
 rod-old,Old Rod,ボロのつりざお
 rod-good,Good Rod,いいつりざお
-rod-good-m,Good Rod - Morning,いいつりざお 朝
-rod-good-d,Good Rod - Day,いいつりざお 昼
-rod-good-n,Good Rod - Night,すごいつりざお 夜
 rod-sup,Super Rod,すごいつりざお
-rod-sup-m,Super Rod - Morning,すごいつりざお 朝
-rod-sup-d,Super Rod - Day,すごいつりざお 昼
-rod-sup-n,Super Rod - Night,すごいつりざお 夜
 swar,Swarm,大量発生
 sou-hoen,Hoenn Sound,ホウエンサウンド
 sou-shin,Sinnoh Sound,シンオウサウンド
