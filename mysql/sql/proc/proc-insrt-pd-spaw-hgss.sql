@@ -114,7 +114,7 @@ begin
                     set vEnc = 'head-b';
                 when 'Headbutt (sp)' then
                     set vEnc = 'head-sp';
-                when 'rock' then
+                when 'Rock Smash' then
                     set vEnc = 'rock';
                 when 'Surfing' then
                     set vEnc = 'surf';
@@ -138,7 +138,7 @@ begin
                     set vEnc = 'sou-hoen';
                 when 'Sinnoh Sound' then
                     set vEnc = 'sou-shin';
-                when 'gift' then
+                when 'Gift' then
                     set vEnc = 'gift';
                 when 'sp' then
                     set vEnc = 'sp';
