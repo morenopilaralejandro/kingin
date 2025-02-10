@@ -104,7 +104,9 @@ begin
                 where zone_code = vZone;
             
             case vEnc
-                when 'walk' then 
+                when 'Grass' then 
+                    set vEnc = 'walk';
+                when 'Cave' then 
                     set vEnc = 'walk';
                 when 'Headbutt (Group A)' then
                     set vEnc = 'head-a';
@@ -132,9 +134,9 @@ begin
                     set vEnc = 'swar-good';
                 when 'Swarm (Super Rod)' then
                     set vEnc = 'swar-sup';
-                when 'sou-hoen' then
+                when 'Hoenn Sound' then
                     set vEnc = 'sou-hoen';
-                when 'sou-shin' then
+                when 'Sinnoh Sound' then
                     set vEnc = 'sou-shin';
                 when 'gift' then
                     set vEnc = 'gift';
