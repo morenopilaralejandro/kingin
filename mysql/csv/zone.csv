@@ -54,6 +54,8 @@ misc-clif,zn-misc-clif,
 misc-dojo,zn-misc-dojo,city-saf
 rout-1,zn-rout-1,
 rout-2,zn-rout-2,
+rout-2-nor,zn-nor,rout-2
+rout-2-sou,zn-sou,rout-2
 rout-3,zn-rout-3,
 rout-4,zn-rout-4,
 rout-5,zn-rout-5,
@@ -114,8 +116,8 @@ dngn-unio-1f,zn-1f,dngn-unio
 dngn-unio-b1f,zn-b1f,dngn-unio
 dngn-unio-b2f,zn-b2f,dngn-unio
 dngn-well,zn-dngn-well,
-dngn-well-1f,zn-1f,dngn-well
 dngn-well-b1f,zn-b1f,dngn-well
+dngn-well-b2f,zn-b2f,dngn-well
 dngn-ilex,zn-dngn-ilex,
 dngn-rad,zn-dngn-rad,
 dngn-rad-1f,zn-1f,dngn-rad
@@ -136,8 +138,8 @@ dngn-park-thu,zn-dngn-park-thu,dngn-park
 dngn-park-sat,zn-dngn-park-sat,dngn-park
 dngn-ath,zn-dngn-ath,
 dngn-burn,zn-dngn-burn,
-dngn-burn-1F,zn-1f,dngn-burn
-dngn-burn-B1F,zn-b1f,dngn-burn
+dngn-burn-1f,zn-1f,dngn-burn
+dngn-burn-b1f,zn-b1f,dngn-burn
 dngn-bell,zn-dngn-bell,
 dngn-trail,zn-dngn-trail,dngn-bell
 dngn-bell-1f,zn-1f,dngn-bell
@@ -174,8 +176,8 @@ dngn-whir-bot,zn-bot,dngn-whir
 dngn-embe,zn-dngn-embe,
 dngn-mort,zn-dngn-mort,
 dngn-mort-1f,zn-1f,dngn-mort
-dngn-mort-1f2,zn-1f2,dngn-mort
-dngn-mort-1f3,zn-1f3,dngn-mort
+dngn-mort-1fb,zn-1fb,dngn-mort
+dngn-mort-2f,zn-2f,dngn-mort
 dngn-mort-b1f,zn-b1f,dngn-mort
 dngn-hide,zn-dngn-hide,
 dngn-hide-b1f,zn-b1f,dngn-hide
@@ -202,12 +204,12 @@ dngn-indi-leag,zn-dngn-indi-leag,dngn-indi
 dngn-silv,zn-dngn-silv,
 dngn-silv-out,zn-out,dngn-silv
 dngn-silv-1f,zn-1f,dngn-silv
-dngn-silv-1ft,zn-f1t,dngn-silv
+dngn-silv-1fr,zn-1fr,dngn-silv
+dngn-silv-1ff,zn-1ff,dngn-silv
+dngn-silv-mou,zn-mou,dngn-silv
 dngn-silv-2f,zn-2f,dngn-silv
+dngn-silv-sno,zn-sno,dngn-silv
 dngn-silv-3f,zn-3f,dngn-silv
-dngn-silv-4f,zn-4f,dngn-silv
-dngn-silv-m,zn-m,dngn-silv
-dngn-silv-top,zn-top,dngn-silv
 dngn-silv-sum,zn-sum,dngn-silv
 dngn-viri,zn-dngn-viri,
 dngn-dig,zn-dngn-dig,
@@ -234,6 +236,7 @@ dngn-foam-b2f,zn-b2f,dngn-foam
 dngn-foam-b3f,zn-b3f,dngn-foam
 dngn-foam-b4f,zn-b4f,dngn-foam
 dngn-cin,zn-dngn-cin,
+dngn-clif,zn-dngn-clif,
 saf,zn-saf,
 saf-gate,zn-saf-gate,saf
 saf-plai,zn-saf-plai,saf

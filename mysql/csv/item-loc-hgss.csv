@@ -127,6 +127,7 @@ gym-oliv,TM23,gift
 main-cian,Secret Potion,gift
 main-cian,Stardust,dow
 main-cian,HM02,gift
+main-cian,Berry Juice,trad
 main-cian,Star Piece,rock
 main-cian,Revive,rock
 main-cian,Blue Shard,rock
@@ -198,11 +199,11 @@ main-viri,Nugget,dow
 main-viri,TM85,gift
 gym-viri,TM92,gift
 rout-1,Blk Apricorn,tree
-rout-2,Carbos,flo
-rout-2,Nugget,flo
-rout-2,Sacred Ash,flo
-rout-2,Elixir,flo
-rout-2,Pnk Apricorn,tree
+rout-2-nor,Carbos,flo
+rout-2-nor,Nugget,flo
+rout-2-nor,Sacred Ash,flo
+rout-2-sou,Elixir,flo
+rout-2-sou,Pnk Apricorn,tree
 rout-3,Big Root,flo
 rout-3,Star Piece,dow
 rout-3,Hyper Potion,dow
@@ -507,11 +508,11 @@ dngn-park-main,Aspear Berry,bcc-3
 dngn-park-main,Shed Shell,bcc-4
 dngn-ath,Protein,dow
 dngn-ath,PP Up,dow
-dngn-burn-1F,Antidote,flo
-dngn-burn-1F,HP Up,flo
-dngn-burn-1F,Ether,dow
-dngn-burn-1F,Ultra Ball,dow
-dngn-burn-B1F,TM12,flo
+dngn-burn-1f,Antidote,flo
+dngn-burn-1f,HP Up,flo
+dngn-burn-1f,Ether,dow
+dngn-burn-1f,Ultra Ball,dow
+dngn-burn-b1f,TM12,flo
 dngn-trail,Tiny Mushroom,dow
 dngn-trail,Big Mushroom,dow
 dngn-bell-3f,Full Heal,flo
@@ -571,32 +572,32 @@ dngn-whir-b2f,Full Restore,dow
 dngn-whir-b3f,Rare Candy,dow
 dngn-mort-1f,Elixir,flo
 dngn-mort-1f,Revive,flo
-dngn-mort-1f2,Max Repel,flo
-dngn-mort-1f2,Max Potion,flo
-dngn-mort-1f2,Escape Rope,flo
-dngn-mort-1f2,Nugget,flo
-dngn-mort-1f2,Ultra Ball,flo
-dngn-mort-1f2,Full Incense,flo
-dngn-mort-1f2,Protector,flo
-dngn-mort-1f2,Hyper Potion,dow
-dngn-mort-1f2,Revive,dow
-dngn-mort-1f2,Ultra Ball,dow
-dngn-mort-1f2,Rare Candy,dow
-dngn-mort-1f2,Nugget,dow
-dngn-mort-1f3,Iron,flo
-dngn-mort-1f3,Max Revive,flo
-dngn-mort-1f3,Iron Ball,flo
-dngn-mort-1f3,Ether,flo
-dngn-mort-1f3,Rare Candy,flo
-dngn-mort-1f3,Max Potion,flo
-dngn-mort-1f3,TM40,flo
-dngn-mort-1f3,Escape Rope,flo
-dngn-mort-1f3,Dragon Scale,flo
-dngn-mort-1f3,Elixir,flo
-dngn-mort-1f3,Hyper Potion,dow
-dngn-mort-1f3,Full Restore,dow
-dngn-mort-1f3,HP Up,dow
-dngn-mort-1f3,Full Heal,dow
+dngn-mort-1fb,Max Repel,flo
+dngn-mort-1fb,Max Potion,flo
+dngn-mort-1fb,Escape Rope,flo
+dngn-mort-1fb,Nugget,flo
+dngn-mort-1fb,Ultra Ball,flo
+dngn-mort-1fb,Full Incense,flo
+dngn-mort-1fb,Protector,flo
+dngn-mort-1fb,Hyper Potion,dow
+dngn-mort-1fb,Revive,dow
+dngn-mort-1fb,Ultra Ball,dow
+dngn-mort-1fb,Rare Candy,dow
+dngn-mort-1fb,Nugget,dow
+dngn-mort-2f,Iron,flo
+dngn-mort-2f,Max Revive,flo
+dngn-mort-2f,Iron Ball,flo
+dngn-mort-2f,Ether,flo
+dngn-mort-2f,Rare Candy,flo
+dngn-mort-2f,Max Potion,flo
+dngn-mort-2f,TM40,flo
+dngn-mort-2f,Escape Rope,flo
+dngn-mort-2f,Dragon Scale,flo
+dngn-mort-2f,Elixir,flo
+dngn-mort-2f,Hyper Potion,dow
+dngn-mort-2f,Full Restore,dow
+dngn-mort-2f,HP Up,dow
+dngn-mort-2f,Full Heal,dow
 dngn-mort-b1f,Hyper Potion,flo
 dngn-mort-b1f,Carbos,flo
 dngn-mort-b1f,PP Up,flo
@@ -668,6 +669,35 @@ dngn-road-3f,Max Ether,rock
 dngn-indi-main,Rare Candy,dow
 dngn-silv-out,Reaper Cloth,flo
 dngn-silv-out,Full Restore,dow
+dngn-silv-1f,Expert Belt,flo
+dngn-silv-1f,Ultra Ball,dow
+dngn-silv-1f,Hyper Potion,dow
+dngn-silv-1f,Ultra Ball,dow
+dngn-silv-1f,Dire Hit,dow
+dngn-silv-1f,Full Restore,flo
+dngn-silv-1f,Revive,dow
+dngn-silv-mou,Escape Rope,flo
+dngn-silv-mou,TM76,flo
+dngn-silv-2f,Max Elixir,flo
+dngn-silv-2f,Max Revive,flo
+dngn-silv-2f,Max Potion,dow
+dngn-silv-2f,Calcium,flo
+dngn-silv-2f,Iron,dow
+dngn-silv-2f,Protein,flo
+dngn-silv-2f,Max Ether,rock
+dngn-silv-2f,Revive,rock
+dngn-silv-2f,Red Shard,rock
+dngn-silv-2f,Blue Shard,rock
+dngn-silv-2f,Yellow Shard,rock
+dngn-silv-2f,Green Shard,rock
+dngn-silv-2f,Heart Scale,rock
+dngn-silv-2f,Star Piece,rock
+dngn-silv-sno,Max Ether,dow
+dngn-silv-sno,Pure Incense,flo
+dngn-silv-sno,Rare Candy,dow
+dngn-silv-sno,Hyper Potion,dow
+dngn-silv-sno,Dawn Stone,flo
+dngn-silv-3f,Max Revive,dow
 dngn-viri,TM77,flo
 dngn-viri,Blue Flute,flo
 dngn-viri,Leaf Stone,flo
@@ -745,3 +775,14 @@ dngn-cin,Magmarizer,flo
 dngn-cin,Rare Candy,dow
 dngn-cin,Iron,dow
 dngn-cin,Star Piece,dow
+dngn-clif,Ultra Ball,dow
+dngn-clif,Max Ether,rock
+dngn-clif,Pearl,rock
+dngn-clif,Big Pearl,rock
+dngn-clif,Red Shard,rock
+dngn-clif,Yellow Shard,rock
+dngn-clif,Blue Shard,rock
+dngn-clif,Green Shard,rock
+dngn-clif,Claw Fossil,rock
+dngn-clif,Root Fossil,rock
+dngn-clif,Rare Bone,rock
