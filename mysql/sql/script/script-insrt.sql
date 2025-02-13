@@ -60,6 +60,9 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-enc.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-hgss.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-obt.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-loc-hgss.sql;
+/*insrt-saf*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-saf-blk.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-saf.sql;
 /*insrt-todo
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;
 */

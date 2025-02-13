@@ -1,5 +1,8 @@
 enc_code,enc_name_en,enc_name_ja
 walk,Walking,草むら
+walk-m,Walking - Morning,草むら 朝
+walk-d,Walking - Day,草むら 昼
+walk-n,Walking - Night,草むら 夜
 head,Headbutt,ずつき
 head-a,Headbutt A,ずつき A
 head-b,Headbutt B,ずつき B
@@ -10,6 +13,10 @@ rod-old,Old Rod,ボロのつりざお
 rod-good,Good Rod,いいつりざお
 rod-sup,Super Rod,すごいつりざお
 swar,Swarm,大量発生
+swar-surf,Swarm Surf,大量発生 なみのり
+swar-old,Swarm Old Rod,大量発生 ボロ
+swar-good,Swarm Good Rod,大量発生 いい
+swar-sup,Swarm Super Rod,大量発生 すごい
 sou-hoen,Hoenn Sound,ホウエンサウンド
 sou-shin,Sinnoh Sound,シンオウサウンド
 gift,Gift,ギフト

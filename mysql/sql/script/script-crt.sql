@@ -525,7 +525,7 @@ create table pd_spaw_hgss (
     rate_m int,
     rate_d int,
     rate_n int,
-    constraint pd_spaw_hg_pk primary key (pd_id, zone_id, enc_id, lv_min),
+    constraint pd_spaw_hg_pk primary key (pd_id, zone_id, enc_id, is_hg, is_ss, lv_min),
     constraint pd_spaw_hg_fk_pd foreign key (pd_id)
         references pd(pd_id) on delete cascade,
     constraint pd_spaw_hg_fk_zone foreign key (zone_id)
@@ -564,19 +564,23 @@ create table pd_spaw_saf (
     pd_id int not null,
     zone_id int not null,
     enc_id int not null,
-    saf_blk_id int,
+    saf_blk1_id int,
+    saf_blk2_id int,
     lv_min int,
     lv_max int,
-    amount int,
+    amount1 int,
+    amount2 int,
     days int,
-    constraint pd_spaw_saf_pk primary key (pd_id, zone_id, enc_id),
+    constraint pd_spaw_saf_pk primary key (pd_id, zone_id, enc_id, lv_min),
     constraint pd_spaw_saf_fk_pd foreign key (pd_id)
         references pd(pd_id) on delete cascade,
     constraint pd_spaw_saf_fk_zone foreign key (zone_id)
         references zone(zone_id) on delete cascade,
     constraint pd_spaw_saf_fk_enc foreign key (enc_id)
         references enc(enc_id) on delete cascade,
-    constraint pd_spaw_saf_fk_saf_blk foreign key (saf_blk_id)
+    constraint pd_spaw_saf_fk_saf_blk1 foreign key (saf_blk1_id)
+        references saf_blk(saf_blk_id) on delete cascade,
+    constraint pd_spaw_saf_fk_saf_blk2 foreign key (saf_blk2_id)
         references saf_blk(saf_blk_id) on delete cascade
 );
 

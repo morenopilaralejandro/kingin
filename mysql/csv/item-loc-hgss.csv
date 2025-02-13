@@ -440,12 +440,12 @@ dngn-unio-b2f,Hyper Potion,flo
 dngn-unio-b2f,Elixir,flo
 dngn-unio-b2f,Calcium,dow
 dngn-unio-b2f,Ultra Ball,dow
-dngn-well-1f,Super Potion,flo
-dngn-well-1f,Super Potion,dow
-dngn-well-1f,Great Ball,dow
-dngn-well-1f,Full Heal,flo
-dngn-well-b1f,King's Rock,flo
-dngn-well-b1f,TM18,flo
+dngn-well-b1f,Super Potion,flo
+dngn-well-b1f,Super Potion,dow
+dngn-well-b1f,Great Ball,dow
+dngn-well-b1f,Full Heal,flo
+dngn-well-b2f,King's Rock,flo
+dngn-well-b2f,TM18,flo
 dngn-ilex,HM01,gift
 dngn-ilex,Revive,flo
 dngn-ilex,X Attack,flo
@@ -672,7 +672,6 @@ dngn-silv-out,Full Restore,dow
 dngn-silv-1f,Expert Belt,flo
 dngn-silv-1f,Ultra Ball,dow
 dngn-silv-1f,Hyper Potion,dow
-dngn-silv-1f,Ultra Ball,dow
 dngn-silv-1f,Dire Hit,dow
 dngn-silv-1f,Full Restore,flo
 dngn-silv-1f,Revive,dow

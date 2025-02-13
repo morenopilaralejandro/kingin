@@ -76,16 +76,6 @@ begin
             vRateM,
             vRateD,
             vRateN;
-        select
-            vZone,
-            vPd,
-            vVrs,
-            vEnc,
-            vLvMin, 
-            vLvMax,
-            vRateM,
-            vRateD,
-            vRateN;
 
         set idPd = 0;
         set idZone = 0;
@@ -158,8 +148,6 @@ begin
             elseif vVrs = 'SS' then
                 set boolIsSs = true;
             end if;
-
-            select vVrs, boolIsHg, boolIsSs;
 
             if vLvMin = '' then
                 set intLvMin = null;
