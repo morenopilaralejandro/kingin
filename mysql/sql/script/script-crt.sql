@@ -583,7 +583,54 @@ create table pd_spaw_saf (
     constraint pd_spaw_saf_fk_saf_blk2 foreign key (saf_blk2_id)
         references saf_blk(saf_blk_id) on delete cascade
 );
-
+/*crt-pw*/
+create table pw_unlc (
+    pw_unlc_id int not null auto_increment,
+    pw_unlc_code varchar(32) unique,
+    pw_unlc_desc_en varchar(32),
+    pw_unlc_desc_ja varchar(32),
+    constraint pw_unlc_pk primary key (pw_unlc_id)
+);
+create table pw_crse (
+    pw_crse_id int not null auto_increment,
+    pw_crse_code varchar(32) unique,
+    pw_crse_name_en varchar(32),
+    pw_crse_name_ja varchar(32),
+    pw_unlc_id int,
+    constraint pw_crse_pk primary key (pw_crse_id),
+    constraint pw_crse_fk_pw_unlc foreign key (pw_unlc_id)
+        references pw_unlc(pw_unlc_id) on delete cascade
+);
+create table pw_grp (
+    pw_grp_id int not null auto_increment,
+    pw_grp_code varchar(32) unique,
+    pw_grp_name_en varchar(32),
+    pw_grp_name_ja varchar(32),
+    constraint pw_grp_pk primary key (pw_grp_id)
+);
+create table pw_crse_spaw_pd (
+    pd_id int not null,
+    pw_crse_id int not null,
+    pw_grp_id int not null,
+    step int,
+    constraint pw_crse_spaw_pd_pk primary key (pd_id, pw_crse_id, pw_grp_id),
+    constraint pw_crse_spaw_pd_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint pw_crse_spaw_pd_fk_pw_crse foreign key (pw_crse_id)
+        references pw_crse(pw_crse_id) on delete cascade,
+    constraint pw_crse_spaw_pd_fk_pw_grp foreign key (pw_grp_id)
+        references pw_grp(pw_grp_id) on delete cascade
+);
+create table pw_crse_loc_item (
+    item_id int not null,
+    pw_crse_id int not null,
+    step int,
+    constraint pw_crse_loc_item_pk primary key (item_id, pw_crse_id),
+    constraint pw_crse_loc_item_fk_item foreign key (item_id)
+        references item(item_id) on delete cascade,
+    constraint pw_crse_loc_item_fk_pw_crse foreign key (pw_crse_id)
+        references pw_crse(pw_crse_id) on delete cascade
+);
 /*crt-po*/
 create table po (
     po_id int not null auto_increment,
