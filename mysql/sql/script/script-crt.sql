@@ -613,7 +613,7 @@ create table pw_crse_spaw_pd (
     pw_crse_id int not null,
     pw_grp_id int not null,
     step int,
-    constraint pw_crse_spaw_pd_pk primary key (pd_id, pw_crse_id, pw_grp_id),
+    constraint pw_crse_spaw_pd_pk primary key (pd_id, pw_crse_id, pw_grp_id, step),
     constraint pw_crse_spaw_pd_fk_pd foreign key (pd_id)
         references pd(pd_id) on delete cascade,
     constraint pw_crse_spaw_pd_fk_pw_crse foreign key (pw_crse_id)
@@ -625,7 +625,7 @@ create table pw_crse_loc_item (
     item_id int not null,
     pw_crse_id int not null,
     step int,
-    constraint pw_crse_loc_item_pk primary key (item_id, pw_crse_id),
+    constraint pw_crse_loc_item_pk primary key (item_id, pw_crse_id, step),
     constraint pw_crse_loc_item_fk_item foreign key (item_id)
         references item(item_id) on delete cascade,
     constraint pw_crse_loc_item_fk_pw_crse foreign key (pw_crse_id)

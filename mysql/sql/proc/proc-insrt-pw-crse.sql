@@ -3,7 +3,7 @@ create temporary table aux_pw_crse (
     pw_crse_code varchar(32),
     pw_crse_name_en varchar(32),	
     pw_crse_name_ja varchar(32),
-    pw_unlc varchar(32),
+    pw_unlc varchar(32)
 );
 
 load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/pw-crse.csv'
@@ -51,10 +51,9 @@ begin
         if continueCur1 = 1 then
             select pw_unlc_id into idPwUnlc 
                 from pw_unlc
-                where pw_crse_code = vPwUnlc;
+                where pw_unlc_code = vPwUnlc;
 
             insert into pw_crse (
-                pw_crse_id,
                 pw_crse_code,
                 pw_crse_name_en,
                 pw_crse_name_ja,

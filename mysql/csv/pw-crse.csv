@@ -1,0 +1,28 @@
+pw_crse_code,pw_crse_name_en,pw_crse_name_ja,pw_unlc
+pw-refr,Refreshing Field,さわやかのはら,pw-unlc-str
+pw-nois,Noisy Forest,ざわざわもり,pw-unlc-str
+pw-rug,Rugged Road,ごつごつみち,pw-unlc-50
+pw-bea,Beautiful Beach,きれいうみべ,pw-unlc-200
+pw-subu,Suburban Area,じゅうたくち,pw-unlc-500
+pw-dim,Dim Cave,くらいどうくつ,pw-unlc-1k
+pw-blue,Blue Lake,あおいみずうみ,pw-unlc-2k
+pw-town,Town Outskirts,まちのはずれ,pw-unlc-3k
+pw-hoen,Hoenn Field,ホウエンのはら,pw-unlc-5k
+pw-warm,Warm Beach,あったかビーチ,pw-unlc-7k
+pw-vol,Volcano Path,かざんのこみち,pw-unlc-10k
+pw-tree,Treehouse,ツリーハウス,pw-unlc-15k
+pw-sca,Scary Cave,こわいどうくつ,pw-unlc-20k
+pw-sinn,Sinnoh Field,シンオウのはら,pw-unlc-25k
+pw-icy,Icy Mountain Rd.,さむいやまみち,pw-unlc-30k
+pw-big,Big Forest,おおきなもり,pw-unlc-40k
+pw-whit,White Lake,しろいみずうみ,pw-unlc-50k
+pw-stor,Stormy Beach,あれたうみべ,pw-unlc-65k
+pw-resort,Resort,リゾートち,pw-unlc-80k
+pw-quie,Quiet Cave,しずかどうくつ,pw-unlc-100k
+pw-beyo,Beyond the Sea,うみのむこう,pw-unlc-gts
+pw-edge,Night Skys Edge,よぞらのはて,pw-unlc-ji
+pw-yell,Yellow Forest,きいろのもり,pw-unlc-eve
+pw-rall,Rally,イベント,pw-unlc-eve
+pw-sigh,Sightseeing,おかいもの,pw-unlc-eve
+pw-win,Winner's Path,チャンプのみち,pw-unlc-eve
+pw-ami,Amity Meadow,ふれあいのはら,pw-unlc-eve

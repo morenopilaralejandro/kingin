@@ -1,0 +1,271 @@
+pw_crse,item,step
+pw-refr,Revive,2500
+pw-refr,Full Heal,2000
+pw-refr,Burn Heal,1000
+pw-refr,Ice Heal,900
+pw-refr,Chesto Berry,800
+pw-refr,Awakening,700
+pw-refr,Cheri Berry,600
+pw-refr,Paralyze Heal,500
+pw-refr,Oran Berry,300
+pw-refr,Potion,0
+pw-nois,Net Ball,5000
+pw-nois,Revive,2500
+pw-nois,Green Shard,2000
+pw-nois,Ether,1000
+pw-nois,Energy Root,900
+pw-nois,Energy Powder,800
+pw-nois,Big Mushroom,700
+pw-nois,Pecha Berry,500
+pw-nois,Tiny Mushroom,2000
+pw-nois,Cheri Berry,0
+pw-rug,PP Up,7000
+pw-rug,Hard Stone,5000
+pw-rug,Red Shard,3000
+pw-rug,Star Piece,2000
+pw-rug,Full Heal,1500
+pw-rug,Super Repel,1000
+pw-rug,Burn Heal,800
+pw-rug,Antidote,500
+pw-rug,Escape Rope,100
+pw-rug,Repel,0
+pw-bea,Dive Ball,5000
+pw-bea,Big Pearl,4000
+pw-bea,Blue Shard,3000
+pw-bea,Heart Scale,2000
+pw-bea,Leppa Berry,1800
+pw-bea,Full Heal,1500
+pw-bea,Aspear Berry,1000
+pw-bea,Soda Pop,800
+pw-bea,Rawst Berry,100
+pw-bea,Fresh Water,0
+pw-subu,PP Up,5000
+pw-subu,Guard Spec.,2000
+pw-subu,X Sp. Def,1500
+pw-subu,X Special,1250
+pw-subu,Dire Hit,1000
+pw-subu,X Accuracy,750
+pw-subu,X Speed,500
+pw-subu,X Defense,250
+pw-subu,X Attack,100
+pw-subu,Potion,0
+pw-dim,TM18,6000
+pw-dim,Silver Powder,5000
+pw-dim,Yellow Shard,4500
+pw-dim,Elixir,3000
+pw-dim,Persim Berry,2500
+pw-dim,Max Potion,2000
+pw-dim,Max Ether,1500
+pw-dim,Hyper Potion,1000
+pw-dim,Ether,500
+pw-dim,Sitrus Berry,0
+pw-blue,TM11,5000
+pw-blue,Net Ball,4000
+pw-blue,Dive Ball,3500
+pw-blue,Lum Berry,3000
+pw-blue,Star Piece,2500
+pw-blue,Stardust,2000
+pw-blue,Sitrus Berry,1000
+pw-blue,Pearl,500
+pw-blue,Leppa Berry,100
+pw-blue,Fresh Water,0
+pw-town,TM37,5000
+pw-town,Guard Spec.,3000
+pw-town,X Sp. Def,2500
+pw-town,Ultra Ball,2000
+pw-town,Lum Berry,1500
+pw-town,X Attack,1000
+pw-town,Great Ball,750
+pw-town,X Accuracy,500
+pw-town,Dire Hit,100
+pw-town,Poké Ball,0
+pw-hoen,Ganlon Berry,8000
+pw-hoen,Wacan Berry,3500
+pw-hoen,Passho Berry,3000
+pw-hoen,Occa Berry,2500
+pw-hoen,Qualot Berry,2000
+pw-hoen,Kelpsy Berry,1500
+pw-hoen,Pomeg Berry,1000
+pw-hoen,Nanab Berry,500
+pw-hoen,Bluk Berry,250
+pw-hoen,Razz Berry,0
+pw-warm,Liechi Berry,8000
+pw-warm,Fire Stone,5000
+pw-warm,Yellow Shard,4900
+pw-warm,Blue Shard,4000
+pw-warm,Heart Scale,3000
+pw-warm,Big Pearl,2500
+pw-warm,Revive,2000
+pw-warm,Pearl,1000
+pw-warm,Wepear Berry,100
+pw-warm,Fresh Water,0
+pw-vol,Apicot Berry,8000
+pw-vol,Sun Stone,5500
+pw-vol,Moon Stone,5000
+pw-vol,Flame Orb,4000
+pw-vol,Lava Cookie,3000
+pw-vol,Revive,2000
+pw-vol,Pinap Berry,1000
+pw-vol,Red Shard,500
+pw-vol,Ice Heal,100
+pw-vol,Potion,0
+pw-tree,Salac Berry,8000
+pw-tree,Calcium,4500
+pw-tree,Max Elixir,4000
+pw-tree,Max Potion,3500
+pw-tree,Max Ether,3000
+pw-tree,Ether,2000
+pw-tree,Revival Herb,1000
+pw-tree,Heal Powder,500
+pw-tree,Energy Root,100
+pw-tree,Energy Powder,0
+pw-sca,Petaya Berry,8000
+pw-sca,Iron,4900
+pw-sca,Thick Club,4500
+pw-sca,Dusk Ball,4000
+pw-sca,Blue Shard,3900
+pw-sca,Old Gateau,3500
+pw-sca,Green Shard,2000
+pw-sca,Yellow Shard,1500
+pw-sca,Red Shard,1000
+pw-sca,Repel,0
+pw-sinn,Rare Candy,5000
+pw-sinn,Full Restore,4000
+pw-sinn,Max Potion,3800
+pw-sinn,Repeat Ball,3000
+pw-sinn,Timer Ball,2500
+pw-sinn,Revive,2000
+pw-sinn,Hyper Potion,1500
+pw-sinn,Full Heal,1000
+pw-sinn,Nest Ball,500
+pw-sinn,Super Potion,0
+pw-icy,TM07,6000
+pw-icy,Yache Berry,5000
+pw-icy,Rindo Berry,4500
+pw-icy,Icy Rock,4000
+pw-icy,Smooth Rock,3500
+pw-icy,Heat Rock,3000
+pw-icy,Damp Rock,2500
+pw-icy,Max Repel,1000
+pw-icy,Full Heal,100
+pw-icy,X Defense,0
+pw-big,Hondew Berry,5000
+pw-big,Qualot Berry,4500
+pw-big,Bluk Berry,4000
+pw-big,Durin Berry,3500
+pw-big,Big Mushroom,3000
+pw-big,Belue Berry,2500
+pw-big,Honey,2000
+pw-big,Tamato Berry,1000
+pw-big,Grepa Berry,500
+pw-big,Tiny Mushroom,0
+pw-whit,TM68,10000
+pw-whit,Kebia Berry,5000
+pw-whit,Chople Berry,4500
+pw-whit,Watmel Berry,4000
+pw-whit,Pamtre Berry,3500
+pw-whit,Spelon Berry,3000
+pw-whit,Nomel Berry,2500
+pw-whit,Rabuta Berry,2000
+pw-whit,Magost Berry,1000
+pw-whit,Cornn Berry,0
+pw-stor,PP Up,5000
+pw-stor,Payapa Berry,4500
+pw-stor,Coba Berry,4000
+pw-stor,Shuca Berry,3500
+pw-stor,Tanga Berry,3000
+pw-stor,Charti Berry,2500
+pw-stor,Heal Ball,2000
+pw-stor,Quick Ball,1500
+pw-stor,Heart Scale,800
+pw-stor,Fresh Water,0
+pw-resort,Luxury Ball,6000
+pw-resort,Poké Doll,5000
+pw-resort,Fluffy Tail,3000
+pw-resort,MooMoo Milk,2500
+pw-resort,Honey,2000
+pw-resort,Soda Pop,1000
+pw-resort,Max Repel,800
+pw-resort,Lemonade,500
+pw-resort,Green Shard,200
+pw-resort,Fresh Water,0
+pw-quie,TM15,10000
+pw-quie,Nugget,5500
+pw-quie,TM10,5000
+pw-quie,Max Elixir,4500
+pw-quie,Big Pearl,3000
+pw-quie,Heart Scale,2500
+pw-quie,Dusk Ball,2000
+pw-quie,Stardust,1000
+pw-quie,Pearl,500
+pw-quie,Elixir,0
+pw-beyo,Chilan Berry,5000
+pw-beyo,Babiri Berry,4500
+pw-beyo,Colbur Berry,4000
+pw-beyo,Haban Berry,3500
+pw-beyo,Kasib Berry,3000
+pw-beyo,Kelpsy Berry,2500
+pw-beyo,Pamtre Berry,2000
+pw-beyo,Spelon Berry,1500
+pw-beyo,Pomeg Berry,1000
+pw-beyo,Stardust,0
+pw-edge,TM29,10000
+pw-edge,Moon Stone,5000
+pw-edge,Rare Bone,4000
+pw-edge,Star Piece,3500
+pw-edge,Green Shard,3000
+pw-edge,Yellow Shard,2500
+pw-edge,Red Shard,2000
+pw-edge,Blue Shard,1500
+pw-edge,Pearl,1000
+pw-edge,Stardust,0
+pw-yell,Light Ball,7000
+pw-yell,Thunder Stone,6000
+pw-yell,Miracle Seed,5000
+pw-yell,Big Root,4000
+pw-yell,Aspear Berry,1000
+pw-yell,Rawst Berry,900
+pw-yell,Pecha Berry,800
+pw-yell,Chesto Berry,700
+pw-yell,Cheri Berry,600
+pw-yell,Big Mushroom,0
+pw-rall,Yellow Flute,1000
+pw-rall,Max Repel,900
+pw-rall,Elixir,800
+pw-rall,Pearl,700
+pw-rall,Max Repel,500
+pw-rall,Super Potion,300
+pw-rall,Escape Rope,200
+pw-rall,Paralyze Heal,150
+pw-rall,Oran Berry,100
+pw-rall,Potion,0
+pw-sigh,Rare Candy,5000
+pw-sigh,Old Gateau,4500
+pw-sigh,Energy Root,3500
+pw-sigh,Energy Powder,3000
+pw-sigh,MooMoo Milk,2600
+pw-sigh,Fresh Water,2200
+pw-sigh,Soda Pop,1800
+pw-sigh,Lemonade,1400
+pw-sigh,Lava Cookie,1000
+pw-sigh,Honey,0
+pw-win,Focus Sash,10000
+pw-win,Choice Scarf,9000
+pw-win,Choice Band,8000
+pw-win,Choice Specs,7000
+pw-win,Power Herb,6000
+pw-win,White Herb,5000
+pw-win,Sitrus Berry,2000
+pw-win,Lum Berry,1000
+pw-win,Persim Berry,500
+pw-win,Chesto Berry,0
+pw-ami,Electirizer,2550
+pw-ami,Magmarizer,2500
+pw-ami,Sun Stone,2050
+pw-ami,Moon Stone,2000
+pw-ami,Oval Stone,1500
+pw-ami,Star Piece,1000
+pw-ami,MooMoo Milk,700
+pw-ami,Lemonade,600
+pw-ami,Soda Pop,500
+pw-ami,Fresh Water,0

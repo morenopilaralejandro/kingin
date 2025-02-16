@@ -3,7 +3,7 @@ create temporary table aux_pw_crse_spaw_pd (
     pw_crse varchar(32),
     pd varchar(32),
     pw_grp varchar(32),
-    step varchar(32),
+    step varchar(32)
 );
 
 load data infile '/home/alejandro/eclipse-workspace/kingin/mysql/csv/pw-crse-spaw-pd.csv'
