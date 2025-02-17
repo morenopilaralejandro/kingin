@@ -57,9 +57,9 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop-exch-pd.sql;
 /*insrt-obt*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-vrs.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-enc.sql;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-hgss.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-hgss.sq;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-obt.sql;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-loc-hgss.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-loc-hgss.sq;
 /*insrt-saf*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-saf-blk.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-saf.sql;
@@ -69,6 +69,14 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pw-crse.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pw-grp.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pw-crse-spaw-pd.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pw-crse-loc-item.sql;
+/*insrt-gear*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-npc-title.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-npc.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gear-time.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gear-day.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gear-call.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gear-foug-pd.sql;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gear-gift-item.sql;
 /*insrt-todo
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;
 */

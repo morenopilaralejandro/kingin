@@ -2160,6 +2160,13 @@ dngn-clif,Makuhita,HG/SS,Hoenn Sound,19,20,20,,
 dngn-clif,Absol,HG/SS,Hoenn Sound,20,22,20,,
 dngn-clif,Chingling,HG/SS,Sinnoh Sound,19,20,20,,
 dngn-clif,Bronzor,HG/SS,Sinnoh Sound,20,22,20,,
+misc-clif,Wooper,HG/SS,Surfing,20,30,90,,
+misc-clif,Quagsire,HG/SS,Surfing,30,40,10,,
+misc-clif,Magikarp,HG/SS,Fishing (Old Rod),10,,100,,
+misc-clif,Poliwag,HG/SS,Fishing (Good Rod),20,,15,,
+misc-clif,Magikarp,HG/SS,Fishing (Good Rod),20,,85,,
+misc-clif,Poliwag,HG/SS,Fishing (Super Rod),40,,30,,
+misc-clif,Magikarp,HG/SS,Fishing (Super Rod),40,,70,,
 saf-plai,Rattata,HG/SS,Grass,15,17,30,30,0
 saf-plai,Raticate,HG/SS,Grass,15,17,0,0,30
 saf-plai,Abra,HG/SS,Grass,15,17,30,30,30

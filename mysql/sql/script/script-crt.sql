@@ -631,6 +631,76 @@ create table pw_crse_loc_item (
     constraint pw_crse_loc_item_fk_pw_crse foreign key (pw_crse_id)
         references pw_crse(pw_crse_id) on delete cascade
 );
+/*crt-gear*/
+create table npc_title (
+    npc_title_id int not null auto_increment,
+    npc_title_code varchar(32) unique,
+    npc_title_name_en varchar(32),
+    npc_title_name_ja varchar(32),
+    constraint npc_title_pk primary key (npc_title_id)
+);
+create table npc (
+    npc_id int not null auto_increment,
+    npc_code varchar(32) unique,
+    npc_name_en varchar(32),
+    npc_name_ja varchar(32),
+    npc_title_id int,
+    constraint npc_pk primary key (npc_id),
+    constraint npc_fk_title foreign key (npc_title_id)
+        references npc_title(npc_title_id) on delete cascade
+);
+create table gear_time (
+    gear_time_id int not null auto_increment,
+    gear_time_code varchar(32) unique,
+    gear_time_name_en varchar(32),
+    gear_time_name_ja varchar(32),
+    constraint gear_time_pk primary key (gear_time_id)
+);
+create table gear_day (
+    gear_day_id int not null auto_increment,
+    gear_day_code varchar(32) unique,
+    gear_day_name_en varchar(32),
+    gear_day_name_ja varchar(32),
+    constraint gear_day_pk primary key (gear_day_id)
+);
+create table gear_call (
+    gear_call_id int not null auto_increment,
+    gear_call_code varchar(32) unique,
+    gear_day_id int,
+    gear_time_id int,
+    npc_id int,    
+    zone_id int,
+    money int,
+    constraint gear_call_pk primary key (gear_call_id),
+    constraint gear_call_fk_day foreign key (gear_day_id)
+        references gear_day(gear_day_id) on delete cascade,
+    constraint gear_call_fk_time foreign key (gear_time_id)
+        references gear_time(gear_time_id) on delete cascade,
+    constraint gear_call_fk_npc foreign key (npc_id)
+        references npc(npc_id) on delete cascade,
+    constraint gear_call_fk_zone foreign key (zone_id)
+        references zone(zone_id) on delete cascade
+);
+create table gear_foug_pd (
+    gear_call_id int not null,
+    pd_id int not null,
+    lv int,
+    ordr int,
+    constraint gear_foug_pd_pk primary key (gear_call_id, pd_id, ordr),
+    constraint gear_foug_pd_fk_gear_call foreign key (gear_call_id)
+        references gear_call(gear_call_id) on delete cascade,
+    constraint gear_foug_pd_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade
+);
+create table gear_gift_item (
+    gear_call_id int not null,
+    item_id int not null,
+    constraint gear_gift_item_pk primary key (gear_call_id),
+    constraint gear_gift_item_fk_gear_call foreign key (gear_call_id)
+        references gear_call(gear_call_id) on delete cascade,
+    constraint gear_gift_item_fk_item foreign key (item_id)
+        references item(item_id) on delete cascade
+);
 /*crt-po*/
 create table po (
     po_id int not null auto_increment,
