@@ -1,17 +1,17 @@
 /*crt-stat*/
 create table stat (
     stat_id int not null auto_increment,
-    stat_code varchar(32) unique,
-    stat_name_en varchar(32),
-    stat_name_ja varchar(32),
+    stat_code varchar(36) unique,
+    stat_name_en varchar(36),
+    stat_name_ja varchar(36),
     constraint stat_pk primary key (stat_id)
 );
 /*crt-natu*/
 create table natu (
     natu_id int not null auto_increment,
-    natu_code varchar(32) unique,
-    natu_name_en varchar(32),
-    natu_name_ja varchar(32),
+    natu_code varchar(36) unique,
+    natu_name_en varchar(36),
+    natu_name_ja varchar(36),
     stat_id_red int,
     stat_id_blue int,
     constraint natu_pk primary key (natu_id),
@@ -23,47 +23,47 @@ create table natu (
 /*crt-egg-grp*/
 create table egg_grp (
     egg_grp_id int not null auto_increment,
-    egg_grp_code varchar(32) unique,
-    egg_grp_name_en varchar(32),
-    egg_grp_name_ja varchar(32),
+    egg_grp_code varchar(36) unique,
+    egg_grp_name_en varchar(36),
+    egg_grp_name_ja varchar(36),
     constraint egg_grp_pk primary key (egg_grp_id)
 );
 /*crt-egg-cyc*/
 create table egg_cyc (
     egg_cyc_id int not null auto_increment,
-    egg_cyc_code varchar(32) unique,
+    egg_cyc_code varchar(36) unique,
     egg_cyc_val int,
     constraint egg_cyc_pk primary key (egg_cyc_id)
 );
 /*crt-exp-grp*/
 create table exp_grp (
     exp_grp_id int not null auto_increment,
-    exp_grp_code varchar(32) unique,
-    exp_grp_name_en varchar(32),
-    exp_grp_name_ja varchar(32),
+    exp_grp_code varchar(36) unique,
+    exp_grp_name_en varchar(36),
+    exp_grp_name_ja varchar(36),
     exp_grp_final int,
     constraint exp_grp_pk primary key (exp_grp_id)
 );
 /*crt-gndr*/
 create table gndr (
     gndr_id int not null auto_increment,
-    gndr_code varchar(32) unique,
-    gndr_name_en varchar(32),
-    gndr_name_ja varchar(32),
-    gndr_sym varchar(32),
+    gndr_code varchar(36) unique,
+    gndr_name_en varchar(36),
+    gndr_name_ja varchar(36),
+    gndr_sym varchar(36),
     constraint gndr_pk primary key (gndr_id)
 );
 /*crt-abil*/
 create table abil_eff_type (
     abil_eff_type_id int not null auto_increment,
-    abil_eff_type_code varchar(32) unique,
+    abil_eff_type_code varchar(36) unique,
     abil_eff_type_name_en varchar(1000),
     abil_eff_type_name_ja varchar(1000),
     constraint abil_eff_type_pk primary key (abil_eff_type_id)
 );
 create table abil_eff (
     abil_eff_id int not null auto_increment,
-    abil_eff_code varchar(32) unique,
+    abil_eff_code varchar(36) unique,
     abil_eff_desc_en varchar(1000),
     abil_eff_desc_ja varchar(1000),
     abil_eff_type_id int,
@@ -73,9 +73,9 @@ create table abil_eff (
 );
 create table abil (
     abil_id int not null auto_increment,
-    abil_code varchar(32) unique,
-    abil_name_en varchar(32),
-    abil_name_ja varchar(32),
+    abil_code varchar(36) unique,
+    abil_name_en varchar(36),
+    abil_name_ja varchar(36),
     /*
     reverse condition on all except mold breaker
     affected by trace -> true
@@ -110,52 +110,52 @@ create table abil_pass_eff (
 /*crt-type*/
 create table type (
     type_id int not null auto_increment,
-    type_code varchar(32) unique,
-    type_name_en varchar(32),
-    type_name_ja varchar(32),
+    type_code varchar(36) unique,
+    type_name_en varchar(36),
+    type_name_ja varchar(36),
     constraint type_pk primary key (type_id)
 );
 /*crt-move*/
 create table move_cat (
     move_cat_id int not null auto_increment,
-    move_cat_code varchar(32) unique,
-    move_cat_name_en varchar(32),
-    move_cat_name_ja varchar(32),
+    move_cat_code varchar(36) unique,
+    move_cat_name_en varchar(36),
+    move_cat_name_ja varchar(36),
     constraint move_cat_pk primary key (move_cat_id)
 );
 create table move_eff (
     move_eff_id int not null auto_increment,
-    move_eff_code varchar(32) unique,
+    move_eff_code varchar(36) unique,
     move_eff_desc_en varchar(1000),
     move_eff_desc_ja varchar(1000),
     constraint move_eff_pk primary key (move_eff_id)
 );
 create table move_trgt (
     move_trgt_id int not null auto_increment,
-    move_trgt_code varchar(32) unique,
-    move_trgt_name_en varchar(32),
-    move_trgt_name_ja varchar(32),
+    move_trgt_code varchar(36) unique,
+    move_trgt_name_en varchar(36),
+    move_trgt_name_ja varchar(36),
     constraint move_eff_pk primary key (move_trgt_id)
 );
 create table move_mthd (
     move_mthd_id int not null auto_increment,
-    move_mthd_code varchar(32) unique,
-    move_mthd_name_en varchar(32),
-    move_mthd_name_ja varchar(32),
+    move_mthd_code varchar(36) unique,
+    move_mthd_name_en varchar(36),
+    move_mthd_name_ja varchar(36),
     constraint move_mthd_pk primary key (move_mthd_id)
 );
 create table move_lrn (
     move_lrn_id int not null auto_increment,
-    move_lrn_code varchar(32) unique,
-    move_lrn_name_en varchar(32),
-    move_lrn_name_ja varchar(32),
+    move_lrn_code varchar(36) unique,
+    move_lrn_name_en varchar(36),
+    move_lrn_name_ja varchar(36),
     constraint move_lrn_pk primary key (move_lrn_id)
 );
 create table move (
     move_id int not null auto_increment,
-    move_code varchar(32) unique,
-    move_name_en varchar(32),
-    move_name_ja varchar(32),
+    move_code varchar(36) unique,
+    move_name_en varchar(36),
+    move_name_ja varchar(36),
     move_pp int,
     move_bp int,
     move_ac int,
@@ -195,9 +195,9 @@ create table move_considered_mthd (
 );
 create table move_tuto (
     move_tuto_id int not null auto_increment,
-    move_tuto_code varchar(32) unique,
-    move_tuto_name_en varchar(32),
-    move_tuto_name_ja varchar(32),
+    move_tuto_code varchar(36) unique,
+    move_tuto_name_en varchar(36),
+    move_tuto_name_ja varchar(36),
     constraint move_tuto_pk primary key (move_tuto_id)
 );
 create table move_remembered_tuto (
@@ -213,14 +213,14 @@ create table move_remembered_tuto (
 /*crt-zone*/
 create table zone_name (
     zone_name_id int not null auto_increment,
-    zone_name_code varchar(32) unique,
-    zone_name_en varchar(32),
-    zone_name_ja varchar(32),
+    zone_name_code varchar(36) unique,
+    zone_name_en varchar(36),
+    zone_name_ja varchar(36),
     constraint zone_name_pk primary key (zone_name_id)
 );
 create table zone (
     zone_id int not null auto_increment,
-    zone_code varchar(32) unique,
+    zone_code varchar(36) unique,
     zone_name_id int,
     zone_main_id int,
     constraint zone_pk primary key (zone_id),
@@ -232,31 +232,31 @@ create table zone (
 /*crt-item*/
 create table item_type (
     item_type_id int not null auto_increment,
-    item_type_code varchar(32) unique,
-    item_type_name_en varchar(32),
-    item_type_name_ja varchar(32),
+    item_type_code varchar(36) unique,
+    item_type_name_en varchar(36),
+    item_type_name_ja varchar(36),
     constraint item_type_pk primary key (item_type_id)
 );
 create table item_pkt (
     item_pkt_id int not null auto_increment,
-    item_pkt_code varchar(32) unique,
-    item_pkt_name_en varchar(32),
-    item_pkt_name_ja varchar(32),
+    item_pkt_code varchar(36) unique,
+    item_pkt_name_en varchar(36),
+    item_pkt_name_ja varchar(36),
     constraint item_pkt_pk primary key (item_pkt_id)
 );
 create table item_cat (
     item_cat_id int not null auto_increment,
-    item_cat_code varchar(32) unique,
-    item_cat_name_en varchar(32),
-    item_cat_name_ja varchar(32),
+    item_cat_code varchar(36) unique,
+    item_cat_name_en varchar(36),
+    item_cat_name_ja varchar(36),
     constraint item_cat_pk primary key (item_cat_id)
 );
 create table item (
     item_id int not null auto_increment,
-    item_code varchar(32) unique,
-    item_img varchar(32),
-    item_name_en varchar(32),
-    item_name_ja varchar(32),
+    item_code varchar(36) unique,
+    item_img varchar(36),
+    item_name_en varchar(36),
+    item_name_ja varchar(36),
     item_desc_en varchar(1000),
     item_desc_ja varchar(1000),
     item_price_buy_ye int,
@@ -278,9 +278,9 @@ create table item (
 );
 create table item_mach_obt (
     item_mach_obt_id int not null auto_increment,
-    item_mach_obt_code varchar(32) unique,
-    item_mach_obt_name_en varchar(32),
-    item_mach_obt_name_ja varchar(32),
+    item_mach_obt_code varchar(36) unique,
+    item_mach_obt_name_en varchar(36),
+    item_mach_obt_name_ja varchar(36),
     constraint item_mach_obt_pk primary key (item_mach_obt_id)
 );
 create table item_mach (
@@ -299,16 +299,16 @@ create table item_mach (
 /*crt-shop*/
 create table curr (
     curr_id int not null auto_increment,
-    curr_code varchar(32) unique,
-    curr_name_en varchar(32),
-    curr_name_ja varchar(32),
+    curr_code varchar(36) unique,
+    curr_name_en varchar(36),
+    curr_name_ja varchar(36),
     constraint curr_pk primary key (curr_id)
 );
 create table shop (
     shop_id int not null auto_increment,
-    shop_code varchar(32) unique,
-    shop_name_en varchar(32),
-    shop_name_ja varchar(32),
+    shop_code varchar(36) unique,
+    shop_name_en varchar(36),
+    shop_name_ja varchar(36),
     zone_id int,
     curr_id int,
     constraint shop_pk primary key (shop_id),
@@ -329,11 +329,11 @@ create table shop_sell_item (
 /*crt-pd*/
 create table pd (
     pd_id int not null auto_increment,
-    pd_code varchar(32) unique,
+    pd_code varchar(36) unique,
     pd_index int,
-    pd_name_en varchar(32),
-    pd_name_ja varchar(32),
-    pd_img varchar(32),
+    pd_name_en varchar(36),
+    pd_name_ja varchar(36),
+    pd_img varchar(36),
     pd_cap_rate int,
     pd_exp int, 
     pd_hap int,
@@ -419,9 +419,9 @@ create table pd_shif_pd (
 );
 create table evo_fam (
     evo_fam_id int not null auto_increment,
-    evo_fam_code varchar(32) unique,
-    evo_fam_name_en varchar(32),
-    evo_fam_name_ja varchar(32),
+    evo_fam_code varchar(36) unique,
+    evo_fam_name_en varchar(36),
+    evo_fam_name_ja varchar(36),
     constraint evo_fam_pk primary key (evo_fam_id)
 );
 create table pd_lina_evo_fam (
@@ -436,7 +436,7 @@ create table pd_lina_evo_fam (
 );
 create table evo_cond (
     evo_cond_id int not null auto_increment,
-    evo_cond_code varchar(32) unique,
+    evo_cond_code varchar(36) unique,
     evo_cond_desc_en varchar(1000),
     evo_cond_desc_ja varchar(1000),
     constraint evo_cond_pk primary key (evo_cond_id)
@@ -501,17 +501,17 @@ create table shop_exch_pd (
 /*crt-obt*/
 create table vrs (
     vrs_id int not null auto_increment,
-    vrs_code varchar(32) unique,
-    vrs_name_en varchar(32),
-    vrs_name_ja varchar(32),
-    vrs_sym varchar(32),
+    vrs_code varchar(36) unique,
+    vrs_name_en varchar(36),
+    vrs_name_ja varchar(36),
+    vrs_sym varchar(36),
     constraint vrs_pk primary key (vrs_id)
 );
 create table enc (
     enc_id int not null auto_increment,
-    enc_code varchar(32) unique,
-    enc_name_en varchar(32),
-    enc_name_ja varchar(32),
+    enc_code varchar(36) unique,
+    enc_name_en varchar(36),
+    enc_name_ja varchar(36),
     constraint enc_pk primary key (enc_id)
 );
 create table pd_spaw_hgss (
@@ -535,9 +535,9 @@ create table pd_spaw_hgss (
 );
 create table item_obt (
     item_obt_id int not null auto_increment,
-    item_obt_code varchar(32) unique,
-    item_obt_name_en varchar(32),
-    item_obt_name_ja varchar(32),
+    item_obt_code varchar(36) unique,
+    item_obt_name_en varchar(36),
+    item_obt_name_ja varchar(36),
     constraint item_obt_pk primary key (item_obt_id)
 );
 create table item_loc_hgss (
@@ -555,9 +555,9 @@ create table item_loc_hgss (
 /*crt-saf*/
 create table saf_blk (
     saf_blk_id int not null auto_increment,
-    saf_blk_code varchar(32) unique,
-    saf_blk_name_en varchar(32),
-    saf_blk_name_ja varchar(32),
+    saf_blk_code varchar(36) unique,
+    saf_blk_name_en varchar(36),
+    saf_blk_name_ja varchar(36),
     constraint saf_blk_pk primary key (saf_blk_id)
 );
 create table pd_spaw_saf (
@@ -586,16 +586,16 @@ create table pd_spaw_saf (
 /*crt-pw*/
 create table pw_unlc (
     pw_unlc_id int not null auto_increment,
-    pw_unlc_code varchar(32) unique,
-    pw_unlc_desc_en varchar(32),
-    pw_unlc_desc_ja varchar(32),
+    pw_unlc_code varchar(36) unique,
+    pw_unlc_desc_en varchar(36),
+    pw_unlc_desc_ja varchar(36),
     constraint pw_unlc_pk primary key (pw_unlc_id)
 );
 create table pw_crse (
     pw_crse_id int not null auto_increment,
-    pw_crse_code varchar(32) unique,
-    pw_crse_name_en varchar(32),
-    pw_crse_name_ja varchar(32),
+    pw_crse_code varchar(36) unique,
+    pw_crse_name_en varchar(36),
+    pw_crse_name_ja varchar(36),
     pw_unlc_id int,
     constraint pw_crse_pk primary key (pw_crse_id),
     constraint pw_crse_fk_pw_unlc foreign key (pw_unlc_id)
@@ -603,9 +603,9 @@ create table pw_crse (
 );
 create table pw_grp (
     pw_grp_id int not null auto_increment,
-    pw_grp_code varchar(32) unique,
-    pw_grp_name_en varchar(32),
-    pw_grp_name_ja varchar(32),
+    pw_grp_code varchar(36) unique,
+    pw_grp_name_en varchar(36),
+    pw_grp_name_ja varchar(36),
     constraint pw_grp_pk primary key (pw_grp_id)
 );
 create table pw_crse_spaw_pd (
@@ -634,16 +634,16 @@ create table pw_crse_loc_item (
 /*crt-gear*/
 create table npc_title (
     npc_title_id int not null auto_increment,
-    npc_title_code varchar(32) unique,
-    npc_title_name_en varchar(32),
-    npc_title_name_ja varchar(32),
+    npc_title_code varchar(36) unique,
+    npc_title_name_en varchar(36),
+    npc_title_name_ja varchar(36),
     constraint npc_title_pk primary key (npc_title_id)
 );
 create table npc (
     npc_id int not null auto_increment,
-    npc_code varchar(32) unique,
-    npc_name_en varchar(32),
-    npc_name_ja varchar(32),
+    npc_code varchar(36) unique,
+    npc_name_en varchar(36),
+    npc_name_ja varchar(36),
     npc_title_id int,
     constraint npc_pk primary key (npc_id),
     constraint npc_fk_title foreign key (npc_title_id)
@@ -651,21 +651,21 @@ create table npc (
 );
 create table gear_time (
     gear_time_id int not null auto_increment,
-    gear_time_code varchar(32) unique,
-    gear_time_name_en varchar(32),
-    gear_time_name_ja varchar(32),
+    gear_time_code varchar(36) unique,
+    gear_time_name_en varchar(36),
+    gear_time_name_ja varchar(36),
     constraint gear_time_pk primary key (gear_time_id)
 );
 create table gear_day (
     gear_day_id int not null auto_increment,
-    gear_day_code varchar(32) unique,
-    gear_day_name_en varchar(32),
-    gear_day_name_ja varchar(32),
+    gear_day_code varchar(36) unique,
+    gear_day_name_en varchar(36),
+    gear_day_name_ja varchar(36),
     constraint gear_day_pk primary key (gear_day_id)
 );
 create table gear_call (
     gear_call_id int not null auto_increment,
-    gear_call_code varchar(32) unique,
+    gear_call_code varchar(36) unique,
     gear_day_id int,
     gear_time_id int,
     npc_id int,    
@@ -701,9 +701,153 @@ create table gear_gift_item (
     constraint gear_gift_item_fk_item foreign key (item_id)
         references item(item_id) on delete cascade
 );
+/*crt-usr*/
+create table usr (
+    usr_id int not null auto_increment,
+    usr_uuid varchar(36) unique,
+    usr_name varchar(36),
+    usr_pass varchar(36),
+    usr_mail varchar(36),
+    constraint usr_pk primary key (usr_id)
+);
+create table fc (
+    fc_id int not null auto_increment,
+    fc_code varchar(15),    
+    fc_name varchar(36),
+    usr_id int,
+    vrs_id int,
+    constraint fc_pk primary key (fc_id),
+    constraint fc_fk_usr foreign key (usr_id)
+        references usr(usr_id) on delete cascade,
+    constraint fc_fk_vrs foreign key (vrs_id)
+        references vrs(vrs_id) on delete cascade
+);
 /*crt-po*/
 create table po (
     po_id int not null auto_increment,
-    TODO varchar(32),
-    constraint pd_pk primary key (po_id)
+    po_uuid varchar (36) unique,
+    po_date_crt timestamp,
+    po_date_mod timestamp,
+    po_def_hp int,
+    po_def_atk int,
+    po_def_def int,
+    po_def_spatk int,
+    po_def_spdef int,
+    po_def_spe int,
+    po_cur_hp int,
+    po_cur_atk int,
+    po_cur_def int,
+    po_cur_spatk int,
+    po_cur_spdef int,
+    po_cur_spe int,
+    po_ev_hp int,
+    po_ev_atk int,
+    po_ev_def int,
+    po_ev_spatk int,
+    po_ev_spdef int,
+    po_ev_spe int,
+    po_is_saiko_hp bool,
+    po_is_saiko_atk bool,
+    po_is_saiko_def bool,
+    po_is_saiko_spatk bool,
+    po_is_saiko_spdef bool,
+    po_is_saiko_spe bool,
+    po_is_priv bool,
+    pd_id int,
+    usr_id int,
+    abil_id int,
+    natu_id int,
+    gndr_id int,
+    constraint po_pk primary key (po_id),
+    constraint po_fk_pd foreign key (pd_id)
+        references pd(pd_id) on delete cascade,
+    constraint po_fk_usr foreign key (usr_id)
+        references usr(usr_id) on delete cascade,
+    constraint po_fk_abil foreign key (abil_id)
+        references abil(abil_id) on delete cascade,
+    constraint po_fk_natu foreign key (natu_id)
+        references natu(natu_id) on delete cascade,
+    constraint po_fk_gndr foreign key (gndr_id)
+        references gndr(gndr_id) on delete cascade
+);
+create table po_held_item (
+    po_id int not null,
+    item_id int not null,
+    constraint po_held_item_pk primary key (po_id),
+    constraint po_held_item_fk_po foreign key (po_id)
+        references po(po_id) on delete cascade,
+    constraint po_held_item_fk_item foreign key (item_id)
+        references item(item_id) on delete cascade
+);
+create table po_know_move (
+    po_id int not null,
+    move_id int not null,
+    constraint po_know_move_pk primary key (po_id, move_id),
+    constraint po_know_move_fk_po foreign key (po_id)
+        references po(po_id) on delete cascade,
+    constraint po_know_move_fk_move foreign key (move_id)
+        references move(move_id) on delete cascade
+);
+/*crt-po*/
+create table team (
+    team_id int not null auto_increment,
+    team_uuid varchar (36) unique,
+    team_date_crt timestamp,
+    team_date_mod timestamp,
+    team_is_priv bool,
+    usr_id int,
+    constraint team_pk primary key (team_id),
+    constraint team_fk_usr foreign key (usr_id)
+        references usr(usr_id) on delete cascade
+);
+create table team_mem_po (
+    team_id int not null,
+    po_id int not null,  
+    constraint team_mem_po_pk primary key (team_id, po_id),
+    constraint team_mem_po_fk_team foreign key (team_id)
+        references team(team_id) on delete cascade,
+    constraint team_mem_po_fk_po foreign key (po_id)
+        references po(po_id) on delete cascade
+);
+create table usr_sele_po (
+    usr_id int not null,
+    po_id int not null,
+    constraint usr_sele_po_pk primary key (usr_id, po_id),
+    constraint usr_sele_po_fk_usr foreign key (usr_id)
+        references usr(usr_id) on delete cascade,
+    constraint usr_sele_po_fk_po foreign key (po_id)
+        references po(po_id) on delete cascade
+);
+create table usr_sele_item (
+    usr_id int not null,
+    item_id int not null,  
+    constraint usr_sele_item_pk primary key (usr_id, item_id),
+    constraint usr_sele_item_fk_usr foreign key (usr_id)
+        references usr(usr_id) on delete cascade,
+    constraint usr_sele_item_fk_item foreign key (item_id)
+        references item(item_id) on delete cascade
+);
+create table usr_sele_move (
+    usr_id int not null,
+    move_id int not null,  
+    constraint usr_sele_move_pk primary key (usr_id, move_id),
+    constraint usr_sele_move_fk_usr foreign key (usr_id)
+        references usr(usr_id) on delete cascade,
+    constraint usr_sele_move_fk_move foreign key (move_id)
+        references move(move_id) on delete cascade
+);
+/*crt-arti*/
+create table arti_type (
+    arti_type_id int not null auto_increment,
+    arti_type_code varchar(36),
+    constraint arti_type_pk primary key (arti_type_id)
+);
+create table arti (
+    arti_id int not null auto_increment,
+    arti_code varchar(36),
+    arti_view int,
+    arti_type_id int,
+    constraint arti_pk primary key (arti_id),
+    constraint arti_pk_arti_type foreign key (arti_type_id)
+        references arti_type(arti_type_id) on delete cascade
 );
