@@ -845,6 +845,8 @@ create table arti_type (
 create table arti (
     arti_id int not null auto_increment,
     arti_code varchar(36),
+    arti_name_en varchar(36),
+    arti_name_ja varchar(36),
     arti_view int,
     arti_type_id int,
     constraint arti_pk primary key (arti_id),

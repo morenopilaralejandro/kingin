@@ -77,6 +77,5 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gear-day.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gear-call.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gear-foug-pd.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-gear-gift-item.sql;
-/*insrt-todo
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-po.sql;
-*/
+/*insrt-arti*/
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-arti.sql;

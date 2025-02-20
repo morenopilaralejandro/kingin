@@ -10,4 +10,4 @@ use kingin;
 
 source ~/eclipse-workspace/kingin/mysql/sql/script/script-drp.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/script/script-crt.sql;
-source ~/eclipse-workspace/kingin/mysql/sql/script/script-insrt.sq;
+source ~/eclipse-workspace/kingin/mysql/sql/script/script-insrt.sql;
