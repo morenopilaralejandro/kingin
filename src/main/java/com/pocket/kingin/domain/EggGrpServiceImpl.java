@@ -6,34 +6,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StatServiceImpl implements StatService {
+public class EggGrpServiceImpl implements EggGrpService {
 	@Autowired
-	private StatRepository repo;
+	private EggGrpRepository repo;
 	
 	@Override
-	public List<Stat> all() {
+	public List<EggGrp> all() {
 		return repo.findAll();
 	}
 	
 	@Override
-	public Stat one(Long id) {
-		return repo.findById(id).orElseThrow(() -> new StatNotFoundException(id));
+	public EggGrp one(Long id) {
+		return repo.findById(id).orElseThrow(() -> new EggGrpNotFoundException(id));
 	}
 	
 	@Override
-	public Stat insert(Stat newObj) {
+	public EggGrp insert(EggGrp newObj) {
 		return repo.save(newObj);
 	}
 	
 	@Override
-	public Stat replace(Stat newObj, Long id) {
+	public EggGrp replace(EggGrp newObj, Long id) {
 		return repo.findById(id).map(oldObj -> {
-			oldObj.setStatCode(newObj.getStatCode());
-			oldObj.setStatNameEn(newObj.getStatNameEn());
-			oldObj.setStatNameJa(newObj.getStatNameJa());
+			oldObj.setEggGrpCode(newObj.getEggGrpCode());
+			oldObj.setEggGrpNameEn(newObj.getEggGrpNameEn());
+			oldObj.setEggGrpNameJa(newObj.getEggGrpNameJa());
 			return repo.save(oldObj);
 		}).orElseGet(() -> {
-			newObj.setStatId(id);
+			newObj.setEggGrpId(id);
 			return repo.save(newObj);
 		});
 	}

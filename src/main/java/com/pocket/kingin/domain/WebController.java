@@ -27,6 +27,7 @@ public class WebController {
 		for (Stat i : all) {
 			System.out.println(i.getInternatName().get(locale.getLanguage()));
 		}
+		/*
 		System.out.println("test3");
 		statService.insert(new Stat(7L, "new", "en", "ja"));
 		System.out.println(statService.one(7L).toString());
@@ -36,12 +37,11 @@ public class WebController {
 		for (Stat i : all) {
 			System.out.println(i.toString());
 		}
-		
-		
+		*/
 		
 		
 		model.addAttribute("test", 1234);
-		model.addAttribute("langCurr", locale.getLanguage());
+		model.addAttribute("langCur", locale.getLanguage());
 		return "/index";
 	}
 	

@@ -6,34 +6,33 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StatServiceImpl implements StatService {
+public class EggCycServiceImpl implements EggCycService {
 	@Autowired
-	private StatRepository repo;
+	private EggCycRepository repo;
 	
 	@Override
-	public List<Stat> all() {
+	public List<EggCyc> all() {
 		return repo.findAll();
 	}
 	
 	@Override
-	public Stat one(Long id) {
-		return repo.findById(id).orElseThrow(() -> new StatNotFoundException(id));
+	public EggCyc one(Long id) {
+		return repo.findById(id).orElseThrow(() -> new EggCycNotFoundException(id));
 	}
 	
 	@Override
-	public Stat insert(Stat newObj) {
+	public EggCyc insert(EggCyc newObj) {
 		return repo.save(newObj);
 	}
 	
 	@Override
-	public Stat replace(Stat newObj, Long id) {
+	public EggCyc replace(EggCyc newObj, Long id) {
 		return repo.findById(id).map(oldObj -> {
-			oldObj.setStatCode(newObj.getStatCode());
-			oldObj.setStatNameEn(newObj.getStatNameEn());
-			oldObj.setStatNameJa(newObj.getStatNameJa());
+			oldObj.setEggCycCode(newObj.getEggCycCode());
+			oldObj.setEggCycVal(newObj.getEggCycVal());
 			return repo.save(oldObj);
 		}).orElseGet(() -> {
-			newObj.setStatId(id);
+			newObj.setEggCycId(id);
 			return repo.save(newObj);
 		});
 	}
