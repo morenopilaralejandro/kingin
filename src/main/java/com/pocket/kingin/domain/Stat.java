@@ -25,8 +25,7 @@ public class Stat implements InternatName {
 	@Column(name = "stat_name_ja")
 	private String statNameJa;
 
-	public Stat() {
-	}
+	public Stat() {}
 	
 	public Stat(Long statId, String statCode, String statNameEn, String statNameJa) {
 		super();

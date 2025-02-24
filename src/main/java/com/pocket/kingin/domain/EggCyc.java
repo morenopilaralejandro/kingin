@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "eggCyc")
+@Table(name = "egg_cyc")
 public class EggCyc {
 	@Column(name = "egg_cyc_id")
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long eggCycId;
@@ -19,8 +19,7 @@ public class EggCyc {
 	@Column(name = "egg_cyc_val")
 	private Long eggCycVal;
 	
-	public EggCyc() {
-	}
+	public EggCyc() {}
 	
 	public EggCyc(Long eggCycId, String eggCycCode, Long eggCycVal) {
 		super();

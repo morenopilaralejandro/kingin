@@ -27,8 +27,7 @@ public class ExpGrp implements InternatName {
 	@Column(name = "exp_grp_final")
 	private Long expGrpFinal;
 
-	public ExpGrp() {
-	}	
+	public ExpGrp() {}	
 	
 	public ExpGrp(Long expGrpId, String expGrpCode, String expGrpNameEn, String expGrpNameJa, Long expGrpFinal) {
 		super();

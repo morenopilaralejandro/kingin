@@ -14,7 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "eggGrp")
+@Table(name = "egg_grp")
 public class EggGrp implements InternatName {
 	@Column(name = "egg_grp_id")
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long eggGrpId;
@@ -25,8 +25,7 @@ public class EggGrp implements InternatName {
 	@Column(name = "egg_grp_name_ja")
 	private String eggGrpNameJa;
 
-	public EggGrp() {
-	}
+	public EggGrp() {}
 	
 	public EggGrp(Long eggGrpId, String eggGrpCode, String eggGrpNameEn, String eggGrpNameJa) {
 		super();

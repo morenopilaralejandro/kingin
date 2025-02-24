@@ -8,6 +8,7 @@ import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -27,16 +28,15 @@ public class Natu implements InternatName {
 	@Column(name = "natu_name_ja")
 	private String natuNameJa;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "stat_id_red", referencedColumnName = "stat_id")
 	private Stat statRed;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "stat_id_blue", referencedColumnName = "stat_id")
 	private Stat statBlue;
 
-	public Natu() {
-	}
+	public Natu() {}
 	
 	public Natu(Long natuId, String natuCode, String natuNameEn, String natuNameJa, Stat statRed, Stat statBlue) {
 		super();
