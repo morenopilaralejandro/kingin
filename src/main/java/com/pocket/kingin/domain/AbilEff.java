@@ -23,9 +23,9 @@ public class AbilEff implements InternatDesc {
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long abilEffId;
 	@Column(name = "abil_eff_code", unique = true)
 	private String abilEffCode;
-	@Column(name = "abil_eff_name_en")
+	@Column(name = "abil_eff_desc_en")
 	private String abilEffDescEn;
-	@Column(name = "abil_eff_name_ja")
+	@Column(name = "abil_eff_desc_ja")
 	private String abilEffDescJa;
 
     @ManyToOne(fetch = FetchType.LAZY)

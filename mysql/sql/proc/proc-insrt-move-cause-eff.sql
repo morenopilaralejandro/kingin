@@ -36,8 +36,7 @@ begin
     declare continueCur1 int default 1;
     declare cur1 cursor for select * from aux_move_cause_eff;
 	declare continue handler for SQLSTATE '02000' set continueCur1 = 0;
-
-    delete from move_cause_eff;    
+   
     open cur1;
 	while continueCur1=1 do
         fetch cur1 into 

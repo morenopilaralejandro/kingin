@@ -20,9 +20,9 @@ public class MoveEff implements InternatDesc {
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long moveEffId;
 	@Column(name = "move_eff_code", unique = true)
 	private String moveEffCode;
-	@Column(name = "move_eff_name_en")
+	@Column(name = "move_eff_desc_en")
 	private String moveEffDescEn;
-	@Column(name = "move_eff_name_ja")
+	@Column(name = "move_eff_desc_ja")
 	private String moveEffDescJa;
 
 	public MoveEff() {}

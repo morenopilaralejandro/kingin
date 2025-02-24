@@ -31,14 +31,14 @@ public class AbilServiceImpl implements AbilService {
 			oldObj.setAbilCode(newObj.getAbilCode());
 			oldObj.setAbilNameEn(newObj.getAbilNameEn());
 			oldObj.setAbilNameJa(newObj.getAbilNameJa());
-			oldObj.setRole(newObj.isRole());
-			oldObj.setRece(newObj.isRece());
-			oldObj.setEntr(newObj.isEntr());
-			oldObj.setTrac(newObj.isTrac());
-			oldObj.setSksw(newObj.isSksw());
-			oldObj.setGast(newObj.isGast());
-			oldObj.setMold(newObj.isMold());
-			oldObj.setTran(newObj.isTran());
+			oldObj.setAbilIsRole(newObj.getAbilIsRole());
+			oldObj.setAbilIsRece(newObj.getAbilIsRece());
+			oldObj.setAbilIsEntr(newObj.getAbilIsEntr());
+			oldObj.setAbilIsTrac(newObj.getAbilIsTrac());
+			oldObj.setAbilIsSksw(newObj.getAbilIsSksw());
+			oldObj.setAbilIsGast(newObj.getAbilIsGast());
+			oldObj.setAbilIsMold(newObj.getAbilIsMold());
+			oldObj.setAbilIsTran(newObj.getAbilIsTran());
 			return repo.save(oldObj);
 		}).orElseGet(() -> {
 			newObj.setAbilId(id);

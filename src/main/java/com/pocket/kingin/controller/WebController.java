@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.pocket.kingin.domain.Move;
+import com.pocket.kingin.domain.MoveService;
 import com.pocket.kingin.domain.Stat;
 import com.pocket.kingin.domain.StatService;
 
@@ -16,6 +18,9 @@ import com.pocket.kingin.domain.StatService;
 public class WebController {
 	@Autowired
 	private StatService statService;
+	
+	@Autowired
+	private MoveService moveService;
 	
 	@RequestMapping(value = "/")
 	public String index(Model model) {
@@ -41,6 +46,12 @@ public class WebController {
 			System.out.println(i.toString());
 		}
 		*/
+		
+		System.out.println("test5");
+		List<Move> all1 = moveService.all();
+		System.out.println(all1.get(0).getMoveCauseEffs().toString());
+		
+		
 		
 		
 		model.addAttribute("test", 1234);

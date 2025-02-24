@@ -395,7 +395,7 @@ stringshot,String Shot,いとをはく,40,0,95,0,Yes,No,No,bug,status,Both,low-o
 struggle,Struggle,わるあがき,1,50,0,0,No,Yes,Yes,normal,physical,Selected,,,
 stunspore,Stun Spore,しびれごな,30,0,75,0,Yes,No,No,grass,status,Selected,induce-para,,
 submission,Submission,じごくぐるま,25,80,80,0,Yes,Yes,Yes,fighting,physical,Selected,recoil,,
-substitute,Substitute,みがわり,10,0,0,0,No,No,No,normal,status,User,substitute,,
+substitute,Substitute,みがわり,10,0,0,0,No,No,No,normal,status,User,,,
 suckerpunch,Sucker Punch,ふいうち,5,80,100,1,Yes,Yes,Yes,dark,physical,Selected,fail-select-atk,,
 sunnyday,Sunny Day,にほんばれ,5,0,0,0,No,No,No,fire,status,Battlefield,field-sun,,
 superfang,Super Fang,いかりのまえば,10,1,90,0,Yes,No,Yes,normal,physical,Selected,half-opp-hp,,

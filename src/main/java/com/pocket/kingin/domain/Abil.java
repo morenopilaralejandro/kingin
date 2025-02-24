@@ -30,21 +30,21 @@ public class Abil implements InternatName {
 	@Column(name = "abil_name_ja")
 	private String abilNameJa;
 	@Column(name = "abil_is_role")
-	private boolean Role;
+	private Boolean abilIsRole;
 	@Column(name = "abil_is_rece")
-	private boolean Rece;
+	private Boolean abilIsRece;
 	@Column(name = "abil_is_entr")
-	private boolean Entr;
+	private Boolean abilIsEntr;
 	@Column(name = "abil_is_trac")
-	private boolean Trac;
+	private Boolean abilIsTrac;
 	@Column(name = "abil_is_sksw")
-	private boolean Sksw;
+	private Boolean abilIsSksw;
 	@Column(name = "abil_is_gast")
-	private boolean Gast;
+	private Boolean abilIsGast;
 	@Column(name = "abil_is_mold")
-	private boolean Mold;
+	private Boolean abilIsMold;
 	@Column(name = "abil_is_tran")
-	private boolean Tran;
+	private Boolean abilIsTran;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "abil_pass_eff", joinColumns = @JoinColumn(name = "abil_id"), inverseJoinColumns = @JoinColumn(name = "abil_eff_id"))
@@ -52,21 +52,23 @@ public class Abil implements InternatName {
 
 	public Abil() {}
 
-	public Abil(Long abilId, String abilCode, String abilNameEn, String abilNameJa, boolean role, boolean rece,
-			boolean entr, boolean trac, boolean sksw, boolean gast, boolean mold, boolean tran) {
+	public Abil(Long abilId, String abilCode, String abilNameEn, String abilNameJa, Boolean abilIsRole,
+			Boolean abilIsRece, Boolean abilIsEntr, Boolean abilIsTrac, Boolean abilIsSksw, Boolean abilIsGast,
+			Boolean abilIsMold, Boolean abilIsTran, List<AbilEff> abilEffs) {
 		super();
 		this.abilId = abilId;
 		this.abilCode = abilCode;
 		this.abilNameEn = abilNameEn;
 		this.abilNameJa = abilNameJa;
-		Role = role;
-		Rece = rece;
-		Entr = entr;
-		Trac = trac;
-		Sksw = sksw;
-		Gast = gast;
-		Mold = mold;
-		Tran = tran;
+		this.abilIsRole = abilIsRole;
+		this.abilIsRece = abilIsRece;
+		this.abilIsEntr = abilIsEntr;
+		this.abilIsTrac = abilIsTrac;
+		this.abilIsSksw = abilIsSksw;
+		this.abilIsGast = abilIsGast;
+		this.abilIsMold = abilIsMold;
+		this.abilIsTran = abilIsTran;
+		this.abilEffs = abilEffs;
 	}
 
 	@Override
@@ -109,80 +111,91 @@ public class Abil implements InternatName {
 		this.abilNameJa = abilNameJa;
 	}
 
-	public boolean isRole() {
-		return Role;
+	public Boolean getAbilIsRole() {
+		return abilIsRole;
 	}
 
-	public void setRole(boolean role) {
-		Role = role;
+	public void setAbilIsRole(Boolean abilIsRole) {
+		this.abilIsRole = abilIsRole;
 	}
 
-	public boolean isRece() {
-		return Rece;
+	public Boolean getAbilIsRece() {
+		return abilIsRece;
 	}
 
-	public void setRece(boolean rece) {
-		Rece = rece;
+	public void setAbilIsRece(Boolean abilIsRece) {
+		this.abilIsRece = abilIsRece;
 	}
 
-	public boolean isEntr() {
-		return Entr;
+	public Boolean getAbilIsEntr() {
+		return abilIsEntr;
 	}
 
-	public void setEntr(boolean entr) {
-		Entr = entr;
+	public void setAbilIsEntr(Boolean abilIsEntr) {
+		this.abilIsEntr = abilIsEntr;
 	}
 
-	public boolean isTrac() {
-		return Trac;
+	public Boolean getAbilIsTrac() {
+		return abilIsTrac;
 	}
 
-	public void setTrac(boolean trac) {
-		Trac = trac;
+	public void setAbilIsTrac(Boolean abilIsTrac) {
+		this.abilIsTrac = abilIsTrac;
 	}
 
-	public boolean isSksw() {
-		return Sksw;
+	public Boolean getAbilIsSksw() {
+		return abilIsSksw;
 	}
 
-	public void setSksw(boolean sksw) {
-		Sksw = sksw;
+	public void setAbilIsSksw(Boolean abilIsSksw) {
+		this.abilIsSksw = abilIsSksw;
 	}
 
-	public boolean isGast() {
-		return Gast;
+	public Boolean getAbilIsGast() {
+		return abilIsGast;
 	}
 
-	public void setGast(boolean gast) {
-		Gast = gast;
+	public void setAbilIsGast(Boolean abilIsGast) {
+		this.abilIsGast = abilIsGast;
 	}
 
-	public boolean isMold() {
-		return Mold;
+	public Boolean getAbilIsMold() {
+		return abilIsMold;
 	}
 
-	public void setMold(boolean mold) {
-		Mold = mold;
+	public void setAbilIsMold(Boolean abilIsMold) {
+		this.abilIsMold = abilIsMold;
 	}
 
-	public boolean isTran() {
-		return Tran;
+	public Boolean getAbilIsTran() {
+		return abilIsTran;
 	}
 
-	public void setTran(boolean tran) {
-		Tran = tran;
+	public void setAbilIsTran(Boolean abilIsTran) {
+		this.abilIsTran = abilIsTran;
+	}
+
+	public List<AbilEff> getAbilEffs() {
+		return abilEffs;
+	}
+
+	public void setAbilEffs(List<AbilEff> abilEffs) {
+		this.abilEffs = abilEffs;
 	}
 
 	@Override
 	public String toString() {
 		return "Abil [abilId=" + abilId + ", abilCode=" + abilCode + ", abilNameEn=" + abilNameEn + ", abilNameJa="
-				+ abilNameJa + ", Role=" + Role + ", Rece=" + Rece + ", Entr=" + Entr + ", Trac=" + Trac + ", Sksw="
-				+ Sksw + ", Gast=" + Gast + ", Mold=" + Mold + ", Tran=" + Tran + "]";
+				+ abilNameJa + ", abilIsRole=" + abilIsRole + ", abilIsRece=" + abilIsRece + ", abilIsEntr="
+				+ abilIsEntr + ", abilIsTrac=" + abilIsTrac + ", abilIsSksw=" + abilIsSksw + ", abilIsGast="
+				+ abilIsGast + ", abilIsMold=" + abilIsMold + ", abilIsTran=" + abilIsTran + ", abilEffs=" + abilEffs
+				+ "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Entr, Gast, Mold, Rece, Role, Sksw, Trac, Tran, abilCode, abilId, abilNameEn, abilNameJa);
+		return Objects.hash(abilCode, abilEffs, abilId, abilIsEntr, abilIsGast, abilIsMold, abilIsRece, abilIsRole,
+				abilIsSksw, abilIsTrac, abilIsTran, abilNameEn, abilNameJa);
 	}
 
 	@Override
@@ -194,10 +207,13 @@ public class Abil implements InternatName {
 		if (getClass() != obj.getClass())
 			return false;
 		Abil other = (Abil) obj;
-		return Entr == other.Entr && Gast == other.Gast && Mold == other.Mold && Rece == other.Rece
-				&& Role == other.Role && Sksw == other.Sksw && Trac == other.Trac && Tran == other.Tran
-				&& Objects.equals(abilCode, other.abilCode) && Objects.equals(abilId, other.abilId)
-				&& Objects.equals(abilNameEn, other.abilNameEn) && Objects.equals(abilNameJa, other.abilNameJa);
+		return Objects.equals(abilCode, other.abilCode) && Objects.equals(abilEffs, other.abilEffs)
+				&& Objects.equals(abilId, other.abilId) && Objects.equals(abilIsEntr, other.abilIsEntr)
+				&& Objects.equals(abilIsGast, other.abilIsGast) && Objects.equals(abilIsMold, other.abilIsMold)
+				&& Objects.equals(abilIsRece, other.abilIsRece) && Objects.equals(abilIsRole, other.abilIsRole)
+				&& Objects.equals(abilIsSksw, other.abilIsSksw) && Objects.equals(abilIsTrac, other.abilIsTrac)
+				&& Objects.equals(abilIsTran, other.abilIsTran) && Objects.equals(abilNameEn, other.abilNameEn)
+				&& Objects.equals(abilNameJa, other.abilNameJa);
 	}
 
 }
