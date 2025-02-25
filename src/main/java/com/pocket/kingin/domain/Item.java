@@ -1,6 +1,7 @@
 package com.pocket.kingin.domain;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -8,17 +9,24 @@ import com.pocket.kingin.internat.InternatDesc;
 import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.DiscriminatorType;
 
 @Entity
 @Table(name = "item")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "item_type_id", discriminatorType = DiscriminatorType.INTEGER)
 public class Item implements InternatName, InternatDesc {
 	@Column(name = "item_id")
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long itemId;
@@ -48,17 +56,21 @@ public class Item implements InternatName, InternatDesc {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "item_type_id", referencedColumnName = "item_type_id")
 	private ItemType itemType;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "type_id", referencedColumnName = "item_pkt_id")
 	private ItemPkt itemPkt;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "type_id", referencedColumnName = "item_cat_id")
 	private ItemCat itemCat;
 	
-	public Item() {}
-	
+	@ManyToMany(mappedBy = "items")
+	private List<Shop> shops;
+
+	public Item() {
+	}
+
 	@Override
 	public Map<String, String> getInternatName() {
 		Map<String, String> map = new HashMap<String, String>();
@@ -66,7 +78,7 @@ public class Item implements InternatName, InternatDesc {
 		map.put("ja", this.itemNameJa);
 		return map;
 	}
-	
+
 	public Item(Long itemId, String itemCode, String itemNameEn, String itemNameJa, String itemDescEn,
 			String itemDescJa, Long itemPriceBuyYe, Long itemPriceSelYe, Long itemPriceBuyBp, Long itemPriceBuyCn,
 			Long itemPriceBuyAp, Long itemFlin, ItemType itemType, ItemPkt itemPkt, ItemCat itemCat) {
@@ -95,7 +107,7 @@ public class Item implements InternatName, InternatDesc {
 		map.put("ja", this.itemDescJa);
 		return map;
 	}
-	
+
 	public Long getPriceBuyByCurr(Curr curr) {
 		switch (curr.getCurrCode()) {
 		case "curr-ye": {
@@ -235,6 +247,14 @@ public class Item implements InternatName, InternatDesc {
 		this.itemCat = itemCat;
 	}
 
+	public List<Shop> getShops() {
+		return shops;
+	}
+
+	public void setShops(List<Shop> shops) {
+		this.shops = shops;
+	}
+
 	@Override
 	public String toString() {
 		return "Item [itemId=" + itemId + ", itemCode=" + itemCode + ", itemNameEn=" + itemNameEn + ", itemNameJa="
@@ -269,5 +289,5 @@ public class Item implements InternatName, InternatDesc {
 				&& Objects.equals(itemPriceBuyYe, other.itemPriceBuyYe)
 				&& Objects.equals(itemPriceSelYe, other.itemPriceSelYe) && Objects.equals(itemType, other.itemType);
 	}
-	
+
 }
