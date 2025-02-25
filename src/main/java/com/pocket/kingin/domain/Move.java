@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import com.pocket.kingin.composite.MoveCauseEff;
+import com.pocket.kingin.composite.MoveRememberedTuto;
 import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
@@ -14,6 +16,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -58,6 +62,13 @@ public class Move implements InternatName {
 	
 	@OneToMany(mappedBy = "move", fetch = FetchType.LAZY)
 	private List<MoveCauseEff> moveCauseEffs;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "move_considered_mthd", joinColumns = @JoinColumn(name = "move_id"), inverseJoinColumns = @JoinColumn(name = "move_mthd_id"))
+	private List<MoveMthd> mthds;
+	
+	@OneToMany(mappedBy = "move", fetch = FetchType.LAZY)
+	private List<MoveRememberedTuto> moveRememberedTutos;
 	
 	public Move() {}
 
@@ -207,6 +218,22 @@ public class Move implements InternatName {
 
 	public void setMoveCauseEffs(List<MoveCauseEff> moveCauseEffs) {
 		this.moveCauseEffs = moveCauseEffs;
+	}
+
+	public List<MoveMthd> getMthds() {
+		return mthds;
+	}
+
+	public void setMthds(List<MoveMthd> mthds) {
+		this.mthds = mthds;
+	}
+
+	public List<MoveRememberedTuto> getMoveRememberedTutos() {
+		return moveRememberedTutos;
+	}
+
+	public void setMoveRememberedTutos(List<MoveRememberedTuto> moveRememberedTutos) {
+		this.moveRememberedTutos = moveRememberedTutos;
 	}
 
 	@Override

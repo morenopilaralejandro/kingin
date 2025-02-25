@@ -1,6 +1,9 @@
-package com.pocket.kingin.domain;
+package com.pocket.kingin.composite;
 
 import java.util.Objects;
+
+import com.pocket.kingin.domain.Move;
+import com.pocket.kingin.domain.MoveEff;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
@@ -43,6 +46,14 @@ public class MoveCauseEff {
 	public MoveCauseEff(Long moveId, Long moveEffId, Move move, MoveEff moveEff, Long rate) {
 		super();
 		this.id = new MoveCauseEffId(moveId, moveEffId);
+		this.move = move;
+		this.moveEff = moveEff;
+		this.rate = rate;
+	}
+	
+	public MoveCauseEff(Move move, MoveEff moveEff, Long rate) {
+		super();
+		this.id = new MoveCauseEffId(move.getMoveId(), moveEff.getMoveEffId());
 		this.move = move;
 		this.moveEff = moveEff;
 		this.rate = rate;
