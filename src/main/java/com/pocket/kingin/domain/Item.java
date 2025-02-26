@@ -16,17 +16,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.persistence.InheritanceType;
-import jakarta.persistence.DiscriminatorType;
 
 @Entity
 @Table(name = "item")
+@DiscriminatorColumn(name = "item_type_id")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "item_type_id", discriminatorType = DiscriminatorType.INTEGER)
 public class Item implements InternatName, InternatDesc {
 	@Column(name = "item_id")
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long itemId;
@@ -54,15 +53,15 @@ public class Item implements InternatName, InternatDesc {
 	private Long itemFlin;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "item_type_id", referencedColumnName = "item_type_id")
+	@JoinColumn(name = "item_type_id", referencedColumnName = "item_type_id", insertable=false, updatable=false)
 	private ItemType itemType;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "type_id", referencedColumnName = "item_pkt_id")
+	@JoinColumn(name = "item_pkt_id", referencedColumnName = "item_pkt_id")
 	private ItemPkt itemPkt;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "type_id", referencedColumnName = "item_cat_id")
+	@JoinColumn(name = "item_cat_id", referencedColumnName = "item_cat_id")
 	private ItemCat itemCat;
 	
 	@ManyToMany(mappedBy = "items")

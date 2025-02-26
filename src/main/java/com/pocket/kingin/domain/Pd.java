@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import com.pocket.kingin.composite.PdDimoGndr;
+import com.pocket.kingin.composite.PdHoldItem;
+import com.pocket.kingin.composite.PdYielStat;
 import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
@@ -14,7 +17,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -59,6 +65,31 @@ public class Pd implements InternatName {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "exp_grp_id", referencedColumnName = "exp_grp_id")
 	private ExpGrp expGrp;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<PdYielStat> pdYielStats;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "pd_tra_abil", joinColumns = @JoinColumn(name = "pd_id"), inverseJoinColumns = @JoinColumn(name = "abil_id"))
+	private List<Abil> abils;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "pd_belo_egg_grp", joinColumns = @JoinColumn(name = "pd_id"), inverseJoinColumns = @JoinColumn(name = "egg_grp_id"))
+	private List<EggGrp> eggGrps;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "pd_evok_type", joinColumns = @JoinColumn(name = "pd_id"), inverseJoinColumns = @JoinColumn(name = "type_id"))
+	private List<Type> types;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<PdHoldItem> pdHoldItems;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<PdDimoGndr> pdDimoGndrs;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "pd_shif_pd", joinColumns = @JoinColumn(name = "pd_id_ori"), inverseJoinColumns = @JoinColumn(name = "pd_id_alt"))
+	private List<Pd> alts;
 	
 	public Pd() {}
 	
@@ -242,6 +273,62 @@ public class Pd implements InternatName {
 
 	public void setExpGrp(ExpGrp expGrp) {
 		this.expGrp = expGrp;
+	}
+
+	public List<PdYielStat> getPdYielStats() {
+		return pdYielStats;
+	}
+
+	public void setPdYielStats(List<PdYielStat> pdYielStats) {
+		this.pdYielStats = pdYielStats;
+	}
+
+	public List<Abil> getAbils() {
+		return abils;
+	}
+
+	public void setAbils(List<Abil> abils) {
+		this.abils = abils;
+	}
+
+	public List<EggGrp> getEggGrps() {
+		return eggGrps;
+	}
+
+	public void setEggGrps(List<EggGrp> eggGrps) {
+		this.eggGrps = eggGrps;
+	}
+
+	public List<Type> getTypes() {
+		return types;
+	}
+
+	public void setTypes(List<Type> types) {
+		this.types = types;
+	}
+
+	public List<PdHoldItem> getPdHoldItems() {
+		return pdHoldItems;
+	}
+
+	public void setPdHoldItems(List<PdHoldItem> pdHoldItems) {
+		this.pdHoldItems = pdHoldItems;
+	}
+
+	public List<PdDimoGndr> getPdDimoGndrs() {
+		return pdDimoGndrs;
+	}
+
+	public void setPdDimoGndrs(List<PdDimoGndr> pdDimoGndrs) {
+		this.pdDimoGndrs = pdDimoGndrs;
+	}
+
+	public List<Pd> getAlts() {
+		return alts;
+	}
+
+	public void setAlts(List<Pd> alts) {
+		this.alts = alts;
 	}
 
 	@Override

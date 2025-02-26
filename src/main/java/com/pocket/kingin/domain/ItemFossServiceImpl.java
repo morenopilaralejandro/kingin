@@ -31,7 +31,7 @@ public class ItemFossServiceImpl implements ItemFossService {
 			oldObj.setPd(newObj.getPd());
 			return repo.save(oldObj);
 		}).orElseGet(() -> {
-			newObj.setItemFossId(id);
+			newObj.setItemId(id);
 			return repo.save(newObj);
 		});
 	}

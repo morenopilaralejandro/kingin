@@ -6,19 +6,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "item_mach")
 @DiscriminatorValue("2")
 public class ItemMach extends Item {
-	@Column(name = "item_mach_id")
-	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long itemMachId;
 	@Column(name = "item_mach_num")
 	private Long itemMachNum;
 	
@@ -32,20 +25,11 @@ public class ItemMach extends Item {
 
 	public ItemMach() {}
 
-	public ItemMach(Long itemMachId, Long itemMachNum, ItemMachObt itemMachObt, Move move) {
+	public ItemMach(Long itemMachNum, ItemMachObt itemMachObt, Move move) {
 		super();
-		this.itemMachId = itemMachId;
 		this.itemMachNum = itemMachNum;
 		this.itemMachObt = itemMachObt;
 		this.move = move;
-	}
-
-	public Long getItemMachId() {
-		return itemMachId;
-	}
-
-	public void setItemMachId(Long itemMachId) {
-		this.itemMachId = itemMachId;
 	}
 
 	public Long getItemMachNum() {
@@ -74,15 +58,14 @@ public class ItemMach extends Item {
 
 	@Override
 	public String toString() {
-		return "ItemMach [itemMachId=" + itemMachId + ", itemMachNum=" + itemMachNum + ", itemMachObt=" + itemMachObt
-				+ ", move=" + move + "]";
+		return "ItemMach [itemMachNum=" + itemMachNum + ", itemMachObt=" + itemMachObt + ", move=" + move + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + Objects.hash(itemMachId, itemMachNum, itemMachObt, move);
+		result = prime * result + Objects.hash(itemMachNum, itemMachObt, move);
 		return result;
 	}
 
@@ -95,8 +78,8 @@ public class ItemMach extends Item {
 		if (getClass() != obj.getClass())
 			return false;
 		ItemMach other = (ItemMach) obj;
-		return Objects.equals(itemMachId, other.itemMachId) && Objects.equals(itemMachNum, other.itemMachNum)
-				&& Objects.equals(itemMachObt, other.itemMachObt) && Objects.equals(move, other.move);
+		return Objects.equals(itemMachNum, other.itemMachNum) && Objects.equals(itemMachObt, other.itemMachObt)
+				&& Objects.equals(move, other.move);
 	}
 
 }

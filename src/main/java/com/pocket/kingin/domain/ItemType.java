@@ -16,7 +16,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "item_type")
 public class ItemType implements InternatName {
-	@Column(name = "item_type")
+	@Column(name = "item_type_id")
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long itemTypeId;
 	@Column(name = "item_type_code", unique = true)
 	private String itemTypeCode;

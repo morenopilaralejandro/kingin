@@ -6,34 +6,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ItemMachServiceImpl implements ItemMachService {
+public class EvoFamServiceImpl implements EvoFamService {
 	@Autowired
-	private ItemMachRepository repo;
+	private EvoFamRepository repo;
 	
 	@Override
-	public List<ItemMach> all() {
+	public List<EvoFam> all() {
 		return repo.findAll();
 	}
 	
 	@Override
-	public ItemMach one(Long id) {
-		return repo.findById(id).orElseThrow(() -> new ItemMachNotFoundException(id));
+	public EvoFam one(Long id) {
+		return repo.findById(id).orElseThrow(() -> new EvoFamNotFoundException(id));
 	}
 	
 	@Override
-	public ItemMach insert(ItemMach newObj) {
+	public EvoFam insert(EvoFam newObj) {
 		return repo.save(newObj);
 	}
 	
 	@Override
-	public ItemMach replace(ItemMach newObj, Long id) {
+	public EvoFam replace(EvoFam newObj, Long id) {
 		return repo.findById(id).map(oldObj -> {
-			oldObj.setItemMachNum(newObj.getItemMachNum());
-			oldObj.setItemMachObt(newObj.getItemMachObt());
-			oldObj.setMove(newObj.getMove());
+			oldObj.setEvoFamCode(newObj.getEvoFamCode());
+			oldObj.setEvoFamNameEn(newObj.getEvoFamNameEn());
+			oldObj.setEvoFamNameJa(newObj.getEvoFamNameJa());
 			return repo.save(oldObj);
 		}).orElseGet(() -> {
-			newObj.setItemId(id);
+			newObj.setEvoFamId(id);
 			return repo.save(newObj);
 		});
 	}
