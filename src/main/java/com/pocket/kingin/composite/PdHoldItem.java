@@ -15,7 +15,7 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "move_cause_eff")
+@Table(name = "pd_hold_item")
 public class PdHoldItem {
 	@EmbeddedId
 	private PdHoldItemId id;
@@ -38,14 +38,6 @@ public class PdHoldItem {
 	public PdHoldItem(PdHoldItemId id, Pd pd, Item item, Long rate) {
 		super();
 		this.id = id;
-		this.pd = pd;
-		this.item = item;
-		this.rate = rate;
-	}
-	
-	public PdHoldItem(Long pdId, Long itemId, Pd pd, Item item, Long rate) {
-		super();
-		this.id = new PdHoldItemId(pdId, itemId);
 		this.pd = pd;
 		this.item = item;
 		this.rate = rate;

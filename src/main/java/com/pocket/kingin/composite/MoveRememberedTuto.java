@@ -15,7 +15,7 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "move_cause_eff")
+@Table(name = "move_remembered_tuto")
 public class MoveRememberedTuto {
 	@EmbeddedId
 	private MoveRememberedTutoId id;
@@ -38,14 +38,6 @@ public class MoveRememberedTuto {
 	public MoveRememberedTuto(MoveRememberedTutoId id, Move move, MoveTuto moveTuto, Long bp) {
 		super();
 		this.id = id;
-		this.move = move;
-		this.moveTuto = moveTuto;
-		this.bp = bp;
-	}
-	
-	public MoveRememberedTuto(Long moveId, Long moveTutoId, Move move, MoveTuto moveTuto, Long bp) {
-		super();
-		this.id = new MoveRememberedTutoId(moveId, moveTutoId);
 		this.move = move;
 		this.moveTuto = moveTuto;
 		this.bp = bp;

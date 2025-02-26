@@ -15,7 +15,7 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "move_cause_eff")
+@Table(name = "pd_lina_evo_fam")
 public class PdLinaEvoFam {
 	@EmbeddedId
 	private PdLinaEvoFamId id;
@@ -38,14 +38,6 @@ public class PdLinaEvoFam {
 	public PdLinaEvoFam(PdLinaEvoFamId id, Pd pd, EvoFam evoFam, Long ordr) {
 		super();
 		this.id = id;
-		this.pd = pd;
-		this.evoFam = evoFam;
-		this.ordr = ordr;
-	}
-	
-	public PdLinaEvoFam(Long pdId, Long evoFamId, Pd pd, EvoFam evoFam, Long ordr) {
-		super();
-		this.id = new PdLinaEvoFamId(pdId, evoFamId);
 		this.pd = pd;
 		this.evoFam = evoFam;
 		this.ordr = ordr;

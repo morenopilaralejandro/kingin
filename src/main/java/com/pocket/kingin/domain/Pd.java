@@ -5,8 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import com.pocket.kingin.composite.PdBabyPd;
 import com.pocket.kingin.composite.PdDimoGndr;
+import com.pocket.kingin.composite.PdEvoPd;
 import com.pocket.kingin.composite.PdHoldItem;
+import com.pocket.kingin.composite.PdLrnMove;
 import com.pocket.kingin.composite.PdYielStat;
 import com.pocket.kingin.internat.InternatName;
 
@@ -90,6 +93,15 @@ public class Pd implements InternatName {
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "pd_shif_pd", joinColumns = @JoinColumn(name = "pd_id_ori"), inverseJoinColumns = @JoinColumn(name = "pd_id_alt"))
 	private List<Pd> alts;
+	
+	@OneToMany(mappedBy = "pdSta", fetch = FetchType.LAZY)
+	private List<PdEvoPd> pdEvoPds;
+	
+	@OneToMany(mappedBy = "pdPare", fetch = FetchType.LAZY)
+	private List<PdBabyPd> pdBabyPd;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<PdLrnMove> pdLrnMove;
 	
 	public Pd() {}
 	
@@ -329,6 +341,30 @@ public class Pd implements InternatName {
 
 	public void setAlts(List<Pd> alts) {
 		this.alts = alts;
+	}
+
+	public List<PdEvoPd> getPdEvoPds() {
+		return pdEvoPds;
+	}
+
+	public void setPdEvoPds(List<PdEvoPd> pdEvoPds) {
+		this.pdEvoPds = pdEvoPds;
+	}
+
+	public List<PdBabyPd> getPdBabyPd() {
+		return pdBabyPd;
+	}
+
+	public void setPdBabyPd(List<PdBabyPd> pdBabyPd) {
+		this.pdBabyPd = pdBabyPd;
+	}
+
+	public List<PdLrnMove> getPdLrnMove() {
+		return pdLrnMove;
+	}
+
+	public void setPdLrnMove(List<PdLrnMove> pdLrnMove) {
+		this.pdLrnMove = pdLrnMove;
 	}
 
 	@Override

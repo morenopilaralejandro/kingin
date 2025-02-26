@@ -43,14 +43,6 @@ public class MoveCauseEff {
 		this.rate = rate;
 	}
 	
-	public MoveCauseEff(Long moveId, Long moveEffId, Move move, MoveEff moveEff, Long rate) {
-		super();
-		this.id = new MoveCauseEffId(moveId, moveEffId);
-		this.move = move;
-		this.moveEff = moveEff;
-		this.rate = rate;
-	}
-	
 	public MoveCauseEff(Move move, MoveEff moveEff, Long rate) {
 		super();
 		this.id = new MoveCauseEffId(move.getMoveId(), moveEff.getMoveEffId());

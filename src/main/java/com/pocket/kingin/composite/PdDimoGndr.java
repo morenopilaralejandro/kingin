@@ -15,7 +15,7 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "move_cause_eff")
+@Table(name = "pd_dimo_gndr")
 public class PdDimoGndr {
 	@EmbeddedId
 	private PdDimoGndrId id;
@@ -38,14 +38,6 @@ public class PdDimoGndr {
 	public PdDimoGndr(PdDimoGndrId id, Pd pd, Gndr gndr, Double rate) {
 		super();
 		this.id = id;
-		this.pd = pd;
-		this.gndr = gndr;
-		this.rate = rate;
-	}
-	
-	public PdDimoGndr(Long pdId, Long gndrId, Pd pd, Gndr gndr, Double rate) {
-		super();
-		this.id = new PdDimoGndrId(pdId, gndrId);
 		this.pd = pd;
 		this.gndr = gndr;
 		this.rate = rate;

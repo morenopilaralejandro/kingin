@@ -43,14 +43,6 @@ public class PdYielStat {
 		this.amount = amount;
 	}
 	
-	public PdYielStat(Long pdId, Long statId, Pd pd, Stat stat, Long amount) {
-		super();
-		this.id = new PdYielStatId(pdId, statId);
-		this.pd = pd;
-		this.stat = stat;
-		this.amount = amount;
-	}
-	
 	public PdYielStat(Pd pd, Stat stat, Long amount) {
 		super();
 		this.id = new PdYielStatId(pd.getPdId(), stat.getStatId());
