@@ -6,10 +6,12 @@ begin
     
     insert into arti_type (
         arti_type_id,
-        arti_type_code
+        arti_type_code,
+        arti_type_name_en,
+        arti_type_name_ja
     ) values 
-    (1, 'guide'),
-    (2, 'news');
+    (1, 'guide', 'Guides', 'ガイド'),
+    (2, 'news', 'News', 'ニュース');
 
     insert into arti (
         arti_id,

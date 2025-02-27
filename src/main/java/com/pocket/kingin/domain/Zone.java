@@ -1,9 +1,13 @@
 package com.pocket.kingin.domain;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import com.pocket.kingin.composite.ItemLocHgss;
+import com.pocket.kingin.composite.PdSpawHgss;
+import com.pocket.kingin.composite.PdSpawSaf;
 import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
@@ -14,6 +18,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -31,6 +36,15 @@ public class Zone implements InternatName {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "zone_main_id", referencedColumnName = "zone_id")
 	private Zone zoneMain;
+	
+	@OneToMany(mappedBy = "zone", fetch = FetchType.LAZY)
+	private List<PdSpawHgss> pdSpawHgss;
+	
+	@OneToMany(mappedBy = "zone", fetch = FetchType.LAZY)
+	private List<ItemLocHgss> itemLocHgss;
+	
+	@OneToMany(mappedBy = "zone", fetch = FetchType.LAZY)
+	private List<PdSpawSaf> pdSpawSaf;
 
 	public Zone() {}
 	
@@ -80,6 +94,30 @@ public class Zone implements InternatName {
 
 	public void setZoneMain(Zone zoneMain) {
 		this.zoneMain = zoneMain;
+	}
+
+	public List<PdSpawHgss> getPdSpawHgss() {
+		return pdSpawHgss;
+	}
+
+	public void setPdSpawHgss(List<PdSpawHgss> pdSpawHgss) {
+		this.pdSpawHgss = pdSpawHgss;
+	}
+
+	public List<ItemLocHgss> getItemLocHgss() {
+		return itemLocHgss;
+	}
+
+	public void setItemLocHgss(List<ItemLocHgss> itemLocHgss) {
+		this.itemLocHgss = itemLocHgss;
+	}
+
+	public List<PdSpawSaf> getPdSpawSafs() {
+		return pdSpawSaf;
+	}
+
+	public void setPdSpawSafs(List<PdSpawSaf> pdSpawSafs) {
+		this.pdSpawSaf = pdSpawSafs;
 	}
 
 	@Override

@@ -44,7 +44,7 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop-sell-item.sql;
 /*insrt-pd*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd.sql;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-lrn-move.sq;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-lrn-move.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-hold-item.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-shif-pd.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-evo-fam.sql;
@@ -57,9 +57,9 @@ source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-shop-exch-pd.sql;
 /*insrt-obt*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-vrs.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-enc.sql;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-hgss.sq;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-hgss.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-obt.sql;
-source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-loc-hgss.sq;
+source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-item-loc-hgss.sql;
 /*insrt-saf*/
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-saf-blk.sql;
 source ~/eclipse-workspace/kingin/mysql/sql/proc/proc-insrt-pd-spaw-saf.sql;

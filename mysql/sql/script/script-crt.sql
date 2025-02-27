@@ -840,6 +840,8 @@ create table usr_sele_move (
 create table arti_type (
     arti_type_id int not null auto_increment,
     arti_type_code varchar(36),
+    arti_type_name_en varchar(36),
+    arti_type_name_ja varchar(36),
     constraint arti_type_pk primary key (arti_type_id)
 );
 create table arti (

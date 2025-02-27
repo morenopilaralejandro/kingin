@@ -10,7 +10,11 @@ import com.pocket.kingin.composite.PdDimoGndr;
 import com.pocket.kingin.composite.PdEvoPd;
 import com.pocket.kingin.composite.PdHoldItem;
 import com.pocket.kingin.composite.PdLrnMove;
+import com.pocket.kingin.composite.PdSpawHgss;
+import com.pocket.kingin.composite.PdSpawSaf;
 import com.pocket.kingin.composite.PdYielStat;
+import com.pocket.kingin.composite.PwCrseSpawPd;
+import com.pocket.kingin.composite.ShopExchPd;
 import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
@@ -25,6 +29,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "pd")
@@ -47,6 +52,7 @@ public class Pd implements InternatName {
 	private Long pdExp;
 	@Column(name = "pd_hap")
 	private Long pdHap;
+	@Transient
 	private List<Long> pdBaseArr;
 	@Column(name = "pd_base_hp")
 	private Long pdBaseHp;
@@ -102,6 +108,18 @@ public class Pd implements InternatName {
 	
 	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
 	private List<PdLrnMove> pdLrnMove;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<ShopExchPd> shopExchPds;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<PdSpawHgss> pdSpawHgss;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<PdSpawSaf> pdSpawSaf;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<PwCrseSpawPd> pwCrseSpawPd;
 	
 	public Pd() {}
 	
@@ -365,6 +383,38 @@ public class Pd implements InternatName {
 
 	public void setPdLrnMove(List<PdLrnMove> pdLrnMove) {
 		this.pdLrnMove = pdLrnMove;
+	}
+
+	public List<ShopExchPd> getShopExchPds() {
+		return shopExchPds;
+	}
+
+	public void setShopExchPds(List<ShopExchPd> shopExchPds) {
+		this.shopExchPds = shopExchPds;
+	}
+
+	public List<PdSpawHgss> getPdSpawHgss() {
+		return pdSpawHgss;
+	}
+
+	public void setPdSpawHgss(List<PdSpawHgss> pdSpawHgss) {
+		this.pdSpawHgss = pdSpawHgss;
+	}
+
+	public List<PdSpawSaf> getPdSpawSaf() {
+		return pdSpawSaf;
+	}
+
+	public void setPdSpawSaf(List<PdSpawSaf> pdSpawSaf) {
+		this.pdSpawSaf = pdSpawSaf;
+	}
+
+	public List<PwCrseSpawPd> getPwCrseSpawPd() {
+		return pwCrseSpawPd;
+	}
+
+	public void setPwCrseSpawPd(List<PwCrseSpawPd> pwCrseSpawPd) {
+		this.pwCrseSpawPd = pwCrseSpawPd;
 	}
 
 	@Override

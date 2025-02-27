@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import com.pocket.kingin.composite.ShopExchPd;
 import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
@@ -17,6 +18,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -42,6 +44,9 @@ public class Shop implements InternatName {
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "shop_sell_item", joinColumns = @JoinColumn(name = "shop_id"), inverseJoinColumns = @JoinColumn(name = "item_id"))
 	private List<Item> items;
+	
+	@OneToMany(mappedBy = "shop", fetch = FetchType.LAZY)
+	private List<ShopExchPd> shopExchPds;
 
 	public Shop() {}
 	
@@ -117,6 +122,14 @@ public class Shop implements InternatName {
 
 	public void setItems(List<Item> items) {
 		this.items = items;
+	}
+
+	public List<ShopExchPd> getShopExchPds() {
+		return shopExchPds;
+	}
+
+	public void setShopExchPds(List<ShopExchPd> shopExchPds) {
+		this.shopExchPds = shopExchPds;
 	}
 
 	@Override

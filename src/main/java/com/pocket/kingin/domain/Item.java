@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import com.pocket.kingin.composite.ItemLocHgss;
+import com.pocket.kingin.composite.PwCrseLocItem;
 import com.pocket.kingin.internat.InternatDesc;
 import com.pocket.kingin.internat.InternatName;
 
@@ -18,8 +20,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -66,6 +70,16 @@ public class Item implements InternatName, InternatDesc {
 	
 	@ManyToMany(mappedBy = "items")
 	private List<Shop> shops;
+	
+	@OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
+	private List<ItemLocHgss> itemLocHgss;
+	
+	@OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
+	private List<PwCrseLocItem> pwCrseLocItem;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "gear_gift_item", joinColumns = @JoinColumn(name = "item_id"), inverseJoinColumns = @JoinColumn(name = "gear_call_id"))
+	private List<GearCall> calls;
 
 	public Item() {
 	}
@@ -252,6 +266,30 @@ public class Item implements InternatName, InternatDesc {
 
 	public void setShops(List<Shop> shops) {
 		this.shops = shops;
+	}
+
+	public List<ItemLocHgss> getItemLocHgss() {
+		return itemLocHgss;
+	}
+
+	public void setItemLocHgss(List<ItemLocHgss> itemLocHgss) {
+		this.itemLocHgss = itemLocHgss;
+	}
+
+	public List<PwCrseLocItem> getPwCrseLocItem() {
+		return pwCrseLocItem;
+	}
+
+	public void setPwCrseLocItem(List<PwCrseLocItem> pwCrseLocItem) {
+		this.pwCrseLocItem = pwCrseLocItem;
+	}
+
+	public List<GearCall> getCalls() {
+		return calls;
+	}
+
+	public void setCalls(List<GearCall> calls) {
+		this.calls = calls;
 	}
 
 	@Override
