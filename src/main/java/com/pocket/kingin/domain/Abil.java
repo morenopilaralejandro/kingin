@@ -49,6 +49,9 @@ public class Abil implements InternatName {
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "abil_pass_eff", joinColumns = @JoinColumn(name = "abil_id"), inverseJoinColumns = @JoinColumn(name = "abil_eff_id"))
 	private List<AbilEff> abilEffs;
+	
+	@ManyToMany(mappedBy = "abils")
+	private List<Pd> pds;
 
 	public Abil() {}
 
@@ -181,6 +184,14 @@ public class Abil implements InternatName {
 
 	public void setAbilEffs(List<AbilEff> abilEffs) {
 		this.abilEffs = abilEffs;
+	}
+
+	public List<Pd> getPds() {
+		return pds;
+	}
+
+	public void setPds(List<Pd> pds) {
+		this.pds = pds;
 	}
 
 	@Override

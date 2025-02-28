@@ -1,6 +1,7 @@
 package com.pocket.kingin.domain;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -11,6 +12,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -24,6 +26,9 @@ public class EggGrp implements InternatName {
 	private String eggGrpNameEn;
 	@Column(name = "egg_grp_name_ja")
 	private String eggGrpNameJa;
+	
+	@ManyToMany(mappedBy = "eggGrps")
+	private List<Pd> pds;
 
 	public EggGrp() {}
 	
@@ -73,6 +78,14 @@ public class EggGrp implements InternatName {
 
 	public void setEggGrpNameJa(String eggGrpNameJa) {
 		this.eggGrpNameJa = eggGrpNameJa;
+	}
+
+	public List<Pd> getPds() {
+		return pds;
+	}
+
+	public void setPds(List<Pd> pds) {
+		this.pds = pds;
 	}
 
 	@Override

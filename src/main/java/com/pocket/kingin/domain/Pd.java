@@ -91,17 +91,17 @@ public class Pd implements InternatName {
 	private List<Type> types;
 	
 	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
-	private List<PdHoldItem> pdHoldItems;
+	private List<PdHoldItem> pdHoldItem;
 	
 	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
-	private List<PdDimoGndr> pdDimoGndrs;
+	private List<PdDimoGndr> pdDimoGndr;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "pd_shif_pd", joinColumns = @JoinColumn(name = "pd_id_ori"), inverseJoinColumns = @JoinColumn(name = "pd_id_alt"))
 	private List<Pd> alts;
 	
 	@OneToMany(mappedBy = "pdSta", fetch = FetchType.LAZY)
-	private List<PdEvoPd> pdEvoPds;
+	private List<PdEvoPd> pdEvoPd;
 	
 	@OneToMany(mappedBy = "pdPare", fetch = FetchType.LAZY)
 	private List<PdBabyPd> pdBabyPd;
@@ -110,7 +110,7 @@ public class Pd implements InternatName {
 	private List<PdLrnMove> pdLrnMove;
 	
 	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
-	private List<ShopExchPd> shopExchPds;
+	private List<ShopExchPd> shopExchPd;
 	
 	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
 	private List<PdSpawHgss> pdSpawHgss;
@@ -337,20 +337,20 @@ public class Pd implements InternatName {
 		this.types = types;
 	}
 
-	public List<PdHoldItem> getPdHoldItems() {
-		return pdHoldItems;
+	public List<PdHoldItem> getPdHoldItem() {
+		return pdHoldItem;
 	}
 
-	public void setPdHoldItems(List<PdHoldItem> pdHoldItems) {
-		this.pdHoldItems = pdHoldItems;
+	public void setPdHoldItem(List<PdHoldItem> pdHoldItem) {
+		this.pdHoldItem = pdHoldItem;
 	}
 
-	public List<PdDimoGndr> getPdDimoGndrs() {
-		return pdDimoGndrs;
+	public List<PdDimoGndr> getPdDimoGndr() {
+		return pdDimoGndr;
 	}
 
-	public void setPdDimoGndrs(List<PdDimoGndr> pdDimoGndrs) {
-		this.pdDimoGndrs = pdDimoGndrs;
+	public void setPdDimoGndr(List<PdDimoGndr> pdDimoGndr) {
+		this.pdDimoGndr = pdDimoGndr;
 	}
 
 	public List<Pd> getAlts() {
@@ -361,12 +361,12 @@ public class Pd implements InternatName {
 		this.alts = alts;
 	}
 
-	public List<PdEvoPd> getPdEvoPds() {
-		return pdEvoPds;
+	public List<PdEvoPd> getPdEvoPd() {
+		return pdEvoPd;
 	}
 
-	public void setPdEvoPds(List<PdEvoPd> pdEvoPds) {
-		this.pdEvoPds = pdEvoPds;
+	public void setPdEvoPd(List<PdEvoPd> pdEvoPd) {
+		this.pdEvoPd = pdEvoPd;
 	}
 
 	public List<PdBabyPd> getPdBabyPd() {
@@ -385,12 +385,12 @@ public class Pd implements InternatName {
 		this.pdLrnMove = pdLrnMove;
 	}
 
-	public List<ShopExchPd> getShopExchPds() {
-		return shopExchPds;
+	public List<ShopExchPd> getShopExchPd() {
+		return shopExchPd;
 	}
 
-	public void setShopExchPds(List<ShopExchPd> shopExchPds) {
-		this.shopExchPds = shopExchPds;
+	public void setShopExchPd(List<ShopExchPd> shopExchPd) {
+		this.shopExchPd = shopExchPd;
 	}
 
 	public List<PdSpawHgss> getPdSpawHgss() {

@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import com.pocket.kingin.composite.ItemLocHgss;
+import com.pocket.kingin.composite.PdHoldItem;
 import com.pocket.kingin.composite.PwCrseLocItem;
 import com.pocket.kingin.internat.InternatDesc;
 import com.pocket.kingin.internat.InternatName;
@@ -70,6 +71,9 @@ public class Item implements InternatName, InternatDesc {
 	
 	@ManyToMany(mappedBy = "items")
 	private List<Shop> shops;
+	
+	@OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
+	private List<PdHoldItem> pdHoldItem;
 	
 	@OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
 	private List<ItemLocHgss> itemLocHgss;
@@ -290,6 +294,14 @@ public class Item implements InternatName, InternatDesc {
 
 	public void setCalls(List<GearCall> calls) {
 		this.calls = calls;
+	}
+
+	public List<PdHoldItem> getPdHoldItem() {
+		return pdHoldItem;
+	}
+
+	public void setPdHoldItem(List<PdHoldItem> pdHoldItem) {
+		this.pdHoldItem = pdHoldItem;
 	}
 
 	@Override

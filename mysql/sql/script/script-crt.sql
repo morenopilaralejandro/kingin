@@ -809,33 +809,6 @@ create table team_mem_po (
     constraint team_mem_po_fk_po foreign key (po_id)
         references po(po_id) on delete cascade
 );
-create table usr_sele_po (
-    usr_id int not null,
-    po_id int not null,
-    constraint usr_sele_po_pk primary key (usr_id, po_id),
-    constraint usr_sele_po_fk_usr foreign key (usr_id)
-        references usr(usr_id) on delete cascade,
-    constraint usr_sele_po_fk_po foreign key (po_id)
-        references po(po_id) on delete cascade
-);
-create table usr_sele_item (
-    usr_id int not null,
-    item_id int not null,  
-    constraint usr_sele_item_pk primary key (usr_id, item_id),
-    constraint usr_sele_item_fk_usr foreign key (usr_id)
-        references usr(usr_id) on delete cascade,
-    constraint usr_sele_item_fk_item foreign key (item_id)
-        references item(item_id) on delete cascade
-);
-create table usr_sele_move (
-    usr_id int not null,
-    move_id int not null,  
-    constraint usr_sele_move_pk primary key (usr_id, move_id),
-    constraint usr_sele_move_fk_usr foreign key (usr_id)
-        references usr(usr_id) on delete cascade,
-    constraint usr_sele_move_fk_move foreign key (move_id)
-        references move(move_id) on delete cascade
-);
 /*crt-arti*/
 create table arti_type (
     arti_type_id int not null auto_increment,
