@@ -23,7 +23,7 @@ public class WebController {
 		Locale locale = LocaleContextHolder.getLocale();
 		
 		model.addAttribute("lang", locale.getLanguage());
-		return "/index";
+		return "index";
 	}
 	
 }

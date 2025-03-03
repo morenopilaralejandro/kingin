@@ -1,3 +1,4 @@
+/*style-root*/
 :root {
     --silver-bg: #7a7e85;
     --egg-bg: #fffdd0;
@@ -9,7 +10,7 @@
     color: inherit;
     text-decoration: inherit;
 }
-
+/*style-header*/
 header {
     background-color: var(--silver-bg);
     display: flex;
@@ -18,7 +19,6 @@ header {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 12px;
-    margin-bottom: 1rem;
 }
 
 header .header-logo, header .header-setting,
@@ -57,7 +57,7 @@ header .header-setting img {
     width: 16px;
     height: 16px;
 }
-
+/*style-footer*/
 footer {
     background-color: var(--silver-bg);
     display: flex;
@@ -73,8 +73,72 @@ footer spawn {
     display: block;
     box-sizing: border-box;
 }
-
+/*style-main*/
 .container-main {
+    margin-top: calc(34px + 1rem);
+    clear: both;
     padding-left: 5%;
     padding-right: 5%;
+}
+/*style-lang*/
+.lang-div {
+    float: right;
+    border-radius: var(--bs-border-radius);
+    position: relative;
+}
+
+.lang-def {
+    display: flex;
+    border-radius: var(--bs-border-radius);
+}
+
+.lang-def .lang-icon {
+    background-color: white;
+    padding: 5px 8px;
+    vertical-align: text-top;
+    border-radius: var(--bs-border-radius);
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.lang-def .lang-icon img {
+    vertical-align: text-top;
+}
+
+.lang-def .lang-text {
+    padding: 5px;
+    background-color: black;
+}
+
+.lang-drop { 
+    display: none;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    border-radius: var(--bs-border-radius);
+    background-color: var(--bs-light-bg-subtle);
+    position: absolute;
+    width: 100%;
+}
+
+.lang-def:hover .lang-icon {
+    /*border-radius: 0px;*/
+}
+
+.lang-div:hover .lang-drop {
+    display: block;
+}
+
+.lang-drop li { 
+    padding: 5px;
+    border-radius: var(--bs-border-radius);
+}
+
+.lang-drop li a { 
+    display: block;
+}
+
+.lang-drop li:hover { 
+    background-color: #4b5157;
 }

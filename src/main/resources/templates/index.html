@@ -17,6 +17,9 @@
     </head>
     <body>
         <header th:replace="~{fragments/header.html :: header}"></header>
+
+        <div th:replace="~{fragments/lang.html :: lang(url = ${url})}"></div>
+
         <div class="container-main">
             <div class="wrapper-main">
                 <section>
