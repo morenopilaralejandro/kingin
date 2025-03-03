@@ -1,0 +1,80 @@
+:root {
+    --silver-bg: #7a7e85;
+    --egg-bg: #fffdd0;
+
+    font-family: sans-serif;
+}
+
+.color-inherit {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+header {
+    background-color: var(--silver-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 12px;
+    margin-bottom: 1rem;
+}
+
+header .header-logo, header .header-setting,
+    header .header-logo img, header .header-setting img,
+    header .header-logo spawn {
+    display: block;
+    box-sizing: border-box;
+}
+
+header .header-logo {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+header .header-logo img {
+    width: 50px;
+}
+
+header .header-logo spawn {
+    font-size: 26px;
+    color: var(--egg-bg);;
+    text-shadow: 0 0 6px black;
+}
+
+header .header-setting {
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-setting img {
+    width: 16px;
+    height: 16px;
+}
+
+footer {
+    background-color: var(--silver-bg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 6px 0px;
+    margin-top: 1rem;
+}
+
+footer spawn {
+    color: var(--egg-bg);;
+    text-shadow: 0 0 6px black;
+    display: block;
+    box-sizing: border-box;
+}
+
+.container-main {
+    padding-left: 5%;
+    padding-right: 5%;
+}

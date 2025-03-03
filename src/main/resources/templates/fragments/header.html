@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <header th:fragment="header">
+        <a th:href="@{/{lang}(lang=${lang})}" class="header-logo color-inherit">
+            <img th:src="@{/img/svg/logo.svg}" alt = "areoya">
+            <spawn th:text="#{general.web}"></spawn>
+        </a>
+        <a href="" class="header-setting">
+            <img th:src="@{/img/svg/list.svg}" alt = "setting">
+        </a>
+    </header>
+</body>
+</html>
