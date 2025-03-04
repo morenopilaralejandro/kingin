@@ -1,7 +1,14 @@
 /*style-root*/
 :root {
-    --silver-bg: #7a7e85;
+    --silver-bg: #2f2f2f;
     --egg-bg: #fffdd0;
+
+    --stat-hp: #0a2518;
+    --stat-atk: #2b1717;
+    --stat-def: #433a15;
+    --stat-spatk: #0a1123;
+    --stat-spdef: #103100;
+    --stat-spe: #470d47;
 
     font-family: sans-serif;
 }
@@ -23,7 +30,7 @@ header {
 
 header .header-logo, header .header-setting,
     header .header-logo img, header .header-setting img,
-    header .header-logo spawn {
+    header .header-logo span {
     display: block;
     box-sizing: border-box;
 }
@@ -38,7 +45,7 @@ header .header-logo img {
     width: 50px;
 }
 
-header .header-logo spawn {
+header .header-logo span {
     font-size: 26px;
     color: var(--egg-bg);;
     text-shadow: 0 0 6px black;
@@ -67,7 +74,7 @@ footer {
     margin-top: 1rem;
 }
 
-footer spawn {
+footer span {
     color: var(--egg-bg);;
     text-shadow: 0 0 6px black;
     display: block;
@@ -109,6 +116,7 @@ footer spawn {
 .lang-def .lang-text {
     padding: 5px;
     background-color: black;
+    border-bottom: 1px solid white;
 }
 
 .lang-drop { 
@@ -141,4 +149,23 @@ footer spawn {
 
 .lang-drop li:hover { 
     background-color: #4b5157;
+}
+/*style-nature*/
+.stat-bg-hp {
+    background-color: var(--stat-hp) !important;
+}
+.stat-bg-atk {
+    background-color: var(--stat-atk) !important;
+}
+.stat-bg-def {
+    background-color: var(--stat-def) !important;
+}
+.stat-bg-spatk {
+    background-color: var(--stat-spatk) !important;
+}
+.stat-bg-spdef {
+    background-color: var(--stat-spdef) !important;
+}
+.stat-bg-spe {
+    background-color: var(--stat-spe) !important;
 }

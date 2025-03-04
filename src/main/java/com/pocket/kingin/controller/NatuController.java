@@ -24,6 +24,8 @@ public class NatuController {
 	        
 		List<Natu> natus = natuService.all();
 		
+		
+		
 		model.addAttribute("lang", locale.getLanguage());
 		model.addAttribute("url", "/nature");
 		model.addAttribute("natus", natus);

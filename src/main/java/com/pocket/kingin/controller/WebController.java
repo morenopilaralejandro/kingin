@@ -11,19 +11,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class WebController {
-
 	@RequestMapping({"/", "/index"})
 	public String indexNoVar(Model model) {
 		Locale locale = LocaleContextHolder.getLocale();
 		return index(locale.getLanguage(), model);
 	}
 	
-	@GetMapping({"/{lang}/", "/{lang}", "/{lang}/index"})
+	@GetMapping({"/{lang}/", "/{lang}/index"})
 	public String index(@PathVariable("lang") String lang, Model model) {
 		Locale locale = LocaleContextHolder.getLocale();
 		
 		model.addAttribute("lang", locale.getLanguage());
+		model.addAttribute("url", "/index");
 		return "index";
+	}
+
+	@GetMapping(value = "/{lang}/source")
+	public String source(@PathVariable("lang") String lang, Model model) {
+		Locale locale = LocaleContextHolder.getLocale();
+		model.addAttribute("lang", locale.getLanguage());
+		model.addAttribute("url", "/source");
+		return "source";
 	}
 	
 }

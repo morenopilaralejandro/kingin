@@ -22,8 +22,8 @@ public class InternatInterceptor implements HandlerInterceptor {
 			Locale locale = new Locale("en");
 			if (lang.equals("en") || lang.equals("ja")) {
 				locale = new Locale(lang);
+				request.getSession().setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, locale);
 			}
-			request.getSession().setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, locale);
 		}
 		return true;
 	}

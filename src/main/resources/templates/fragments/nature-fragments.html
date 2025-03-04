@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div th:fragment="natus-table(natus, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="max-width: 500px;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{nature.nature}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{nature.inc}"></th>
+                <th 
+                    class="bg-black"
+                    th:text="#{nature.dec}">
+                </th>
+            </tr>
+            <tr th:each="natu : ${natus}">
+                <td
+                    th:text="${natu.getInternatName().get(lang)}">
+                </td>
+                <td 
+                    th:class="${'stat-bg-' + natu.getStatRed().getStatCode()}" 
+                    th:text="${natu.getStatRed().getInternatName().get(lang)}">
+                </td>
+                <td 
+                    th:class="${'stat-bg-' + natu.getStatBlue().getStatCode()}" 
+                    th:text="${natu.getStatBlue().getInternatName().get(lang)}">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

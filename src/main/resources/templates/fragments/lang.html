@@ -14,35 +14,13 @@
             </div>
         </div>
         <ul class="lang-drop">
-            <li><a th:href="@{/{lang}{url}(lang=en,url=${url})}" th:text="#{lang.english.native}" class="color-inherit"></a></li>
-            <li><a th:href="@{/{lang}{url}(lang=ja,url=${url})}" th:text="#{lang.japanese.native}" class="color-inherit"></a></li>
+            <li>
+                <a th:href="@{/{lang}{url}(lang=en,url=${url})}" th:text="#{lang.english.native}" class="color-inherit"></a>
+            </li>
+            <li>
+                <a th:href="@{/{lang}{url}(lang=ja,url=${url})}" th:text="#{lang.japanese.native}" class="color-inherit"></a>
+            </li>
         </ul>
-    </div>
-
-
-    <div th:fragment="form-lang(url)" class="div-lang">
-        <form id="formLang" name="formLang" 
-            th:action="${url != null ? url : '#'}" method="post" 
-            enctype="multipart/form-data">
-            <div>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <img th:src="@{/img/svg/translate.svg}" alt="translate">
-                        </span>
-                    </div>
-                    <select id="lang" name="lang" class="form-select">
-                        <option value="en" th:text="#{lang.english.native}"
-                            th:selected="${lang == 'en'}"></option>
-                        <option value="ja" th:text="#{lang.japanese.native}"
-                            th:selected="${currentLang == 'ja'}"></option>
-                        <option value="es" th:text="#{lang.spanish.native}" 
-                            th:selected="${currentLang == 'es'}"></option>
-                    </select>
-                </div>
-                <input type="submit" id="submitLang" name="submitLang" style="display: none;">
-            </div>
-        </form>
     </div>
 </body>
 </html>

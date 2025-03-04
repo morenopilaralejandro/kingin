@@ -27,9 +27,20 @@
                     <article>
                         <h2 id="database" th:text="#{index.database}"></h2>
                         <ul>
-                            <li><a th:href="@{/{lang}/nature(lang=${lang})}">Natures</a></li>
+                            <li>
+                                <a 
+                                    th:href="@{/{lang}/source(lang=${lang})}"
+                                    th:text="#{source.title}">
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    th:href="@{/{lang}/nature(lang=${lang})}"
+                                    th:text="#{nature.title}">
+                                </a>
+                            </li>
                         </ul>
-                    <article>
+                    </article>
                 </section>
             </div>
         </div>
