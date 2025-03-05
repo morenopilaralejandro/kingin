@@ -21,6 +21,11 @@ public class EggGrpServiceImpl implements EggGrpService {
 	}
 	
 	@Override
+	public List<EggGrp> findByEggGrpCode(String code) {
+		return repo.findByEggGrpCode(code);
+	}
+	
+	@Override
 	public EggGrp insert(EggGrp newObj) {
 		return repo.save(newObj);
 	}

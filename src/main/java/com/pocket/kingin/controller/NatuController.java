@@ -18,13 +18,11 @@ public class NatuController {
 	@Autowired
 	private NatuService natuService;
 	
-	@GetMapping(value = "/{lang}/nature")
+	@GetMapping({"/{lang}/nature", "/{lang}/nature/"})
 	public String nature(@PathVariable("lang") String lang, Model model) {
 		Locale locale = LocaleContextHolder.getLocale();
 	        
 		List<Natu> natus = natuService.all();
-		
-		
 		
 		model.addAttribute("lang", locale.getLanguage());
 		model.addAttribute("url", "/nature");

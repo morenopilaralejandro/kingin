@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <a
+        th:fragment="egg-group-link(eggGrp, lang)"
+        th:text="${eggGrp.getInternatName().get(lang)}"
+        th:href="@{/{lang}/egg-group/{code}(lang=${lang}, code=${eggGrp.getEggGrpCode()})}">        
+    </a>
+
+    <div th:fragment="egg-group-ul(eggGrps, lang)">
+        <ul>
+            <li th:each="eggGrp : ${eggGrps}">
+                <a th:replace="~{fragments/egg-group-fragments.html :: egg-group-link(eggGrp = ${eggGrp}, lang = ${lang})}"></a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

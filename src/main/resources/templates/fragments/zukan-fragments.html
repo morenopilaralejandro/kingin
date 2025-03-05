@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <a
+        th:fragment="pd-link(pd, lang)"
+        th:text="${pd.getInternatName().get(lang)}"
+        th:href="@{/{lang}/zukan/{code}(lang=${lang}, code=${pd.getPdCode()})}">        
+    </a>
+
+    <div th:fragment="pd-container-lg(pds, lang)">
+        <div th:if="${pds.isEmpty()}" class="mb-3">
+            <span th:text="#{general.nodata}"></span>
+        </div>
+        <div th:unless="${pds.isEmpty()}" class="pd-container-lg mb-3">
+            <div th:each="pd : ${pds}">
+                <a th:replace="~{fragments/zukan-fragments.html :: pd-link(pd = ${pd}, lang = ${lang})}"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

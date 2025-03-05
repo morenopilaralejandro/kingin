@@ -6,6 +6,8 @@ public interface EggGrpService {
 	List<EggGrp> all();
 
 	EggGrp one(Long id);
+	
+	List<EggGrp> findByEggGrpCode(String code);
 
 	EggGrp insert(EggGrp newObj);
 

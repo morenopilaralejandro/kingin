@@ -16,15 +16,15 @@
         <link rel="stylesheet" th:href="@{/css/style.css}">
     </head>
     <body>
-        <header th:replace="~{fragments/header.html :: header}"></header>
+        <header th:replace="~{fragments/header-fragments.html :: header}"></header>
 
-        <div th:replace="~{fragments/lang.html :: lang(url = ${url})}"></div>
+        <div th:replace="~{fragments/lang-fragments.html :: lang-div(url = ${url})}"></div>
 
         <div class="container-main">
             <div class="wrapper-main">
-                <section>
+                <div>
                     <h1 th:text="#{index.home}"></h1>
-                    <article>
+                    <section>
                         <h2 id="database" th:text="#{index.database}"></h2>
                         <ul>
                             <li>
@@ -39,12 +39,18 @@
                                     th:text="#{nature.title}">
                                 </a>
                             </li>
+                            <li>
+                                <a 
+                                    th:href="@{/{lang}/egg-group(lang=${lang})}"
+                                    th:text="#{egggroup.list.title}">
+                                </a>
+                            </li>
                         </ul>
-                    </article>
-                </section>
+                    </section>
+                </div>
             </div>
         </div>
 
-        <footer th:replace="~{fragments/footer.html :: footer}"></footer>
+        <footer th:replace="~{fragments/footer-fragments.html :: footer}"></footer>
     </body>
 </html>

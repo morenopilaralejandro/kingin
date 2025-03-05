@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-    <div th:fragment="lang(url)" class="lang-div">
+    <div th:fragment="lang-div(url)" class="lang-div">
         <div class="lang-def">
             <div class="lang-icon">       
                 <img th:src="@{/img/svg/translate.svg}" alt="lang">
@@ -21,6 +21,23 @@
                 <a th:href="@{/{lang}{url}(lang=ja,url=${url})}" th:text="#{lang.japanese.native}" class="color-inherit"></a>
             </li>
         </ul>
+    </div>
+
+    <div th:fragment="lang-other(internatName)">
+        <table class="table table-bordered table-sm other-languages" style="width: fit-content;">
+            <tr>
+                <th class="bg-black" th:text="#{lang.language}"></th>
+                <th class="bg-black" th:text="#{general.name}"></th>
+            </tr>
+            <tr>
+                <th th:text="#{lang.english}"></th>  
+                <td th:text="${internatName.get('en')}"></td>
+            </tr>
+            <tr>
+                <th th:text="#{lang.japanese}"></th>  
+                <td th:text="${internatName.get('ja')}"></td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

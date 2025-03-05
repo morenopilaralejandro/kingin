@@ -26,7 +26,7 @@ public class WebController {
 		return "index";
 	}
 
-	@GetMapping(value = "/{lang}/source")
+	@GetMapping("/{lang}/source")
 	public String source(@PathVariable("lang") String lang, Model model) {
 		Locale locale = LocaleContextHolder.getLocale();
 		model.addAttribute("lang", locale.getLanguage());
