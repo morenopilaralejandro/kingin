@@ -68,6 +68,9 @@ begin
 	end while;
 	close cur1;
     drop table if exists aux_abil_eff;
+    update abil_eff set 
+        abil_eff_desc_en = trim(abil_eff_desc_en),
+        abil_eff_desc_ja = trim(abil_eff_desc_ja);
 end
 &&
 delimiter ;

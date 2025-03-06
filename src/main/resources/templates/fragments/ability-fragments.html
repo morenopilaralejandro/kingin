@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <a
+        th:fragment="ability-link(abil, lang)"
+        th:text="${abil.getInternatName().get(lang)}"
+        th:href="@{/{lang}/ability/{code}(lang=${lang}, code=${abil.getAbilCode()})}">        
+    </a>
+
+    <div th:fragment="ability-ul(abils, lang)">
+        <ul>
+            <li th:each="abil : ${abils}">
+                <a th:replace="~{fragments/ability-fragments.html :: ability-link(
+                    abil = ${abil}, 
+                    lang = ${lang})}">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div th:fragment="ability-effect-inline(abilEffs, lang)">
+        <!--
+            th:remove="tag"
+        -->
+        <span 
+            th:each="abilEff: ${abilEffs}"
+            th:class="${'ability-effect' + ' ' +lang}"
+            th:text="${abilEff.getInternatDesc().get(lang)}"
+        ></span>
+    </div>
+
+    <div th:fragment="ability-effect-block(abilEffs, lang)">
+        <!--
+            th:remove="tag"
+        -->
+        <span 
+            th:each="abilEff: ${abilEffs}"
+            style="display: block;"
+            th:text="${abilEff.getInternatDesc().get(lang)}"
+        ></span>
+    </div>
+
+    <div th:fragment="ability-interactions(abil, auxAbils, auxMoves ,lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{ability.effect.effective}">
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <a th:replace="~{fragments/move-fragments.html :: move-link(
+                        move = ${auxMoves.get(0)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:if="${abil.getAbilIsRole()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${abil.getAbilIsRole()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+            <!--
+            <tr>
+                <td
+                    th:text="#{ability.bool.rece}">
+                </td>
+                <td th:if="${abil.getAbilIsRece()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${abil.getAbilIsRece()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+            <tr>
+                <td
+                    th:text="#{ability.bool.entr}">
+                </td>
+                <td th:if="${abil.getAbilIsEntr()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${abil.getAbilIsEntr()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+            -->
+            <tr>
+                <td>
+                    <a th:replace="~{fragments/ability-fragments.html :: ability-link(
+                        abil = ${auxAbils.get(0)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:if="${abil.getAbilIsTrac()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${abil.getAbilIsTrac()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a th:replace="~{fragments/move-fragments.html :: move-link(
+                        move = ${auxMoves.get(1)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:if="${abil.getAbilIsSksw()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${abil.getAbilIsSksw()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a th:replace="~{fragments/move-fragments.html :: move-link(
+                        move = ${auxMoves.get(2)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:if="${abil.getAbilIsGast()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${abil.getAbilIsGast()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a th:replace="~{fragments/ability-fragments.html :: ability-link(
+                        abil = ${auxAbils.get(1)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:if="${abil.getAbilIsMold()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${abil.getAbilIsMold()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a th:replace="~{fragments/move-fragments.html :: move-link(
+                        move = ${auxMoves.get(3)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:if="${abil.getAbilIsTran()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${abil.getAbilIsTran()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

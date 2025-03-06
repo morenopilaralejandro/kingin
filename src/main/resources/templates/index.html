@@ -16,7 +16,7 @@
         <link rel="stylesheet" th:href="@{/css/style.css}">
     </head>
     <body>
-        <header th:replace="~{fragments/header-fragments.html :: header}"></header>
+        <header th:replace="~{fragments/header-fragments.html :: header(lang = ${lang})}"></header>
 
         <div th:replace="~{fragments/lang-fragments.html :: lang-div(url = ${url})}"></div>
 
@@ -45,12 +45,18 @@
                                     th:text="#{egggroup.list.title}">
                                 </a>
                             </li>
+                            <li>
+                                <a 
+                                    th:href="@{/{lang}/ability(lang=${lang})}"
+                                    th:text="#{ability.list.title}">
+                                </a>
+                            </li>
                         </ul>
                     </section>
                 </div>
             </div>
         </div>
 
-        <footer th:replace="~{fragments/footer-fragments.html :: footer}"></footer>
+        <footer th:replace="~{fragments/footer-fragments.html :: footer(lang = ${lang})}"></footer>
     </body>
 </html>

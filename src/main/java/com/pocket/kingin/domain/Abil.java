@@ -1,5 +1,6 @@
 package com.pocket.kingin.domain;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +18,7 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "abil")
@@ -45,6 +47,10 @@ public class Abil implements InternatName {
 	private Boolean abilIsMold;
 	@Column(name = "abil_is_tran")
 	private Boolean abilIsTran;
+	@Transient
+	List<AbilEff> abilEffBattles;
+	@Transient
+	List<AbilEff> abilEffOvers;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "abil_pass_eff", joinColumns = @JoinColumn(name = "abil_id"), inverseJoinColumns = @JoinColumn(name = "abil_eff_id"))
@@ -72,6 +78,20 @@ public class Abil implements InternatName {
 		this.abilIsMold = abilIsMold;
 		this.abilIsTran = abilIsTran;
 		this.abilEffs = abilEffs;
+		
+		updateEffs();
+	}
+	
+	public void updateEffs() {
+		this.abilEffBattles = new ArrayList<AbilEff>();
+		this.abilEffOvers = new ArrayList<AbilEff>();
+		for (AbilEff abilEff : this.abilEffs) {
+			if(abilEff.getAbilEffType().getAbilEffTypeCode().equals("battle")) {
+				this.abilEffBattles.add(abilEff);
+			} else {
+				this.abilEffOvers.add(abilEff);
+			}
+		}
 	}
 
 	@Override
@@ -192,6 +212,24 @@ public class Abil implements InternatName {
 
 	public void setPds(List<Pd> pds) {
 		this.pds = pds;
+	}
+
+	public List<AbilEff> getAbilEffBattles() {
+		updateEffs();
+		return abilEffBattles;
+	}
+
+	public void setAbilEffBattles(List<AbilEff> abilEffBattles) {
+		this.abilEffBattles = abilEffBattles;
+	}
+
+	public List<AbilEff> getAbilEffOvers() {
+		updateEffs();
+		return abilEffOvers;
+	}
+
+	public void setAbilEffOvers(List<AbilEff> abilEffOvers) {
+		this.abilEffOvers = abilEffOvers;
 	}
 
 	@Override

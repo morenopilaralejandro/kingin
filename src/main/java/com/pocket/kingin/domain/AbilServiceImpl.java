@@ -21,6 +21,11 @@ public class AbilServiceImpl implements AbilService {
 	}
 	
 	@Override
+	public List<Abil> findByAbilCode(String code) {
+		return repo.findByAbilCode(code);
+	}
+	
+	@Override
 	public Abil insert(Abil newObj) {
 		return repo.save(newObj);
 	}

@@ -6,6 +6,8 @@ public interface AbilService {
 	List<Abil> all();
 
 	Abil one(Long id);
+	
+	List<Abil> findByAbilCode(String code);
 
 	Abil insert(Abil newObj);
 

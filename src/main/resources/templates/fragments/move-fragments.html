@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <a
+        th:fragment="move-link(move, lang)"
+        th:text="${move.getInternatName().get(lang)}"
+        th:href="@{/{lang}/move/{code}(lang=${lang}, code=${move.getMoveCode()})}">        
+    </a>
+</body>
+</html>

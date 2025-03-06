@@ -16,7 +16,7 @@
         <link rel="stylesheet" th:href="@{/css/style.css}">
     </head>
     <body>
-        <header th:replace="~{fragments/header-fragments.html :: header}"></header>
+        <header th:replace="~{fragments/header-fragments.html :: header(lang = ${lang})}"></header>
 
         <div th:replace="~{fragments/lang-fragments.html :: lang-div(url = ${url})}"></div>
 
@@ -45,11 +45,14 @@
 
                 <div>
                     <h1 th:text="#{nature.title}"></h1>
-                    <div th:replace="~{fragments/nature-fragments.html :: natus-table(natus = ${natus}, lang = ${lang})}"></div>
+                    <div th:replace="~{fragments/nature-fragments.html :: natus-table(
+                        natus = ${natus}, 
+                        lang = ${lang})}">
+                    </div>
                 </div>            
             </div>
         </div>
 
-        <footer th:replace="~{fragments/footer-fragments.html :: footer}"></footer>
+        <footer th:replace="~{fragments/footer-fragments.html :: footer(lang = ${lang})}"></footer>
     </body>
 </html>

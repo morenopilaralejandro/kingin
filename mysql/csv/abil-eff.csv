@@ -92,8 +92,8 @@ dmg-turn-end,Decreases 1/8 of user’s maximum HP every turn.,毎ターン終了
 heal-status-chance,"Every turn, it has a 1 in 3 chance of healing status conditions.",ターンごとに1/3の確率で状態異常が治る。,battle
 heal-status-rain,Heals status conditions at the end of the turn when the weather is rainy.,天気があめの時、ターン終了時に状態異常が回復する。,battle
 heal-status-switch,Heals status conditions when switching out.,他のポケモンに交代すると異常状態が回復する。,battle
-heal-water,Restores ¼ of the user’s maximum HP when hit by Water-type.,みずタイプの技を受けると、ダメージを受けずHPが最大HPの1/4回復する。,battle
-heal-electric,Restores ¼ of the user’s maximum HP when hit by Electric-type.,でんきタイプの技を受けると、ダメージを受けずHPが最大HPの1/4回復する。,battle
+heal-water,Restores 1/4 of the user’s maximum HP when hit by Water-type.,みずタイプの技を受けると、ダメージを受けずHPが最大HPの1/4回復する。,battle
+heal-electric,Restores 1/4 of the user’s maximum HP when hit by Electric-type.,でんきタイプの技を受けると、ダメージを受けずHPが最大HPの1/4回復する。,battle
 heal-rain-8,Restores 1/8 of the user’s maximum HP when the weather is rainy.,天気があめの時は毎ターンHPが最大HPの1/8回復する。,battle
 heal-rain,Restores 1/16 of the user’s maximum HP when the weather is rainy.,天気があめの時は毎ターンHPが最大HPの1/16回復する。,battle
 heal-hail,Restores 1/16 of the user’s maximum HP when its Snowing.,天気があられの時、毎ターン終了時にHPが最大HPの1/16回復する。,battle

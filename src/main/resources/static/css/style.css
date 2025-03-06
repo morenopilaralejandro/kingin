@@ -195,10 +195,10 @@ footer span {
 .stat-bg-spe {
     background-color: var(--stat-spe) !important;
 }
-
-
-
-
+/*style-ability*/
+.ability-effect.en + .ability-effect.en {
+    margin-left: 3px;
+}
 
 /*style-zukan*/
 .pd-container-lg {

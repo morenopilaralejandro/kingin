@@ -12,7 +12,10 @@
     <div th:fragment="egg-group-ul(eggGrps, lang)">
         <ul>
             <li th:each="eggGrp : ${eggGrps}">
-                <a th:replace="~{fragments/egg-group-fragments.html :: egg-group-link(eggGrp = ${eggGrp}, lang = ${lang})}"></a>
+                <a th:replace="~{fragments/egg-group-fragments.html :: egg-group-link(
+                    eggGrp = ${eggGrp}, 
+                    lang = ${lang})}">
+                </a>
             </li>
         </ul>
     </div>

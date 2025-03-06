@@ -84,34 +84,50 @@ begin
         if continueCur1 = 1 then
             if lower(vAbilIsRole) = 'yes' then
                 set boolIsRole = false;
+            else 
+                set boolIsRole = true;
             end if;
 
             if lower(vAbilIsRece) = 'yes' then
                 set boolIsRece = false;
+            else 
+                set boolIsRece = true;
             end if;
 
             if lower(vAbilIsEntr) = 'yes' then
                 set boolIsEntr = false;
+            else 
+                set boolIsEntr = true;
             end if;
 
             if lower(vAbilIsTrac) = 'yes' then
                 set boolIsTrac = false;
+            else 
+                set boolIsTrac = true;
             end if;
 
             if lower(vAbilIsSksw) = 'yes' then
                 set boolIsSksw = false;
+            else 
+                set boolIsSksw = true;
             end if;
 
             if lower(vAbilIsGast) = 'yes' then
                 set boolIsGast = false;
+            else 
+                set boolIsGast = true;
             end if;
 
             if lower(vAbilIsMold) = 'yes' then
                 set boolIsMold = true;
+            else 
+                set boolIsMold = false;
             end if;
 
             if lower(vAbilIsTran) = 'yes' then
-                set vAbilIsTran = false;
+                set boolIsTran = false;
+            else 
+                set boolIsTran = true;
             end if;
 
             insert into abil (

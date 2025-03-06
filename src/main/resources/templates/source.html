@@ -16,7 +16,7 @@
         <link rel="stylesheet" th:href="@{/css/style.css}">
     </head>
     <body>
-        <header th:replace="~{fragments/header-fragments.html :: header}"></header>
+        <header th:replace="~{fragments/header-fragments.html :: header(lang = ${lang})}"></header>
 
         <div th:replace="~{fragments/lang-fragments.html :: lang-div(url = ${url})}"></div>
 
@@ -101,6 +101,6 @@
             </div>
         </div>
 
-        <footer th:replace="~{fragments/footer-fragments.html :: footer}"></footer>
+        <footer th:replace="~{fragments/footer-fragments.html :: footer(lang = ${lang})}"></footer>
     </body>
 </html>

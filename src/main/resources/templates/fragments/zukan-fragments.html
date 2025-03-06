@@ -15,7 +15,10 @@
         </div>
         <div th:unless="${pds.isEmpty()}" class="pd-container-lg mb-3">
             <div th:each="pd : ${pds}">
-                <a th:replace="~{fragments/zukan-fragments.html :: pd-link(pd = ${pd}, lang = ${lang})}"></a>
+                <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                    pd = ${pd}, 
+                    lang = ${lang})}">
+                </a>
             </div>
         </div>
     </div>

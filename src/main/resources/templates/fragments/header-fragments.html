@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-    <header th:fragment="header">
+    <header th:fragment="header(lang)">
         <a th:href="@{/{lang}/index(lang=${lang})}" class="header-logo color-inherit">
             <img th:src="@{/img/svg/logo.svg}" alt = "areoya">
             <span th:text="#{general.web}"></span>
