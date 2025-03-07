@@ -3,7 +3,11 @@ package com.pocket.kingin.domain;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+
+import com.pocket.kingin.form.MoveSearch;
+import com.pocket.kingin.form.MoveSearchSpec;
 
 @Service
 public class MoveServiceImpl implements MoveService {
@@ -13,6 +17,27 @@ public class MoveServiceImpl implements MoveService {
 	@Override
 	public List<Move> all() {
 		return repo.findAll();
+	}
+	
+	@Override
+	public List<Move> findByMoveCode(String code) {
+		return repo.findByMoveCode(code);
+	}
+
+	@Override
+	public List<Move> findByMoveNameEnContainingIgnoreCase(String moveNameEn) {
+		return repo.findByMoveNameEnContainingIgnoreCase(moveNameEn);
+	}
+
+	@Override
+	public List<Move> findByMoveNameJaContainingIgnoreCase(String moveNameJa) {
+		return repo.findByMoveNameJaContainingIgnoreCase(moveNameJa);
+	}
+	
+	@Override
+	public List<Move> findByCriteriaMoveSearch(MoveSearch moveSearch, String lang) {
+		Specification<Move> spec = MoveSearchSpec.moveSearch(moveSearch, lang);
+		return repo.findAll(spec);
 	}
 	
 	@Override

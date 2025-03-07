@@ -1,5 +1,7 @@
 package com.pocket.kingin.composite;
 
+import java.util.Objects;
+
 import com.pocket.kingin.domain.Move;
 import com.pocket.kingin.domain.MoveLrn;
 import com.pocket.kingin.domain.Pd;
@@ -51,6 +53,59 @@ public class PdLrnMove {
 		this.moveLrn = moveLrn;
 	}
 
-	
+	public PdLrnMoveId getId() {
+		return id;
+	}
+
+	public void setId(PdLrnMoveId id) {
+		this.id = id;
+	}
+
+	public Pd getPd() {
+		return pd;
+	}
+
+	public void setPd(Pd pd) {
+		this.pd = pd;
+	}
+
+	public Move getMove() {
+		return move;
+	}
+
+	public void setMove(Move move) {
+		this.move = move;
+	}
+
+	public MoveLrn getMoveLrn() {
+		return moveLrn;
+	}
+
+	public void setMoveLrn(MoveLrn moveLrn) {
+		this.moveLrn = moveLrn;
+	}
+
+	@Override
+	public String toString() {
+		return "PdLrnMove [id=" + id + ", pd=" + pd + ", move=" + move + ", moveLrn=" + moveLrn + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, move, moveLrn, pd);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		PdLrnMove other = (PdLrnMove) obj;
+		return Objects.equals(id, other.id) && Objects.equals(move, other.move)
+				&& Objects.equals(moveLrn, other.moveLrn) && Objects.equals(pd, other.pd);
+	}
 	
 }

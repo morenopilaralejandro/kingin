@@ -14,16 +14,28 @@ public class AbilServiceImpl implements AbilService {
 	public List<Abil> all() {
 		return repo.findAll();
 	}
+
+	@Override
+	public List<Abil> findByAbilCode(String code) {
+		return repo.findByAbilCode(code);
+	}
+	
+	@Override
+	public List<Abil> findByAbilNameEnContainingIgnoreCase(String abilNameEn) {
+		return repo.findByAbilNameEnContainingIgnoreCase(abilNameEn);
+	}
+
+	@Override
+	public List<Abil> findByAbilNameJaContainingIgnoreCase(String abilNameJa) {
+		return repo.findByAbilNameJaContainingIgnoreCase(abilNameJa);
+	}
 	
 	@Override
 	public Abil one(Long id) {
 		return repo.findById(id).orElseThrow(() -> new AbilNotFoundException(id));
 	}
 	
-	@Override
-	public List<Abil> findByAbilCode(String code) {
-		return repo.findByAbilCode(code);
-	}
+
 	
 	@Override
 	public Abil insert(Abil newObj) {

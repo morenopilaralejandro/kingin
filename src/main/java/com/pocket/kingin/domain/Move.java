@@ -7,6 +7,7 @@ import java.util.Objects;
 
 import com.pocket.kingin.composite.MoveCauseEff;
 import com.pocket.kingin.composite.MoveRememberedTuto;
+import com.pocket.kingin.composite.PdLrnMove;
 import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
@@ -69,6 +70,12 @@ public class Move implements InternatName {
 	
 	@OneToMany(mappedBy = "move", fetch = FetchType.LAZY)
 	private List<MoveRememberedTuto> moveRememberedTutos;
+	
+	@OneToMany(mappedBy = "move", fetch = FetchType.LAZY)
+	private List<PdLrnMove> pdLrnMove;
+	
+	@OneToMany(mappedBy = "move")
+	private List<ItemMach> items;
 	
 	public Move() {}
 
@@ -234,6 +241,22 @@ public class Move implements InternatName {
 
 	public void setMoveRememberedTutos(List<MoveRememberedTuto> moveRememberedTutos) {
 		this.moveRememberedTutos = moveRememberedTutos;
+	}
+
+	public List<PdLrnMove> getPdLrnMove() {
+		return pdLrnMove;
+	}
+
+	public void setPdLrnMove(List<PdLrnMove> pdLrnMove) {
+		this.pdLrnMove = pdLrnMove;
+	}
+
+	public List<ItemMach> getItems() {
+		return items;
+	}
+
+	public void setItems(List<ItemMach> items) {
+		this.items = items;
 	}
 
 	@Override

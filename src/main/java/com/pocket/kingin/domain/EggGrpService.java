@@ -4,10 +4,14 @@ import java.util.List;
 
 public interface EggGrpService {
 	List<EggGrp> all();
-
-	EggGrp one(Long id);
 	
 	List<EggGrp> findByEggGrpCode(String code);
+	
+	List<EggGrp> findByEggGrpNameEnContainingIgnoreCase(String eggGrpNameEn);
+	
+	List<EggGrp> findByEggGrpNameJaContainingIgnoreCase(String eggGrpNameJa);
+
+	EggGrp one(Long id);
 
 	EggGrp insert(EggGrp newObj);
 

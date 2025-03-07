@@ -16,15 +16,25 @@ public class EggGrpServiceImpl implements EggGrpService {
 	}
 	
 	@Override
-	public EggGrp one(Long id) {
-		return repo.findById(id).orElseThrow(() -> new EggGrpNotFoundException(id));
-	}
-	
-	@Override
 	public List<EggGrp> findByEggGrpCode(String code) {
 		return repo.findByEggGrpCode(code);
 	}
 	
+	@Override
+	public List<EggGrp> findByEggGrpNameEnContainingIgnoreCase(String eggGrpNameEn) {
+		return repo.findByEggGrpNameEnContainingIgnoreCase(eggGrpNameEn);
+	}
+
+	@Override
+	public List<EggGrp> findByEggGrpNameJaContainingIgnoreCase(String eggGrpNameJa) {
+		return repo.findByEggGrpNameJaContainingIgnoreCase(eggGrpNameJa);
+	}
+	
+	@Override
+	public EggGrp one(Long id) {
+		return repo.findById(id).orElseThrow(() -> new EggGrpNotFoundException(id));
+	}
+
 	@Override
 	public EggGrp insert(EggGrp newObj) {
 		return repo.save(newObj);

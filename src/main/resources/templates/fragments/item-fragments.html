@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <a
+        th:fragment="item-link(item, lang)"
+        th:text="${item.getInternatName().get(lang)}"
+        th:href="@{/{lang}/item/{code}(lang=${lang}, code=${item.getPdCode()})}">        
+    </a>
+</body>
+</html>
