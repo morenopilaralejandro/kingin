@@ -8,5 +8,214 @@
         th:text="${move.getInternatName().get(lang)}"
         th:href="@{/{lang}/move/{code}(lang=${lang}, code=${move.getMoveCode()})}">        
     </a>
+
+    <div th:fragment="move-ul(moves, lang)">
+        <ul>
+            <li th:each="move : ${moves}">
+                <a th:replace="~{fragments/move-fragments.html :: move-link(
+                    move = ${move}, 
+                    lang = ${lang})}">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div th:remove="tag" th:fragment="move-effect-inline(moveCauseEffs, lang)">
+        <!--
+            th:remove="tag"
+        -->
+        <th:block th:each="moveCauseEff: ${moveCauseEffs}">
+            <th:block th:if="${moveCauseEff.getRate() == null}">
+                <span 
+                    th:class="${'move-effect' + ' ' + lang}"
+                    th:text="${moveCauseEff.getMoveEff().getInternatDesc().get(lang)}">
+                </span>
+            </th:block>
+            <th:block th:unless="${moveCauseEff.getRate() == null}">
+                <th:block th:if="${lang == 'ja'}">
+                    <span 
+                        th:unless="${moveCauseEff.getRate() == null}"
+                        th:class="${'move-effect' + ' ' + lang}"
+                        th:text="${moveCauseEff.getRate() + '%の' + moveCauseEff.getMoveEff().getInternatDesc().get(lang)}">
+                    </span>
+                </th:block>
+                <th:block th:unless="${lang == 'ja'}">
+                    <span 
+                        th:unless="${moveCauseEff.getRate() == null}"
+                        th:class="${'move-effect' + ' ' + lang}"
+                        th:text="${moveCauseEff.getMoveEff().getInternatDesc().get(lang) + ' (' + moveCauseEff.getRate() + '%)'}">
+                    </span>
+                </th:block>
+            </th:block>
+        </th:block>
+    </div>
+
+    <div th:fragment="move-table-basic(moves, isMoveLink, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.title}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.type}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.category}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.power}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.accuracy}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.pp}">
+                </th>
+            </tr>
+            <th:block th:each="move : ${moves}">
+                <tr>
+                    <th:block th:if="${isMoveLink}">
+                        <td class="bg-light-subtle">
+                            <a th:replace="~{fragments/move-fragments.html :: move-link(
+                                move = ${move}, 
+                                lang = ${lang})}">
+                            </a>
+                        </td>
+                    </th:block>
+                    <th:block th:unless="${isMoveLink}">
+                        <td
+                            class="bg-light-subtle"
+                            th:text="${move.getInternatName().get(lang)}">
+                        </td>
+                    </th:block>
+                    <td class="bg-light-subtle" style="text-align: center;">
+                        <span th:replace="~{fragments/icon-fragments.html :: icon-type( 
+                            type = ${move.getType()},
+                            lang = ${lang})}">
+                        </span>
+                    </td>
+                    <td class="bg-light-subtle" style="text-align: center;">
+                        <span th:replace="~{fragments/icon-fragments.html :: icon-move-cat( 
+                            moveCat = ${move.getMoveCat()},
+                            lang = ${lang})}">
+                        </span>
+                    </td>
+                    <td
+                        class="bg-light-subtle"
+                        th:text="${move.getMoveBp()}">
+                    </td>
+                    <td
+                        class="bg-light-subtle"
+                        th:text="${move.getMoveAc()}">
+                    </td>
+                    <td
+                        class="bg-light-subtle"
+                        th:text="${move.getMovePp()}">
+                    </td>
+                </tr>
+                <tr th:unless="${move.getMoveCauseEffs().isEmpty()}">
+                    <td colspan="6">
+                        <div th:replace="~{fragments/move-fragments.html :: move-effect-inline(
+                            moveCauseEffs = ${move.getMoveCauseEffs()}, 
+                            lang = ${lang})}">
+                        </div>
+                    </td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
+
+    <div th:fragment="move-search-form(moveSearch, types, moveCats, lang)">    
+        <form 
+            class="row g-3 mb-3"
+            style="max-width: 300px;"
+            id="moveSearchForm" 
+            name="moveSearchForm" 
+            th:object="${moveSearch}"
+            th:action="@{/{lang}/move#results(lang=${lang})}"
+            method="post" 
+            enctype="multipart/form-data">
+            <!--moveName-->
+            <div class="col-12">
+                <label 
+                    for="moveName" 
+                    class="form-label"
+                    th:text="#{general.name}">
+                </label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="moveName"
+                    name="moveName"
+                    th:field="*{moveName}"
+                >
+            </div>
+            <!--type-->
+            <div class="col-md-6">
+                <label 
+                    for="type" 
+                    class="form-label"
+                    th:text="#{move.type}">
+                </label>
+                <select 
+                    class="form-select form-select" 
+                    aria-label="Small select example"
+                    id="type"
+                    name="type"
+                    th:field="*{type}"
+                >
+                    <option 
+                        selected 
+                        value="0"
+                        th:text="#{move.list.default}">
+                    </option>
+                    <option 
+                        th:each="type : ${types}"
+                        th:value="${type.getTypeId()}"
+                        th:text="${type.getInternatName().get(lang)}">
+                    </option>
+                </select>
+            </div>
+            <!--moveCat-->
+            <div class="col-md-6">
+                <label 
+                    for="moveCat" 
+                    class="form-label"
+                    th:text="#{move.category}">
+                </label>
+                <select 
+                    class="form-select form-select" 
+                    aria-label="Small select example"
+                    id="moveCat"
+                    name="moveCat"
+                    th:field="*{moveCat}"
+                >
+                    <option 
+                        selected 
+                        value="0"
+                        th:text="#{move.list.default}">
+                    </option>
+                    <option 
+                        th:each="moveCat : ${moveCats}"
+                        th:value="${moveCat.getMoveCatId()}"
+                        th:text="${moveCat.getInternatName().get(lang)}">
+                    </option>
+                </select>
+            </div>
+            <div class="col-12">
+                <button 
+                    type="submit" 
+                    class="btn btn-primary"
+                    th:text="#{move.list.search}">
+                </button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

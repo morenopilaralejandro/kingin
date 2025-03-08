@@ -10,6 +10,30 @@
     --stat-spdef: #103100;
     --stat-spe: #470d47;
 
+    --type-normal: #9fa19f;
+    --type-fire: #e62829;
+    --type-fighting: #ff8000;
+    --type-water: #297fef;
+    --type-flying: #81b9ef;
+    --type-grass: #3fa129;
+    --type-poison: #9141cb;
+    --type-electric: #fac000;
+    --type-ground: #905020;
+    --type-psychic: #ef4179;
+    --type-rock: #afa981;
+    --type-ice: #3dcef3;
+    --type-bug: #91a119;
+    --type-dragon: #6876e5;
+    --type-ghost: #704070;
+    --type-dark: #624d4e;
+    --type-steel: #60a1b8;
+    --type-question: #68a090;
+
+    --move-cat-physical: #ce2918;
+    --move-cat-physical-text: #f78421;
+    --move-cat-special: #5a637b;
+    --move-cat-status: #969296;
+
     font-family: sans-serif;
 }
 
@@ -199,7 +223,109 @@ footer span {
 .ability-effect.en + .ability-effect.en {
     margin-left: 3px;
 }
+/*style-icon*/
+.icon-custom {
+    border-radius: var(--bs-border-radius);
+    display: inline-block;
+}
 
+.icon-type {
+    color: white;
+    width: 78px;
+    text-align: center;
+    text-shadow: 0 0 3px black;
+}
+
+.icon-type.normal {
+    background-color: var(--type-normal);
+}
+
+.icon-type.fire {
+    background-color: var(--type-fire);
+}
+
+.icon-type.fighting {
+    background-color: var(--type-fighting);
+}
+
+.icon-type.water {
+    background-color: var(--type-water);
+}
+
+.icon-type.flying {
+    background-color: var(--type-flying);
+}
+
+.icon-type.grass {
+    background-color: var(--type-grass);
+}
+
+.icon-type.poison {
+    background-color: var(--type-poison);
+}
+
+.icon-type.electric {
+    background-color: var(--type-electric);
+}
+
+.icon-type.ground {
+    background-color: var(--type-ground);
+}
+
+.icon-type.psychic {
+    background-color: var(--type-psychic);
+}
+
+.icon-type.rock {
+    background-color: var(--type-rock);
+}
+
+.icon-type.ice {
+    background-color: var(--type-ice);
+}
+
+.icon-type.bug {
+    background-color: var(--type-bug);
+}
+
+.icon-type.dragon {
+    background-color: var(--type-dragon);
+}
+
+.icon-type.ghost {
+    background-color: var(--type-ghost);
+}
+
+.icon-type.dark {
+    background-color: var(--type-dark);
+}
+
+.icon-type.steel {
+    background-color: var(--type-steel);
+}
+
+.icon-type.question {
+    background-color: var(--type-question);
+}
+
+.icon-move-cat {
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 3px black;
+    width: 68px;
+}
+
+.icon-move-cat.physical {
+    background-color: var(--move-cat-physical);
+}
+
+.icon-move-cat.special {
+    background-color: var(--move-cat-special);
+}
+
+.icon-move-cat.status {
+    background-color: var(--move-cat-status);
+}
 /*style-zukan*/
 .pd-container-lg {
     display: flex;

@@ -38,31 +38,13 @@ public class MoveController {
 	@Autowired
 	private ItemService itemService;
 
-	@GetMapping({ "/{lang}/move", "/{lang}/move/" })
-	public String moveListDefault(@PathVariable("lang") String lang, Model model, MoveSearch moveSearch) {
-		Locale locale = LocaleContextHolder.getLocale();
-
-		List<Move> moves = moveService.all();
-
-		moveSearch.setMoveName("");
-		moveSearch.setType(0L);
-		moveSearch.setMoveCat(0L);
-
-		model.addAttribute("lang", locale.getLanguage());
-		model.addAttribute("url", "/move");
-		model.addAttribute("moves", moves);
-		model.addAttribute("types", typeService.all());
-		model.addAttribute("moveCats", moveCatService.all());
-		return "move-list";
-	}
-
 	@RequestMapping(value = { "/{lang}/move", "/{lang}/move/" }, method = { RequestMethod.GET, RequestMethod.POST })
 	public String moveListSubmit(@PathVariable("lang") String lang, Model model, MoveSearch moveSearch,
 			BindingResult bindingResult) {
 		Locale locale = LocaleContextHolder.getLocale();
 
 		List<Move> moves = new ArrayList<Move>();
-
+		
 		if (!bindingResult.hasErrors()) {
 			try {
 				if (moveSearch.getType() > 0) {
@@ -71,12 +53,12 @@ public class MoveController {
 				if (moveSearch.getMoveCat() > 0) {
 					moveSearch.setMoveCatObj(moveCatService.one(moveSearch.getMoveCat()));
 				}
-				moveService.findByCriteriaMoveSearch(moveSearch, lang);
+				moves = moveService.findByCriteriaMoveSearch(moveSearch, lang);
 			} catch (Exception e) {
-				moveListDefault(lang, model, moveSearch);
+				moves = moveService.all();
 			}
 		}
-
+		
 		model.addAttribute("lang", locale.getLanguage());
 		model.addAttribute("url", "/move");
 		model.addAttribute("moves", moves);
@@ -103,7 +85,7 @@ public class MoveController {
 		Item tm = null;
 
 		if (moves.isEmpty()) {
-			return moveListDefault(lang, model, null);
+			//return moveListDefault(lang, model, null);
 		}
 
 		move = moves.get(0);

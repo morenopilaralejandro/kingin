@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <span
+        th:fragment="icon-type(type, lang)"
+        class="icon-custom icon-type"
+        th:classappend="${type.getTypeCode()}"
+        th:text="${type.getInternatName().get(lang)}">        
+    </span>
+
+    <span
+        th:fragment="icon-move-cat(moveCat, lang)"
+        class="icon-custom icon-move-cat"
+        th:classappend="${moveCat.getMoveCatCode()}"
+        th:text="${moveCat.getInternatName().get(lang)}">        
+    </span>
+</body>
+</html>
