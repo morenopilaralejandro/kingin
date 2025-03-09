@@ -82,6 +82,20 @@ public class Abil implements InternatName {
 		updateEffs();
 	}
 	
+	public String getEffectInline(List<AbilEff> abilEffs, String lang) {
+		/*${abil.getEffectInline(abil.getAbilEffBattles(), lang)}*/
+		String aux = "";
+		int i = 0;
+		for (AbilEff abilEff : abilEffs) {
+			aux += abilEff.getInternatDesc().get(lang);
+			if (i < abilEffs.size() - 1 && !lang.equals("ja")) {
+				aux += " "; 
+			}
+			i++;
+		}
+		return aux;
+	}
+	
 	public void updateEffs() {
 		this.abilEffBattles = new ArrayList<AbilEff>();
 		this.abilEffOvers = new ArrayList<AbilEff>();

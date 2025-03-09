@@ -109,6 +109,10 @@ begin
         set idMoveTrgt = 0;
         set idMoveEff = 0;
 
+        set boolMoveIsBright = false;
+        set boolMoveIsKing = false;
+        set boolMoveIsContact = false;
+
         if continueCur1 = 1 then
             select type_id into idType 
                 from type 

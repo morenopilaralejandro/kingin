@@ -15,6 +15,7 @@ may-low-opp-spatk-one,May lower opponent's Sp. Attack one stage.,確率で相手
 may-low-opp-spdef-one,May lower opponent's Sp. Defense one stage.,確率で相手のとくぼうランクを1段階下げる。
 may-low-opp-spe-one,May lower opponent's Speed one stage.,確率で相手のすばやさランクを1段階下げる。
 may-low-opp-acu-one,May lower opponent's Accuracy one stage.,確率で相手の命中率を1段階下げる。
+may-low-opp-spdef-two,May lower opponent's Special Defense two stages.,確率で相手のとくぼうランクを2段階下げる。
 may-rse-slf-atk-one,May raise user's Attack one stage.,確率で自分のこうげきランクが1段階上がる。
 may-rse-slf-def-one,May raise user's Defense one stage.,確率で自分のぼうぎょランクが1段階上がる。
 may-rse-slf-spatk-one,May raise user's Sp. Attack one stage.,確率で自分のとくこうランクが1段階上がる。
@@ -200,8 +201,8 @@ endeavor,Power rises if user's HP are less than opponent's HP.,相手の残りHP
 falseswipe,Leaves the opponent with at least 1 HP.,この技のダメージで相手のHPが0になる時、相手のHPを1にする。
 feint,"Inflicts damage if the target has used Protect or Detect during that turn, lifting their effects.",相手が技まもる、みきりをしている場合は、その効果を解除して攻撃できる。
 followme,Opponent only attacks the user.,そのターンの相手の技をすべて自分が受ける。
-gravity-eff-1,"During intense gravity, the accuracy of all moves is multiplied by 5/3.",5ターンの間、すべてのポケモンの命中率が5/3倍になる。
-gravity-eff-2,Intense gravity causes all Pokémon on the field to become grounded.,特性ふゆうや、ひこうタイプのポケモンにじめんタイプの技が当たるようになる。
+gravity-eff-1,"For five turns, the accuracy of all moves is multiplied by 5/3.",5ターンの間、すべてのポケモンの命中率が5/3倍になる。
+gravity-eff-2,Causes all Pokémon on the field to become grounded.,特性ふゆうや、ひこうタイプのポケモンにじめんタイプの技が当たるようになる。
 grudge,"If the user faints, deletes the PP of opponent's last move.",相手の技のダメージでひんし状態になった場合、その技のPPを0にする。
 decrease-pp,Opponent's last move loses 4 PP.,相手の最後に使った技のPPを4減らす。
 helpinghand,Raise adjacent ally move's power by 50% this turn,使用したターンの間、味方の技の威力を1.5倍にする。

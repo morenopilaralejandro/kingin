@@ -20,38 +20,11 @@
         </ul>
     </div>
 
-    <div th:remove="tag" th:fragment="move-effect-inline(moveCauseEffs, lang)">
-        <!--
-            th:remove="tag"
-        -->
-        <th:block th:each="moveCauseEff: ${moveCauseEffs}">
-            <th:block th:if="${moveCauseEff.getRate() == null}">
-                <span 
-                    th:class="${'move-effect' + ' ' + lang}"
-                    th:text="${moveCauseEff.getMoveEff().getInternatDesc().get(lang)}">
-                </span>
-            </th:block>
-            <th:block th:unless="${moveCauseEff.getRate() == null}">
-                <th:block th:if="${lang == 'ja'}">
-                    <span 
-                        th:unless="${moveCauseEff.getRate() == null}"
-                        th:class="${'move-effect' + ' ' + lang}"
-                        th:text="${moveCauseEff.getRate() + '%の' + moveCauseEff.getMoveEff().getInternatDesc().get(lang)}">
-                    </span>
-                </th:block>
-                <th:block th:unless="${lang == 'ja'}">
-                    <span 
-                        th:unless="${moveCauseEff.getRate() == null}"
-                        th:class="${'move-effect' + ' ' + lang}"
-                        th:text="${moveCauseEff.getMoveEff().getInternatDesc().get(lang) + ' (' + moveCauseEff.getRate() + '%)'}">
-                    </span>
-                </th:block>
-            </th:block>
-        </th:block>
-    </div>
-
     <div th:fragment="move-table-basic(moves, isMoveLink, lang)" class="table-responsive">
-        <table class="table table-bordered table-sm">
+        <div th:if="${moves.isEmpty()}" class="mb-3">
+            <span th:text="#{general.nodata}"></span>
+        </div>
+        <table th:unless="${moves.isEmpty()}" class="table table-bordered table-sm">
             <tr>
                 <th 
                     class="bg-black" 
@@ -121,13 +94,134 @@
                 </tr>
                 <tr th:unless="${move.getMoveCauseEffs().isEmpty()}">
                     <td colspan="6">
-                        <div th:replace="~{fragments/move-fragments.html :: move-effect-inline(
-                            moveCauseEffs = ${move.getMoveCauseEffs()}, 
-                            lang = ${lang})}">
-                        </div>
+                        <span
+                            th:text="${move.getEffectInline(lang)}">            
+                        </span>
                     </td>
                 </tr>
             </th:block>
+        </table>
+    </div>
+
+    <div th:fragment="move-table-advanced(move, auxItems,lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <!--
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{ability.effect.effective}">
+                </th>
+            </tr>
+            -->
+            <tr>
+                <td 
+                    th:text="#{move.hit}">
+                </td>
+                <td 
+                    th:text="${move.getMoveTrgt().getInternatName.get(lang)}">
+                </td>
+            </tr>
+            <tr th:unless="${move.getMthds().isEmpty()}">
+                <td 
+                    th:text="#{move.method}">
+                </td>
+                <td>
+                    <span 
+                        th:each="mthd : ${move.getMthds()}"
+                        th:text="${mthd.getInternatName().get(lang) + ' '}">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td 
+                    th:text="#{move.tm}">
+                </td>
+                <td 
+                    th:if="${move.getItems().isEmpty()}"
+                    th:text="#{general.none}">
+                </td>
+                <td th:unless="${move.getItems().isEmpty()}">
+                    <a th:replace="~{fragments/item-fragments.html :: item-link(
+                        item = ${move.getItems().get(0)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td 
+                    th:text="#{move.priority}">
+                </td>
+                <td 
+                    th:text="${move.getMovePrio()}">
+                </td>
+            </tr>
+
+            <tr>
+                <td th:text="#{move.contact}">
+                </td>
+                <td th:if="${move.getMoveIscontact()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${move.getMoveIscontact()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a th:replace="~{fragments/item-fragments.html :: item-link(
+                        item = ${auxItems.get(0)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:if="${move.getMoveIsBright()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${move.getMoveIsBright()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a th:replace="~{fragments/item-fragments.html :: item-link(
+                        item = ${auxItems.get(1)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:if="${move.getMoveIsking()}" class="bg-success-subtle" style="text-align: center;">
+                    <img alt="y" th:src="@{/img/svg/check.svg}">
+                </td>
+                <td th:unless="${move.getMoveIsking()}" class="bg-danger-subtle" style="text-align: center;">
+                    <img alt="n" th:src="@{/img/svg/x.svg}">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div th:fragment="move-learn-lv(pdLrnMove, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.learn.lv.name}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.learn.lv.lv}">
+                </th>
+            </tr>
+            <tr th:each="plm : ${pdLrnMove}">
+                <td>
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${plm.getPd()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${plm.getId().getLv()}"></td>
+            </tr>
         </table>
     </div>
 

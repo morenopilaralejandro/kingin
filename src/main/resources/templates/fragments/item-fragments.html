@@ -6,7 +6,7 @@
     <a
         th:fragment="item-link(item, lang)"
         th:text="${item.getInternatName().get(lang)}"
-        th:href="@{/{lang}/item/{code}(lang=${lang}, code=${item.getPdCode()})}">        
+        th:href="@{/{lang}/item/{code}(lang=${lang}, code=${item.getItemCode()})}">        
     </a>
 </body>
 </html>

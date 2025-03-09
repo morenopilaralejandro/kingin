@@ -20,17 +20,6 @@
         </ul>
     </div>
 
-    <div th:fragment="ability-effect-inline(abilEffs, lang)">
-        <!--
-            th:remove="tag"
-        -->
-        <span 
-            th:each="abilEff: ${abilEffs}"
-            th:class="${'ability-effect' + ' ' +lang}"
-            th:text="${abilEff.getInternatDesc().get(lang)}"
-        ></span>
-    </div>
-
     <div th:fragment="ability-effect-block(abilEffs, lang)">
         <!--
             th:remove="tag"

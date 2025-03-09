@@ -155,11 +155,10 @@ public class MoveController {
 			tocIds.add("sp");
 		}
 		
-		System.out.println(move.getMoveCauseEffs().get(0).getMoveEff().getInternatDesc().get(lang));
-		
 		model.addAttribute("lang", locale.getLanguage());
 		model.addAttribute("url", "/move/" + code);
-		model.addAttribute("moves", moves.get(0));
+		model.addAttribute("moves", moves);
+		model.addAttribute("move", moves.get(0));
 		model.addAttribute("lvPdLrnMove", lvPdLrnMove);
 		model.addAttribute("tmMoves", tmMoves);
 		model.addAttribute("egMoves", egMoves);
@@ -167,10 +166,10 @@ public class MoveController {
 		model.addAttribute("tfMoves", tfMoves);
 		model.addAttribute("pwMoves", pwMoves);
 		model.addAttribute("spMoves", spMoves);
+		model.addAttribute("tocIds", tocIds);
 		model.addAttribute("auxItems", auxItems);
 		model.addAttribute("tm", tm);
-		
-		
+	
 		/*
 		 * 
 		 * 

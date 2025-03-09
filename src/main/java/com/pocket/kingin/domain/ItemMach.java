@@ -3,14 +3,19 @@ package com.pocket.kingin.domain;
 import java.util.Objects;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+import jakarta.persistence.Table;
 
 @Entity
-@DiscriminatorValue("2")
+@Table(name = "item_mach")
+@Inheritance(strategy = InheritanceType.JOINED)
+@PrimaryKeyJoinColumn(name = "item_mach_id")
 public class ItemMach extends Item {
 	@Column(name = "item_mach_num")
 	private Long itemMachNum;

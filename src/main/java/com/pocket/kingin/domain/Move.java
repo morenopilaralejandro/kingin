@@ -98,6 +98,27 @@ public class Move implements InternatName {
 		this.moveCat = moveCat;
 		this.moveTrgt = moveTrgt;
 	}
+	
+	public String getEffectInline(String lang) {
+		String aux = "";
+		int i = 0;
+		for (MoveCauseEff mce : this.getMoveCauseEffs()) {
+			if (mce.getRate() == null) {
+				aux += mce.getMoveEff().getInternatDesc().get(lang);		
+			} else {
+				if (lang.equals("ja")) {
+					aux += mce.getRate() + "%の" + mce.getMoveEff().getInternatDesc().get(lang);
+				} else {
+					aux += mce.getMoveEff().getInternatDesc().get(lang) + " (" + mce.getRate() + "%)";
+				}
+			}
+			if (i < this.getMoveCauseEffs().size() - 1 && !lang.equals("ja")) {
+				aux += " "; 
+			}
+			i++;
+		}
+		return aux;
+	}
 
 	@Override
 	public Map<String, String> getInternatName() {

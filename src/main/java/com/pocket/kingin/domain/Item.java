@@ -12,7 +12,6 @@ import com.pocket.kingin.internat.InternatDesc;
 import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -29,8 +28,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "item")
-@DiscriminatorColumn(name = "item_type_id")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Item implements InternatName, InternatDesc {
 	@Column(name = "item_id")
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long itemId;
