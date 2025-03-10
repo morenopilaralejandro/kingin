@@ -74,7 +74,7 @@ public class Move implements InternatName {
 	@OneToMany(mappedBy = "move", fetch = FetchType.LAZY)
 	private List<PdLrnMove> pdLrnMove;
 	
-	@OneToMany(mappedBy = "move")
+	@OneToMany(mappedBy = "move", fetch = FetchType.LAZY)
 	private List<ItemMach> items;
 	
 	public Move() {}

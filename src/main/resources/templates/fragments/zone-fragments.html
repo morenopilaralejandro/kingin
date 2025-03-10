@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <a
+        th:fragment="zone-link(zone, lang)"
+        th:text="${zone.getInternatNameCompound().get(lang)}"
+        th:href="${zone.getHref(lang)}">
+    </a>
+
+    <a
+        th:fragment="shop-link(shop, lang)"
+        th:text="${shop.getInternatName().get(lang)}"
+        th:href="${shop.getHref(lang)}">
+    </a>
+
+    <div th:fragment="zone-ul(zones, lang)">
+        <ul>
+            <li th:each="zone : ${zones}">
+                <a th:replace="~{fragments/zone-fragments.html :: zone-link(
+                    zone = ${zone}, 
+                    lang = ${lang})}">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div th:fragment="zone-shop-table(shop, lang)" class="table-responsive">
+        <table th:id="${shop.getShopCode()}" class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    style="text-align: center;"
+                    th:text="${shop.getInternatName().get(lang)}">
+                </th>
+            </tr>
+            <tr th:each="item : ${shop.getItems()}">
+                <td>
+                    <a th:replace="~{fragments/item-fragments.html :: item-link(
+                        item = ${item}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${item.getPriceBuyByCurr(shop.getCurr())}"></td>
+            </tr>
+            <tr th:each="sep : ${shop.getShopExchPds()}">
+                <td>
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${sep.getPd()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${sep.getPrice()}"></td>
+            </tr>
+        </table>
+    </div>      
+
+    <div th:fragment="zone-item-loc-table(itemLocHgss, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zone.items.obtention}">
+                </th>
+            </tr>
+            <tr th:each="ilh : ${itemLocHgss}">
+                <td>
+                    <a th:replace="~{fragments/item-fragments.html :: item-link(
+                        item = ${ilh.getItem()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${ilh.getItemObt().getInternatName().get(lang)}"></td>
+            </tr>
+        </table>
+    </div>      
+
+
+
+
+
+
+
+
+    <div th:remove="tag" th:fragment="zone-details-combo(zone, lang)">
+        <div 
+            th:if="${
+                zone.getItemLocHgss().isEmpty() &&
+                zone.getShops().isEmpty()
+            }" 
+            class="mb-3">
+            <span th:text="#{general.nodata}"></span>
+        </div>
+
+
+
+
+
+
+        <article th:unless="${zone.getPdSpawHgss().isEmpty()}">
+            <h3 id="items" th:text="#{zone.spawns}"></h3>
+            <div th:replace="~{fragments/zone-fragments.html :: zone-item-loc-table(
+                itemLocHgss = ${zone.getItemLocHgss()},
+                lang = ${lang})}">
+            </div>
+        </article>
+
+
+
+
+
+
+
+        <article th:unless="${zone.getItemLocHgss().isEmpty()}">
+            <h3 id="items" th:text="#{zone.items}"></h3>
+            <div th:replace="~{fragments/zone-fragments.html :: zone-item-loc-table(
+                itemLocHgss = ${zone.getItemLocHgss()},
+                lang = ${lang})}">
+            </div>
+        </article>
+        <article th:unless="${zone.getShops().isEmpty()}">
+            <h3 id="shops" th:text="#{zone.shops}"></h3>
+            <th:block th:each="shop : ${zone.getShops()}">
+                <div th:replace="~{fragments/zone-fragments.html :: zone-shop-table(
+                    shop = ${shop},
+                    lang = ${lang})}">
+                </div>
+            </th:block>
+        </article>
+    </div>
+</body>
+</html>

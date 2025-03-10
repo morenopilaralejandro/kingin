@@ -59,6 +59,18 @@ public class Shop implements InternatName {
 		this.zone = zone;
 		this.curr = curr;
 	}
+	
+	public String getHref(String lang) {
+		String aux = "/" + lang + "/map/";
+		if (this.zone.getZoneMain() == null) {
+			aux += this.zone.getZoneCode();
+		} else {
+			aux += this.zone.getZoneMain().getZoneCode();
+			aux += "#";
+			aux += this.shopCode;
+		}
+		return aux;
+	}
 
 	@Override
 	public Map<String, String> getInternatName() {

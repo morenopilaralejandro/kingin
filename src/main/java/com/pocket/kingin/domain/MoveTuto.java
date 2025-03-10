@@ -1,16 +1,20 @@
 package com.pocket.kingin.domain;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import com.pocket.kingin.composite.MoveRememberedTuto;
 import com.pocket.kingin.internat.InternatName;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -24,6 +28,9 @@ public class MoveTuto implements InternatName {
 	private String moveTutoNameEn;
 	@Column(name = "move_tuto_name_ja")
 	private String moveTutoNameJa;
+	
+	@OneToMany(mappedBy = "moveTuto", fetch = FetchType.LAZY)
+	private List<MoveRememberedTuto> moveRememberedTutos;
 
 	public MoveTuto() {}
 	
@@ -73,6 +80,14 @@ public class MoveTuto implements InternatName {
 
 	public void setMoveTutoNameJa(String moveTutoNameJa) {
 		this.moveTutoNameJa = moveTutoNameJa;
+	}
+	
+	public List<MoveRememberedTuto> getMoveRememberedTutos() {
+		return moveRememberedTutos;
+	}
+
+	public void setMoveRememberedTutos(List<MoveRememberedTuto> moveRememberedTutos) {
+		this.moveRememberedTutos = moveRememberedTutos;
 	}
 
 	@Override

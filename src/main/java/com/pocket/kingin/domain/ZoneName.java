@@ -20,9 +20,9 @@ public class ZoneName implements InternatName {
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long zoneNameId;
 	@Column(name = "zone_name_code", unique = true)
 	private String zoneNameCode;
-	@Column(name = "zone_name_name_en")
+	@Column(name = "zone_name_en")
 	private String zoneNameEn;
-	@Column(name = "zone_name_name_ja")
+	@Column(name = "zone_name_ja")
 	private String zoneNameJa;
 
 	public ZoneName() {}

@@ -225,6 +225,30 @@
         </table>
     </div>
 
+    <div th:fragment="move-tutor-table(moveRememberedTuto, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.title}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.tutor.bp}">
+                </th>
+            </tr>
+            <tr th:each="mrt : ${moveRememberedTuto}">
+                <td>
+                    <a th:replace="~{fragments/move-fragments.html :: move-link(
+                        move = ${mrt.getMove()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${mrt.getBp()}"></td>
+            </tr>
+        </table>
+    </div>
+
     <div th:fragment="move-search-form(moveSearch, types, moveCats, lang)">    
         <form 
             class="row g-3 mb-3"

@@ -20,14 +20,21 @@ import com.pocket.kingin.domain.ItemService;
 import com.pocket.kingin.domain.Move;
 import com.pocket.kingin.domain.MoveCatService;
 import com.pocket.kingin.domain.MoveService;
+import com.pocket.kingin.domain.MoveTuto;
+import com.pocket.kingin.domain.MoveTutoService;
 import com.pocket.kingin.domain.Pd;
 import com.pocket.kingin.domain.TypeService;
+import com.pocket.kingin.domain.Zone;
+import com.pocket.kingin.domain.ZoneService;
 import com.pocket.kingin.form.MoveSearch;
 
 @Controller
 public class MoveController {
 	@Autowired
 	private MoveService moveService;
+	
+	@Autowired
+	private MoveTutoService moveTutoService;
 
 	@Autowired
 	private TypeService typeService;
@@ -37,6 +44,35 @@ public class MoveController {
 
 	@Autowired
 	private ItemService itemService;
+	
+	@Autowired
+	private ZoneService zoneService;
+	
+	@GetMapping({"/{lang}/move-tutor", "/{lang}/move-tutor/"})
+	public String moveTutor(@PathVariable("lang") String lang, Model model) {
+		Locale locale = LocaleContextHolder.getLocale();
+	        
+		List<MoveTuto> moveTutos = moveTutoService.all();
+		List<Zone> auxZones = new ArrayList<Zone>();
+		
+		/*ilex*/
+		auxZones.add(zoneService.one(120L));
+		/*thor*/
+		auxZones.add(zoneService.one(10L));
+		auxZones.add(zoneService.one(10L));
+		auxZones.add(zoneService.one(10L));
+		auxZones.add(zoneService.one(10L));
+		/*dngn-batt-acce*/
+		auxZones.add(zoneService.one(167L));
+		auxZones.add(zoneService.one(167L));
+		auxZones.add(zoneService.one(167L));
+		
+		model.addAttribute("lang", locale.getLanguage());
+		model.addAttribute("url", "/move-tutor");
+		model.addAttribute("moveTutos", moveTutos);
+		model.addAttribute("auxZones", auxZones);
+		return "move-tutor";
+	}
 
 	@RequestMapping(value = { "/{lang}/move", "/{lang}/move/" }, method = { RequestMethod.GET, RequestMethod.POST })
 	public String moveListSubmit(@PathVariable("lang") String lang, Model model, MoveSearch moveSearch,

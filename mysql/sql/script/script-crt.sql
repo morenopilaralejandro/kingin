@@ -492,7 +492,7 @@ create table shop_exch_pd (
     shop_id int not null,
     pd_id int not null,
     price int,
-    constraint shop_exch_pd_pk primary key (pd_id),
+    constraint shop_exch_pd_pk primary key (shop_id, pd_id),
     constraint shop_exch_pd_fk_shop foreign key (shop_id)
         references shop(shop_id) on delete cascade,
     constraint shop_exch_pd_fk_pd foreign key (pd_id)

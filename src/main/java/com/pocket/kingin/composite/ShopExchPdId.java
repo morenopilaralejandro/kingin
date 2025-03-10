@@ -12,12 +12,16 @@ public class ShopExchPdId implements Serializable {
 
 	@Column(name = "shop_id")
 	private Long shopId;
+	
+	@Column(name = "pd_id")
+	private Long pdId;
 
 	public ShopExchPdId() {}
 
-	public ShopExchPdId(Long shopId) {
+	public ShopExchPdId(Long shopId, Long pdId) {
 		super();
 		this.shopId = shopId;
+		this.pdId = pdId;
 	}
 
 	public Long getShopId() {
@@ -28,18 +32,26 @@ public class ShopExchPdId implements Serializable {
 		this.shopId = shopId;
 	}
 
+	public Long getPdId() {
+		return pdId;
+	}
+
+	public void setPdId(Long pdId) {
+		this.pdId = pdId;
+	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
 	@Override
 	public String toString() {
-		return "ShopExchPdId [shopId=" + shopId + "]";
+		return "ShopExchPdId [shopId=" + shopId + ", pdId=" + pdId + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(shopId);
+		return Objects.hash(pdId, shopId);
 	}
 
 	@Override
@@ -51,7 +63,7 @@ public class ShopExchPdId implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		ShopExchPdId other = (ShopExchPdId) obj;
-		return Objects.equals(shopId, other.shopId);
+		return Objects.equals(pdId, other.pdId) && Objects.equals(shopId, other.shopId);
 	}
 
 }

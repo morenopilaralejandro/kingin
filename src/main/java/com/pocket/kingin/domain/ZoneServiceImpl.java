@@ -16,6 +16,26 @@ public class ZoneServiceImpl implements ZoneService {
 	}
 	
 	@Override
+	public List<Zone> findByZoneCode(String code) {
+		return repo.findByZoneCode(code);
+	}
+	
+	@Override
+	public List<Zone> findByZoneMain(Zone zoneMain) {
+		return repo.findByZoneMain(zoneMain);
+	}
+
+	@Override
+	public List<Zone> findByNameEn(String zoneNameEn) {
+		return repo.findByNameEn(zoneNameEn);
+	}
+
+	@Override
+	public List<Zone> findByNameJa(String zoneNameJa) {
+		return repo.findByNameJa(zoneNameJa);
+	}
+	
+	@Override
 	public Zone one(Long id) {
 		return repo.findById(id).orElseThrow(() -> new ZoneNotFoundException(id));
 	}
@@ -42,5 +62,5 @@ public class ZoneServiceImpl implements ZoneService {
 	public void delete(Long id) {
 		repo.deleteById(id);
 	}
-	
+
 }

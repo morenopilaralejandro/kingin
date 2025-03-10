@@ -38,6 +38,9 @@ public class Zone implements InternatName {
 	private Zone zoneMain;
 	
 	@OneToMany(mappedBy = "zone", fetch = FetchType.LAZY)
+	private List<Shop> shops;	
+	
+	@OneToMany(mappedBy = "zone", fetch = FetchType.LAZY)
 	private List<PdSpawHgss> pdSpawHgss;
 	
 	@OneToMany(mappedBy = "zone", fetch = FetchType.LAZY)
@@ -64,6 +67,34 @@ public class Zone implements InternatName {
 		return map;
 	}
 
+	public Map<String, String> getInternatNameCompound() {
+		Map<String, String> map = new HashMap<String, String>();
+		String auxEn = "";
+		String auxJa = "";
+		if (this.zoneMain == null) {
+			auxEn = this.zoneName.getZoneNameEn();
+			auxJa = this.zoneName.getZoneNameJa();
+		} else {
+			auxEn = this.zoneMain.getZoneName().getZoneNameEn() + " - " + this.zoneName.getZoneNameEn();
+			auxJa = this.zoneMain.getZoneName().getZoneNameJa() + " - " + this.zoneName.getZoneNameJa();			
+		}
+		map.put("en", auxEn);
+		map.put("ja", auxJa);
+		return map;
+	}
+	
+	public String getHref(String lang) {
+		String aux = "/" + lang + "/map/";
+		if (this.zoneMain == null) {
+			aux += this.zoneCode;
+		} else {
+			aux += this.zoneMain.getZoneCode();
+			aux += "#";
+			aux += this.zoneCode;
+		}
+		return aux;
+	}
+	
 	public Long getZoneId() {
 		return zoneId;
 	}
@@ -112,12 +143,20 @@ public class Zone implements InternatName {
 		this.itemLocHgss = itemLocHgss;
 	}
 
-	public List<PdSpawSaf> getPdSpawSafs() {
+	public List<PdSpawSaf> getPdSpawSaf() {
 		return pdSpawSaf;
 	}
 
-	public void setPdSpawSafs(List<PdSpawSaf> pdSpawSafs) {
-		this.pdSpawSaf = pdSpawSafs;
+	public void setPdSpawSaf(List<PdSpawSaf> pdSpawSaf) {
+		this.pdSpawSaf = pdSpawSaf;
+	}
+
+	public List<Shop> getShops() {
+		return shops;
+	}
+
+	public void setShops(List<Shop> shops) {
+		this.shops = shops;
 	}
 
 	@Override

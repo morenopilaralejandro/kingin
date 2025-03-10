@@ -15,7 +15,7 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "move_cause_eff")
+@Table(name = "shop_exch_pd")
 public class ShopExchPd {
 	@EmbeddedId
 	private ShopExchPdId id;
@@ -26,7 +26,8 @@ public class ShopExchPd {
 	private Shop shop;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "pd_id", referencedColumnName = "pd_id")
+	@MapsId("pdId")
+	@JoinColumn(name = "pd_id")
 	private Pd pd;
 	
 	@Column(name = "price")
@@ -44,7 +45,7 @@ public class ShopExchPd {
 	
 	public ShopExchPd(Shop shop, Pd pd, Long price) {
 		super();
-		this.id = new ShopExchPdId(shop.getShopId());
+		this.id = new ShopExchPdId(shop.getShopId(), pd.getPdId());
 		this.shop = shop;
 		this.pd = pd;
 		this.price = price;

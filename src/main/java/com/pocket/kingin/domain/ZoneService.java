@@ -4,6 +4,14 @@ import java.util.List;
 
 public interface ZoneService {
 	List<Zone> all();
+	
+	List<Zone> findByZoneCode(String code);
+	
+	List<Zone> findByZoneMain(Zone zoneMain);
+	
+	List<Zone> findByNameEn(String zoneNameEn);
+	
+	List<Zone> findByNameJa(String zoneNameJa);
 
 	Zone one(Long id);
 
