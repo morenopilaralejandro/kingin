@@ -43,7 +43,7 @@
                         lang = ${lang})}">
                     </a>
                 </td>
-                <td th:text="${item.getPriceBuyByCurr(shop.getCurr())}"></td>
+                <td th:text="${item.getPriceBuyByCurr(shop.getCurr()) + ' ' + shop.getCurr().getInternatName().get(lang)}"></td>
             </tr>
             <tr th:each="sep : ${shop.getShopExchPds()}">
                 <td>
@@ -52,7 +52,7 @@
                         lang = ${lang})}">
                     </a>
                 </td>
-                <td th:text="${sep.getPrice()}"></td>
+                <td th:text="${sep.getPrice() + ' ' + shop.getCurr().getInternatName().get(lang)}"></td>
             </tr>
         </table>
     </div>      
@@ -81,51 +81,194 @@
         </table>
     </div>      
 
+    <div th:fragment="zone-spawn-hgss(pdSpawHgss, colspan, isZone, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    th:if="${isZone}"
+                    class="bg-black" 
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    th:unless="${isZone}"
+                    class="bg-black" 
+                    th:text="#{zone.title}">
+                </th>
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    th:text="#{zone.spawns.game}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zone.spawns.obtention}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zone.spawns.level}">
+                </th>
+                <th 
+                    th:colspan="${colspan}"
+                    class="bg-black" 
+                    th:text="#{zone.spawns.rate}">
+                </th>
+            </tr>
+            <tr th:each="psh : ${pdSpawHgss}">
+                <td th:if="${isZone}">
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${psh.getPd()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:unless="${isZone}">
+                    <a th:replace="~{fragments/zone-fragments.html :: zone-link(
+                        zone = ${psh.getZone()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td 
+                    class="spawn-version"
+                    th:classappend ="${psh.getId().getIsHg() ? 'hg':''}"
+                    th:text="#{zone.spawns.game.hg}">
+                </td>
+                <td 
+                    class="spawn-version"
+                    th:classappend ="${psh.getId().getIsSs() ? 'ss':''}"
+                    th:text="#{zone.spawns.game.ss}">
+                </td>
+                <td th:text="${psh.getEnc().getInternatName().get(lang)}"></td>
+                <td 
+                    th:if="${psh.getLvMax() == null}"
+                    th:text="${psh.getId().getLvMin()}">
+                </td>
+                <td 
+                    th:unless="${psh.getLvMax() == null}"
+                    th:text="${psh.getId().getLvMin() + '~' + psh.getLvMax()}">
+                </td>
+                <th:block th:if="${psh.getRateD() == null && psh.getRateN() == null}">
+                    <td 
+                        th:if="${psh.getRateM() == null}"
+                        th:colspan="${colspan}" 
+                        style="text-align: center;"
+                        th:text="#{general.none}">
+                    </td>
+                    <td 
+                        th:unless="${psh.getRateM() == null}"
+                        th:colspan="${colspan}" 
+                        style="text-align: center;"
+                        th:text="${psh.getRateM() + '%'}">
+                    </td>
+                </th:block>
+                <th:block th:unless="${psh.getRateD() == null && psh.getRateN() == null}">
+                    <td th:text="${psh.getRateM() + '%'}"></td>
+                    <td th:text="${psh.getRateD() + '%'}"></td>
+                    <td th:text="${psh.getRateN() + '%'}"></td>
+                </th:block>
+            </tr>
+        </table>
+    </div>      
 
-
-
-
-
-
+    <div th:fragment="zone-spawn-saf(pdSpawSaf, isZone, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    th:if="${isZone}"
+                    class="bg-black" 
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    th:unless="${isZone}"
+                    class="bg-black" 
+                    th:text="#{zone.title}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zone.spawns.obtention}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zone.spawns.level}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zone.safari.blocks}">
+                </th>
+                <th
+                    class="bg-black" 
+                    th:text="#{zone.safari.days}">
+                </th>
+            </tr>
+            <tr th:each="pss : ${pdSpawSaf}">
+                <td th:if="${isZone}">
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${pss.getPd()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:unless="${isZone}">
+                    <a th:replace="~{fragments/zone-fragments.html :: zone-link(
+                        zone = ${psh.getZone()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${pss.getEnc().getInternatName().get(lang)}"></td>
+                <td
+                    th:if="${pss.getLvMax() == null}"
+                    th:text="${pss.getId().getLvMin()}">
+                </td>
+                <td
+                    th:unless="${pss.getLvMax() == null}"
+                    th:text="${pss.getId().getLvMin() + '~' + pss.getLvMax()}">
+                </td>
+                <td>
+                    <span 
+                        th:each="blk : ${pss.getSafBlks()}"
+                        style="display: block;"
+                        th:text="${blk.getInternatName().get(lang) + ' ' + pss.getAmounts().get(blkStat.index)}">
+                    </span>
+                </td>
+                <td th:text="${pss.getDays()}"></td>
+            </tr>
+        </table>
+    </div>
 
     <div th:remove="tag" th:fragment="zone-details-combo(zone, lang)">
         <div 
             th:if="${
+                zone.getPdSpawHgss().isEmpty() &&
+                zone.getPdSpawSaf().isEmpty() &&
                 zone.getItemLocHgss().isEmpty() &&
                 zone.getShops().isEmpty()
             }" 
             class="mb-3">
             <span th:text="#{general.nodata}"></span>
         </div>
-
-
-
-
-
-
         <article th:unless="${zone.getPdSpawHgss().isEmpty()}">
-            <h3 id="items" th:text="#{zone.spawns}"></h3>
-            <div th:replace="~{fragments/zone-fragments.html :: zone-item-loc-table(
-                itemLocHgss = ${zone.getItemLocHgss()},
+            <h3 th:text="#{zone.spawns}"></h3>
+            <div th:replace="~{fragments/zone-fragments.html :: zone-spawn-hgss(
+                pdSpawHgss = ${zone.getPdSpawHgssOrdered()},
+                isZone = ${true},
+                colspan = ${zone.getPdSpawHgssColspan()},
                 lang = ${lang})}">
             </div>
         </article>
-
-
-
-
-
-
-
+        <article th:unless="${zone.getPdSpawSaf().isEmpty()}">
+            <h3 th:text="#{zone.safari}"></h3>
+            <div th:replace="~{fragments/zone-fragments.html :: zone-spawn-saf(
+                pdSpawSaf = ${zone.getPdSpawSaf()},
+                isZone = ${true},
+                lang = ${lang})}">
+            </div>
+        </article>
         <article th:unless="${zone.getItemLocHgss().isEmpty()}">
-            <h3 id="items" th:text="#{zone.items}"></h3>
+            <h3 th:text="#{zone.items}"></h3>
             <div th:replace="~{fragments/zone-fragments.html :: zone-item-loc-table(
-                itemLocHgss = ${zone.getItemLocHgss()},
+                itemLocHgss = ${zone.getItemLocHgssOrdered()},
                 lang = ${lang})}">
             </div>
         </article>
         <article th:unless="${zone.getShops().isEmpty()}">
-            <h3 id="shops" th:text="#{zone.shops}"></h3>
+            <h3 th:text="#{zone.shops}"></h3>
             <th:block th:each="shop : ${zone.getShops()}">
                 <div th:replace="~{fragments/zone-fragments.html :: zone-shop-table(
                     shop = ${shop},

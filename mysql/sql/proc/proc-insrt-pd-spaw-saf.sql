@@ -167,7 +167,7 @@ begin
                 intLvMax,
                 intAmount1,
                 intAmount2,
-                days
+                intDays
             );
         end if;
 	end while;

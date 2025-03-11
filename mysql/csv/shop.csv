@@ -30,8 +30,8 @@ sh-mart-viri,PokéMart - Viridian City,フレンドリィショップ - トキ�
 sh-saf-rig,Safari Zone - Right Tent,サファリゾーン - 南東の露店,saf-gate,curr-ye
 sh-saf-lef,Safari Zone - Left Tent,サファリゾーン - 南西の露店,saf-gate,curr-ye
 sh-indi,Indigo Plateau,セキエイこうげん,dngn-indi,curr-ye
-sh-batt-ite,Battle Frontier - Items,バトルフロンティア - アイテム,dngn-batt,curr-bp
-sh-batt-tms,Battle Frontier - TMs,バトルフロンティア - わざマシン,dngn-batt,curr-bp
+sh-batt-ite,Battle Frontier - Items,バトルフロンティア - アイテム,dngn-batt-main,curr-bp
+sh-batt-tms,Battle Frontier - TMs,バトルフロンティア - わざマシン,dngn-batt-main,curr-bp
 sh-ath-ve,Pokeathlon Dome - Vending,ポケスロンドーム - 自動販売機,dngn-ath,curr-ye
 sh-ath-mo,Pokeathlon Dome - Monday,ポケスロンドーム - 月,dngn-ath,curr-ap
 sh-ath-tu,Pokeathlon Dome - Tuesday,ポケスロンドーム - 火,dngn-ath,curr-ap

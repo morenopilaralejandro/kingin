@@ -1,5 +1,6 @@
 package com.pocket.kingin.composite;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +20,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
 @Entity
-@Table(name = "item_loc_hgss")
+@Table(name = "pd_spaw_saf")
 public class PdSpawSaf {
 	@EmbeddedId
 	private PdSpawSafId id;
@@ -80,11 +81,6 @@ public class PdSpawSaf {
 		this.amount1 = amount1;
 		this.amount2 = amount2;
 		this.days = days;
-		
-		this.safBlks.add(safBlk1);
-		this.safBlks.add(safBlk2);
-		this.amounts.add(amount1);
-		this.amounts.add(amount2);
 	}
 	
 	public PdSpawSaf(Pd pd, Zone zone, Enc enc, SafBlk safBlk1, SafBlk safBlk2, Long lvMin, Long lvMax,
@@ -188,6 +184,11 @@ public class PdSpawSaf {
 	}
 
 	public List<SafBlk> getSafBlks() {
+		this.safBlks = new ArrayList<SafBlk>();
+		this.safBlks.add(safBlk1);
+		if (safBlk2 != null) {
+			this.safBlks.add(safBlk2);	
+		}
 		return safBlks;
 	}
 
@@ -196,6 +197,11 @@ public class PdSpawSaf {
 	}
 
 	public List<Long> getAmounts() {
+		this.amounts = new ArrayList<Long>();
+		this.amounts.add(amount1);
+		if (safBlk2 != null) {
+			this.amounts.add(amount2);
+		}
 		return amounts;
 	}
 

@@ -130,12 +130,35 @@ public class Zone implements InternatName {
 	public List<PdSpawHgss> getPdSpawHgss() {
 		return pdSpawHgss;
 	}
+	
+	public List<PdSpawHgss> getPdSpawHgssOrdered() {
+		pdSpawHgss.sort((o1, o2)
+                -> o1.getEnc().getEncId().compareTo(
+                        o2.getEnc().getEncId()));
+		return pdSpawHgss;
+	}
+	
+	public int getPdSpawHgssColspan() {
+		int colspan = 1;
+		for (PdSpawHgss psh : pdSpawHgss) {
+			if (psh.getRateD() != null || 
+					psh.getRateN() != null) {
+				colspan = 3;
+			}
+		}
+		return colspan;
+	}
 
 	public void setPdSpawHgss(List<PdSpawHgss> pdSpawHgss) {
 		this.pdSpawHgss = pdSpawHgss;
 	}
 
 	public List<ItemLocHgss> getItemLocHgss() {
+		return itemLocHgss;
+	}
+	
+	public List<ItemLocHgss> getItemLocHgssOrdered() {
+		itemLocHgss.sort((o1, o2) -> o1.getItemObt().getItemObtId().compareTo(o2.getItemObt().getItemObtId()));
 		return itemLocHgss;
 	}
 

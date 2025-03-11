@@ -38,25 +38,40 @@ public class PdSpawHgss {
 	
 	@Column(name = "lv_max")
 	private Long lvMax;
+	
+	@Column(name = "rate_m")
+	private Long RateM;
+	
+	@Column(name = "rate_d")
+	private Long RateD;
+	
+	@Column(name = "rate_n")
+	private Long RateN;
 
 	public PdSpawHgss() {}
 	
-	public PdSpawHgss(PdSpawHgssId id, Pd pd, Zone zone, Enc enc, Long lvMax) {
+	public PdSpawHgss(PdSpawHgssId id, Pd pd, Zone zone, Enc enc, Long lvMax, Long rateM, Long rateD, Long rateN) {
 		super();
 		this.id = id;
 		this.pd = pd;
 		this.zone = zone;
 		this.enc = enc;
 		this.lvMax = lvMax;
+		RateM = rateM;
+		RateD = rateD;
+		RateN = rateN;
 	}
-
-	public PdSpawHgss(Pd pd, Zone zone, Enc enc, Long lvMax, Boolean isHg, Boolean isSS, Long lvMin) {
+	
+	public PdSpawHgss(Pd pd, Zone zone, Enc enc, Boolean isHg, Boolean isSs, Long lvMin, Long lvMax, Long rateM, Long rateD, Long rateN) {
 		super();
-		this.id = new PdSpawHgssId(pd.getPdId(), zone.getZoneId(), enc.getEncId(), isHg, isSS, lvMin);
+		this.id = new PdSpawHgssId(pd.getPdId(), zone.getZoneId(), enc.getEncId(), isHg, isSs, lvMin);
 		this.pd = pd;
 		this.zone = zone;
 		this.enc = enc;
 		this.lvMax = lvMax;
+		RateM = rateM;
+		RateD = rateD;
+		RateN = rateN;
 	}
 
 	public PdSpawHgssId getId() {
@@ -99,14 +114,39 @@ public class PdSpawHgss {
 		this.lvMax = lvMax;
 	}
 
+	public Long getRateM() {
+		return RateM;
+	}
+
+	public void setRateM(Long rateM) {
+		RateM = rateM;
+	}
+
+	public Long getRateD() {
+		return RateD;
+	}
+
+	public void setRateD(Long rateD) {
+		RateD = rateD;
+	}
+
+	public Long getRateN() {
+		return RateN;
+	}
+
+	public void setRateN(Long rateN) {
+		RateN = rateN;
+	}
+
 	@Override
 	public String toString() {
-		return "PdSpawHgss [id=" + id + ", pd=" + pd + ", zone=" + zone + ", enc=" + enc + ", lvMax=" + lvMax + "]";
+		return "PdSpawHgss [id=" + id + ", pd=" + pd + ", zone=" + zone + ", enc=" + enc + ", lvMax=" + lvMax
+				+ ", RateM=" + RateM + ", RateD=" + RateD + ", RateN=" + RateN + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(enc, id, lvMax, pd, zone);
+		return Objects.hash(RateD, RateM, RateN, enc, id, lvMax, pd, zone);
 	}
 
 	@Override
@@ -118,8 +158,10 @@ public class PdSpawHgss {
 		if (getClass() != obj.getClass())
 			return false;
 		PdSpawHgss other = (PdSpawHgss) obj;
-		return Objects.equals(enc, other.enc) && Objects.equals(id, other.id) && Objects.equals(lvMax, other.lvMax)
-				&& Objects.equals(pd, other.pd) && Objects.equals(zone, other.zone);
+		return Objects.equals(RateD, other.RateD) && Objects.equals(RateM, other.RateM)
+				&& Objects.equals(RateN, other.RateN) && Objects.equals(enc, other.enc) && Objects.equals(id, other.id)
+				&& Objects.equals(lvMax, other.lvMax) && Objects.equals(pd, other.pd)
+				&& Objects.equals(zone, other.zone);
 	}
 
 }

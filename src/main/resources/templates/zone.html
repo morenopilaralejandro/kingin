@@ -57,8 +57,14 @@
                             <th:block th:if="${subZones.isEmpty()}">
                                 <li>
                                     <a href="#details">
-                                        <span th:text="${'1. '}"></span> 
+                                        <span th:text="${'1. '}"></span>
                                         <span th:text="#{zone.details}"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#other-lang">
+                                        <span th:text="${'2. '}"></span>
+                                        <span th:text="#{lang.other}"></span>
                                     </a>
                                 </li>
                             </th:block>
@@ -69,13 +75,13 @@
                                         <span th:text="${subZone.getInternatName().get(lang)}"></span>
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="#other-lang">
+                                        <span th:text="${subZones.size() + '. '}"></span> 
+                                        <span th:text="#{lang.other}"></span>
+                                    </a>
+                                </li>
                             </th:block>
-                            <li>
-                                <a href="#other-lang">
-                                    <span th:text="${subZones.size() + '. '}"></span> 
-                                    <span th:text="#{lang.other}"></span>
-                                </a>
-                            </li>
                         </ul>
                     </div>
 
@@ -95,7 +101,7 @@
                                 th:text="${subZone.getInternatName().get(lang)}">
                             </h2>    
                             <div th:replace="~{fragments/zone-fragments.html :: zone-details-combo(
-                                zone = ${subZone},
+                                zone = ${subZone},                                
                                 lang = ${lang})}">
                             </div>
                         </section>
