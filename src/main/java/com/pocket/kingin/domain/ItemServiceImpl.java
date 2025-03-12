@@ -16,6 +16,26 @@ public class ItemServiceImpl implements ItemService {
 	}
 	
 	@Override
+	public List<Item> findByItemCode(String code) {
+		return repo.findByItemCode(code);
+	}
+	
+	@Override
+	public List<Item> findByItemPkt(ItemPkt itemPkt) {
+		return repo.findByItemPkt(itemPkt);
+	}
+
+	@Override
+	public List<Item> findByItemNameEnContainingIgnoreCase(String itemNameEn) {
+		return repo.findByItemNameEnContainingIgnoreCase(itemNameEn);
+	}
+
+	@Override
+	public List<Item> findByItemNameJaContainingIgnoreCase(String itemNameJa) {
+		return repo.findByItemNameJaContainingIgnoreCase(itemNameJa);
+	}
+	
+	@Override
 	public Item one(Long id) {
 		return repo.findById(id).orElseThrow(() -> new ItemNotFoundException(id));
 	}
@@ -53,5 +73,5 @@ public class ItemServiceImpl implements ItemService {
 	public void delete(Long id) {
 		repo.deleteById(id);
 	}
-	
+
 }

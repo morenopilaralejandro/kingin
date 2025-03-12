@@ -57,12 +57,18 @@
         </table>
     </div>      
 
-    <div th:fragment="zone-item-loc-table(itemLocHgss, lang)" class="table-responsive">
+    <div th:fragment="zone-item-loc-table(itemLocHgss, isZone, lang)" class="table-responsive">
         <table class="table table-bordered table-sm" style="width: fit-content;">
             <tr>
                 <th 
+                    th:if="${isZone}"
                     class="bg-black" 
                     th:text="#{general.name}">
+                </th>
+                <th 
+                    th:unless="${isZone}"
+                    class="bg-black" 
+                    th:text="#{zone.title}">
                 </th>
                 <th 
                     class="bg-black" 
@@ -70,12 +76,19 @@
                 </th>
             </tr>
             <tr th:each="ilh : ${itemLocHgss}">
-                <td>
+                <td th:if="${isZone}">
                     <a th:replace="~{fragments/item-fragments.html :: item-link(
                         item = ${ilh.getItem()}, 
                         lang = ${lang})}">
                     </a>
                 </td>
+                <td th:unless="${isZone}">
+                    <a th:replace="~{fragments/zone-fragments.html :: zone-link(
+                        zone = ${ilh.getZone()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+
                 <td th:text="${ilh.getItemObt().getInternatName().get(lang)}"></td>
             </tr>
         </table>
@@ -264,6 +277,7 @@
             <h3 th:text="#{zone.items}"></h3>
             <div th:replace="~{fragments/zone-fragments.html :: zone-item-loc-table(
                 itemLocHgss = ${zone.getItemLocHgssOrdered()},
+                isZone = ${true},
                 lang = ${lang})}">
             </div>
         </article>

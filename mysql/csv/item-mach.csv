@@ -38,7 +38,7 @@ tm36,36,many,Sludge Bomb
 tm37,37,wkr,Sandstorm
 tm38,38,many,Fire Blast
 tm39,39,one,Rock Tomb
-tm40,40,one,Aerial Ace
+tm40,40,many,Aerial Ace
 tm41,41,many,Torment
 tm42,42,many,Facade
 tm43,43,one,Secret Power
@@ -62,7 +62,7 @@ tm60,60,many,Drain Punch
 tm61,61,many,Will-o-wisp
 tm62,62,many,Silver Wind
 tm63,63,one,Embargo
-tm64,64,many,Explosion
+tm64,64,one,Explosion
 tm65,65,many,Shadow Claw
 tm66,66,one,Payback
 tm67,67,one,Recycle
@@ -85,7 +85,7 @@ tm83,83,many,Natural Gift
 tm84,84,one,Poison Jab
 tm85,85,one,Dream Eater
 tm86,86,one,Grass Knot
-tm87,87,one,Swagger
+tm87,87,many,Swagger
 tm88,88,one,Pluck
 tm89,89,many,U-Turn
 tm90,90,many,Substitute

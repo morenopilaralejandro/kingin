@@ -66,9 +66,9 @@ public class Shop implements InternatName {
 			aux += this.zone.getZoneCode();
 		} else {
 			aux += this.zone.getZoneMain().getZoneCode();
-			aux += "#";
-			aux += this.shopCode;
 		}
+		aux += "#";
+		aux += this.shopCode;
 		return aux;
 	}
 

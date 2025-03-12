@@ -4,6 +4,14 @@ import java.util.List;
 
 public interface ItemService {
 	List<Item> all();
+	
+	List<Item> findByItemCode(String code);
+	
+	List<Item> findByItemPkt(ItemPkt itemPkt);
+	
+	List<Item> findByItemNameEnContainingIgnoreCase(String itemNameEn);
+	
+	List<Item> findByItemNameJaContainingIgnoreCase(String itemNameJa);
 
 	Item one(Long id);
 

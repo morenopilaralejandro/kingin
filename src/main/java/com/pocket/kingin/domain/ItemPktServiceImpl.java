@@ -16,6 +16,11 @@ public class ItemPktServiceImpl implements ItemPktService {
 	}
 	
 	@Override
+	public List<ItemPkt> findByItemPktCode(String code) {
+		return repo.findByItemPktCode(code);
+	}
+	
+	@Override
 	public ItemPkt one(Long id) {
 		return repo.findById(id).orElseThrow(() -> new ItemPktNotFoundException(id));
 	}

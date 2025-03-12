@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface ItemPktService {
 	List<ItemPkt> all();
+	
+	List<ItemPkt> findByItemPktCode(String code);
 
 	ItemPkt one(Long id);
 

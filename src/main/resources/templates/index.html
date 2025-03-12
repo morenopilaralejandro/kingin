@@ -69,6 +69,12 @@
                                     th:text="#{zone.list.title}">
                                 </a>
                             </li>
+                            <li>
+                                <a 
+                                    th:href="@{/{lang}/item(lang=${lang})}"
+                                    th:text="#{item.list.title}">
+                                </a>
+                            </li>
                         </ul>
                     </section>
                 </div>

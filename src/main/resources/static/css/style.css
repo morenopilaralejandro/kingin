@@ -340,6 +340,18 @@ footer span {
     background-color: var(--bs-light-bg-subtle);
     color: white !important;
 }
+/*style-item*/
+.item-mach-obt.many {
+    background-color: var(--bs-success-bg-subtle);
+}
+
+.item-mach-obt.one {
+    background-color: var(--bs-danger-bg-subtle);
+}
+
+.item-mach-obt.wkr {
+    background-color: var(--bs-warning-bg-subtle);
+}
 /*style-zukan*/
 .pd-container-lg {
     display: flex;

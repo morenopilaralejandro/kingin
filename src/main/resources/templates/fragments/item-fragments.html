@@ -8,5 +8,149 @@
         th:text="${item.getInternatName().get(lang)}"
         th:href="@{/{lang}/item/{code}(lang=${lang}, code=${item.getItemCode()})}">        
     </a>
+
+    <a
+        th:fragment="pocket-link(pkt, lang)"
+        th:text="${pkt.getInternatName().get(lang)}"
+        th:href="@{/{lang}/pocket/{code}(lang=${lang}, code=${pkt.getItemPktCode()})}">        
+    </a>
+
+    <div th:fragment="pocket-ul(itemPkts, lang)">
+        <ul>
+            <li th:each="pkt : ${itemPkts}">
+                <a th:replace="~{fragments/item-fragments.html :: pocket-link(
+                    pkt = ${pkt}, 
+                    lang = ${lang})}">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div th:fragment="item-table(items, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm">
+            <tr>
+                <th 
+                    class="bg-black w-25" 
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{item.desc}">
+                </th>
+            </tr>
+            <tr th:each="item : ${items}">
+                <td>
+                    <a th:replace="~{fragments/item-fragments.html :: item-link(
+                        item = ${item}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${item.getInternatDesc().get(lang)}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div th:fragment="item-mach-table(itemMachs, isLink ,lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{item.tm}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.title}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.type}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.category}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.power}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.accuracy}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{item.availability}">
+                </th>
+            </tr>
+            <th:block th:each="itemMach : ${itemMachs}">
+                <tr>
+                    <td th:if="${isLink}" class="bg-light-subtle">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${itemMach}, 
+                            lang = ${lang})}">
+                        </a>
+                    </td>
+                    <td 
+                        th:unless="${isLink}" 
+                        class="bg-light-subtle"
+                        th:text="${itemMach.getInternatName().get(lang)}">
+                    </td>
+                    <td class="bg-light-subtle">
+                        <a th:replace="~{fragments/move-fragments.html :: move-link(
+                            move = ${itemMach.getMove()}, 
+                            lang = ${lang})}">
+                        </a>
+                    </td>
+                    <td class="bg-light-subtle" style="text-align: center;">
+                        <span th:replace="~{fragments/icon-fragments.html :: icon-type( 
+                            type = ${itemMach.getMove().getType()},
+                            lang = ${lang})}">
+                        </span>
+                    </td>
+                    <td class="bg-light-subtle" style="text-align: center;">
+                        <span th:replace="~{fragments/icon-fragments.html :: icon-move-cat( 
+                            moveCat = ${itemMach.getMove().getMoveCat()},
+                            lang = ${lang})}">
+                        </span>
+                    </td>
+                    <td
+                        class="bg-light-subtle"
+                        th:text="${itemMach.getMove().getMoveBp()}">
+                    </td>
+                    <td
+                        class="bg-light-subtle"
+                        th:text="${itemMach.getMove().getMoveAc()}">
+                    </td>
+                    <td 
+                        class="item-mach-obt"
+                        th:classappend="${itemMach.getItemMachObt().getItemMachObtCode()}"
+                        th:text="${itemMach.getItemMachObt().getInternatName().get(lang)}">
+                    </td>
+                </tr>
+
+            </th:block>
+        </table>
+    </div>
+
+    <div th:fragment="item-shop-table(shops, item, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    th:text="#{item.shops}">
+                </th>
+            </tr>
+            <tr th:each="shop : ${shops}">
+                <td>
+                    <a th:replace="~{fragments/zone-fragments.html :: shop-link(
+                        shop = ${shop}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${item.getPriceBuyByCurr(shop.getCurr()) + ' ' + shop.getCurr().getInternatName().get(lang)}"></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
