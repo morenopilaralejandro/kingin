@@ -1,6 +1,6 @@
 /*style-root*/
 :root {
-    --silver-bg: #2f2f2f;
+    --silver-bg: silver;
     --egg-bg: #fffdd0;
 
     --stat-hp: #0a2518;
@@ -99,7 +99,7 @@ footer {
 }
 
 footer span {
-    color: var(--egg-bg);;
+    color: #fffa8b;
     text-shadow: 0 0 6px black;
     display: block;
     box-sizing: border-box;
@@ -124,7 +124,7 @@ footer span {
 }
 
 .lang-def .lang-icon {
-    background-color: white;
+    background-color: var(--silver-bg);
     padding: 5px 8px;
     vertical-align: text-top;
     border-radius: var(--bs-border-radius);
@@ -140,7 +140,7 @@ footer span {
 .lang-def .lang-text {
     padding: 5px;
     background-color: black;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--silver-bg);
 }
 
 .lang-drop { 

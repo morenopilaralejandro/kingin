@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <a
+        th:fragment="walker-link(pwCrse, lang)"
+        th:text="${pwCrse.getInternatName().get(lang)}"
+        th:href="@{/{lang}/walker/{code}(lang=${lang}, code=${pwCrse.getPwCrseCode()})}">        
+    </a>
+
+    <div th:fragment="walker-unlock-table(pwCrses, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{walker.title}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{walker.unlock}">
+                </th>
+            </tr>
+            <tr th:each="pwCrse : ${pwCrses}">
+                <td>
+                    <a th:replace="~{fragments/walker-fragments.html :: walker-link(
+                        pwCrse = ${pwCrse}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${pwCrse.getPwUnlc().getInternatDesc().get(lang)}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div th:fragment="walker-spawn-table(grpA, grpB, grpC, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>            
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{walker.steps}">
+                </th>
+            </tr>
+            <tr th:each="wsp : ${grpA}">
+                <td
+                    th:if = "${wspStat.index == 0}"
+                    class="bg-black" 
+                    style="vertical-align: middle; font-weight: bold;"
+                    rowspan="2"
+                    th:text="#{walker.grpa}">
+                </td>
+                <td>
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${wsp.getPd()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${wsp.getId().getStep()}"></td>
+            </tr>
+            <tr th:each="wsp : ${grpB}">
+                <td
+                    th:if = "${wspStat.index == 0}"
+                    class="bg-black" 
+                    style="vertical-align: middle; font-weight: bold;"
+                    rowspan="2"
+                    th:text="#{walker.grpb}">
+                </td>
+                <td>
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${wsp.getPd()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${wsp.getId().getStep()}"></td>
+            </tr>
+            <tr th:each="wsp : ${grpC}">
+                <td
+                    th:if = "${wspStat.index == 0}"
+                    class="bg-black" 
+                    style="vertical-align: middle; font-weight: bold;"
+                    rowspan="2"
+                    th:text="#{walker.grpc}">
+                </td>
+                <td>
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${wsp.getPd()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${wsp.getId().getStep()}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div th:fragment="pd-walker-table(pd, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>            
+                <th 
+                    class="bg-black" 
+                    th:text="#{walker.title}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{walker.steps}">
+                </th>
+            </tr>
+            <tr th:each="wsp : ${pd.getPwCrseSpawPd()}">
+                <td>
+                    <a th:replace="~{fragments/walker-fragments.html :: walker-link(
+                        pwCrse = ${wsp.getPwCrse()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${wsp.getId().getStep()}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div th:fragment="walker-item-table(pwCrseLocItem, isPw, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>            
+                <th 
+                    th:if="${isPw}"
+                    class="bg-black" 
+                    th:text="#{item.title}">
+                </th>
+                <th 
+                    th:unless="${isPw}"
+                    class="bg-black" 
+                    th:text="#{walker.title}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{walker.steps}">
+                </th>
+            </tr>
+            <tr th:each="wli : ${pwCrseLocItem}">
+                <td th:if="${isPw}">
+                    <a th:replace="~{fragments/item-fragments.html :: item-link(
+                        item = ${wli.getItem()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:unless="${isPw}">
+                    <a th:replace="~{fragments/walker-fragments.html :: walker-link(
+                        pwCrse = ${wli.getPwCrse()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${wli.getId().getStep()}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

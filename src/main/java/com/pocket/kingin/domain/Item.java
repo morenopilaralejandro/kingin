@@ -141,6 +141,10 @@ public class Item implements InternatName, InternatDesc {
 			return null;
 		}
 	}
+	
+	public String getTitle(String lang) {
+		return "";
+	}
 
 	public Long getItemId() {
 		return itemId;

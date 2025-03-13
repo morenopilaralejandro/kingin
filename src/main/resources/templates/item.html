@@ -45,7 +45,7 @@
                         <li class="breadcrumb-item">
                             <a 
                                 th:href="@{/{lang}/pocket/{code}(lang=${lang}, code=${item.getItemPkt().getItemPktCode()})}" 
-                                th:text="#{item.pocket.title}">
+                                th:text="${item.getItemPkt().getInternatName().get(lang)}">
                             </a>
                         </li>
                         <li 
@@ -118,10 +118,19 @@
                                 lang = ${lang})}">
                             </div>
                         </article>
+
+                        <article th:unless="${item.getPwCrseLocItem().isEmpty()}">
+                            <h3 th:text="#{walker.list.title}"></h3>
+                            <div th:replace="~{fragments/walker-fragments.html :: walker-item-table(
+                                pwCrseLocItem = ${item.getPwCrseLocItem()},
+                                isPw = ${false},
+                                lang = ${lang})}">
+                            </div>
+                        </article>
         
                         <!--
                             todo
-                            article powewalker and held item
+                            gear and held item
                         -->
                     </section>
                     <section>

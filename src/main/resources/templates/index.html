@@ -75,6 +75,12 @@
                                     th:text="#{item.list.title}">
                                 </a>
                             </li>
+                            <li>
+                                <a 
+                                    th:href="@{/{lang}/walker(lang=${lang})}"
+                                    th:text="#{walker.list.title}">
+                                </a>
+                            </li>
                         </ul>
                     </section>
                 </div>

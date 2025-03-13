@@ -29,8 +29,8 @@ public class PwUnlcServiceImpl implements PwUnlcService {
 	public PwUnlc replace(PwUnlc newObj, Long id) {
 		return repo.findById(id).map(oldObj -> {
 			oldObj.setPwUnlcCode(newObj.getPwUnlcCode());
-			oldObj.setPwUnlcNameEn(newObj.getPwUnlcNameEn());
-			oldObj.setPwUnlcNameJa(newObj.getPwUnlcNameJa());
+			oldObj.setPwUnlcDescEn(newObj.getPwUnlcDescEn());
+			oldObj.setPwUnlcDescJa(newObj.getPwUnlcDescJa());
 			return repo.save(oldObj);
 		}).orElseGet(() -> {
 			newObj.setPwUnlcId(id);

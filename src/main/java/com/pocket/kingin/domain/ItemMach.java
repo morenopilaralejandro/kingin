@@ -36,6 +36,20 @@ public class ItemMach extends Item {
 		this.itemMachObt = itemMachObt;
 		this.move = move;
 	}
+	
+	public ItemMach(Long itemId, String itemCode, String itemNameEn, String itemNameJa, String itemDescEn,
+			String itemDescJa, Long itemPriceBuyYe, Long itemPriceSelYe, Long itemPriceBuyBp, Long itemPriceBuyCn,
+			Long itemPriceBuyAp, Long itemFlin, ItemType itemType, ItemPkt itemPkt, ItemCat itemCat) {
+		super(itemId, itemCode, itemNameEn, itemNameJa, itemDescEn, itemDescJa, itemPriceBuyYe, itemPriceSelYe, itemPriceBuyBp,
+				itemPriceBuyCn, itemPriceBuyAp, itemFlin, itemType, itemPkt, itemCat);
+	}
+	
+	@Override
+	public String getTitle(String lang) {
+		String title = "";
+		title = this.move.getInternatName().get(lang);
+		return title;
+	}
 
 	public Long getItemMachNum() {
 		return itemMachNum;

@@ -16,6 +16,21 @@ public class PwCrseServiceImpl implements PwCrseService {
 	}
 	
 	@Override
+	public List<PwCrse> findByPwCrseCode(String code) {
+		return repo.findByPwCrseCode(code);
+	}
+
+	@Override
+	public List<PwCrse> findByPwCrseNameEnContainingIgnoreCase(String pwCrseNameEn) {
+		return repo.findByPwCrseNameEnContainingIgnoreCase(pwCrseNameEn);
+	}
+
+	@Override
+	public List<PwCrse> findBypwCrseNameJaContainingIgnoreCase(String pwCrseNameJa) {
+		return repo.findBypwCrseNameJaContainingIgnoreCase(pwCrseNameJa);
+	}
+	
+	@Override
 	public PwCrse one(Long id) {
 		return repo.findById(id).orElseThrow(() -> new PwCrseNotFoundException(id));
 	}

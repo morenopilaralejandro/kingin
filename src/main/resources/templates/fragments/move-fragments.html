@@ -24,10 +24,10 @@
         <div th:if="${moves.isEmpty()}" class="mb-3">
             <span th:text="#{general.nodata}"></span>
         </div>
-        <table th:unless="${moves.isEmpty()}" class="table table-bordered table-sm">
+        <table th:unless="${moves.isEmpty()}" class="table table-bordered table-sm" style="max-width: 600px;">
             <tr>
                 <th 
-                    class="bg-black" 
+                    class="bg-black w-25" 
                     th:text="#{move.title}">
                 </th>
                 <th 
