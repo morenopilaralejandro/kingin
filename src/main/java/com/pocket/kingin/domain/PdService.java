@@ -4,6 +4,12 @@ import java.util.List;
 
 public interface PdService {
 	List<Pd> all();
+	
+	List<Pd> findByPdCode(String code);
+	
+	List<Pd> findByPdNameEnContainingIgnoreCase(String pdNameEn);
+	
+	List<Pd> findByPdNameJaContainingIgnoreCase(String pdNameJa);
 
 	Pd one(Long id);
 

@@ -15,7 +15,7 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "move_cause_eff")
+@Table(name = "gear_foug_pd")
 public class GearFougPd {
 	@EmbeddedId
 	private GearFougPdId id;

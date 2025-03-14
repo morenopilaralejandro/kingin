@@ -20,7 +20,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -67,7 +66,7 @@ public class Item implements InternatName, InternatDesc {
 	@JoinColumn(name = "item_cat_id", referencedColumnName = "item_cat_id")
 	private ItemCat itemCat;
 	
-	@ManyToMany(mappedBy = "items")
+	@ManyToMany(mappedBy = "items", fetch = FetchType.LAZY)
 	private List<Shop> shops;
 	
 	@OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
@@ -79,9 +78,8 @@ public class Item implements InternatName, InternatDesc {
 	@OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
 	private List<PwCrseLocItem> pwCrseLocItem;
 	
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "gear_gift_item", joinColumns = @JoinColumn(name = "item_id"), inverseJoinColumns = @JoinColumn(name = "gear_call_id"))
-	private List<GearCall> calls;
+	@ManyToMany(mappedBy = "items", fetch = FetchType.LAZY)
+	private List<GearCall> gearCalls;
 
 	public Item() {
 	}
@@ -290,20 +288,20 @@ public class Item implements InternatName, InternatDesc {
 		this.pwCrseLocItem = pwCrseLocItem;
 	}
 
-	public List<GearCall> getCalls() {
-		return calls;
-	}
-
-	public void setCalls(List<GearCall> calls) {
-		this.calls = calls;
-	}
-
 	public List<PdHoldItem> getPdHoldItem() {
 		return pdHoldItem;
 	}
 
 	public void setPdHoldItem(List<PdHoldItem> pdHoldItem) {
 		this.pdHoldItem = pdHoldItem;
+	}
+
+	public List<GearCall> getGearCalls() {
+		return gearCalls;
+	}
+
+	public void setGearCalls(List<GearCall> gearCalls) {
+		this.gearCalls = gearCalls;
 	}
 
 	@Override

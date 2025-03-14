@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html th:lang="#{lang.code}" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="keywords" th:content="#{judge.keywords}">
+	    <meta name="description" th:content="#{judge.description}">
+	    <meta name="author" th:content="#{general.author}">
+        <title th:text="#{judge.title} + '｜' + #{general.web}"></title>
+
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+            crossorigin="anonymous">
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+    </head>
+    <body>
+        <header th:replace="~{fragments/header-fragments.html :: header(lang = ${lang})}"></header>
+
+        <div th:replace="~{fragments/lang-fragments.html :: lang-div(url = ${url})}"></div>
+
+        <div class="container-main">
+            <div class="wrapper-main">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a 
+                                th:href="@{/{lang}/index(lang=${lang})}" 
+                                th:text="#{index.home}">
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a 
+                                th:href="@{/{lang}/index#database(lang=${lang})}" 
+                                th:text="#{index.database}">
+                            </a>
+                        </li>
+                        <li 
+                            class="breadcrumb-item active" aria-current="page" 
+                            th:text="#{judge.title}">
+                        </li>
+                    </ol>
+                </nav>
+
+                <div>
+                    <h1 th:text="#{judge.title}"></h1>
+                    <section>
+                        <h2 th:text="#{judge.potential}"></h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm" style="width: fit-content;">
+                                <tr>
+                                    <th 
+                                        class="bg-black" 
+                                        th:text="#{judge.dialogue}">
+                                    </th>
+                                    <th 
+                                        class="bg-black" 
+                                        th:text="#{judge.iv}">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td th:text="#{judge.potential.outstanding.text}"></td>
+                                    <td th:text="#{judge.potential.outstanding.range}"></td>
+                                </tr>
+                                <tr>
+                                    <td th:text="#{judge.potential.superior.text}"></td>
+                                    <td th:text="#{judge.potential.superior.range}"></td>
+                                </tr>
+                                <tr>
+                                    <td th:text="#{judge.potential.average.text}"></td>
+                                    <td th:text="#{judge.potential.average.range}"></td>
+                                </tr>
+                                <tr>
+                                    <td th:text="#{judge.potential.decent.text}"></td>
+                                    <td th:text="#{judge.potential.decent.range}"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section>
+                        <h2 th:text="#{judge.stat}"></h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm" style="width: fit-content;">
+                                <tr>
+                                    <th 
+                                        class="bg-black" 
+                                        th:text="#{judge.dialogue}">
+                                    </th>
+                                    <th 
+                                        class="bg-black" 
+                                        th:text="#{judge.iv}">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td th:text="#{judge.stat.best.text}"></td>
+                                    <td th:text="#{judge.stat.best.value}"></td>
+                                </tr>
+                                <tr>
+                                    <td th:text="#{judge.stat.fantastic.text}"></td>
+                                    <td th:text="#{judge.stat.fantastic.value}"></td>
+                                </tr>
+                                <tr>
+                                    <td th:text="#{judge.stat.good.text}"></td>
+                                    <td th:text="#{judge.stat.good.value}"></td>
+                                </tr>
+                                <tr>
+                                    <td th:text="#{judge.stat.decent.text}"></td>
+                                    <td th:text="#{judge.stat.decent.value}"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                </div>            
+            </div>
+        </div>
+
+        <footer th:replace="~{fragments/footer-fragments.html :: footer(lang = ${lang})}"></footer>
+    </body>
+</html>

@@ -1,6 +1,8 @@
 package com.pocket.kingin.controller;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
@@ -21,8 +23,29 @@ public class WebController {
 	public String index(@PathVariable("lang") String lang, Model model) {
 		Locale locale = LocaleContextHolder.getLocale();
 		
+		Map<String, String> urlMap = new HashMap<String, String>();
+		urlMap.put("zukan", "zukan");
+		urlMap.put("ability", "ability");
+		
+		urlMap.put("egggroup", "egg-group");
+		urlMap.put("nature", "nature");
+		
+		urlMap.put("move", "move");
+		urlMap.put("tutor", "move-tutor");
+		
+		urlMap.put("item", "item");
+		urlMap.put("zone", "map");
+		
+		
+		urlMap.put("gear", "gear");
+		urlMap.put("walker", "walker");
+		
+		urlMap.put("judge", "judge");
+		urlMap.put("source", "source");
+		
 		model.addAttribute("lang", locale.getLanguage());
 		model.addAttribute("url", "/index");
+		model.addAttribute("urlMap", urlMap);
 		return "index";
 	}
 

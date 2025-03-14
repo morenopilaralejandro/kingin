@@ -144,13 +144,6 @@ public class Pd implements InternatName {
 		this.pdBaseSpe = pdBaseSpe;
 		this.eggCyc = eggCyc;
 		this.expGrp = expGrp;
-		
-		this.pdBaseArr.add(pdBaseHp);
-		this.pdBaseArr.add(pdBaseAtk);
-		this.pdBaseArr.add(pdBaseDef);
-		this.pdBaseArr.add(pdBaseSpatk);
-		this.pdBaseArr.add(pdBaseSpdef);
-		this.pdBaseArr.add(pdBaseSpe);
 	}
 
 	@Override
@@ -234,6 +227,12 @@ public class Pd implements InternatName {
 	}
 
 	public List<Long> getPdBaseArr() {
+		this.pdBaseArr.add(pdBaseHp);
+		this.pdBaseArr.add(pdBaseAtk);
+		this.pdBaseArr.add(pdBaseDef);
+		this.pdBaseArr.add(pdBaseSpatk);
+		this.pdBaseArr.add(pdBaseSpdef);
+		this.pdBaseArr.add(pdBaseSpe);
 		return pdBaseArr;
 	}
 

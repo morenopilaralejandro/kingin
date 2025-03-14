@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   fill="currentColor"
+   class="bi bi-capsule"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <path
+     d="M 1.828,8.9 8.9,1.827 a 4.0001031,4.0001031 0 1 1 5.657,5.657 l -7.07,7.071 A 4.000457,4.000457 0 1 1 1.827,8.9 Z m 9.128,0.771 2.893,-2.893 A 3,3 0 1 0 9.606,2.536 L 6.713,5.429 Z"
+     id="path1"
+     style="fill:#ffffff" />
+</svg>

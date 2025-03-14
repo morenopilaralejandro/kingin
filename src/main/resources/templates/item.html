@@ -105,6 +105,7 @@
                             th:if="${
                                 item.getItemLocHgss().isEmpty() &&
                                 item.getPwCrseLocItem().isEmpty() &&
+                                item.getGearCalls().isEmpty() &&
                                 item.getPdHoldItem().isEmpty()
                             }" 
                             class="mb-3">
@@ -118,7 +119,6 @@
                                 lang = ${lang})}">
                             </div>
                         </article>
-
                         <article th:unless="${item.getPwCrseLocItem().isEmpty()}">
                             <h3 th:text="#{walker.list.title}"></h3>
                             <div th:replace="~{fragments/walker-fragments.html :: walker-item-table(
@@ -127,10 +127,19 @@
                                 lang = ${lang})}">
                             </div>
                         </article>
+                        <article th:unless="${item.getGearCalls().isEmpty()}">
+                            <h3 th:text="#{gear.list.title}"></h3>
+                            <th:block th:each="gearCall : ${item.getGearCalls()}">
+                                <div th:replace="~{fragments/gear-fragments.html :: gear-call-table(
+                                    gearCall = ${gearCall},
+                                    lang = ${lang})}">
+                                </div>
+                            </th:block>
+                        </article>
         
                         <!--
                             todo
-                            gear and held item
+                            held item
                         -->
                     </section>
                     <section>

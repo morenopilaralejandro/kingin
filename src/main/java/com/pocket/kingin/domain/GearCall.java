@@ -125,6 +125,11 @@ public class GearCall {
 	public List<GearFougPd> getGearFougPd() {
 		return gearFougPd;
 	}
+	
+	public List<GearFougPd> getGearFougPdOrdered() {
+		this.gearFougPd.sort((o1, o2) -> o1.getId().getOrdr().compareTo(o2.getId().getOrdr()));
+		return gearFougPd;
+	}
 
 	public void setGearFougPd(List<GearFougPd> gearFougPd) {
 		this.gearFougPd = gearFougPd;

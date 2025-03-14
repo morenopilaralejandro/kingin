@@ -352,6 +352,35 @@ footer span {
 .item-mach-obt.wkr {
     background-color: var(--bs-warning-bg-subtle);
 }
+/*style-index*/
+div.index-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+div.index-container a {
+    background-color: #3f3f3f;
+    border-radius: var(--bs-border-radius);
+    display: block;
+    color: initial;
+    text-decoration: none;
+    padding: 10px;
+    width: 150px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+div.index-container a:hover {
+    background-color: black;
+    outline: 2px solid rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1))
+}
+div.index-container span {
+    padding-left: 5px;
+}
+
+
 /*style-zukan*/
 .pd-container-lg {
     display: flex;

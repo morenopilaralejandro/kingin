@@ -20,68 +20,62 @@
 
         <div th:replace="~{fragments/lang-fragments.html :: lang-div(url = ${url})}"></div>
 
-        <div class="container-main">
+        <div class="container-main" style="margin-bottom: 300px;">
             <div class="wrapper-main">
                 <div>
                     <h1 th:text="#{index.home}"></h1>
                     <section>
                         <h2 id="database" th:text="#{index.database}"></h2>
-                        <ul>
-                            <li>
-                                <a 
-                                    th:href="@{/{lang}/source(lang=${lang})}"
-                                    th:text="#{source.title}">
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    th:href="@{/{lang}/nature(lang=${lang})}"
-                                    th:text="#{nature.title}">
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    th:href="@{/{lang}/egg-group(lang=${lang})}"
-                                    th:text="#{egggroup.list.title}">
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    th:href="@{/{lang}/ability(lang=${lang})}"
-                                    th:text="#{ability.list.title}">
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    th:href="@{/{lang}/move(lang=${lang})}"
-                                    th:text="#{move.list.title}">
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    th:href="@{/{lang}/move-tutor(lang=${lang})}"
-                                    th:text="#{move.tutor.title}">
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    th:href="@{/{lang}/map(lang=${lang})}"
-                                    th:text="#{zone.list.title}">
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    th:href="@{/{lang}/item(lang=${lang})}"
-                                    th:text="#{item.list.title}">
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    th:href="@{/{lang}/walker(lang=${lang})}"
-                                    th:text="#{walker.list.title}">
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="index-container">
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('zukan')})}">
+                                <img th:src="@{/img/svg/zukan.svg}" th:alt="#{zukan.list.title}">
+                                <span th:text="#{zukan.list.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('ability')})}">
+                                <img th:src="@{/img/svg/ability.svg}" th:alt="#{ability.list.title}">
+                                <span th:text="#{ability.list.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('egggroup')})}">
+                                <img th:src="@{/img/svg/egggroup.svg}" th:alt="#{egggroup.list.title}">
+                                <span th:text="#{egggroup.list.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('nature')})}">
+                                <img th:src="@{/img/svg/nature.svg}" th:alt="#{nature.title}">
+                                <span th:text="#{nature.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('move')})}">
+                                <img th:src="@{/img/svg/move.svg}" th:alt="#{move.list.title}">
+                                <span th:text="#{move.list.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('tutor')})}">
+                                <img th:src="@{/img/svg/tutor.svg}" th:alt="#{move.tutor.title}">
+                                <span th:text="#{move.tutor.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('item')})}">
+                                <img th:src="@{/img/svg/item.svg}" th:alt="#{item.list.title}">
+                                <span th:text="#{item.list.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('zone')})}">
+                                <img th:src="@{/img/svg/zone.svg}" th:alt="#{zone.list.title}">
+                                <span th:text="#{zone.list.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('gear')})}">
+                                <img th:src="@{/img/svg/gear.svg}" th:alt="#{gear.list.title}">
+                                <span th:text="#{gear.list.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('walker')})}">
+                                <img th:src="@{/img/svg/walker.svg}" th:alt="#{walker.list.title}">
+                                <span th:text="#{walker.list.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('judge')})}">
+                                <img th:src="@{/img/svg/judge.svg}" th:alt="#{judge.title}">
+                                <span th:text="#{judge.title}"></span>
+                            </a>
+                            <a th:href="@{/{lang}/{url}(lang=${lang}, url=${urlMap.get('source')})}">
+                                <img th:src="@{/img/svg/source.svg}" th:alt="#{source.title}">
+                                <span th:text="#{source.title}"></span>
+                            </a>
+                        </div>
                     </section>
                 </div>
             </div>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div th:fragment="gear-call-table(gearCall, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="max-width: 400px;">
+            <tr>
+                <td 
+                    class="bg-black w-25" 
+                    style="font-weight: bold;"
+                    th:text="#{gear.day}">
+                </td>
+                <td
+                    colspan="2"
+                    th:text="${gearCall.getGearDay().getInternatName().get(lang)}">
+                </td>
+            </tr>
+            <tr>
+                <td 
+                    class="bg-black" 
+                    style="font-weight: bold;"
+                    th:text="#{gear.time}">
+                </td>
+                <td
+                    colspan="2"
+                    th:text="${gearCall.getGearTime().getInternatName().get(lang)}">
+                </td>
+            </tr>
+            <tr>
+                <td 
+                    class="bg-black" 
+                    style="font-weight: bold;"
+                    th:text="#{gear.trainer}">
+                </td>
+                <td
+                    colspan="2"
+                    th:text="${gearCall.getNpc().getInternatNameCompound().get(lang)}">
+                </td>
+            </tr>
+            <tr>
+                <td 
+                    class="bg-black" 
+                    style="font-weight: bold;"
+                    th:text="#{gear.location}">
+                </td>
+                <td colspan="2">
+                    <a th:replace="~{fragments/zone-fragments.html :: zone-link(
+                        zone = ${gearCall.getZone()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td 
+                    class="bg-black" 
+                    style="font-weight: bold;"
+                    th:text="#{gear.reward}">
+                </td>
+                <td colspan="2">
+                    <span 
+                        th:text="${gearCall.getMoney()}">
+                    </span>
+                    <span 
+                        th:text="${lang.equals('ja') ? '円':'₽'}">
+                    </span>
+                </td>
+            </tr>
+            <tr th:unless="${gearCall.getItems().isEmpty()}">
+                <td 
+                    class="bg-black" 
+                    style="font-weight: bold;"
+                    th:text="#{gear.item}">
+                </td>
+                <td colspan="2">
+                    <a th:replace="~{fragments/item-fragments.html :: item-link(
+                        item = ${gearCall.getItems().get(0)}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+            </tr>
+            <tr th:each="gfp : ${gearCall.getGearFougPdOrdered()}">
+                <td
+                    th:if="${gfpStat.index == 0}"
+                    th:rowspan="${gearCall.getGearFougPd().size()}"
+                    class="bg-black" 
+                    style="font-weight: bold;"
+                    th:text="#{gear.oponents}">
+                </td>
+                <td class="w-50">
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${gfp.getPd()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${gfp.getLv()}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

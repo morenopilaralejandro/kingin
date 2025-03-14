@@ -16,6 +16,21 @@ public class PdServiceImpl implements PdService {
 	}
 	
 	@Override
+	public List<Pd> findByPdCode(String code) {
+		return repo.findByPdCode(code);
+	}
+
+	@Override
+	public List<Pd> findByPdNameEnContainingIgnoreCase(String pdNameEn) {
+		return repo.findByPdNameEnContainingIgnoreCase(pdNameEn);
+	}
+
+	@Override
+	public List<Pd> findByPdNameJaContainingIgnoreCase(String pdNameJa) {
+		return repo.findByPdNameJaContainingIgnoreCase(pdNameJa);
+	}
+	
+	@Override
 	public Pd one(Long id) {
 		return repo.findById(id).orElseThrow(() -> new PdNotFoundException(id));
 	}

@@ -43,6 +43,19 @@ public class Npc implements InternatName {
 		this.npcTitle = npcTitle;
 	}
 
+	public Map<String, String> getInternatNameCompound() {
+		Map<String, String> map = new HashMap<String, String>();
+		String auxEn = "";
+		String auxJa = "";
+		
+		auxEn = this.npcTitle.getNpcTitleNameEn() + " " + this.npcNameEn;
+		auxJa = this.npcTitle.getNpcTitleNameJa() + " " + this.npcNameJa;
+		
+		map.put("en", auxEn);
+		map.put("ja", auxJa);
+		return map;
+	}
+	
 	@Override
 	public Map<String, String> getInternatName() {
 		Map<String, String> map = new HashMap<String, String>();
