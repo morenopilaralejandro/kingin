@@ -27,6 +27,17 @@
         </ul>
     </div>
 
+    <div th:fragment="item-ul(items, lang)">
+        <ul>
+            <li th:each="item : ${items}">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${item}, 
+                    lang = ${lang})}">
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <div th:fragment="item-table(items, lang)" class="table-responsive">
         <table class="table table-bordered table-sm">
             <tr>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div th:fragment="search-form(formSearch, lang)">    
+        <form 
+            class="search-form"
+            style="max-width: 300px;"
+            id="formSearch" 
+            name="formSearch" 
+            th:object="${formSearch}"
+            th:action="@{/{lang}/search(lang=${lang})}"
+            method="get" 
+            enctype="multipart/form-data">
+
+            <input 
+                id="q"
+                name="q"
+                class="form-control me-2" 
+                type="search" 
+                th:placeholder="#{search.title}" 
+                aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">
+                <img th:src="@{/img/svg/search.svg}" th:alt="#{search.title}">
+            </button>
+        </form>
+    </div>
+</body>
+</html>

@@ -11,18 +11,18 @@ public interface ZoneRepository extends JpaRepository<Zone, Long> {
 	List<Zone> findByZoneMain(Zone zoneMain);
 	
 	@Query( value =
-			"select z from zone z " +
+			"select z.* from zone z " +
 			"join zone_name zn " +
 			"on z.zone_name_id=zn.zone_name_id " +
-			"where lower(zn.zone_name_en) like lower('%?1%') " +
-			"and z.zone_main_id is null", nativeQuery = true)
+			"where lower(zn.zone_name_en) like %?1% " +
+			"and z.zone_main_id is null" , nativeQuery = true)
 	List<Zone> findByNameEn(String zoneNameEn);
 	
 	@Query( value =
-			"select z from zone z " +
+			"select z.* from zone z " +
 			"join zone_name zn " +
 			"on z.zone_name_id=zn.zone_name_id " +
-			"where lower(zn.zone_name_ja) like lower('%?1%') " +
+			"where lower(zn.zone_name_ja) like %?1% " +
 			"and z.zone_main_id is null" , nativeQuery = true)
 	List<Zone> findByNameJa(String zoneNameJa);
 

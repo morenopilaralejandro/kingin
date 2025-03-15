@@ -456,7 +456,7 @@ unownreport,unown-report,Unown Report,アンノーンノート,A report of all t
 berrypots,berry-pots,Berry Pots,きのみプランター,Handy containers for cultivating Berries wherever you go.,いつでも てがるに きのみを そだてられる けいたいしきの さいばい ようき。,null,null,null,null,null,null,item,ip-key,ic-key
 dowsingmchn,dowsing-machine,Dowsing MCHN,ダウジングマシン,It checks for unseen items in the area and makes noise and lights when it finds something.,みえない どうぐに はんのうして おとと ひかりで おしえてくれる さいしんの きかい。,null,null,null,null,null,null,item,ip-key,ic-key
 bluecard,blue-card,Blue Card,ブルーカード,A card to save points for the Buena's Password show.,「アオイのあいことば」 ばんぐみの ポイントを ためる カード。,null,null,null,null,null,null,item,ip-key,ic-key
-slowpoketail,slowpoke-tail,SlowpokeTail,おいしいシッポ,A very tasty tail of something. It sells for a high price.,とても おいしい なにかの しっぽ。 ショップで たかく うれる。,null,null,null,null,null,null,item,ip-key,ic-key
+slowpoketail,slowpoke-tail,Slowpoke Tail,おいしいシッポ,A very tasty tail of something. It sells for a high price.,とても おいしい なにかの しっぽ。 ショップで たかく うれる。,null,null,null,null,null,null,item,ip-key,ic-key
 clearbell,clear-bell,Clear Bell,とうめいなスズ,A very old-fashioned bell that makes a gentle ringing.,こころ やすまる ねいろが きける とても ふるめかしい スズ。,null,null,null,null,null,null,item,ip-key,ic-key
 cardkey,card-key,Card Key,カードキー,A card key that opens a shutter in the Radio Tower.,ラジオとうの シャッターを あける カードしきの カギ。,null,null,null,null,null,null,item,ip-key,ic-key
 basementkey,basement-key,Basement Key,ちかのかぎ,A key that opens a door in the Goldenrod Tunnel.,コガネちかつうろに ある とびらを あける カギ。,null,null,null,null,null,null,item,ip-key,ic-key

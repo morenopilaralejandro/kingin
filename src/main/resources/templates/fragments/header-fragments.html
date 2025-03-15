@@ -8,6 +8,10 @@
             <img th:src="@{/img/svg/logo.svg}" alt = "areoya">
             <span th:text="#{general.web}"></span>
         </a>
+        <div th:replace="~{fragments/search-fragments.html :: search-form(
+            formSearch = ${null},
+            lang = ${lang})}">
+        </div>
         <!--
         <a href="" class="header-setting">
             <img th:src="@{/img/svg/list.svg}" alt = "setting">
