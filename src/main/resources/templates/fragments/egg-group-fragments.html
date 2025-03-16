@@ -19,5 +19,41 @@
             </li>
         </ul>
     </div>
+
+    <div th:fragment="egg-group-other-table(pds, eggGrp, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{egggroup.other}">
+                </th>
+            </tr>
+            <tr th:each="pd : ${pds}">
+                <td>
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${pd}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <th:block th:if="${pd.getEggGrps().size() == 1}">
+                    <td th:text="#{general.none}"></td>
+                </th:block>
+                <th:block th:unless="${pd.getEggGrps().size() == 1}">
+                    <td 
+                        th:each="pdEg : ${pd.getEggGrps()}"
+                        th:unless="${pdEg.equals(eggGrp)}">
+                        <a th:replace="~{fragments/egg-group-fragments.html :: egg-group-link(
+                            eggGrp = ${pdEg}, 
+                            lang = ${lang})}">
+                        </a>
+                    </td>
+                </th:block>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

@@ -70,8 +70,9 @@
                     </div>
                     <section>
                         <h2 id="#list" th:text="#{egggroup.list}"></h2>     
-                        <div th:replace="~{fragments/zukan-fragments.html :: pd-container-lg(
+                        <div th:replace="~{fragments/egg-group-fragments.html :: egg-group-other-table(
                             pds = ${eggGrp.getPds()}, 
+                            eggGrp = ${eggGrp},
                             lang = ${lang})}">
                         </div>
                     </section>

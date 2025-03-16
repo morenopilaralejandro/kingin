@@ -72,10 +72,6 @@
         </table>
     </div>
 
-
-
-
-
     <div th:fragment="zukan-detail-table(pd, auxStats, lang)" class="table-responsive">
         <table class="table table-bordered table-sm" style="width: fit-content;">
             <tr>
@@ -177,7 +173,6 @@
                     th:text="${pd.getEggCyc().getEggCycVal()}">
                 </td>
             </tr>
-
             <tr>
                 <td 
                     class="bg-light-subtle" 
@@ -192,12 +187,13 @@
                     </th:block>
                 </td>
             </tr>
-
-
-
-
-
-            <!--
+            <tr>
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    th:text="#{zukan.other}">
+                </th>
+            </tr>
             <tr>
                 <td
                     class="bg-light-subtle" 
@@ -209,9 +205,67 @@
                     </th:block>
                 </td>
             </tr>
-            -->
+            <tr>
+                <td
+                    class="bg-light-subtle" 
+                    th:text="#{zukan.cap}">
+                </td>
+                <td th:text="${pd.getPdCapRate()}"></td>
+            </tr>
+            <tr>
+                <td
+                    class="bg-light-subtle" 
+                    th:text="#{zukan.hap}">
+                </td>
+                <td th:text="${pd.getPdHap()}"></td>
+            </tr>
+            <tr>
+                <td
+                    class="bg-light-subtle" 
+                    th:text="#{zukan.exp}">
+                </td>
+                <td th:text="${pd.getPdExp()}"></td>
+            </tr>
+            <tr>
+                <td
+                    class="bg-light-subtle" 
+                    th:text="#{zukan.expgrp}">
+                </td>
+                <td th:text="${pd.getExpGrp().getExpGrpFinal()}"></td>
+            </tr>
+        </table>
+    </div>
 
 
+    <div th:fragment="zukan-item(pdHoldItem, isItem, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zukan.items.rate}">
+                </th>
+            </tr>
+            <tr th:each="phi : ${pdHoldItem}">
+                <td>
+                    <th:block th:if="${isItem}">
+                        <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                            pd = ${phi.getPd()}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                    <th:block th:unless="${isItem}">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${phi.getItem()}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </td>
+                <td th:text="${phi.getRate() + '%'}"></td>
+            </tr>
         </table>
     </div>
 </body>
