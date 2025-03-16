@@ -9,6 +9,17 @@
         th:href="@{/{lang}/zukan/{code}(lang=${lang}, code=${pd.getPdCode()})}">        
     </a>
 
+    <div th:fragment="pd-ul(pds, lang)">
+        <ul>
+            <li th:each="pd : ${pds}">
+                <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                    pd = ${pd}, 
+                    lang = ${lang})}">
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <div th:fragment="pd-container-lg(pds, lang)">
         <div th:if="${pds.isEmpty()}" class="mb-3">
             <span th:text="#{general.nodata}"></span>
@@ -21,6 +32,44 @@
                 </a>
             </div>
         </div>
+    </div>
+
+    <div th:fragment="zukan-list-table(pds, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zukan.no}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    style="width: 130px;"
+                    th:text="#{general.name}">
+                </th>
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    th:text="#{zukan.type}">
+                </th>
+            </tr>
+            <tr th:each="pd : ${pds}">
+                <td th:text="${pd.getPdIndexFormat()}"></td>
+                <td>
+                    <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                        pd = ${pd}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td 
+                    th:colspan="${pd.getTypes().size() == 1 ? '2':''}"
+                    th:each="type : ${pd.getTypes}">
+                    <span th:replace="~{fragments/icon-fragments.html :: icon-type( 
+                        type = ${type},
+                        lang = ${lang})}">
+                    </span>
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

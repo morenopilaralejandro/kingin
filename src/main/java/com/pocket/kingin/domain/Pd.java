@@ -100,6 +100,10 @@ public class Pd implements InternatName {
 	@JoinTable(name = "pd_shif_pd", joinColumns = @JoinColumn(name = "pd_id_ori"), inverseJoinColumns = @JoinColumn(name = "pd_id_alt"))
 	private List<Pd> alts;
 	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "pd_shif_pd", joinColumns = @JoinColumn(name = "pd_id_alt"), inverseJoinColumns = @JoinColumn(name = "pd_id_ori"))
+	private List<Pd> oris;
+	
 	@OneToMany(mappedBy = "pdSta", fetch = FetchType.LAZY)
 	private List<PdEvoPd> pdEvoPd;
 	
@@ -146,6 +150,18 @@ public class Pd implements InternatName {
 		this.expGrp = expGrp;
 	}
 
+	public String getPdIndexFormat() {
+		String auxStr = "";
+		Long auxIndex = 0L;
+		if (this.oris.isEmpty()) {
+			auxIndex = this.pdIndex;
+		} else {
+			auxIndex = this.oris.get(0).getPdIndex();
+		}
+		auxStr = String.format("%03d", auxIndex);
+		return auxStr;
+	}
+	
 	@Override
 	public Map<String, String> getInternatName() {
 		Map<String, String> map = new HashMap<String, String>();
@@ -414,6 +430,14 @@ public class Pd implements InternatName {
 
 	public void setPwCrseSpawPd(List<PwCrseSpawPd> pwCrseSpawPd) {
 		this.pwCrseSpawPd = pwCrseSpawPd;
+	}
+
+	public List<Pd> getOris() {
+		return oris;
+	}
+
+	public void setOris(List<Pd> oris) {
+		this.oris = oris;
 	}
 
 	@Override

@@ -53,11 +53,10 @@
                     <th:block th:unless="${isEmptyRes}">
                         <section th:unless="${pds.isEmpty()}">
                             <h2 th:text="#{zukan.list.title}"></h2>
-
-
-
-
-
+                            <div th:replace="~{fragments/zukan-fragments.html :: pd-ul(
+                                pds = ${pds}, 
+                                lang = ${lang})}">
+                            </div>
                         </section>
                         <section th:unless="${abils.isEmpty()}">
                             <h2 th:text="#{ability.list.title}"></h2>
