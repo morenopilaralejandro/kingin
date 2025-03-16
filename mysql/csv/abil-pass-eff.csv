@@ -135,6 +135,7 @@ static,phy-para
 static,over-inc-enc-elec
 steadfast,rse-slf-spe-flinch
 stench,add-flinch
+stickyhold,item-no-take
 stickyhold,over-inc-fish
 stormdrain,redi-water
 sturdy,sturdy

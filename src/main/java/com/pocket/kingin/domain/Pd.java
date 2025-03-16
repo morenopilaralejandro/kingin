@@ -1,5 +1,6 @@
 package com.pocket.kingin.domain;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -243,6 +244,7 @@ public class Pd implements InternatName {
 	}
 
 	public List<Long> getPdBaseArr() {
+		this.pdBaseArr = new ArrayList<Long>();
 		this.pdBaseArr.add(pdBaseHp);
 		this.pdBaseArr.add(pdBaseAtk);
 		this.pdBaseArr.add(pdBaseDef);

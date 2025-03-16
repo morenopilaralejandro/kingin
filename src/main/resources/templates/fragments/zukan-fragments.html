@@ -71,5 +71,148 @@
             </tr>
         </table>
     </div>
+
+
+
+
+
+    <div th:fragment="zukan-detail-table(pd, auxStats, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    colspan="2"
+                    style="text-align: center;"
+                    class="bg-black" 
+                    th:text="${pd.getInternatName().get(lang)}">
+                </th>
+            </tr>
+            <tr>
+                <td
+                    class="bg-light-subtle" 
+                    th:text="#{zukan.no}">
+                </td>
+                <td th:text="${pd.getPdIndexFormat()}"></td>
+            </tr>
+            <tr>
+                <td
+                    class="bg-light-subtle" 
+                    th:text="#{zukan.type}">
+                </td>
+                <td class="td-type">
+                    <div>
+                        <th:block th:each="type : ${pd.getTypes()}">
+                            <span th:replace="~{fragments/icon-fragments.html :: icon-type( 
+                                type = ${type},
+                                lang = ${lang})}">
+                            </span>
+                        </th:block>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    th:text="#{zukan.stats}">
+                </th>
+            </tr>
+            <tr th:each="base : ${pd.getPdBaseArr()}">
+                <td 
+                    class="bg-light-subtle" 
+                    th:text="${auxStats.get(baseStat.index).getInternatName().get(lang)}">
+                </td>
+                <td th:text="${base}"></td>
+            </tr>
+            <tr>
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    th:text="#{zukan.abilities}">
+                </th>
+            </tr>
+            <tr th:each="abil : ${pd.getAbils()}">
+                <td class="bg-light-subtle">
+                    <a th:replace="~{fragments/ability-fragments.html :: ability-link(
+                        abil = ${abil}, 
+                        lang = ${lang})}">
+                    </a>        
+                </td>
+                <td 
+                    class="td-ability-effect" 
+                    th:text="${abil.getEffectInline(abil.getAbilEffBattles(), lang)}">
+                </td>
+            </tr>
+            <tr>
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    th:text="#{zukan.gender}">
+                </th>
+            </tr>
+            <tr th:each="pdg : ${pd.getPdDimoGndr()}">
+                <td 
+                    class="bg-light-subtle" 
+                    th:text="${pdg.getGndr().getInternatName().get(lang)}">
+                </td>
+                <td th:text="${pdg.getRate()} + '%'"></td>
+            </tr>
+            <tr>
+                <th 
+                    colspan="2"
+                    class="bg-black" 
+                    th:text="#{zukan.egg}">
+                </th>
+            </tr>
+            <tr>
+                <td 
+                    class="bg-light-subtle" 
+                    th:text="#{zukan.steps}">
+                </td>
+                <td 
+                    th:if="${lang.equals('ja')}" 
+                    th:text="${pd.getEggCyc().getEggCycVal() + '歩'}">
+                </td>
+                <td 
+                    th:unless="${lang.equals('ja')}" 
+                    th:text="${pd.getEggCyc().getEggCycVal()}">
+                </td>
+            </tr>
+
+            <tr>
+                <td 
+                    class="bg-light-subtle" 
+                    th:text="#{zukan.egggroup}">
+                </td>
+                <td class="td-egggroup">
+                    <th:block th:each="eggGrp : ${pd.getEggGrps()}">
+                        <a th:replace="~{fragments/egg-group-fragments.html :: egg-group-link(
+                            eggGrp = ${eggGrp}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </td>
+            </tr>
+
+
+
+
+
+            <!--
+            <tr>
+                <td
+                    class="bg-light-subtle" 
+                    th:text="#{zukan.yield}">
+                </td>
+                <td class="td-yield">
+                    <th:block th:each="pys : ${pd.getPdYielStats()}">
+                        <span th:text="${pys.getAmount() + ' ' + pys.getStat().getInternatName().get(lang)}"></span>
+                    </th:block>
+                </td>
+            </tr>
+            -->
+
+
+        </table>
+    </div>
 </body>
 </html>

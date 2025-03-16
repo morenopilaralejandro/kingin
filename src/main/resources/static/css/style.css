@@ -412,3 +412,19 @@ div.index-container span {
     display: block;
     padding: 5px;
 }
+/*
+.td-type div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+*/
+.td-yield span, .td-gndr span, .td-egggroup a {
+    display: block;
+}
+
+.td-ability-effect { 
+    max-width: 165px;
+    font-size: 12px;
+    vertical-align: middle;
+}

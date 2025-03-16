@@ -47,7 +47,7 @@ public class ZukanController {
 		Locale locale = LocaleContextHolder.getLocale();
 	        
 		List<Pd> pds = pdService.findByPdCode(code);
-		List<Stat> stats = statService.all();
+		List<Stat> auxStats = statService.all();
 		if (pds.isEmpty()) {
 			return zukanList(lang, model);
 		}
@@ -55,7 +55,7 @@ public class ZukanController {
 		model.addAttribute("lang", locale.getLanguage());
 		model.addAttribute("url", "/zukan/" + code);
 		model.addAttribute("pd", pds.get(0));
-		model.addAttribute("stats", stats);
+		model.addAttribute("auxStats", auxStats);
 		return "zukan";
 	}
 	
