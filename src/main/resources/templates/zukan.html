@@ -70,6 +70,14 @@
                                             th:case="'evolution'"
                                             th:text="#{zukan.evolution}">
                                         </span>
+                                        <span 
+                                            th:case="'incense'"
+                                            th:text="#{zukan.incense}">
+                                        </span>
+                                        <span 
+                                            th:case="'forms'"
+                                            th:text="#{zukan.forms}">
+                                        </span>
                                     </th:block>
                                 </a>
                             </li>
@@ -105,6 +113,24 @@
                             lang = ${lang})}">
                         </div>
                     </section>
+                    <section th:if="${isIncense}">
+                        <h2 id="incense" th:text="#{zukan.incense}"></h2>   
+                        <div th:replace="~{fragments/zukan-fragments.html :: incense-table(
+                            auxEvoPds = ${auxEvoPds}, 
+                            lang = ${lang})}">
+                        </div>
+                    </section>
+
+
+                    <section th:unless="${auxAlts.isEmpty()}">
+                        <h2 id="forms" th:text="#{zukan.forms}"></h2>   
+                        <div th:replace="~{fragments/zukan-fragments.html :: pd-container-lg(
+                            pds = ${auxAlts}, 
+                            lang = ${lang})}">
+                        </div>
+                    </section>
+
+
                     <section>
                         <h2 id="other-lang" th:text="#{lang.other}"></h2>     
                         <div th:replace="~{fragments/lang-fragments.html :: lang-other(

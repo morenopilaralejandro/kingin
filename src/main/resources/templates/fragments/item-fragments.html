@@ -62,8 +62,8 @@
         </table>
     </div>
 
-    <div th:fragment="item-mach-table(itemMachs, isLink ,lang)" class="table-responsive">
-        <table class="table table-bordered table-sm" style="width: fit-content;">
+    <div th:fragment="item-mach-table(itemMachs, isLink, isEff ,lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: max-content;">
             <tr>
                 <th 
                     class="bg-black" 
@@ -139,7 +139,13 @@
                         th:text="${itemMach.getItemMachObt().getInternatName().get(lang)}">
                     </td>
                 </tr>
-
+                <tr th:if="${isEff && !itemMach.getMove().getMoveCauseEffs().isEmpty()}">
+                    <td colspan="7">
+                        <span
+                            th:text="${itemMach.getMove().getEffectInline(lang)}">            
+                        </span>
+                    </td>
+                </tr>
             </th:block>
         </table>
     </div>

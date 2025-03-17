@@ -9,6 +9,7 @@ import java.util.Objects;
 import com.pocket.kingin.composite.PdBabyPd;
 import com.pocket.kingin.composite.PdDimoGndr;
 import com.pocket.kingin.composite.PdEvoPd;
+import com.pocket.kingin.composite.PdEvokType;
 import com.pocket.kingin.composite.PdHoldItem;
 import com.pocket.kingin.composite.PdLinaEvoFam;
 import com.pocket.kingin.composite.PdLrnMove;
@@ -88,9 +89,11 @@ public class Pd implements InternatName {
 	@JoinTable(name = "pd_belo_egg_grp", joinColumns = @JoinColumn(name = "pd_id"), inverseJoinColumns = @JoinColumn(name = "egg_grp_id"))
 	private List<EggGrp> eggGrps;
 	
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "pd_evok_type", joinColumns = @JoinColumn(name = "pd_id"), inverseJoinColumns = @JoinColumn(name = "type_id"))
+	@Transient
 	private List<Type> types;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<PdEvokType> pdEvokType;	
 	
 	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
 	private List<PdHoldItem> pdHoldItem;
@@ -351,6 +354,16 @@ public class Pd implements InternatName {
 	}
 
 	public List<Type> getTypes() {
+		this.types = new ArrayList<Type>();
+		Type[] auxTypes = new Type[2];
+		for (PdEvokType pet : this.getPdEvokType()) {
+			auxTypes[pet.getOrdr().intValue()] = pet.getType();
+		}
+		for (int i = 0; i < auxTypes.length; i++) {
+			if (auxTypes[i] != null) {
+				this.types.add(auxTypes[i]);
+			}
+		}
 		return types;
 	}
 
@@ -452,6 +465,14 @@ public class Pd implements InternatName {
 
 	public void setPdLinaEvoFam(List<PdLinaEvoFam> pdLinaEvoFam) {
 		this.pdLinaEvoFam = pdLinaEvoFam;
+	}
+
+	public List<PdEvokType> getPdEvokType() {
+		return pdEvokType;
+	}
+
+	public void setPdEvokType(List<PdEvokType> pdEvokType) {
+		this.pdEvokType = pdEvokType;
 	}
 
 	@Override

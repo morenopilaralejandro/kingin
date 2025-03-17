@@ -55,10 +55,12 @@ public class ZukanController {
 	        
 		Pd pd = null;
 		List<Pd> pds = pdService.findByPdCode(code);
-		List<String> ids = new ArrayList<String>();
 		List<Pd> auxEvoPds = new ArrayList<Pd>();
+		List<Pd> auxAlts = new ArrayList<Pd>();
+		List<String> ids = new ArrayList<String>();
 		List<Stat> auxStats = statService.all();
 		Map<String, Item> auxEvoItems = new HashMap<String, Item>();
+		boolean isIncense = false;
 		if (pds.isEmpty()) {
 			return zukanList(lang, model);
 		}
@@ -120,6 +122,24 @@ public class ZukanController {
 		if (!pd.getPdLinaEvoFam().isEmpty()) {
 			ids.add("evolution");
 			auxEvoPds = pdService.findByEvoFamId(pd.getPdLinaEvoFam().get(0).getEvoFam().getEvoFamId());
+			for (Pd pare : auxEvoPds) {
+				if (!pare.getPdBabyPd().isEmpty()) {
+					isIncense = true;
+				}
+			}
+		}
+		if (isIncense) {
+			ids.add("incense");
+		}
+		if (!pd.getAlts().isEmpty()) {
+			ids.add("forms");
+			auxAlts.add(pd);
+			auxAlts.addAll(pd.getAlts());
+		}
+		if (!pd.getOris().isEmpty()) {
+			ids.add("forms");
+			auxAlts.add(pd.getOris().get(0));
+			auxAlts.addAll(pd.getOris().get(0).getAlts());
 		}
 		
 		model.addAttribute("lang", locale.getLanguage());
@@ -129,6 +149,8 @@ public class ZukanController {
 		model.addAttribute("auxEvoPds", auxEvoPds);
 		model.addAttribute("auxStats", auxStats);
 		model.addAttribute("auxEvoItems", auxEvoItems);
+		model.addAttribute("isIncense", isIncense);
+		model.addAttribute("auxAlts", auxAlts);
 		
 		return "zukan";
 	}

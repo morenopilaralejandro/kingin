@@ -296,19 +296,23 @@ begin
             if idType1 != 0 then
                 insert into pd_evok_type (
                     pd_id,
-                    type_id
+                    type_id,
+                    ordr
                 ) values (
                     i,
-                    idType1
+                    idType1,
+                    '0'
                 );
             end if;
             if idType2 != 0 then
                 insert into pd_evok_type (
                     pd_id,
-                    type_id
+                    type_id,
+                    ordr
                 ) values (
                     i,
-                    idType2
+                    idType2,
+                    '1'
                 );
             end if;
 

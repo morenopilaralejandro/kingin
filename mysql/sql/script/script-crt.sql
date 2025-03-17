@@ -382,6 +382,7 @@ create table pd_belo_egg_grp (
 create table pd_evok_type (
     pd_id int not null,
     type_id int not null,
+    ordr int,
     constraint pd_evok_type_pk primary key (pd_id, type_id),
     constraint pd_evok_type_fk_pd foreign key (pd_id)
         references pd(pd_id) on delete cascade,

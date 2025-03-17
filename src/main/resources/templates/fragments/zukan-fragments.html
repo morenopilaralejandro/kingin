@@ -268,10 +268,7 @@
         </table>
     </div>
 
-
-
-
-    <div th:remove="tag" th:fragment="evo-cond-inline(evoCond, auxEvoItems, lang)">
+    <div th:remove="tag" th:fragment="evo-cond-inline(evoCond, lv, auxEvoItems, lang)">
         <th:block th:switch="${evoCond.getEvoCondCode()}">
             <th:block th:case="'st'">
                 <a th:replace="~{fragments/item-fragments.html :: item-link(
@@ -279,31 +276,323 @@
                     lang = ${lang})}">
                 </a>
             </th:block>
-
-
-
+            <th:block th:case="'sf'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('firestone')}, 
+                    lang = ${lang})}">
+                </a>
+            </th:block>
+            <th:block th:case="'sw'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('waterstone')}, 
+                    lang = ${lang})}">
+                </a>
+            </th:block>
+            <th:block th:case="'sl'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('leafstone')}, 
+                    lang = ${lang})}">
+                </a>
+            </th:block>
+            <th:block th:case="'ss'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('sunstone')}, 
+                    lang = ${lang})}">
+                </a>
+            </th:block>
+            <th:block th:case="'sm'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('moonstone')}, 
+                    lang = ${lang})}">
+                </a>
+            </th:block>
+            <th:block th:case="'sy'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('shinystone')}, 
+                    lang = ${lang})}">
+                </a>
+            </th:block>
+            <th:block th:case="'sd'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('duskstone')}, 
+                    lang = ${lang})}">
+                </a>
+            </th:block>
+            <th:block th:case="'wm'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('dawnstone')}, 
+                    lang = ${lang})}">
+                </a>
+                <span th:text="#{zukan.evo.wm}"></span>
+            </th:block>
+            <th:block th:case="'wf'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('dawnstone')}, 
+                    lang = ${lang})}">
+                </a>
+                <span th:text="#{zukan.evo.wf}"></span>
+            </th:block>
+            <th:block th:case="'tk'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('kingsrock')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('kingsrock')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'tm'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('metalcoat')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('metalcoat')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'tp'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('protector')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('protector')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'td'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('dragonscale')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('dragonscale')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'te'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('electirizer')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('electirizer')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'tg'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('magmarizer')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('magmarizer')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'tu'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('upgrade')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('upgrade')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'t2'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('dubiousdisc')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('dubiousdisc')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'tc'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('reapercloth')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('reapercloth')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'tt'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('deepseatooth')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('deepseatooth')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'ts'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('deepseascale')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.tradewhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('deepseascale')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'io'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('ovalstone')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.daywhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.daywhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('ovalstone')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'if'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('razorfang')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.nightwhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.nightwhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('razorfang')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'ic'">
+                <th:block th:switch="${lang}">
+                    <th:block th:case="'ja'">
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('razorclaw')}, 
+                            lang = ${lang})}">
+                        </a>
+                        <span th:text="#{zukan.evo.nightwhilehold}"></span>
+                    </th:block>
+                    <th:block th:case="*">
+                        <span th:text="#{zukan.evo.nightwhilehold}"></span>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${auxEvoItems.get('razorclaw')}, 
+                            lang = ${lang})}">
+                        </a>
+                    </th:block>
+                </th:block>
+            </th:block>
+            <th:block th:case="'lv'">
+                <span th:text="#{zukan.evo.lv}"></span>
+                <span th:text="${lv}"></span>
+            </th:block>
             <th:block th:case="*">
                 <span th:text="${evoCond.getInternatDesc().get(lang)}"></span>
             </th:block>
-
-<!--
-sf	Fire Stone
-sw	Water Stone
-sl	Leaf Stone
-ss	Sun Stone
-sm	Moon Stone
-sy	Shiny Stone
-sd	Dusk Stone
-wm	Dawn Stone on male
-wf	Dawn Stone on female
--->
-
         </th:block>
     </div>
-
-
-
-
 
     <div th:fragment="evo-table(auxEvoPds, auxEvoItems, lang)" class="table-responsive">
         <table class="table table-bordered table-sm" style="width: fit-content;">
@@ -338,9 +627,51 @@ wf	Dawn Stone on female
                     <td>
                         <div th:replace="~{fragments/zukan-fragments.html :: evo-cond-inline(
                             evoCond = ${pep.getEvoCond()},
+                            lv = ${pep.getLv()},
                             auxEvoItems = ${auxEvoItems}, 
                             lang = ${lang})}">
                         </div>  
+                    </td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
+
+    <div th:fragment="incense-table(auxEvoPds, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zukan.pare}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zukan.baby}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{item.title}">
+                </th>
+            </tr>
+            <th:block th:each="pd : ${auxEvoPds}">
+                <tr th:each="pbp : ${pd.getPdBabyPd()}">
+                    <td>
+                       <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                            pd = ${pbp.getPdPare()}, 
+                            lang = ${lang})}">
+                        </a>
+                    </td>
+                    <td>
+                       <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                            pd = ${pbp.getPdBaby()}, 
+                            lang = ${lang})}">
+                        </a>
+                    </td>
+                    <td>
+                        <a th:replace="~{fragments/item-fragments.html :: item-link(
+                            item = ${pbp.getItem()}, 
+                            lang = ${lang})}">
+                        </a>
                     </td>
                 </tr>
             </th:block>
