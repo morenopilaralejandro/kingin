@@ -54,25 +54,28 @@
                     <div class="toc">
                         <span class="toc-title" th:text="#{general.toc}"></span>
                         <ul class="toc-list">
-                            <li>
-                                <a href="#details">
-                                    <span th:text="${'1. '}"></span> 
-                                    <span th:text="#{zukan.details}"></span>
+                            <li th:each="id : ${ids}">
+                                <a th:href="${'#' + id}">
+                                    <span th:text="${idStat.count + '. '}"></span> 
+                                    <th:block th:switch="${id}">
+                                        <span 
+                                            th:case="'details'"
+                                            th:text="#{zukan.details}">
+                                        </span>
+                                        <span 
+                                            th:case="'items'"
+                                            th:text="#{zukan.items}">
+                                        </span>
+                                        <span 
+                                            th:case="'evolution'"
+                                            th:text="#{zukan.evolution}">
+                                        </span>
+                                    </th:block>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#items">
-                                    <span th:text="${'2. '}"></span> 
-                                    <span th:text="#{zukan.items}"></span>
-                                </a>
-                            </li>
-
-
-
-
                             <li>
                                 <a href="#other-lang">
-                                    <span th:text="${'4. '}"></span> 
+                                    <span th:text="${(ids.size() + 1) + '. '}"></span> 
                                     <span th:text="#{lang.other}"></span>
                                 </a>
                             </li>
@@ -86,24 +89,22 @@
                             lang = ${lang})}">
                         </div>
                     </section>
-                    <section>
+                    <section th:unless="${pd.getPdHoldItem().isEmpty()}">
                         <h2 id="items" th:text="#{zukan.items}"></h2>     
-                        <div th:if="${pd.getPdHoldItem().isEmpty()}" class="mb-3">
-                            <span th:text="#{general.none}"></span>
+                        <div th:replace="~{fragments/zukan-fragments.html :: zukan-item-table(
+                            pdHoldItem = ${pd.getPdHoldItem()}, 
+                            isItem = ${false},
+                            lang = ${lang})}">
                         </div>
-                        <th:block th:unless="${pd.getPdHoldItem().isEmpty()}">
-                            <div th:replace="~{fragments/zukan-fragments.html :: zukan-item(
-                                pdHoldItem = ${pd.getPdHoldItem()}, 
-                                isItem = ${false},
-                                lang = ${lang})}">
-                            </div>
-                        </th:block>
                     </section>
-
-
-
-
-
+                    <section th:unless="${auxEvoPds.isEmpty()}">
+                        <h2 id="evolution" th:text="#{zukan.evolution}"></h2>   
+                        <div th:replace="~{fragments/zukan-fragments.html :: evo-table(
+                            auxEvoPds = ${auxEvoPds}, 
+                            auxEvoItems = ${auxEvoItems},
+                            lang = ${lang})}">
+                        </div>
+                    </section>
                     <section>
                         <h2 id="other-lang" th:text="#{lang.other}"></h2>     
                         <div th:replace="~{fragments/lang-fragments.html :: lang-other(

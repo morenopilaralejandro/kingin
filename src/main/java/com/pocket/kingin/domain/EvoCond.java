@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-import com.pocket.kingin.internat.InternatName;
+import com.pocket.kingin.internat.InternatDesc;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "evo_cond")
-public class EvoCond implements InternatName {
+public class EvoCond implements InternatDesc {
 	@Column(name = "evo_cond_id")
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long evoCondId;
 	@Column(name = "evo_cond_code", unique = true)
@@ -36,7 +36,7 @@ public class EvoCond implements InternatName {
 	}
 	
 	@Override
-	public Map<String, String> getInternatName() {
+	public Map<String, String> getInternatDesc() {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("en", this.evoCondDescEn);
 		map.put("ja", this.evoCondDescJa);

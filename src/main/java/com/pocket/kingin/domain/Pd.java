@@ -10,6 +10,7 @@ import com.pocket.kingin.composite.PdBabyPd;
 import com.pocket.kingin.composite.PdDimoGndr;
 import com.pocket.kingin.composite.PdEvoPd;
 import com.pocket.kingin.composite.PdHoldItem;
+import com.pocket.kingin.composite.PdLinaEvoFam;
 import com.pocket.kingin.composite.PdLrnMove;
 import com.pocket.kingin.composite.PdSpawHgss;
 import com.pocket.kingin.composite.PdSpawSaf;
@@ -104,6 +105,9 @@ public class Pd implements InternatName {
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "pd_shif_pd", joinColumns = @JoinColumn(name = "pd_id_alt"), inverseJoinColumns = @JoinColumn(name = "pd_id_ori"))
 	private List<Pd> oris;
+	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<PdLinaEvoFam> pdLinaEvoFam;
 	
 	@OneToMany(mappedBy = "pdSta", fetch = FetchType.LAZY)
 	private List<PdEvoPd> pdEvoPd;
@@ -440,6 +444,14 @@ public class Pd implements InternatName {
 
 	public void setOris(List<Pd> oris) {
 		this.oris = oris;
+	}
+
+	public List<PdLinaEvoFam> getPdLinaEvoFam() {
+		return pdLinaEvoFam;
+	}
+
+	public void setPdLinaEvoFam(List<PdLinaEvoFam> pdLinaEvoFam) {
+		this.pdLinaEvoFam = pdLinaEvoFam;
 	}
 
 	@Override

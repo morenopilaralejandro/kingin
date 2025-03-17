@@ -31,6 +31,11 @@ public class PdServiceImpl implements PdService {
 	}
 	
 	@Override
+	public List<Pd> findByEvoFamId(Long evoFamId) {
+		return repo.findByEvoFamId(evoFamId);
+	}
+	
+	@Override
 	public Pd one(Long id) {
 		return repo.findById(id).orElseThrow(() -> new PdNotFoundException(id));
 	}

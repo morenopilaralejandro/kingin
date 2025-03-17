@@ -236,8 +236,7 @@
         </table>
     </div>
 
-
-    <div th:fragment="zukan-item(pdHoldItem, isItem, lang)" class="table-responsive">
+    <div th:fragment="zukan-item-table(pdHoldItem, isItem, lang)" class="table-responsive">
         <table class="table table-bordered table-sm" style="width: fit-content;">
             <tr>
                 <th 
@@ -266,6 +265,85 @@
                 </td>
                 <td th:text="${phi.getRate() + '%'}"></td>
             </tr>
+        </table>
+    </div>
+
+
+
+
+    <div th:remove="tag" th:fragment="evo-cond-inline(evoCond, auxEvoItems, lang)">
+        <th:block th:switch="${evoCond.getEvoCondCode()}">
+            <th:block th:case="'st'">
+                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                    item = ${auxEvoItems.get('thunderstone')}, 
+                    lang = ${lang})}">
+                </a>
+            </th:block>
+
+
+
+            <th:block th:case="*">
+                <span th:text="${evoCond.getInternatDesc().get(lang)}"></span>
+            </th:block>
+
+<!--
+sf	Fire Stone
+sw	Water Stone
+sl	Leaf Stone
+ss	Sun Stone
+sm	Moon Stone
+sy	Shiny Stone
+sd	Dusk Stone
+wm	Dawn Stone on male
+wf	Dawn Stone on female
+-->
+
+        </th:block>
+    </div>
+
+
+
+
+
+    <div th:fragment="evo-table(auxEvoPds, auxEvoItems, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zukan.evo.sta}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zukan.evo.end}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{zukan.evo.cond}">
+                </th>
+            </tr>
+            <th:block th:each="pd : ${auxEvoPds}">
+                <tr th:each="pep : ${pd.getPdEvoPd()}">
+                    <td>
+                        <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                            pd = ${pep.getPdSta()}, 
+                            lang = ${lang})}">
+                        </a>
+                    </td>
+                    <td>
+                        <a th:replace="~{fragments/zukan-fragments.html :: pd-link(
+                            pd = ${pep.getPdEnd()}, 
+                            lang = ${lang})}">
+                        </a>
+                    </td>
+                    <td>
+                        <div th:replace="~{fragments/zukan-fragments.html :: evo-cond-inline(
+                            evoCond = ${pep.getEvoCond()},
+                            auxEvoItems = ${auxEvoItems}, 
+                            lang = ${lang})}">
+                        </div>  
+                    </td>
+                </tr>
+            </th:block>
         </table>
     </div>
 </body>

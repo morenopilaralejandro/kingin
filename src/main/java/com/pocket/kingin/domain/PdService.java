@@ -11,6 +11,8 @@ public interface PdService {
 	
 	List<Pd> findByPdNameJaContainingIgnoreCase(String pdNameJa);
 
+	List<Pd> findByEvoFamId(Long evoFamId);
+	
 	Pd one(Long id);
 
 	Pd insert(Pd newObj);
