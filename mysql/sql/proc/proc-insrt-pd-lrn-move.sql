@@ -77,17 +77,19 @@ begin
                 set intLv = cast(vLv as unsigned);
             end if;
 
-            insert into pd_lrn_move (
-                pd_id,
-                move_id,
-                move_lrn_id,
-                lv
-            ) values (
-                idPd,
-                idMove,
-                idMoveLrn,
-                intLv
-            );
+            if vMoveName != 'Defog' then
+                insert into pd_lrn_move (
+                    pd_id,
+                    move_id,
+                    move_lrn_id,
+                    lv
+                ) values (
+                    idPd,
+                    idMove,
+                    idMoveLrn,
+                    intLv
+                );
+            end if;
         end if;
 	end while;
 	close cur1;

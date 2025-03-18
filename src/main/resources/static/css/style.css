@@ -428,3 +428,10 @@ div.index-container span {
     font-size: 12px;
     vertical-align: middle;
 }
+/*style-move*/
+.pd-learn-table {
+    max-width: 650px;
+}
+.pd-learn-table.lv {
+
+}

@@ -133,6 +133,9 @@ public class Pd implements InternatName {
 	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
 	private List<PwCrseSpawPd> pwCrseSpawPd;
 	
+	@OneToMany(mappedBy = "pd", fetch = FetchType.LAZY)
+	private List<ItemFoss> itemFoss;
+	
 	public Pd() {}
 	
 	public Pd(Long pdId, String pdCode, Long pdIndex, String pdNameEn, String pdNameJa, String pdImg, Long pdCapRate,
@@ -426,6 +429,17 @@ public class Pd implements InternatName {
 	public void setShopExchPd(List<ShopExchPd> shopExchPd) {
 		this.shopExchPd = shopExchPd;
 	}
+	
+	public int getPdSpawHgssColspan() {
+		int colspan = 1;
+		for (PdSpawHgss psh : pdSpawHgss) {
+			if (psh.getRateD() != null || 
+					psh.getRateN() != null) {
+				colspan = 3;
+			}
+		}
+		return colspan;
+	}
 
 	public List<PdSpawHgss> getPdSpawHgss() {
 		return pdSpawHgss;
@@ -473,6 +487,14 @@ public class Pd implements InternatName {
 
 	public void setPdEvokType(List<PdEvokType> pdEvokType) {
 		this.pdEvokType = pdEvokType;
+	}
+
+	public List<ItemFoss> getItemFoss() {
+		return itemFoss;
+	}
+
+	public void setItemFoss(List<ItemFoss> itemFoss) {
+		this.itemFoss = itemFoss;
 	}
 
 	@Override

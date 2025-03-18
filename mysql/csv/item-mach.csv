@@ -91,11 +91,11 @@ tm89,89,many,U-Turn
 tm90,90,many,Substitute
 tm91,91,many,Flash Cannon
 tm92,92,one,Trick Room
-hm01,1,one,Cut
-hm02,2,one,Fly
-hm03,3,one,Surf
-hm04,4,one,Strength
-hm05,5,one,Whirlpool
-hm06,6,one,Rock Smash
-hm07,7,one,Waterfall
-hm08,8,one,Rock Climb
+hm01,101,one,Cut
+hm02,102,one,Fly
+hm03,103,one,Surf
+hm04,104,one,Strength
+hm05,105,one,Whirlpool
+hm06,106,one,Rock Smash
+hm07,107,one,Waterfall
+hm08,108,one,Rock Climb

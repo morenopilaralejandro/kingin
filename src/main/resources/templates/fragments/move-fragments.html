@@ -335,5 +335,147 @@
             </div>
         </form>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div th:fragment="pd-learn-table(pdLrnMove, moveLrnCode, cSpan, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm pd-learn-table"
+            th:classappend="${moveLrnCode}">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    style="min-width: 130px;"
+                    th:text="#{move.title}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.type}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.category}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.power}">
+                </th>
+                <th 
+                    class="bg-black"
+                    th:text="#{move.accuracy}">
+                </th>
+                <th 
+                    class="bg-black" 
+                    th:text="#{move.pp}">
+                </th>
+                <th:block th:switch="${moveLrnCode}">
+                    <th 
+                        th:case="'lv'"
+                        class="bg-black" 
+                        th:text="#{move.learn.lv.lv}">
+                    </th>
+                    <th 
+                        th:case="'tm'"
+                        style="min-width: 110px;"
+                        class="bg-black" 
+                        th:text="#{move.learn.tm}">
+                    </th>
+                    <th 
+                        th:case="'eg'"
+                        class="bg-black" 
+                        th:text="#{move.learn.eg}">
+                    </th>
+                </th:block>
+            </tr>
+            <th:block th:each="plm : ${pdLrnMove}">
+                <tr>
+                    <td class="bg-light-subtle">
+                        <a th:replace="~{fragments/move-fragments.html :: move-link(
+                            move = ${plm.getMove()}, 
+                            lang = ${lang})}">
+                        </a>
+                    </td>
+                    <td class="bg-light-subtle" style="text-align: center;">
+                        <span th:replace="~{fragments/icon-fragments.html :: icon-type( 
+                            type = ${plm.getMove().getType()},
+                            lang = ${lang})}">
+                        </span>
+                    </td>
+                    <td class="bg-light-subtle" style="text-align: center;">
+                        <span th:replace="~{fragments/icon-fragments.html :: icon-move-cat( 
+                            moveCat = ${plm.getMove().getMoveCat()},
+                            lang = ${lang})}">
+                        </span>
+                    </td>
+                    <td
+                        class="bg-light-subtle"
+                        th:text="${plm.getMove().getMoveBp()}">
+                    </td>
+                    <td
+                        class="bg-light-subtle"
+                        th:text="${plm.getMove().getMoveAc()}">
+                    </td>
+                    <td
+                        class="bg-light-subtle"
+                        th:text="${plm.getMove().getMovePp()}">
+                    </td>
+                    <th:block th:switch="${moveLrnCode}">
+                        <td 
+                            th:case="'lv'"
+                            class="bg-light-subtle"
+                            th:text="${plm.getId().getLv()}">
+                        </td>
+                        <th:block th:case="'tm'">
+                            <td th:if="${plm.getMove().getItems().isEmpty()}"
+                                class="bg-light-subtle"
+                                th:text="#{general.nodata}">
+                            </td>
+                            <td th:unless="${plm.getMove().getItems().isEmpty()}" class="bg-light-subtle">
+                                <a th:replace="~{fragments/item-fragments.html :: item-link(
+                                    item = ${plm.getMove().getItems().get(0)}, 
+                                    lang = ${lang})}">
+                                </a>
+                            </td>
+                        </th:block>
+                        <th:block th:case="'eg'">
+                            <td class="bg-light-subtle"
+                                th:text="${'todo'}">
+                            </td>
+                        </th:block>
+                    </th:block>
+                </tr>
+                <tr th:unless="${plm.getMove().getMoveCauseEffs().isEmpty()}">
+                    <td th:colspan="${cSpan}">
+                        <span
+                            th:text="${plm.getMove().getEffectInline(lang)}">            
+                        </span>
+                    </td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

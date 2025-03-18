@@ -677,5 +677,26 @@
             </th:block>
         </table>
     </div>
+
+    <div th:fragment="pd-shop-table(shopExchPd, lang)" class="table-responsive">
+        <table class="table table-bordered table-sm" style="width: fit-content;">
+            <tr>
+                <th 
+                    class="bg-black" 
+                    colspan="2"
+                    th:text="#{general.name}">
+                </th>
+            </tr>
+            <tr th:each="sep : ${shopExchPd}">
+                <td>
+                    <a th:replace="~{fragments/zone-fragments.html :: shop-link(
+                        shop = ${sep.getShop()}, 
+                        lang = ${lang})}">
+                    </a>
+                </td>
+                <td th:text="${sep.getPrice() + ' ' + sep.getShop().getCurr().getInternatName().get(lang)}"></td>
+            </tr>
+        </table>
+    </div>      
 </body>
 </html>

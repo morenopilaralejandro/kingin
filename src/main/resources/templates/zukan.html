@@ -75,8 +75,24 @@
                                             th:text="#{zukan.incense}">
                                         </span>
                                         <span 
+                                            th:case="'fossil'"
+                                            th:text="#{zukan.fossil}">
+                                        </span>
+                                        <span 
                                             th:case="'forms'"
                                             th:text="#{zukan.forms}">
+                                        </span>
+                                        <span 
+                                            th:case="'location'"
+                                            th:text="#{zukan.location}">
+                                        </span>
+                                        <span 
+                                            th:case="'shops'"
+                                            th:text="#{zone.shops}">
+                                        </span>
+                                        <span 
+                                            th:case="'moves'"
+                                            th:text="#{move.list.title}">
                                         </span>
                                     </th:block>
                                 </a>
@@ -120,8 +136,6 @@
                             lang = ${lang})}">
                         </div>
                     </section>
-
-
                     <section th:unless="${auxAlts.isEmpty()}">
                         <h2 id="forms" th:text="#{zukan.forms}"></h2>   
                         <div th:replace="~{fragments/zukan-fragments.html :: pd-container-lg(
@@ -129,8 +143,127 @@
                             lang = ${lang})}">
                         </div>
                     </section>
-
-
+                    <section th:if="${isFossil}">
+                        <h2 id="fossil" th:text="#{zukan.fossil}"></h2>   
+                        <div th:replace="~{fragments/item-fragments.html :: item-ul(
+                            items = ${auxItemFoss}, 
+                            lang = ${lang})}">
+                        </div>
+                    </section>
+                    <section>
+                        <h2 id="location" th:text="#{zukan.location}"></h2>
+                        <th:block th:if="${isLocation}">
+                            <article th:unless="${pd.getPdSpawHgss().isEmpty()}">
+                                <h3 th:text="#{zone.title}"></h3>
+                                <div th:replace="~{fragments/zone-fragments.html :: zone-spawn-hgss(
+                                    pdSpawHgss = ${pd.getPdSpawHgss()},
+                                    isZone = ${false},
+                                    colspan = ${pd.getPdSpawHgssColspan()},
+                                    lang = ${lang})}">
+                                </div>
+                            </article>
+                            <article th:unless="${pd.getPdSpawSaf().isEmpty()}">
+                                <h3 th:text="#{zone.safari}"></h3>
+                                <div th:replace="~{fragments/zone-fragments.html :: zone-spawn-saf(
+                                    pdSpawSaf = ${pd.getPdSpawSaf()},
+                                    isZone = ${false},
+                                    lang = ${lang})}">
+                                </div>
+                            </article>
+                            <article th:unless="${pd.getPwCrseSpawPd().isEmpty()}">
+                                <h3 th:text="#{walker.list.title}"></h3>
+                                <div th:replace="~{fragments/walker-fragments.html :: pd-walker-table(
+                                    pd = ${pd},
+                                    lang = ${lang})}">
+                                </div>
+                            </article>
+                            <article th:unless="${pd.getShopExchPd().isEmpty()}">
+                                <h3 th:text="#{zone.shops}"></h3>
+                                <div th:replace="~{fragments/zukan-fragments.html :: pd-shop-table(
+                                    shopExchPd = ${pd.getShopExchPd()},
+                                    lang = ${lang})}">
+                                </div>
+                            </article>
+                        </th:block>
+                        <div th:unless="${isLocation}" class="mb-3">
+                            <span th:text="#{general.none}"></span>
+                        </div>
+                    </section>
+                    <section>
+                        <h2 id="moves" th:text="#{move.list.title}"></h2>     
+                        <article th:unless="${lvPdLrnMove.isEmpty()}">
+                            <h3 th:text="#{move.learn.lv}"></h3>
+                            <div th:replace="~{fragments/move-fragments.html :: pd-learn-table(
+                                pdLrnMove = ${lvPdLrnMove},
+                                moveLrnCode = ${'lv'},
+                                cSpan = ${7},
+                                lang = ${lang})}">
+                            </div>
+                        </article>
+                        <article th:unless="${tmPdLrnMove.isEmpty()}">
+                            <h3 th:text="#{move.learn.tm}"></h3>
+                            <div th:replace="~{fragments/move-fragments.html :: pd-learn-table(
+                                pdLrnMove = ${tmPdLrnMove},
+                                moveLrnCode = ${'tm'},
+                                cSpan = ${7},
+                                lang = ${lang})}">
+                            </div>
+                        </article>
+                        <article th:unless="${egPdLrnMove.isEmpty()}">
+                            <h3 th:text="#{move.learn.eg}"></h3>
+                            <div th:replace="~{fragments/move-fragments.html :: pd-learn-table(
+                                pdLrnMove = ${egPdLrnMove},
+                                moveLrnCode = ${'eg'},
+                                cSpan = ${7},
+                                lang = ${lang})}">
+                            </div>
+                        </article>
+                        <article th:unless="${tuPdLrnMove.isEmpty()}">
+                            <h3 th:text="#{move.learn.tu}"></h3>
+                            <div th:replace="~{fragments/move-fragments.html :: pd-learn-table(
+                                pdLrnMove = ${tuPdLrnMove},
+                                moveLrnCode = ${'tu'},
+                                cSpan = ${6},
+                                lang = ${lang})}">
+                            </div>
+                        </article>
+                        <article th:unless="${prPdLrnMove.isEmpty()}">
+                            <h3 th:text="#{move.learn.pr}"></h3>
+                            <div th:replace="~{fragments/move-fragments.html :: pd-learn-table(
+                                pdLrnMove = ${prPdLrnMove},
+                                moveLrnCode = ${'pr'},
+                                cSpan = ${6},
+                                lang = ${lang})}">
+                            </div>
+                        </article>
+                        <article th:unless="${tfPdLrnMove.isEmpty()}">
+                            <h3 th:text="#{move.learn.tf}"></h3>
+                            <div th:replace="~{fragments/move-fragments.html :: pd-learn-table(
+                                pdLrnMove = ${tfPdLrnMove},
+                                moveLrnCode = ${'tf'},
+                                cSpan = ${6},
+                                lang = ${lang})}">
+                            </div>
+                        </article>
+                        <article th:unless="${pwPdLrnMove.isEmpty()}">
+                            <h3 th:text="#{move.learn.pw}"></h3>
+                            <div th:replace="~{fragments/move-fragments.html :: pd-learn-table(
+                                pdLrnMove = ${pwPdLrnMove},
+                                moveLrnCode = ${'pw'},
+                                cSpan = ${6},
+                                lang = ${lang})}">
+                            </div>
+                        </article>
+                        <article th:unless="${spPdLrnMove.isEmpty()}">
+                            <h3 th:text="#{move.learn.sp}"></h3>
+                            <div th:replace="~{fragments/move-fragments.html :: pd-learn-table(
+                                pdLrnMove = ${spPdLrnMove},
+                                moveLrnCode = ${'sp'},
+                                cSpan = ${6},
+                                lang = ${lang})}">
+                            </div>
+                        </article>
+                    </section>
                     <section>
                         <h2 id="other-lang" th:text="#{lang.other}"></h2>     
                         <div th:replace="~{fragments/lang-fragments.html :: lang-other(
