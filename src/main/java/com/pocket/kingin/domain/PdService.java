@@ -13,6 +13,10 @@ public interface PdService {
 
 	List<Pd> findByEvoFamId(Long evoFamId);
 	
+	List<Pd> findByEggMoveLv(Long pdId, Long moveId);
+	
+	List<Pd> findByEggMoveEg(Long pdId, Long moveId);
+	
 	Pd one(Long id);
 
 	Pd insert(Pd newObj);

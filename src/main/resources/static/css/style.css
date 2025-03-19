@@ -404,7 +404,7 @@ div.index-container span {
 
 .pd-container-lg div {
     border: 1px solid var(--bs-border-color);
-    min-width: 100px;
+    min-width: 105px;
     box-sizing: border-box;
 }
 
@@ -430,8 +430,17 @@ div.index-container span {
 }
 /*style-move*/
 .pd-learn-table {
-    max-width: 650px;
+    width: min-content;
 }
-.pd-learn-table.lv {
 
+.w-move-name {
+    min-width: 130px;
+}
+
+.w-move-power {
+    min-width: 42px;
+}
+
+.w-move-accuracy {
+    min-width: 58px;
 }

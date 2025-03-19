@@ -36,6 +36,16 @@ public class PdServiceImpl implements PdService {
 	}
 	
 	@Override
+	public List<Pd> findByEggMoveLv(Long pdId, Long moveId) {
+		return repo.findByEggMoveLv(pdId, moveId);
+	}
+
+	@Override
+	public List<Pd> findByEggMoveEg(Long pdId, Long moveId) {
+		return repo.findByEggMoveEg(pdId, moveId);
+	}
+	
+	@Override
 	public Pd one(Long id) {
 		return repo.findById(id).orElseThrow(() -> new PdNotFoundException(id));
 	}

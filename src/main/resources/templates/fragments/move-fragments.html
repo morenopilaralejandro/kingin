@@ -24,10 +24,10 @@
         <div th:if="${moves.isEmpty()}" class="mb-3">
             <span th:text="#{general.nodata}"></span>
         </div>
-        <table th:unless="${moves.isEmpty()}" class="table table-bordered table-sm" style="max-width: 600px;">
+        <table th:unless="${moves.isEmpty()}" class="table table-bordered table-sm" style="width: min-content;">
             <tr>
                 <th 
-                    class="bg-black w-25" 
+                    class="bg-black w-move-name" 
                     th:text="#{move.title}">
                 </th>
                 <th 
@@ -39,11 +39,11 @@
                     th:text="#{move.category}">
                 </th>
                 <th 
-                    class="bg-black" 
+                    class="bg-black w-move-power" 
                     th:text="#{move.power}">
                 </th>
                 <th 
-                    class="bg-black"
+                    class="bg-black w-move-accuracy"
                     th:text="#{move.accuracy}">
                 </th>
                 <th 
@@ -336,25 +336,12 @@
         </form>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
     <div th:fragment="pd-learn-table(pdLrnMove, moveLrnCode, cSpan, lang)" class="table-responsive">
         <table class="table table-bordered table-sm pd-learn-table"
             th:classappend="${moveLrnCode}">
             <tr>
                 <th 
-                    class="bg-black" 
-                    style="min-width: 130px;"
+                    class="bg-black w-move-name" 
                     th:text="#{move.title}">
                 </th>
                 <th 
@@ -366,11 +353,11 @@
                     th:text="#{move.category}">
                 </th>
                 <th 
-                    class="bg-black" 
+                    class="bg-black w-move-power" 
                     th:text="#{move.power}">
                 </th>
                 <th 
-                    class="bg-black"
+                    class="bg-black w-move-accuracy"
                     th:text="#{move.accuracy}">
                 </th>
                 <th 
@@ -385,12 +372,13 @@
                     </th>
                     <th 
                         th:case="'tm'"
-                        style="min-width: 110px;"
+                        style="min-width: 120px;"
                         class="bg-black" 
                         th:text="#{move.learn.tm}">
                     </th>
                     <th 
                         th:case="'eg'"
+                        style="min-width: 80px;"
                         class="bg-black" 
                         th:text="#{move.learn.eg}">
                     </th>
@@ -447,8 +435,12 @@
                             </td>
                         </th:block>
                         <th:block th:case="'eg'">
-                            <td class="bg-light-subtle"
-                                th:text="${'todo'}">
+                            <td class="bg-light-subtle">
+                                <a th:replace="~{fragments/egg-move-fragments.html :: egg-move-link(
+                                    pd = ${plm.getPd()},
+                                    move = ${plm.getMove()},
+                                    lang = ${lang})}">
+                                </a>
                             </td>
                         </th:block>
                     </th:block>
@@ -463,19 +455,5 @@
             </th:block>
         </table>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

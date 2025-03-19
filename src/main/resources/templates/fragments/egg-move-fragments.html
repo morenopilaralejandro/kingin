@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <a
+        th:fragment="egg-move-link(pd, move, lang)"
+        th:text="#{eggmove.check}"
+        th:href="@{/{lang}/egg-move/{pdCode}/{moveCode}(lang=${lang}, pdCode=${pd.getPdCode()}, moveCode=${move.getMoveCode()})}">        
+    </a>
+</body>
+</html>
